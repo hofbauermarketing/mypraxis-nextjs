@@ -1,8 +1,21 @@
+import Image from 'next/image'
+
 export default function HomePage() {
   return (
     <main>
       {/* ===== HERO ===== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8]">
+        {/* Hero background image – semi-transparent */}
+        <div className="absolute inset-0">
+          <Image
+            src="/hero-bg.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover opacity-20"
+            sizes="100vw"
+          />
+        </div>
         <div className="absolute inset-0 hero-pattern" />
         <div className="absolute inset-0 opacity-10"
           style={{
