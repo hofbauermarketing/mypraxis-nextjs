@@ -176,6 +176,8 @@ export const metadata: Metadata = {
   },
 }
 
+import Navigation from '@/components/Navigation'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de-AT">
@@ -189,6 +191,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="alternate" hrefLang="de-AT" href="https://www.mypraxis.at/" />
       </head>
       <body className="bg-white text-dark antialiased">
+        <Navigation />
         {children}
       </body>
     </html>
