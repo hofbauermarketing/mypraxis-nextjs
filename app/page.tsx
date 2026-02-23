@@ -2,51 +2,30 @@ export default function HomePage() {
   return (
     <main>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0f1e3c] via-[#1a365d] to-[#1e4080]">
-        {/* Animated background pattern */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8]">
         <div className="absolute inset-0 hero-pattern" />
-        <div className="absolute inset-0 opacity-20"
+        <div className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
 
-        {/* Floating decorative elements */}
-        <div className="absolute top-32 right-10 md:right-24 animate-float">
-          <div className="glass-card rounded-2xl px-5 py-4 text-white text-sm font-medium shadow-xl">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-green-300 text-xs">KI empfiehlt Sie</span>
-            </div>
-            <p className="text-white font-semibold">ChatGPT · Perplexity</p>
-            <p className="text-blue-200 text-xs">Google AI Overviews</p>
-          </div>
-        </div>
-
-        <div className="absolute bottom-40 left-6 md:left-20 animate-float delay-300">
-          <div className="glass-card rounded-2xl px-5 py-4 text-white text-sm shadow-xl">
-            <p className="text-green-300 font-semibold text-base">bis zu 30 %</p>
-            <p className="text-blue-200 text-xs">KMU.DIGITAL Förderung</p>
-          </div>
-        </div>
-
-        {/* Main content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24 pb-16">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
           <div className="animate-fade-in-up">
-            <span className="inline-block bg-white/10 border border-white/20 text-blue-200 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
+            <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
               Österreichs Spezialist für digitale Positionierung von Ärzt:innen
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight animate-fade-in-up delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fade-in-up delay-100">
             <span className="gradient-text">Ihre Ordination.</span>
             <br />
             <span className="text-white">Digital positioniert.</span>
             <br />
-            <span className="text-green-300">Von KI empfohlen.</span>
+            <span className="text-[#ff8a00]">Von KI empfohlen.</span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-lg sm:text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             Wir machen niedergelassene Ärztinnen und Ärzte dort sichtbar, wo Patienten heute und morgen suchen – in Suchmaschinen und KI-Systemen wie ChatGPT.
           </p>
 
@@ -58,23 +37,22 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-400">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-400">
             <a
               href="#kontakt"
-              className="bg-accent hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all shadow-lg hover:shadow-green-500/30 hover:scale-105"
+              className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-4 rounded-xl text-base sm:text-lg transition-all shadow-lg hover:shadow-orange-500/30 hover:scale-105"
             >
               Erstberatung vereinbaren
             </a>
             <a
               href="#leistungen"
-              className="glass-card hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all"
+              className="glass-card hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-base sm:text-lg transition-all"
             >
               Leistungen ansehen
             </a>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <svg className="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -83,68 +61,52 @@ export default function HomePage() {
       </section>
 
       {/* ===== PROBLEMVERSTÄNDNIS ===== */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             Das Problem
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-primary">
             Sie sind Experte in Ihrem Fach. Online merkt man das nicht.
           </h2>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Sie haben sich als Wahlärztin oder Wahlarzt selbstständig gemacht – für mehr Autonomie, mehr Zeit pro Patient, bessere Medizin. Ihre Expertise spricht für sich, Ihre Patienten empfehlen Sie weiter.
           </p>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Aber: Wer Sie noch nicht kennt, findet Sie nicht. Nicht auf Google, nicht bei ChatGPT, nicht bei Perplexity. Und die nächste Generation an Patienten sucht genau dort.
           </p>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Gleichzeitig stehen Sie vor einem regulatorischen Minenfeld: ÖÄK-Werberichtlinien, DSGVO, Impressumspflicht, Barrierefreiheitsgesetz. Eine Website aufzusetzen, die nicht nur gut aussieht, sondern auch rechtskonform ist – das braucht Spezialwissen.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             Wir bringen beides zusammen: Rechtskonformität und digitale Sichtbarkeit. Damit Ihre Ordination nicht nur existiert, sondern gefunden wird.
           </p>
         </div>
       </section>
 
       {/* ===== WAS UNS UNTERSCHEIDET ===== */}
-      <section className="py-24 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
               Was uns unterscheidet
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-primary">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-primary">
             Nicht einfach eine Website. Eine digitale Positionierung.
           </h2>
-          <p className="text-center text-gray-500 mb-12 text-lg">Vier Gründe, warum Ärzte uns wählen</p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <p className="text-center text-gray-500 mb-12 text-base sm:text-lg">Vier Gründe, warum Ärzte uns wählen</p>
+          <div className="grid sm:grid-cols-2 gap-6">
             {[
-              {
-                icon: '🔍',
-                title: 'Tiefenrecherche statt Template',
-                text: 'Wir analysieren Ihr Fachgebiet, Ihren Werdegang, Ihre Region und Ihre Mitbewerber. Jeder Text auf Ihrer Website basiert auf echten Daten – nicht auf Platzhaltern.',
-              },
-              {
-                icon: '🤖',
-                title: 'KI-Sichtbarkeit statt nur Google',
-                text: 'Immer mehr Patienten suchen über KI-Assistenten nach Ärzten. Wir implementieren strukturierte Daten, semantische Inhalte und llms.txt – damit Ihre Ordination in KI-Antworten genannt wird.',
-              },
-              {
-                icon: '⚖️',
-                title: 'Rechtskonform ohne Ihr Zutun',
-                text: 'ÖÄK-Werberichtlinien, DSGVO, Impressumspflicht, Barrierefreiheitsgesetz – wir kennen die Anforderungen und setzen sie um. Sie konzentrieren sich auf Ihre Patienten.',
-              },
-              {
-                icon: '🎯',
-                title: 'Wunschpatienten statt Laufkundschaft',
-                text: 'Durch gezielte Positionierung erreichen Sie genau die Patienten, die zu Ihrer Spezialisierung passen. Nicht mehr Patienten – die richtigen Patienten.',
-              },
+              { icon: '🔍', title: 'Tiefenrecherche statt Template', text: 'Wir analysieren Ihr Fachgebiet, Ihren Werdegang, Ihre Region und Ihre Mitbewerber. Jeder Text auf Ihrer Website basiert auf echten Daten – nicht auf Platzhaltern.' },
+              { icon: '🤖', title: 'KI-Sichtbarkeit statt nur Google', text: 'Immer mehr Patienten suchen über KI-Assistenten nach Ärzten. Wir implementieren strukturierte Daten, semantische Inhalte und llms.txt – damit Ihre Ordination in KI-Antworten genannt wird.' },
+              { icon: '⚖️', title: 'Rechtskonform ohne Ihr Zutun', text: 'ÖÄK-Werberichtlinien, DSGVO, Impressumspflicht, Barrierefreiheitsgesetz – wir kennen die Anforderungen und setzen sie um. Sie konzentrieren sich auf Ihre Patienten.' },
+              { icon: '🎯', title: 'Wunschpatienten statt Laufkundschaft', text: 'Durch gezielte Positionierung erreichen Sie genau die Patienten, die zu Ihrer Spezialisierung passen. Nicht mehr Patienten – die richtigen Patienten.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
+              <div key={item.title} className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 card-hover">
                 <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-primary">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.text}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 text-primary">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{item.text}</p>
               </div>
             ))}
           </div>
@@ -152,89 +114,89 @@ export default function HomePage() {
       </section>
 
       {/* ===== PAKETE ===== */}
-      <section className="py-24 px-6 bg-white" id="leistungen">
+      <section className="py-20 px-6 bg-white" id="leistungen">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
               Leistungen & Preise
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-primary">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-primary">
             Zwei Wege zu Ihrer digitalen Praxis-Präsenz.
           </h2>
-          <p className="text-center text-gray-500 mb-12 text-lg">Transparente Festpreise. Bis zu 30 % über KMU.DIGITAL förderbar.</p>
+          <p className="text-center text-gray-500 mb-12 text-base sm:text-lg">Transparente Festpreise. Bis zu 30 % über KMU.DIGITAL förderbar.</p>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Paket 1 */}
-            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-200 card-hover flex flex-col">
-              <h3 className="text-2xl font-bold text-primary mb-2">Praxis-Website</h3>
-              <p className="text-gray-500 mb-6">Ihre professionelle Online-Präsenz.</p>
-              <p className="text-5xl font-extrabold text-primary mb-1">€ 3.900</p>
+            <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-200 card-hover flex flex-col">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Praxis-Website</h3>
+              <p className="text-gray-500 mb-6 text-sm sm:text-base">Ihre professionelle Online-Präsenz.</p>
+              <p className="text-4xl sm:text-5xl font-extrabold text-primary mb-1">€ 3.900</p>
               <p className="text-sm text-gray-400 mb-6">netto, einmalig</p>
-              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1">
+              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1 text-sm sm:text-base">
                 {['Bis 5 Seiten individuell gestaltet', 'Local SEO & Google Maps', 'DSGVO- & ÖÄK-konform', 'Basis Schema Markup', 'Mobile-Optimierung & SSL', 'Online-Terminbuchung', 'Cookie-Banner & Impressum', 'Einschulung', '12 Monate technische Betreuung'].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
-              <div className="bg-green-50 border border-green-100 rounded-xl p-4 mb-6">
+              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-600">Paketpreis: € 3.900</p>
-                <p className="text-sm text-green-700 font-medium">KMU.DIGITAL (30 %): − € 1.170</p>
-                <p className="text-lg font-bold text-green-800">Ihr Eigenanteil: € 2.730</p>
+                <p className="text-sm text-orange-700 font-medium">KMU.DIGITAL (30 %): − € 1.170</p>
+                <p className="text-base sm:text-lg font-bold text-orange-800">Ihr Eigenanteil: € 2.730</p>
               </div>
-              <a href="#kontakt" className="block text-center bg-primary hover:bg-blue-900 text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105">
+              <a href="#kontakt" className="block text-center bg-primary hover:bg-[#2040b8] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base">
                 Erstberatung anfordern
               </a>
             </div>
 
             {/* Paket 2 - Empfohlen */}
-            <div className="bg-gradient-to-b from-[#1a365d] to-[#2b6cb0] rounded-2xl shadow-2xl p-8 border-0 relative card-hover flex flex-col">
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-sm font-bold px-5 py-1.5 rounded-full shadow-lg">
+            <div className="bg-gradient-to-b from-[#2d4fd6] to-[#3b62e8] rounded-2xl shadow-2xl p-6 sm:p-8 relative card-hover flex flex-col">
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff8a00] text-white text-sm font-bold px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
                 EMPFOHLEN
               </span>
-              <h3 className="text-2xl font-bold text-white mb-2">Digitale Positionierung</h3>
-              <p className="text-blue-200 mb-6">Gefunden werden, wo Patienten suchen.</p>
-              <p className="text-5xl font-extrabold text-white mb-1">€ 7.500</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Digitale Positionierung</h3>
+              <p className="text-blue-200 mb-6 text-sm sm:text-base">Gefunden werden, wo Patienten suchen.</p>
+              <p className="text-4xl sm:text-5xl font-extrabold text-white mb-1">€ 7.500</p>
               <p className="text-sm text-blue-300 mb-6">netto, einmalig</p>
-              <ul className="space-y-2.5 text-blue-100 mb-8 flex-1">
+              <ul className="space-y-2.5 text-blue-100 mb-8 flex-1 text-sm sm:text-base">
                 {['Alles aus Praxis-Website, plus:', 'Bis 10 Seiten', 'Tiefenrecherche: Fachgebiet, Wettbewerber, Region', 'Zielgruppenanalyse (Wunschpatienten-Profil)', 'Maßgeschneiderte Texte', 'KI-Readiness: Schema Markup & llms.txt', 'KI-Telefonassistent', 'KI-Sichtbarkeitsanalyse (Vorher/Nachher)', 'FAQ-System', '12 Monate technische Betreuung'].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-green-400 mt-0.5">✓</span>
+                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
               <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6">
                 <p className="text-sm text-blue-200">Paketpreis: € 7.500</p>
-                <p className="text-sm text-green-300 font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
-                <p className="text-lg font-bold text-white">Ihr Eigenanteil: € 5.250</p>
+                <p className="text-sm text-[#ffaa40] font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
+                <p className="text-base sm:text-lg font-bold text-white">Ihr Eigenanteil: € 5.250</p>
               </div>
-              <a href="#kontakt" className="block text-center bg-accent hover:bg-green-500 text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105">
+              <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base">
                 Erstberatung anfordern
               </a>
             </div>
 
             {/* Paket 3 */}
-            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-200 card-hover flex flex-col">
-              <h3 className="text-2xl font-bold text-primary mb-2">Ärztezentren &amp; PVEs</h3>
-              <p className="text-gray-500 mb-6">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
-              <p className="text-3xl font-extrabold text-primary mb-1">Individuelles Konzept</p>
+            <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-200 card-hover flex flex-col">
+              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Ärztezentren &amp; PVEs</h3>
+              <p className="text-gray-500 mb-6 text-sm sm:text-base">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
+              <p className="text-2xl sm:text-3xl font-extrabold text-primary mb-1">Individuelles Konzept</p>
               <p className="text-sm text-gray-400 mb-6">auf Anfrage</p>
-              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1">
+              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1 text-sm sm:text-base">
                 {['Analyse & Strategie fürs Zentrum', 'Interdisziplinäre Schema-Architektur', 'KI-Readiness für alle Fachrichtungen', 'Individuelle Arzt-Profilseiten', 'Gemeinsame llms.txt', 'KMU.DIGITAL Förderberatung', 'Recruiting & Mehrsprachigkeit', 'Laufende Betreuung'].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-green-500 mt-0.5">✓</span>
+                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
-              <div className="bg-green-50 border border-green-100 rounded-xl p-4 mb-6">
+              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-6">
                 <p className="text-sm text-gray-600">Pro Arzt förderbar: bis € 6.000</p>
-                <p className="text-lg font-bold text-green-800">Bei 10 Ärzten: bis € 60.000 Förderung</p>
+                <p className="text-base sm:text-lg font-bold text-orange-800">Bei 10 Ärzten: bis € 60.000 Förderung</p>
               </div>
-              <a href="#kontakt" className="block text-center bg-primary hover:bg-blue-900 text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105">
+              <a href="#kontakt" className="block text-center bg-primary hover:bg-[#2040b8] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base">
                 Projekt besprechen
               </a>
             </div>
@@ -243,37 +205,37 @@ export default function HomePage() {
       </section>
 
       {/* ===== KI-SICHTBARKEIT ===== */}
-      <section className="py-24 px-6 bg-gradient-to-br from-[#0f1e3c] to-[#1a365d] text-white" id="ki">
+      <section className="py-20 px-6 bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8] text-white" id="ki">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
-            <span className="inline-block bg-white/10 border border-white/20 text-blue-200 text-sm font-semibold px-4 py-1.5 rounded-full">
+            <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full">
               KI-Sichtbarkeit
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
             Werden Sie von ChatGPT empfohlen?
           </h2>
-          <p className="text-lg text-blue-100 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-blue-100 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
             Testen Sie es selbst: Fragen Sie ChatGPT nach einem Facharzt Ihrer Richtung in Ihrer Stadt. Werden Sie genannt? Falls nicht – und das betrifft über 90 % aller Ordinationen in Österreich – dann ist Ihre Online-Präsenz für KI-Systeme unsichtbar.
           </p>
-          <h3 className="text-2xl font-semibold mb-10 text-center">Unser Drei-Schichten-Ansatz</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-10 text-center">Unser Drei-Schichten-Ansatz</h3>
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
             {[
               { nr: '1', title: 'Strukturierte Daten', text: 'Maschinenlesbare Informationen über Ihre Fachrichtung, Leistungen und Standort. Google, Bing und KI-Systeme lesen diese Daten direkt aus.' },
               { nr: '2', title: 'Semantische Inhalte', text: 'Texte, die so formuliert sind, dass KI Ihre Expertise korrekt einordnen kann. Nicht SEO-Texte für Google – Antwort-optimierte Inhalte für KI.' },
               { nr: '3', title: 'llms.txt', text: 'Eine spezielle Datei, die KI-Crawler von OpenAI, Anthropic und Perplexity gezielt auslesen. Ihr digitales Profil für die KI-Suche.' },
             ].map((item) => (
-              <div key={item.nr} className="glass-card rounded-2xl p-8 text-center card-hover">
-                <div className="w-14 h-14 bg-accent/20 border border-accent/30 rounded-full flex items-center justify-center mx-auto mb-5">
-                  <span className="text-2xl font-extrabold text-green-300">{item.nr}</span>
+              <div key={item.nr} className="glass-card rounded-2xl p-6 sm:p-8 text-center card-hover">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#ff8a00]/20 border border-[#ff8a00]/30 rounded-full flex items-center justify-center mx-auto mb-5">
+                  <span className="text-xl sm:text-2xl font-extrabold text-[#ff8a00]">{item.nr}</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-3 text-white">{item.title}</h4>
+                <h4 className="text-base sm:text-lg font-semibold mb-3 text-white">{item.title}</h4>
                 <p className="text-blue-200 leading-relaxed text-sm">{item.text}</p>
               </div>
             ))}
           </div>
-          <div className="mt-12 bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
-            <p className="text-lg text-blue-100 leading-relaxed">
+          <div className="mt-12 bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 text-center">
+            <p className="text-base sm:text-lg text-blue-100 leading-relaxed">
               Wenn ein Patient ChatGPT fragt <em>„Welcher Hautarzt in St. Pölten hat gute Bewertungen?"</em>, wird Ihre Ordination in der Antwort genannt – mit Ihrem Namen, Ihrer Fachrichtung und Ihrem Standort.
             </p>
           </div>
@@ -281,74 +243,73 @@ export default function HomePage() {
       </section>
 
       {/* ===== FÖRDERUNG ===== */}
-      <section className="py-24 px-6 bg-gray-50" id="foerderung">
+      <section className="py-20 px-6 bg-gray-50" id="foerderung">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-4">
-            <span className="inline-block bg-green-50 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full">
+            <span className="inline-block bg-orange-50 text-[#cc6600] text-sm font-semibold px-4 py-1.5 rounded-full">
               KMU.DIGITAL Förderung
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-primary">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center text-primary">
             Bis zu 30 % Ihrer Investition kommt zurück.
           </h2>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Über das österreichische Förderprogramm KMU.DIGITAL erhalten niedergelassene Ärztinnen und Ärzte bis zu 30 % der Investitionskosten als Förderung zurück. Maximal € 6.000 pro Unternehmen.
           </p>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed">
-            Voraussetzung ist eine einmalige Strategieberatung durch einen zertifizierten Digital Consultant (CDC). Kosten: ca. € 500 – davon werden 50 % (€ 250) ebenfalls gefördert. Wir arbeiten mit einem erfahrenen, externen Förderberater zusammen, der die gesamte Beratung und Antragstellung für Sie übernimmt.
+          <p className="text-base sm:text-lg text-gray-700 mb-10 leading-relaxed">
+            Voraussetzung ist eine einmalige Strategieberatung durch einen zertifizierten Digital Consultant (CDC). Kosten: ca. € 500 – davon werden 50 % (€ 250) ebenfalls gefördert. Wir arbeiten mit einem erfahrenen, externen Förderberater zusammen.
           </p>
           <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-200">
             <table className="w-full bg-white">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="text-left p-5 text-gray-500 font-medium"></th>
-                  <th className="text-center p-5 text-primary font-bold">Praxis-Website</th>
-                  <th className="text-center p-5 text-primary font-bold">Digitale Positionierung</th>
+                  <th className="text-left p-4 sm:p-5 text-gray-500 font-medium text-sm sm:text-base"></th>
+                  <th className="text-center p-4 sm:p-5 text-primary font-bold text-sm sm:text-base">Praxis-Website</th>
+                  <th className="text-center p-4 sm:p-5 text-primary font-bold text-sm sm:text-base">Digitale Positionierung</th>
                 </tr>
               </thead>
               <tbody>
                 {[
                   { label: 'Paketpreis', v1: '€ 3.900', v2: '€ 7.500', bold: false },
-                  { label: 'Förderung (30 %)', v1: '− € 1.170', v2: '− € 2.250', green: true },
+                  { label: 'Förderung (30 %)', v1: '− € 1.170', v2: '− € 2.250', orange: true },
                   { label: 'Ihr Eigenanteil', v1: '€ 2.730', v2: '€ 5.250', bold: true },
                 ].map((row) => (
                   <tr key={row.label} className="border-b border-gray-100 last:border-0">
-                    <td className={`p-5 ${row.bold ? 'font-bold text-gray-900' : 'text-gray-600'}`}>{row.label}</td>
-                    <td className={`p-5 text-center ${row.bold ? 'font-bold text-lg' : ''} ${row.green ? 'text-green-700 font-medium' : ''}`}>{row.v1}</td>
-                    <td className={`p-5 text-center ${row.bold ? 'font-bold text-lg' : ''} ${row.green ? 'text-green-700 font-medium' : ''}`}>{row.v2}</td>
+                    <td className={`p-4 sm:p-5 text-sm sm:text-base ${row.bold ? 'font-bold text-gray-900' : 'text-gray-600'}`}>{row.label}</td>
+                    <td className={`p-4 sm:p-5 text-center text-sm sm:text-base ${row.bold ? 'font-bold text-base sm:text-lg' : ''} ${row.orange ? 'text-[#cc6600] font-medium' : ''}`}>{row.v1}</td>
+                    <td className={`p-4 sm:p-5 text-center text-sm sm:text-base ${row.bold ? 'font-bold text-base sm:text-lg' : ''} ${row.orange ? 'text-[#cc6600] font-medium' : ''}`}>{row.v2}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-400 mt-4 text-center">Strategieberatung (CDC): ca. € 500, davon € 250 gefördert. Netto-Aufwand für Sie: ca. € 250.</p>
+          <p className="text-xs sm:text-sm text-gray-400 mt-4 text-center">Strategieberatung (CDC): ca. € 500, davon € 250 gefördert. Netto-Aufwand für Sie: ca. € 250.</p>
         </div>
       </section>
 
       {/* ===== PROZESS ===== */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
               Ablauf
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-primary">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-16 text-center text-primary">
             In vier Schritten zu Ihrer digitalen Praxis-Präsenz.
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary/20 via-secondary to-primary/20" />
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { nr: '1', title: 'Erstgespräch', text: '30 Minuten, kostenlos. Wir lernen Ihre Ordination kennen und erklären Förderoptionen.' },
               { nr: '2', title: 'Förderberatung', text: 'Unser CDC führt die KMU.DIGITAL Strategieberatung durch – erst nach Förderzusage starten wir.' },
               { nr: '3', title: 'Umsetzung', text: 'Analyse, Texte, Design, Schema Markup und KI-Readiness – alles aus einer Hand.' },
               { nr: '4', title: 'Launch', text: 'Ihre Website geht online. 12 Monate Betreuung und KI-Sichtbarkeits-Monitoring inklusive.' },
             ].map((step) => (
-              <div key={step.nr} className="text-center relative">
-                <div className="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-5 text-xl font-extrabold shadow-lg relative z-10">
+              <div key={step.nr} className="text-center">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-5 text-lg sm:text-xl font-extrabold shadow-lg">
                   {step.nr}
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-primary">{step.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold mb-2 text-primary">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.text}</p>
               </div>
             ))}
@@ -357,14 +318,14 @@ export default function HomePage() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="py-24 px-6 bg-gray-50" id="faq">
+      <section className="py-20 px-6 bg-gray-50" id="faq">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
               FAQ
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary">Häufige Fragen</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center text-primary">Häufige Fragen</h2>
           <div className="space-y-4">
             {[
               { q: 'Was kostet eine Website für Ärzte in Österreich?', a: 'Unsere Praxis-Website liegt bei € 3.900 netto, die Digitale Positionierung mit Tiefenrecherche und KI-Readiness bei € 7.500 netto. Für Ärztezentren und PVEs erstellen wir individuelle Konzepte. Über KMU.DIGITAL sind bis zu 30 % förderbar.' },
@@ -378,13 +339,13 @@ export default function HomePage() {
               { q: 'Brauche ich technisches Wissen?', a: 'Nein. Wir übernehmen alles – von der Recherche über die Förderabwicklung bis zum Launch. Nach der Fertigstellung erhalten Sie eine Einschulung, damit Sie einfache Änderungen selbst vornehmen können.' },
             ].map((faq, i) => (
               <details key={i} className="bg-white rounded-2xl border border-gray-200 shadow-sm group overflow-hidden">
-                <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-6">
+                <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-5 sm:p-6 text-sm sm:text-base">
                   {faq.q}
                   <span className="ml-4 flex-shrink-0 w-6 h-6 bg-blue-50 rounded-full flex items-center justify-center text-secondary font-bold text-sm group-open:rotate-45 transition-transform duration-300">
                     +
                   </span>
                 </summary>
-                <p className="text-gray-600 px-6 pb-6 leading-relaxed">{faq.a}</p>
+                <p className="text-gray-600 px-5 sm:px-6 pb-5 sm:pb-6 leading-relaxed text-sm sm:text-base">{faq.a}</p>
               </details>
             ))}
           </div>
@@ -392,40 +353,45 @@ export default function HomePage() {
       </section>
 
       {/* ===== KONTAKT / CTA ===== */}
-      <section className="py-24 px-6 bg-gradient-to-br from-[#0f1e3c] to-[#1a365d] text-white relative overflow-hidden" id="kontakt">
+      <section className="py-20 px-6 bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8] text-white relative overflow-hidden" id="kontakt">
         <div className="absolute inset-0 hero-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <span className="inline-block bg-white/10 border border-white/20 text-blue-200 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+          <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
             Kostenloses Erstgespräch
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Bereit für Ihre digitale Positionierung?</h2>
-          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Bereit für Ihre digitale Positionierung?</h2>
+          <p className="text-base sm:text-xl text-blue-100 mb-10 leading-relaxed">
             Vereinbaren Sie ein kostenloses Erstgespräch. 30 Minuten. Unverbindlich. Wir zeigen Ihnen, wie Ihre Ordination in KI-Systemen sichtbar wird.
           </p>
           <a
             href="mailto:office@mypraxis.at"
-            className="inline-block bg-accent hover:bg-green-500 text-white font-bold px-10 py-5 rounded-xl text-lg transition-all hover:scale-105 shadow-lg hover:shadow-green-500/30 animate-pulse-glow"
+            className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-base sm:text-lg transition-all hover:scale-105 shadow-lg"
           >
             Erstberatung vereinbaren
           </a>
-          <p className="mt-8 text-blue-300">Oder rufen Sie an: <a href="tel:+436641915447" className="text-white hover:text-green-300 transition-colors font-semibold">+43 664 19 15 447</a></p>
+          <p className="mt-8 text-blue-300 text-sm sm:text-base">
+            Oder rufen Sie an:{' '}
+            <a href="tel:+436641915447" className="text-white hover:text-[#ff8a00] transition-colors font-semibold">
+              +43 664 19 15 447
+            </a>
+          </p>
         </div>
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer className="py-14 px-6 bg-[#0a1628] text-gray-400">
+      <footer className="py-12 px-6 bg-[#111827] text-gray-400">
         <div className="max-w-5xl mx-auto">
-          <p className="mb-4 text-sm leading-relaxed">
+          <p className="mb-4 text-xs sm:text-sm leading-relaxed">
             mypraxis.at ist eine auf niedergelassene Ärztinnen und Ärzte spezialisierte Digitalagentur in Österreich. Betrieben von Kevin Hofbauer e.U. mit Sitz in Niederösterreich. Wir erstellen rechtssichere Praxis-Websites nach ÖÄK-Richtlinien, implementieren strukturierte Daten für medizinische Einrichtungen und optimieren die Sichtbarkeit von Ordinationen in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI Overviews.
           </p>
-          <p className="mb-8 text-xs text-gray-500 leading-relaxed">
+          <p className="mb-8 text-xs text-gray-600 leading-relaxed">
             Wir betreuen Ärztinnen und Ärzte aller Fachrichtungen: Allgemeinmedizin, Innere Medizin, Orthopädie, Kardiologie, Dermatologie, Gynäkologie, HNO, Urologie, Neurologie, Chirurgie, Augenheilkunde, Kinderheilkunde, Zahnmedizin, Alternativmedizin und alle weiteren Fachrichtungen.
           </p>
-          <div className="flex flex-wrap gap-6 text-sm border-t border-gray-800 pt-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm border-t border-gray-800 pt-6">
             <a href="/impressum" className="hover:text-white transition-colors">Impressum</a>
             <a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a>
             <a href="mailto:office@mypraxis.at" className="hover:text-white transition-colors">office@mypraxis.at</a>
-            <span className="ml-auto">© {new Date().getFullYear()} Kevin Hofbauer e.U.</span>
+            <span className="sm:ml-auto">© {new Date().getFullYear()} Kevin Hofbauer e.U.</span>
           </div>
         </div>
       </footer>
