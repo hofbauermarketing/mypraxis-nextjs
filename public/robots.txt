@@ -1,0 +1,67 @@
+# robots.txt – mypraxis.at
+# KI-Crawler explizit willkommen
+
+User-agent: *
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft / Bing / Copilot
+User-agent: Bingbot
+Allow: /
+User-agent: BingPreview
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta
+User-agent: Facebookbot
+Allow: /
+User-agent: FacebookExternalHit
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl (Training-Daten)
+User-agent: CCBot
+Allow: /
+
+# Weitere KI-Crawler
+User-agent: Bytespider
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: Timpibot
+Allow: /
+
+Sitemap: https://www.mypraxis.at/sitemap.xml
