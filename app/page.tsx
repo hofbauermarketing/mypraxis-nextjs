@@ -96,11 +96,20 @@ export default function HomePage() {
           {/* AI logos – scattered row */}
           <div className="mt-10 flex flex-col items-center gap-3 animate-fade-in-up delay-600">
             <p className="text-blue-400/50 text-xs tracking-[0.2em] uppercase">Wir optimieren für</p>
-            <div className="flex items-center justify-center gap-6 flex-wrap">
-              <Image src="/logos/chatgpt.webp" alt="ChatGPT" width={38} height={24} className="opacity-50 hover:opacity-80 transition-opacity" style={{ objectFit: 'contain' }} />
-              <Image src="/logos/gemini.webp" alt="Google Gemini" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-full" style={{ objectFit: 'contain' }} />
-              <Image src="/logos/perplexity.webp" alt="Perplexity" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-xl" style={{ objectFit: 'contain' }} />
-              <Image src="/logos/claude.webp" alt="Claude AI" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-full" style={{ objectFit: 'contain' }} />
+            <div className="flex items-center justify-center gap-8 flex-wrap">
+              {[
+                { src: '/logos/chatgpt.webp', label: 'ChatGPT', w: 38, h: 24 },
+                { src: '/logos/gemini.webp', label: 'Google Gemini', w: 32, h: 32 },
+                { src: '/logos/perplexity.webp', label: 'Perplexity', w: 32, h: 32 },
+                { src: '/logos/claude.webp', label: 'Anthropic Claude', w: 32, h: 32 },
+              ].map(({ src, label, w, h }) => (
+                <div key={label} className="group relative flex flex-col items-center gap-1.5">
+                  <Image src={src} alt={label} width={w} height={h} className="opacity-50 group-hover:opacity-85 transition-opacity" style={{ objectFit: 'contain' }} />
+                  <span className="text-white/60 text-[10px] tracking-wide opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    {label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -281,18 +290,19 @@ export default function HomePage() {
             Transparente Festpreise. Bis zu 30 % über KMU.DIGITAL förderbar.
           </p>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Praxis-Website & Digitale Positionierung – nebeneinander */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Paket 1 */}
             <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-200 card-hover flex flex-col">
               <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Praxis-Website</h3>
-              <p className="text-gray-500 mb-4 text-sm sm:text-base">Ihre professionelle Online-Präsenz.</p>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-500 mb-3 text-sm">Ihre professionelle Online-Präsenz.</p>
+              <p className="text-xs text-gray-500 mb-4 leading-relaxed">
                 Für Ärztinnen und Ärzte, die eine professionelle, rechtssichere Website brauchen – sauber umgesetzt,
                 ohne Kompromisse bei Qualität und Compliance.
               </p>
               <p className="text-4xl sm:text-5xl font-extrabold text-primary mb-1">€ 3.900</p>
-              <p className="text-sm text-gray-400 mb-6">netto, einmalig</p>
-              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1 text-sm sm:text-base">
+              <p className="text-xs text-gray-400 mb-6">netto, einmalig</p>
+              <ul className="space-y-2 text-gray-700 mb-8 flex-1 text-xs sm:text-sm">
                 {[
                   'Bis 5 Seiten (Home, Über mich, Leistungen, Kontakt, Impressum)',
                   'Individuelles Design (kein Template)',
@@ -307,22 +317,22 @@ export default function HomePage() {
                   '12 Monate technische Betreuung',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
+                    <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
               <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4">
-                <p className="text-sm text-gray-600">Paketpreis: € 3.900</p>
-                <p className="text-sm text-orange-700 font-medium">KMU.DIGITAL (30 %): − € 1.170</p>
-                <p className="text-base sm:text-lg font-bold text-orange-800">Ihr Eigenanteil: € 2.730</p>
+                <p className="text-xs text-gray-600">Paketpreis: € 3.900</p>
+                <p className="text-xs text-orange-700 font-medium">KMU.DIGITAL (30 %): − € 1.170</p>
+                <p className="text-sm font-bold text-orange-800">Ihr Eigenanteil: € 2.730</p>
               </div>
               <p className="text-xs text-gray-400 mb-4 italic">
                 Ideal für Kassenärzte und Wahlärzte, die eine solide digitale Visitenkarte brauchen.
               </p>
               <a
                 href="#kontakt"
-                className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base"
+                className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
               >
                 Erstberatung anfordern
               </a>
@@ -334,14 +344,14 @@ export default function HomePage() {
                 EMPFOHLEN
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Digitale Positionierung</h3>
-              <p className="text-blue-200 mb-4 text-sm sm:text-base">Gefunden werden, wo Patienten suchen.</p>
-              <p className="text-sm text-blue-200 mb-4 leading-relaxed">
+              <p className="text-blue-200 mb-3 text-sm">Gefunden werden, wo Patienten suchen.</p>
+              <p className="text-xs text-blue-200/90 mb-4 leading-relaxed">
                 Für Wahlärztinnen und Wahlärzte, die gezielt Wunschpatienten erreichen wollen. Wir recherchieren Ihr
                 Fachgebiet, analysieren Ihren Wettbewerb und positionieren Sie in Google UND KI-Systemen.
               </p>
               <p className="text-4xl sm:text-5xl font-extrabold text-white mb-1">€ 7.500</p>
-              <p className="text-sm text-blue-300 mb-6">netto, einmalig</p>
-              <ul className="space-y-2.5 text-blue-100 mb-8 flex-1 text-sm sm:text-base">
+              <p className="text-xs text-blue-300 mb-6">netto, einmalig</p>
+              <ul className="space-y-2 text-blue-100 mb-8 flex-1 text-xs sm:text-sm">
                 {[
                   'Alles aus Praxis-Website, plus:',
                   'Bis 10 Seiten (inkl. FAQ, Spezialisierungen, Ablauf)',
@@ -357,15 +367,15 @@ export default function HomePage() {
                   '12 Monate technische Betreuung inkl. Updates',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
-                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
+                    <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
               <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-4">
-                <p className="text-sm text-blue-200">Paketpreis: € 7.500</p>
-                <p className="text-sm text-[#ffaa40] font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
-                <p className="text-base sm:text-lg font-bold text-white">Ihr Eigenanteil: € 5.250</p>
+                <p className="text-xs text-blue-200">Paketpreis: € 7.500</p>
+                <p className="text-xs text-[#ffaa40] font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
+                <p className="text-sm font-bold text-white">Ihr Eigenanteil: € 5.250</p>
               </div>
               <p className="text-xs text-blue-300 mb-4 italic">
                 Nicht einfach eine Website – eine Strategie. Für Wahlärzte, die online die richtigen Patienten
@@ -373,55 +383,67 @@ export default function HomePage() {
               </p>
               <a
                 href="#kontakt"
-                className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base"
+                className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
               >
                 Erstberatung anfordern
               </a>
             </div>
+          </div>
 
-            {/* Paket 3 */}
-            <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-200 card-hover flex flex-col">
-              <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Ärztezentren &amp; PVEs</h3>
-              <p className="text-gray-500 mb-4 text-sm sm:text-base">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                Für interdisziplinäre Ärztezentren, Gruppenpraxen und PVEs. Wir entwickeln eine digitale
-                Infrastruktur, die alle Fachrichtungen verbindet – und jedem einzelnen Arzt maximale KI-Sichtbarkeit
-                verschafft.
-              </p>
-              <p className="text-2xl sm:text-3xl font-extrabold text-primary mb-1">Individuelles Konzept</p>
-              <p className="text-sm text-gray-400 mb-6">auf Anfrage</p>
-              <ul className="space-y-2.5 text-gray-700 mb-8 flex-1 text-sm sm:text-base">
-                {[
-                  'Analyse & Strategiekonzept fürs Zentrum',
-                  'Interdisziplinäre Schema-Architektur',
-                  'KI-Readiness für alle Fachrichtungen',
-                  'Individuelle Arzt-Profilseiten',
-                  'Gemeinsame llms.txt',
-                  'KMU.DIGITAL Förderberatung (jeder Arzt förderbar)',
-                  'Recruiting & Mehrsprachigkeit (optional)',
-                  'Laufende technische Betreuung',
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <span className="text-[#ff8a00] mt-0.5 font-bold">✓</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4">
-                <p className="text-sm text-gray-600">Pro Arzt förderbar: bis € 6.000</p>
-                <p className="text-base sm:text-lg font-bold text-orange-800">
-                  Bei 10 Ärzten: bis € 60.000 Förderung
-                </p>
+          {/* Paket 3 – Ärztezentren & PVEs (volle Breite, horizontal) */}
+          <div className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+            <div className="flex flex-col lg:flex-row">
+              {/* Links: Titel, Beschreibung, Preis, CTA */}
+              <div className="lg:w-72 xl:w-80 p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-blue-50/30 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Ärztezentren &amp; PVEs</h3>
+                  <p className="text-gray-500 mb-3 text-sm">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
+                  <p className="text-xs text-gray-500 mb-6 leading-relaxed">
+                    Für interdisziplinäre Ärztezentren, Gruppenpraxen und PVEs. Wir entwickeln eine digitale
+                    Infrastruktur, die alle Fachrichtungen verbindet – und jedem einzelnen Arzt maximale
+                    KI-Sichtbarkeit verschafft.
+                  </p>
+                  <p className="text-xl sm:text-2xl font-extrabold text-primary mb-1">Individuelles Konzept</p>
+                  <p className="text-xs text-gray-400 mb-2">auf Anfrage</p>
+                </div>
+                <div>
+                  <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4">
+                    <p className="text-xs text-gray-600">Pro Arzt förderbar: bis € 6.000</p>
+                    <p className="text-sm font-bold text-orange-800">Bei 10 Ärzten: bis € 60.000 Förderung</p>
+                  </div>
+                  <p className="text-xs text-gray-400 mb-4 italic">
+                    Jeder niedergelassene Arzt ist ein eigenständiges KMU und kann die Förderung individuell
+                    beantragen.
+                  </p>
+                  <a
+                    href="#kontakt"
+                    className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
+                  >
+                    Projekt besprechen
+                  </a>
+                </div>
               </div>
-              <p className="text-xs text-gray-400 mb-4 italic">
-                Jeder niedergelassene Arzt ist ein eigenständiges KMU und kann die Förderung individuell beantragen.
-              </p>
-              <a
-                href="#kontakt"
-                className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base"
-              >
-                Projekt besprechen
-              </a>
+
+              {/* Rechts: Features in 2 Spalten */}
+              <div className="flex-1 p-6 sm:p-8 flex items-center">
+                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-gray-700 text-xs sm:text-sm w-full">
+                  {[
+                    'Analyse & Strategiekonzept fürs Zentrum',
+                    'Interdisziplinäre Schema-Architektur',
+                    'KI-Readiness für alle Fachrichtungen',
+                    'Individuelle Arzt-Profilseiten',
+                    'Gemeinsame llms.txt',
+                    'KMU.DIGITAL Förderberatung (jeder Arzt förderbar)',
+                    'Recruiting & Mehrsprachigkeit (optional)',
+                    'Laufende technische Betreuung',
+                  ].map((f) => (
+                    <li key={f} className="flex items-start gap-2">
+                      <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           <p className="text-xs text-gray-400 text-center mt-6">
