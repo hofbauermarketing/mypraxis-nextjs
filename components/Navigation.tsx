@@ -55,6 +55,16 @@ export default function Navigation() {
               {item.label}
             </a>
           ))}
+          <Link
+            href="/blog"
+            className={`text-sm font-medium transition-colors ${
+              scrolled
+                ? 'text-gray-700 hover:text-blue-700'
+                : 'text-white/90 hover:text-white'
+            }`}
+          >
+            Blog
+          </Link>
           <a
             href="#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
@@ -99,6 +109,13 @@ export default function Navigation() {
               {item.label}
             </a>
           ))}
+          <Link
+            href="/blog"
+            className="text-gray-700 font-medium hover:text-blue-700"
+            onClick={() => setMenuOpen(false)}
+          >
+            Blog
+          </Link>
           <a
             href="#kontakt"
             className="bg-accent text-white font-semibold px-5 py-3 rounded-lg text-center"

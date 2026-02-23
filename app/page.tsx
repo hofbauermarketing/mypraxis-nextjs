@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import { getSortedPostsData } from '@/lib/blog'
 
 /** Inline brand helper: "my" always orange, "praxis.at" inherits parent color */
 function Mp() {
@@ -9,6 +11,8 @@ function Mp() {
     </>
   )
 }
+
+const BLOG_POSTS = getSortedPostsData()
 
 export default function HomePage() {
   return (
@@ -795,6 +799,43 @@ export default function HomePage() {
               Kontaktieren Sie uns – wir antworten ehrlich und verständlich
             </a>
             <p className="text-gray-400 text-xs mt-2">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== BLOG VORSCHAU ===== */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
+              Wissen für Ihre Praxis
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Aktuelle Artikel</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Praxisnahe Einblicke zu Kosten, KI-Sichtbarkeit und digitalem Aufbau für niedergelassene Ärzte.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {BLOG_POSTS.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-md"
+              >
+                <p className="text-xs font-semibold text-secondary uppercase tracking-wide">{post.date.slice(0, 7)}</p>
+                <h3 className="text-base font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed flex-1">{post.description}</p>
+                <span className="text-sm font-semibold text-primary flex items-center gap-1 mt-1">
+                  Lesen
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/blog" className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-xl transition-all text-sm">
+              Alle Artikel ansehen
+            </Link>
           </div>
         </div>
       </section>
