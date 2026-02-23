@@ -92,19 +92,30 @@ export default function HomePage() {
           </div>
 
           <p className="mt-5 text-blue-300 text-sm animate-fade-in-up delay-500">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
+
+          {/* AI logos – scattered row */}
+          <div className="mt-10 flex flex-col items-center gap-3 animate-fade-in-up delay-600">
+            <p className="text-blue-400/50 text-xs tracking-[0.2em] uppercase">Wir optimieren für</p>
+            <div className="flex items-center justify-center gap-6 flex-wrap">
+              <Image src="/logos/chatgpt.webp" alt="ChatGPT" width={38} height={24} className="opacity-50 hover:opacity-80 transition-opacity" style={{ objectFit: 'contain' }} />
+              <Image src="/logos/gemini.webp" alt="Google Gemini" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-full" style={{ objectFit: 'contain' }} />
+              <Image src="/logos/perplexity.webp" alt="Perplexity" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-xl" style={{ objectFit: 'contain' }} />
+              <Image src="/logos/claude.webp" alt="Claude AI" width={34} height={34} className="opacity-50 hover:opacity-80 transition-opacity rounded-full" style={{ objectFit: 'contain' }} />
+            </div>
+          </div>
         </div>
 
-        {/* Zigzag divider – white teeth cut into blue hero */}
+        {/* Zigzag divider – 3 wide gentle peaks */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <svg
-            viewBox="0 0 1440 56"
+            viewBox="0 0 1440 70"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full block"
-            style={{ height: '56px' }}
+            style={{ height: '70px' }}
           >
             <polygon
-              points="0,56 0,36 48,14 96,36 144,14 192,36 240,14 288,36 336,14 384,36 432,14 480,36 528,14 576,36 624,14 672,36 720,14 768,36 816,14 864,36 912,14 960,36 1008,14 1056,36 1104,14 1152,36 1200,14 1248,36 1296,14 1344,36 1392,14 1440,36 1440,56"
+              points="0,70 0,52 240,12 480,52 720,12 960,52 1200,12 1440,52 1440,70"
               fill="white"
             />
           </svg>

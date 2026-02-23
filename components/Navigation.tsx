@@ -19,7 +19,7 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
-          : 'bg-transparent py-5'
+          : 'bg-black/25 backdrop-blur-sm py-5'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -57,7 +57,7 @@ export default function Navigation() {
           ))}
           <a
             href="#kontakt"
-            className="bg-accent hover:bg-green-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all animate-pulse-glow"
+            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
           >
             Beratung vereinbaren
           </a>

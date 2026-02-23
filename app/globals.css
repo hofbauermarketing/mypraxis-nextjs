@@ -35,8 +35,8 @@ body {
 }
 
 @keyframes shimmer {
-  0% { background-position: -400% center; }
-  100% { background-position: 400% center; }
+  0% { background-position: -300% center; }
+  100% { background-position: 300% center; }
 }
 
 @keyframes slideInRight {
@@ -85,10 +85,12 @@ body {
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-slow {
   animation: floatSlow 7s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-slide-in-right {
@@ -155,21 +157,19 @@ body {
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #6b7280 0%,
-    #9ca3af 18%,
-    #d1d5db 32%,
-    #f3f4f6 44%,
-    #ffffff 50%,
-    #f3f4f6 56%,
-    #d1d5db 68%,
-    #9ca3af 82%,
-    #6b7280 100%
+    #4b5563 0%,
+    #6b7280 25%,
+    #9ca3af 45%,
+    #d1d5db 50%,
+    #9ca3af 55%,
+    #6b7280 75%,
+    #4b5563 100%
   );
-  background-size: 300% auto;
+  background-size: 250% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 5s linear infinite;
+  animation: shimmer 14s linear infinite;
   display: inline-block;
 }
 
