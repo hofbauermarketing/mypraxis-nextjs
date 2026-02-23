@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc]">
         {/* Hero background image – semi-transparent */}
         <div className="absolute inset-0">
           <Image
@@ -218,7 +218,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== KI-SICHTBARKEIT ===== */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8] text-white" id="ki">
+      <section className="py-20 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white" id="ki">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full">
@@ -366,7 +366,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== KONTAKT / CTA ===== */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#1e3ab8] via-[#2d4fd6] to-[#3b62e8] text-white relative overflow-hidden" id="kontakt">
+      <section className="py-20 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden" id="kontakt">
         <div className="absolute inset-0 hero-pattern" />
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
