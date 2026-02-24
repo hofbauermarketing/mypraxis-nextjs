@@ -63,10 +63,21 @@ export default function DemoIndexPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-14 px-6">
+      <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white px-6 pt-6 pb-14">
+        {/* Zurück-Link + Logo */}
+        <div className="max-w-4xl mx-auto flex items-center justify-between mb-10">
+          <Link href="/" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-semibold transition-colors">
+            ← Zurück zur Website
+          </Link>
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-white font-bold text-lg tracking-tight">
+              <span className="text-[#ff8a00]">my</span>praxis.at
+            </span>
+          </Link>
+        </div>
         <div className="max-w-4xl mx-auto text-center">
           <span className="inline-block bg-white/20 border border-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wide uppercase">
-            mypraxis.at · Demo-Seiten
+            Demo-Seiten
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">Stilvorlagen für Ihre Praxis-Website</h1>
           <p className="text-blue-100 text-base max-w-2xl mx-auto">
