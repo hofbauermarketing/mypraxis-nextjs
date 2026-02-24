@@ -477,11 +477,53 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
             Werden Sie von ChatGPT empfohlen?
           </h2>
-          <p className="text-base sm:text-lg text-blue-100 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-blue-100 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
             Testen Sie es selbst: Fragen Sie ChatGPT nach einem Facharzt Ihrer Richtung in Ihrer Stadt. Werden Sie
             genannt? Falls nicht – und das betrifft über 90 % aller Ordinationen in Österreich – dann ist Ihre
             Online-Präsenz für KI-Systeme unsichtbar.
           </p>
+        </div>
+      </section>
+
+      {/* ===== WEBSITE SCANNER ===== */}
+      <section className="py-20 px-6 bg-[#0a0f1e]" id="scan">
+        <div className="max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <span className="inline-block bg-[#ff8a00]/20 border border-[#ff8a00]/30 text-[#ff8a00] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              Kostenfreie Analyse · Gegenwert € 199
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              Ist Ihre Ordination online wirklich sichtbar?
+            </h2>
+            <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
+              Unser Scanner prüft Ihre Website auf KI-Sichtbarkeit, technische Mängel und Auffindbarkeit.
+              Der vollständige Bericht geht in wenigen Minuten direkt an Sie – unverbindlich.
+            </p>
+          </div>
+
+          {/* iframe */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+            <iframe
+              src="https://agenturkunden.io/mypraxis/embed-scan.html?t=277a6b337c9d91dba16c2aa7bc6a03426032f1290ab915fa"
+              width="100%"
+              height="760"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+
+          <p className="text-center text-slate-500 text-xs mt-4">
+            Der Bericht wird direkt an Sie gesendet – kein Anruf nötig, keine Verpflichtung.
+          </p>
+        </div>
+      </section>
+
+      {/* ===== DREI-SCHICHTEN-ANSATZ ===== */}
+      <section className="py-20 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden">
+        <div className="absolute inset-0 hero-pattern" />
+        <div className="relative z-10 max-w-5xl mx-auto">
           <h3 className="text-xl sm:text-2xl font-semibold mb-10 text-center">
             Unser Drei-Schichten-Ansatz für KI-Sichtbarkeit
           </h3>
