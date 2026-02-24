@@ -12,12 +12,37 @@ interface Video {
   description: string
   category: string
   duration?: string
+  source?: string
+  placeholder?: boolean
 }
 
-// ─── Videos hier eintragen ───────────────────────────────────────────────────
-// youtubeId: Der Teil nach „watch?v=" in der YouTube-URL
-// Beispiel: https://www.youtube.com/watch?v=dQw4w9WgXcQ → youtubeId: 'dQw4w9WgXcQ'
 const videos: Video[] = [
+  // ─── Echte Videos ───────────────────────────────────────────────────────────
+  {
+    youtubeId: 'T3hzI7ZMpFw',
+    title: 'KI gegen Krebs – Revolution der Medizin?',
+    description:
+      'KI-Systeme revolutionieren die Krebsdiagnose: Tumorzellen werden früher erkannt, Therapien präziser geplant. Dieses Video der KI WELT zeigt, wie maschinelles Lernen die Onkologie verändert – von der Bildanalyse bis zur personalisierten Behandlung.',
+    category: 'KI & Medizin',
+    source: 'KI WELT',
+  },
+  {
+    youtubeId: 'gxjjAV-oFMA',
+    title: 'Ich habe meine Gesundheit von KI analysieren lassen',
+    description:
+      'Ein Selbstversuch: Was passiert, wenn man seine Gesundheitsdaten von einer künstlichen Intelligenz auswerten lässt? Ein aufschlussreicher Erfahrungsbericht über Chancen und Grenzen von KI in der persönlichen Gesundheitsanalyse.',
+    category: 'KI & Medizin',
+  },
+  {
+    youtubeId: 'O0IVw_0R5eU',
+    title: 'Wie funktioniert die Medizin von morgen?',
+    description:
+      'Der Bayrische Rundfunk beleuchtet, wie künstliche Intelligenz das Gesundheitssystem transformiert – von der Diagnose über die Behandlung bis zur Prävention. Ein fundierter Überblick über KI-Anwendungen in der Medizin von morgen.',
+    category: 'KI & Medizin',
+    source: 'Bayrischer Rundfunk',
+  },
+
+  // ─── Platzhalter – werden sukzessive befüllt ────────────────────────────────
   {
     youtubeId: 'PLACEHOLDER_1',
     title: 'KI-Sichtbarkeit für Arztpraxen – Was Ärzte 2025 wissen müssen',
@@ -25,6 +50,7 @@ const videos: Video[] = [
       'Wie ChatGPT, Google Gemini und andere KI-Systeme Patientenanfragen beantworten und warum die Sichtbarkeit Ihrer Praxis in diesen Systemen immer wichtiger wird.',
     category: 'KI & Sichtbarkeit',
     duration: '~15 Min.',
+    placeholder: true,
   },
   {
     youtubeId: 'PLACEHOLDER_2',
@@ -33,14 +59,16 @@ const videos: Video[] = [
       'Google zeigt bei bis zu 60 % aller Suchanfragen KI-generierte Zusammenfassungen. Erfahren Sie, wie Sie sicherstellen, dass Ihre Praxis dort positiv erwähnt wird.',
     category: 'KI & Sichtbarkeit',
     duration: '~12 Min.',
+    placeholder: true,
   },
   {
     youtubeId: 'PLACEHOLDER_3',
     title: 'Schema Markup für Ärzte – Strukturierte Daten einfach erklärt',
     description:
-      'Strukturierte Daten helfen KI-Systemen und Suchmaschinen, Ihre Praxisinformationen korrekt zu verstehen und weiterzugeben. Ein Überblick für medizinische Einrichtungen.',
+      'Strukturierte Daten helfen KI-Systemen und Suchmaschinen, Ihre Praxisinformationen korrekt zu verstehen. Ein Überblick für medizinische Einrichtungen.',
     category: 'Digitalisierung',
     duration: '~10 Min.',
+    placeholder: true,
   },
   {
     youtubeId: 'PLACEHOLDER_4',
@@ -49,6 +77,7 @@ const videos: Video[] = [
       'Welche Pflichtangaben gehören auf jede Arzt-Website? Was gilt für Kontaktformulare und Cookies? Die wichtigsten DSGVO-Anforderungen für niedergelassene Ärzte in Österreich.',
     category: 'DSGVO & Recht',
     duration: '~18 Min.',
+    placeholder: true,
   },
   {
     youtubeId: 'PLACEHOLDER_5',
@@ -57,34 +86,12 @@ const videos: Video[] = [
       'Das KMU Digital Förderprogramm unterstützt niedergelassene Ärzte bei der Digitalisierung mit bis zu 10.000 €. Schritt-für-Schritt-Anleitung zur Antragstellung.',
     category: 'Förderung',
     duration: '~20 Min.',
-  },
-  {
-    youtubeId: 'PLACEHOLDER_6',
-    title: 'ChatGPT in der Arztpraxis – Chancen und Risiken im Überblick',
-    description:
-      'Wie nutzen Patienten ChatGPT für Gesundheitsfragen? Welche Risiken entstehen durch falsche Informationen? Und wie können Praxen mit fundierter Online-Präsenz Vertrauen aufbauen.',
-    category: 'KI & Sichtbarkeit',
-    duration: '~14 Min.',
-  },
-  {
-    youtubeId: 'PLACEHOLDER_7',
-    title: 'Bewertungsmanagement für Ärzte – Docfinder, Google & Co.',
-    description:
-      'Positive Bewertungen auf Docfinder, Jameda und Google sind entscheidend für die Patientengewinnung. Tipps zum professionellen Umgang mit Bewertungen.',
-    category: 'Marketing',
-    duration: '~16 Min.',
-  },
-  {
-    youtubeId: 'PLACEHOLDER_8',
-    title: 'Barrierefreiheitsgesetz 2025 – Was ändert sich für Arzt-Websites?',
-    description:
-      'Ab 2025 gilt das Barrierefreiheitsgesetz auch für private Websites. Was muss eine barrierefreie Arzt-Website erfüllen, und welche Strafen drohen bei Nichteinhaltung?',
-    category: 'DSGVO & Recht',
-    duration: '~11 Min.',
+    placeholder: true,
   },
 ]
 
 const categoryColors: Record<string, string> = {
+  'KI & Medizin': 'bg-teal-100 text-teal-700',
   'KI & Sichtbarkeit': 'bg-purple-100 text-purple-700',
   'Digitalisierung': 'bg-blue-100 text-blue-700',
   'DSGVO & Recht': 'bg-red-100 text-red-700',
@@ -93,6 +100,7 @@ const categoryColors: Record<string, string> = {
 }
 
 const categoryGradients: Record<string, string> = {
+  'KI & Medizin': 'from-teal-500 to-emerald-700',
   'KI & Sichtbarkeit': 'from-violet-600 to-purple-800',
   'Digitalisierung': 'from-blue-500 to-blue-800',
   'DSGVO & Recht': 'from-red-500 to-rose-700',
@@ -116,7 +124,11 @@ function VideoCard({ video }: { video: Video }) {
       href={href}
       target={hasId ? '_blank' : undefined}
       rel="noopener noreferrer"
-      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col"
+      className={`bg-white rounded-2xl shadow-sm border overflow-hidden transition-all group flex flex-col ${
+        video.placeholder
+          ? 'border-dashed border-gray-200 opacity-60 cursor-default pointer-events-none'
+          : 'border-gray-100 hover:shadow-md'
+      }`}
     >
       {/* Thumbnail */}
       <div className="relative h-44 overflow-hidden">
@@ -127,27 +139,47 @@ function VideoCard({ video }: { video: Video }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className={`w-full h-full bg-gradient-to-br ${gradient}`} />
-        )}
-        {/* Play button overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-14 h-14 bg-black/50 rounded-full flex items-center justify-center group-hover:bg-black/70 transition-colors">
-            <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
+          <div className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+            <span className="text-white/40 text-xs font-semibold uppercase tracking-widest">Platzhalter</span>
           </div>
-        </div>
+        )}
+        {/* Play button overlay – nur bei echten Videos */}
+        {hasId && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-14 h-14 bg-black/50 rounded-full flex items-center justify-center group-hover:bg-black/70 transition-colors">
+              <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+        )}
         {/* Category badge */}
         <div className="absolute bottom-3 left-3">
           <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${colorClass} bg-white/95`}>
             {video.category}
           </span>
         </div>
+        {/* Platzhalter badge */}
+        {video.placeholder && (
+          <div className="absolute top-3 right-3">
+            <span className="text-[10px] font-bold px-2 py-1 rounded bg-gray-800/80 text-gray-300 uppercase tracking-wide">
+              Platzhalter
+            </span>
+          </div>
+        )}
         {/* Duration */}
-        {video.duration && (
+        {video.duration && !video.placeholder && (
           <div className="absolute top-3 right-3">
             <span className="text-xs font-medium px-2 py-1 rounded bg-black/60 text-white">
               {video.duration}
+            </span>
+          </div>
+        )}
+        {/* Source badge */}
+        {video.source && (
+          <div className="absolute top-3 left-3">
+            <span className="text-[10px] font-semibold px-2 py-1 rounded bg-black/60 text-white/90">
+              {video.source}
             </span>
           </div>
         )}
@@ -161,22 +193,26 @@ function VideoCard({ video }: { video: Video }) {
         <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 flex-1">
           {video.description}
         </p>
-        <div className="mt-4 flex items-center gap-1.5 text-[#1e3ab8] font-semibold text-xs">
-          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z" />
-          </svg>
-          <span>Video ansehen</span>
-          <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
+        {hasId && (
+          <div className="mt-4 flex items-center gap-1.5 text-[#1e3ab8] font-semibold text-xs">
+            <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.9C6.8 19 12 19 12 19s4.4 0 7-.1c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.8 14.5V9l5.4 2.8-5.4 2.7z" />
+            </svg>
+            <span>Auf YouTube ansehen</span>
+            <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        )}
       </div>
     </a>
   )
 }
 
 export default function VideothekPage() {
-  const categories = [...new Set(videos.map((v) => v.category))]
+  const realVideos = videos.filter((v) => !v.placeholder)
+  const placeholderVideos = videos.filter((v) => v.placeholder)
+  const categories = [...new Set(realVideos.map((v) => v.category))]
 
   return (
     <>
@@ -188,14 +224,14 @@ export default function VideothekPage() {
             <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Kuratierte Inhalte</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">KI-Videothek</h1>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Ausgewählte Videos zu KI-Sichtbarkeit, Digitalisierung und Online-Präsenz für niedergelassene Ärztinnen und Ärzte in Österreich.
+              Ausgewählte Videos zu KI in der Medizin, Digitalisierung und Online-Präsenz für niedergelassene Ärztinnen und Ärzte.
             </p>
           </div>
         </div>
 
-        {/* Category pills */}
-        <div className="max-w-6xl mx-auto px-6 mt-10">
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Category pills */}
+          <div className="mt-10 flex flex-wrap gap-2 justify-center mb-10">
             {categories.map((cat) => (
               <span
                 key={cat}
@@ -206,15 +242,39 @@ export default function VideothekPage() {
             ))}
           </div>
 
-          {/* Video Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {videos.map((video) => (
+          {/* Real Video Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {realVideos.map((video) => (
               <VideoCard key={video.youtubeId} video={video} />
             ))}
           </div>
 
+          {/* Copyright notice */}
+          <p className="text-xs text-gray-400 text-center mb-14 max-w-2xl mx-auto leading-relaxed">
+            Die Rechte an den oben verlinkten Videos liegen beim jeweiligen Produzenten bzw. Rechteinhaber.
+            mypraxis.at zeigt und verlinkt diese Videos ausschließlich zu Informationszwecken und ohne kommerzielle Absicht.
+          </p>
+
+          {/* Placeholder section */}
+          {placeholderVideos.length > 0 && (
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex-1 h-px bg-gray-200" />
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] whitespace-nowrap">
+                  Demnächst verfügbar
+                </span>
+                <div className="flex-1 h-px bg-gray-200" />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {placeholderVideos.map((video) => (
+                  <VideoCard key={video.youtubeId} video={video} />
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* CTA */}
-          <div className="mt-16 bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-3">Kostenlose Erstberatung</h3>
             <p className="text-blue-100 mb-6">
               30 Minuten, unverbindlich. Wir analysieren Ihre aktuelle Online-Präsenz und zeigen, was möglich ist.
@@ -232,7 +292,7 @@ export default function VideothekPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8 text-center text-sm">
         <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span>© 2026 mypraxis.at – Hofbauer Marketing</span>
+          <span>© {new Date().getFullYear()} mypraxis.at – Hofbauer Marketing</span>
           <div className="flex gap-6">
             <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
