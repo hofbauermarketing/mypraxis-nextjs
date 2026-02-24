@@ -125,6 +125,10 @@ export default function Demo5Page() {
           <div className="text-center mb-14">
             <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Unsere Stärken</span>
             <h2 className="text-4xl font-bold text-white mt-2">Warum das MedCenter?</h2>
+            <p className="text-white/50 text-sm leading-relaxed mt-4 max-w-2xl mx-auto">
+              Das MedCenter Alsergrund ist ein Ort moderner, vernetzter Medizin. In acht Fachrichtungen arbeiten Spezialistinnen und Spezialisten Hand in Hand – verbunden durch ein gemeinsames digitales System und das Ziel einer lückenlosen Patientenbetreuung.
+            </p>
+            <p className="text-teal-400/70 italic text-sm mt-3">„Modern denken, menschlich handeln."</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {[

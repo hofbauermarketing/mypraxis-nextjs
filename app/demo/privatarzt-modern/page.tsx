@@ -114,13 +114,13 @@ export default function Demo2Page() {
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Über mich</span>
             <h2 className="text-3xl font-bold text-white mt-2 mb-6">Medizin. Präzision. Vertrauen.</h2>
             <p className="text-white/60 leading-relaxed mb-4">
-              Nach meinem Studium an der Medizinischen Universität Wien und meiner Facharztausbildung am Wilhelminenspital habe ich mich auf die Verbindung von medizinischer Dermatologie und ästhetischer Medizin spezialisiert. Mein Ansatz ist immer wissenschaftlich fundiert – nicht modisch.
+              Nach vielen Jahren am AKH Wien und einem Forschungsaufenthalt in Zürich mit Schwerpunkt Lasermedizin hat Dr. Stern die Vision einer Praxis verwirklicht, die medizinische Kompetenz mit einem feinen Gespür für Natürlichkeit verbindet. Für sie steht ein gesund erhaltener Hautzustand im Mittelpunkt – nicht bloß das äußere Erscheinungsbild.
             </p>
             <p className="text-white/60 leading-relaxed mb-6">
-              Jede Behandlung beginnt mit einem ausführlichen Erstgespräch. Ich höre zu, erkläre Optionen und empfehle nur, was ich medizinisch für sinnvoll und vertretbar halte.
+              Jede Behandlung beginnt mit einem ausführlichen Erstgespräch. Ich höre zu, erkläre Optionen und empfehle nur, was ich medizinisch für sinnvoll und vertretbar halte. Transparente Beratung und modernste Technologie schließen menschliche Wärme für mich nicht aus.
             </p>
             <div className="border-l-2 border-amber-400 pl-4 text-white/50 italic text-sm">
-              "Schönheit entsteht nicht durch Maske – sondern durch das Hervorheben des Echten."
+              „Haut erzählt Geschichten – von Gesundheit, von Lebensstil, manchmal auch von innerer Unruhe."
             </div>
           </div>
           <div className="md:col-span-2 space-y-3">

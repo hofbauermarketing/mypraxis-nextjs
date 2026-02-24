@@ -134,10 +134,10 @@ export default function Demo3Page() {
             <span className="text-xs font-semibold text-teal-600 uppercase tracking-widest">Über mich</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-5">Kindermedizin mit Herz</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Ich bin Kinderärztin aus Leidenschaft. Nach meiner Facharztausbildung an der Kepler Universitätsklinik Linz habe ich mich 2008 in Linz-Urfahr niedergelassen. Seitdem begleite ich Familien – oft von der Geburt bis ins Jugendalter.
+              Seit 2008 betreibe ich meine Kinder- und Jugendarztpraxis in Linz-Urfahr – ein Ort, an dem sich Familien wohl und verstanden fühlen sollen. Nach meiner Facharztausbildung an der Kinderklinik Linz entschloss ich mich bewusst für die Niederlassung: „Ich wollte Kinder über Jahre hinweg begleiten, nicht nur in akuten Momenten."
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Meine Praxis ist barrierefrei, die Wartezeiten sind kurz und meine Sprechstundenassistentin ist für alle Fragen erreichbar.
+              Mein Schwerpunkt liegt auf Vorsorge, Entwicklungsbegleitung und einer kindgerechten Medizin auf Augenhöhe. Eltern schätzen meine verständnisvolle Art, Kinder meinen Humor. Ich verstehe mich nicht nur als Ärztin, sondern auch als Begleiterin durchs Großwerden – empathisch, unaufgeregt und mit viel Herz.
             </p>
             <div className="grid grid-cols-3 gap-3 text-center">
               {[{ v: '18+', l: 'Jahre' }, { v: '5.000+', l: 'Patienten' }, { v: '⭐ 4,9', l: 'Bewertung' }].map((s) => (

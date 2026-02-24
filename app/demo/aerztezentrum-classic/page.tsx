@@ -122,8 +122,11 @@ export default function Demo4Page() {
           <div>
             <span className="text-xs font-semibold text-blue-600 uppercase tracking-widest">Leistungen</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-4">Was wir anbieten</h2>
-            <p className="text-gray-500 leading-relaxed mb-6">
-              Umfassende medizinische Versorgung auf kurzem Weg. Überweisungen zwischen unseren Fachrichtungen intern möglich – ohne Wartezeiten.
+            <p className="text-gray-500 leading-relaxed mb-4">
+              Das Ärztezentrum Mariahilf steht für Teamarbeit, Qualität und Nähe. Vier Fachärzte – vier Perspektiven – ein gemeinsames Ziel: Gesundheit ganzheitlich denken. Überweisungen zwischen unseren Fachrichtungen intern möglich – ohne Wartezeiten.
+            </p>
+            <p className="text-gray-400 italic text-sm mb-6 border-l-2 border-blue-200 pl-3">
+              „Medizin auf Augenhöhe, mit Austausch statt Eile."
             </p>
             <div className="space-y-4">
               {leistungen.map((l) => (

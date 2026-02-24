@@ -114,14 +114,17 @@ export default function Demo1Page() {
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Über mich</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">Ihr Arzt im 1. Bezirk</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Nach meinem Studium an der Medizinischen Universität Wien und meiner Facharztausbildung am AKH Wien habe ich mich 2014 in der Wiener Innenstadt niedergelassen. Mein Schwerpunkt liegt auf der Diagnostik und Therapie kardiovaskulärer und metabolischer Erkrankungen.
+              Dr. Thomas Haas blickt auf über 15 Jahre Erfahrung in der Inneren Medizin zurück, zuletzt als Oberarzt am AKH Wien. Seine Schwerpunkte – Kardiologie und Diabetes – sind nicht nur medizinische Fachgebiete, sondern persönliche Anliegen.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Mir ist wichtig, dass Sie sich bei mir gut aufgehoben fühlen – und dass ich mir für Sie die Zeit nehme, die Sie verdienen. Nicht 5 Minuten. Ein echtes Gespräch.
+            <p className="text-gray-600 leading-relaxed mb-4">
+              2021 eröffnete er seine Wahlarztpraxis im Herzen von Wien, um seinen Patientinnen und Patienten mehr Zeit widmen zu können. Neben seiner ärztlichen Tätigkeit engagiert er sich in Präventionsprojekten und hält Vorträge über Herzgesundheit und den Zusammenhang von Stress, Bewegung und Ernährung.
             </p>
+            <div className="border-l-2 border-[#1e3ab8] pl-4 text-gray-500 italic text-sm mb-6">
+              „Viele Herzerkrankungen haben mit unserem Lebensstil zu tun. Mir geht es darum, Verständnis und Eigenverantwortung zu fördern – nicht nur Medikamente zu verschreiben."
+            </div>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-                <p className="text-2xl font-bold text-[#1e3ab8]">11+</p>
+                <p className="text-2xl font-bold text-[#1e3ab8]">15+</p>
                 <p className="text-gray-500 text-xs mt-1">Jahre Erfahrung</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center shadow-sm">
@@ -134,10 +137,10 @@ export default function Demo1Page() {
             <h3 className="font-bold text-gray-900 mb-4">Ausbildung & Qualifikationen</h3>
             {[
               { year: '2003–2010', text: 'Studium der Humanmedizin, MedUni Wien' },
-              { year: '2010–2014', text: 'Facharztausbildung Innere Medizin, AKH Wien' },
-              { year: '2014', text: 'Niederlassung als Wahlarzt, Wien 1010' },
-              { year: '2018', text: 'Zertifikat Kardiovaskuläre Prävention, ÖGK' },
-              { year: '2022', text: 'Diplom Ernährungsmedizin, ÖÄK' },
+              { year: '2010–2015', text: 'Facharztausbildung Innere Medizin, AKH Wien' },
+              { year: '2015–2021', text: 'Oberarzt Kardiologie, AKH Wien' },
+              { year: '2021', text: 'Niederlassung als Wahlarzt, Wien 1010' },
+              { year: '2023', text: 'Diplom Ernährungsmedizin, ÖÄK' },
             ].map((q) => (
               <div key={q.year} className="flex gap-4 text-sm">
                 <span className="text-[#1e3ab8] font-semibold shrink-0 w-16">{q.year}</span>
