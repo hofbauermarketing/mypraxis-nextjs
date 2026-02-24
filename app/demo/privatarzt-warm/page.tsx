@@ -18,9 +18,12 @@ export default function Demo3Page() {
       <CookieBanner />
 
       {/* Demo-Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 text-center py-1.5 text-xs font-semibold">
-        Demo-Seite · Stil 3: Warm & Persönlich ·{' '}
-        <Link href="/demo" className="underline">Alle Demos ansehen</Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
+          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <span className="text-center">Demo · Stil 3: Warm & Persönlich</span>
+          <span />
+        </div>
       </div>
 
       {/* NAV */}
@@ -76,11 +79,12 @@ export default function Demo3Page() {
           {/* Photo placeholder */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-72 h-80 rounded-[2rem] bg-gradient-to-br from-teal-400 to-teal-600 flex flex-col items-center justify-center shadow-xl shadow-teal-100 overflow-hidden relative">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                <div className="w-28 h-28 rounded-full bg-white/30 flex items-center justify-center text-5xl font-bold text-white mb-4">AB</div>
-                <p className="text-white font-bold text-sm">Dr. Anna Berger</p>
-                <p className="text-teal-100 text-xs">Kinderärztin</p>
+              <div className="w-72 h-80 rounded-[2rem] overflow-hidden shadow-xl shadow-teal-100 relative">
+                <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Dr. Anna Berger" className="w-full h-full object-cover" />
+                <div className="absolute bottom-0 left-0 right-0 bg-teal-800/80 backdrop-blur-sm p-4">
+                  <p className="text-white font-bold text-sm">Dr. Anna Berger</p>
+                  <p className="text-teal-100 text-xs">Kinderärztin</p>
+                </div>
               </div>
               {/* Fun floating badge */}
               <div className="absolute -top-4 -right-4 bg-yellow-300 rounded-full w-16 h-16 flex flex-col items-center justify-center shadow-lg">
@@ -183,6 +187,29 @@ export default function Demo3Page() {
             <a href="tel:+437325678" className="block w-full bg-teal-600 text-white text-center py-3 rounded-full font-semibold text-sm hover:bg-teal-700 transition-colors shadow-md shadow-teal-100">
               Jetzt anrufen · +43 732 56 78 90
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-teal-50">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-teal-600 uppercase tracking-widest">Häufige Fragen</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Fragen von Eltern</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: 'Ab welchem Alter nehmen Sie Kinder an?', a: 'Von der Geburt bis zum vollendeten 18. Lebensjahr. Auch Jugendliche sind herzlich willkommen – ich nehme mir Zeit für alle Altersstufen.' },
+              { q: 'Wie bekomme ich kurzfristig einen Termin bei akuter Erkrankung?', a: 'Bitte rufen Sie morgens zwischen 8:00 und 9:00 Uhr an. Wir reservieren täglich Akuttermine für kranke Kinder, die baldmöglichst untersucht werden müssen.' },
+              { q: 'Sind alle Impfungen im Impfplan abgedeckt?', a: 'Ja, ich biete alle Impfungen laut österreichischem Impfplan an – inklusive kostenloser Schulimpfungen. Auf Wunsch auch Reiseimpfungen und optionale Zusatzimpfungen.' },
+              { q: 'Was ist beim ersten Termin zu beachten?', a: 'Bitte bringen Sie den Mutter-Kind-Pass oder das Impfheft mit. Beim Ersttermin lerne ich Ihr Kind und Ihre Familie kennen – nehmen Sie sich gerne etwas mehr Zeit.' },
+            ].map((faq, i) => (
+              <div key={i} className="bg-white rounded-2xl p-5 border border-teal-100">
+                <p className="font-bold text-gray-900 text-sm mb-2">{faq.q}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

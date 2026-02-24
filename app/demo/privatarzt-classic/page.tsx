@@ -18,9 +18,12 @@ export default function Demo1Page() {
       <CookieBanner />
 
       {/* Demo-Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 text-center py-1.5 text-xs font-semibold">
-        Demo-Seite · Stil 1: Classic Trust ·{' '}
-        <Link href="/demo" className="underline">Alle Demos ansehen</Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
+          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <span className="text-center">Demo · Stil 1: Classic Trust</span>
+          <span />
+        </div>
       </div>
 
       {/* NAV */}
@@ -67,14 +70,12 @@ export default function Demo1Page() {
               <span className="flex items-center gap-1">✓ Online-Termin</span>
             </div>
           </div>
-          {/* Photo placeholder */}
+          {/* Foto */}
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-72 h-80 rounded-2xl bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] flex items-end justify-center overflow-hidden shadow-xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full bg-white/20 flex items-center justify-center text-5xl font-bold text-white/80">TH</div>
-                </div>
-                <div className="relative z-10 w-full bg-white/10 backdrop-blur p-4 text-white">
+              <div className="w-72 h-80 rounded-2xl overflow-hidden shadow-xl relative">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Thomas Haas" className="w-full h-full object-cover" />
+                <div className="absolute bottom-0 left-0 right-0 bg-[#1e3ab8]/80 backdrop-blur-sm p-4 text-white">
                   <p className="font-bold text-sm">Dr. Thomas Haas</p>
                   <p className="text-white/70 text-xs">Facharzt für Innere Medizin</p>
                 </div>
@@ -185,6 +186,52 @@ export default function Demo1Page() {
               className="block w-full bg-[#1e3ab8] text-white text-center py-3 rounded-xl font-semibold text-sm hover:bg-[#1a33a8] transition-colors">
               Termin per E-Mail anfragen
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BEWERTUNGEN */}
+      <section className="py-20 px-6 bg-[#f0f4ff]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Bewertungen</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Was Patienten sagen</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { text: '„Dr. Haas nimmt sich wirklich Zeit für jeden Patienten. Endlich ein Arzt, der zuhört und erklärt."', name: 'Martin K.' },
+              { text: '„Sehr professionell und kompetent. Die Diagnose war schnell, die Behandlung erfolgreich. Sehr empfehlenswert!"', name: 'Ursula B.' },
+              { text: '„Hervorragende Praxis. Das Team ist freundlich, Wartezeiten kurz. Ich bin jetzt seit 3 Jahren Patient hier."', name: 'Peter W.' },
+            ].map((r, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <p className="text-amber-400 text-sm mb-3">⭐⭐⭐⭐⭐</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">{r.text}</p>
+                <p className="text-[#1e3ab8] text-xs font-semibold">— {r.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Häufige Fragen</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Ihre Fragen – unsere Antworten</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: 'Nehmen Sie neue Patienten an?', a: 'Ja, wir nehmen laufend neue Patienten auf. Bitte vereinbaren Sie telefonisch oder per E-Mail Ihren Ersttermin.' },
+              { q: 'Welche Krankenkassen werden akzeptiert?', a: 'Wir haben einen Kassenvertrag mit WGKK, BVA und SVS. Privatpatienten sind ebenfalls herzlich willkommen.' },
+              { q: 'Wie schnell erhalte ich einen Termin?', a: 'In der Regel innerhalb von 1–3 Werktagen. Bei akuten Beschwerden bitten wir Sie, sich telefonisch zu melden.' },
+              { q: 'Bieten Sie auch Hausbesuche an?', a: 'In begründeten Ausnahmefällen – etwa bei eingeschränkter Mobilität – sind Hausbesuche auf Anfrage möglich.' },
+            ].map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-xl p-5">
+                <p className="font-bold text-gray-900 text-sm mb-2">{faq.q}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

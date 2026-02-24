@@ -3,6 +3,13 @@ import CookieBanner from '@/components/CookieBanner'
 
 export const metadata = { title: 'MedCenter Alsergrund – Wien', robots: 'noindex' }
 
+const team = [
+  { name: 'Dr. Sophie Hartmann', fach: 'Innere Medizin & Kardiologie', kasse: 'WGKK · BVA', photo: 'https://randomuser.me/api/portraits/women/28.jpg' },
+  { name: 'Dr. Markus Eder', fach: 'Neurologie', kasse: 'Wahlarzt', photo: 'https://randomuser.me/api/portraits/men/32.jpg' },
+  { name: 'Dr. Lena Vogt', fach: 'Orthopädie', kasse: 'WGKK · SVS', photo: 'https://randomuser.me/api/portraits/women/55.jpg' },
+  { name: 'Dr. Andreas Pichler', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA · SVS', photo: 'https://randomuser.me/api/portraits/men/68.jpg' },
+]
+
 const fachbereiche = [
   { icon: '🫀', title: 'Innere Medizin', info: '2 Fachärzte · Kasse & Wahlarzt' },
   { icon: '🧠', title: 'Neurologie', info: '1 Facharzt · Wahlarzt' },
@@ -20,9 +27,12 @@ export default function Demo5Page() {
       <CookieBanner />
 
       {/* Demo-Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 text-center py-1.5 text-xs font-semibold">
-        Demo-Seite · Stil 5: Ärztezentrum Premium ·{' '}
-        <Link href="/demo" className="underline">Alle Demos ansehen</Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
+          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <span className="text-center">Demo · Stil 5: Ärztezentrum Premium</span>
+          <span />
+        </div>
       </div>
 
       {/* NAV */}
@@ -119,8 +129,31 @@ export default function Demo5Page() {
         </div>
       </section>
 
-      {/* WARUM WIR */}
+      {/* TEAM */}
       <section id="team" className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Unsere Ärzte</span>
+            <h2 className="text-4xl font-bold text-white mt-2">Das Team</h2>
+            <p className="text-white/40 text-sm mt-2">Spezialistinnen und Spezialisten, die Hand in Hand arbeiten.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {team.map((a) => (
+              <div key={a.name} className="border border-white/10 rounded-2xl overflow-hidden hover:border-teal-500/40 transition-all group">
+                <img src={a.photo} alt={a.name} className="w-full h-48 object-cover object-top" />
+                <div className="p-5">
+                  <h3 className="font-bold text-white text-sm mb-1 group-hover:text-teal-400 transition-colors">{a.name}</h3>
+                  <p className="text-teal-400 text-xs font-semibold mb-1">{a.fach}</p>
+                  <p className="text-white/30 text-xs">{a.kasse}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WARUM WIR */}
+      <section className="py-24 px-6 bg-[#0d1117]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Unsere Stärken</span>
@@ -180,6 +213,29 @@ export default function Demo5Page() {
               className="block w-full bg-teal-500 text-white text-center py-3.5 rounded-xl font-bold text-sm hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
               Online-Termin buchen
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BEWERTUNGEN */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14">
+            <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Patientenstimmen</span>
+            <h2 className="text-4xl font-bold text-white mt-2">Was Patienten sagen</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { text: '„Das Beste an diesem Zentrum: Ich hatte meinen Befund vom Labor noch am gleichen Tag. Und der Internist hat sofort reagiert."', name: 'Andreas F.' },
+              { text: '„Endlich ein Zentrum, das wirklich vernetzt arbeitet. Mein Neurologe und meine Internistin sprechen sich ab – das spürt man."', name: 'Maria S.' },
+              { text: '„Parkhaus im Haus, kurze Wartezeiten, top ausgestattete Praxen. Ich war skeptisch, bin aber jetzt begeistert."', name: 'Josef K.' },
+            ].map((r, i) => (
+              <div key={i} className="border border-white/10 rounded-xl p-6 bg-white/5">
+                <p className="text-teal-400 text-sm mb-3">⭐⭐⭐⭐⭐</p>
+                <p className="text-white/70 text-sm leading-relaxed mb-4 italic">{r.text}</p>
+                <p className="text-teal-400/70 text-xs font-semibold">— {r.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

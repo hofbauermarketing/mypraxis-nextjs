@@ -4,10 +4,10 @@ import CookieBanner from '@/components/CookieBanner'
 export const metadata = { title: 'Ärztezentrum Mariahilf – Wien', robots: 'noindex' }
 
 const aerzte = [
-  { name: 'Dr. Michael Fürst', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA', initials: 'MF', color: 'bg-blue-100 text-blue-700' },
-  { name: 'Dr. Claudia Nowak', fach: 'Innere Medizin', kasse: 'WGKK · SVS', initials: 'CN', color: 'bg-indigo-100 text-indigo-700' },
-  { name: 'Dr. Stefan Hofer', fach: 'Orthopädie & Unfallchirurgie', kasse: 'Wahlarzt', initials: 'SH', color: 'bg-violet-100 text-violet-700' },
-  { name: 'Dr. Eva Zimmermann', fach: 'Gynäkologie', kasse: 'WGKK · BVA · SVS', initials: 'EZ', color: 'bg-rose-100 text-rose-700' },
+  { name: 'Dr. Michael Fürst', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA', photo: 'https://randomuser.me/api/portraits/men/46.jpg' },
+  { name: 'Dr. Claudia Nowak', fach: 'Innere Medizin', kasse: 'WGKK · SVS', photo: 'https://randomuser.me/api/portraits/women/26.jpg' },
+  { name: 'Dr. Stefan Hofer', fach: 'Orthopädie & Unfallchirurgie', kasse: 'Wahlarzt', photo: 'https://randomuser.me/api/portraits/men/33.jpg' },
+  { name: 'Dr. Eva Zimmermann', fach: 'Gynäkologie', kasse: 'WGKK · BVA · SVS', photo: 'https://randomuser.me/api/portraits/women/58.jpg' },
 ]
 
 const leistungen = [
@@ -23,9 +23,12 @@ export default function Demo4Page() {
       <CookieBanner />
 
       {/* Demo-Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 text-center py-1.5 text-xs font-semibold">
-        Demo-Seite · Stil 4: Ärztezentrum Classic ·{' '}
-        <Link href="/demo" className="underline">Alle Demos ansehen</Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
+          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <span className="text-center">Demo · Stil 4: Ärztezentrum Classic</span>
+          <span />
+        </div>
       </div>
 
       {/* NAV */}
@@ -101,9 +104,7 @@ export default function Demo4Page() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {aerzte.map((a) => (
               <div key={a.name} className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-md transition-all group">
-                <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold ${a.color}`}>
-                  {a.initials}
-                </div>
+                <img src={a.photo} alt={a.name} className="w-16 h-16 rounded-full mx-auto mb-4 object-cover" />
                 <h3 className="font-bold text-gray-900 text-sm mb-1">{a.name}</h3>
                 <p className="text-blue-600 text-xs font-semibold mb-2">{a.fach}</p>
                 <p className="text-gray-400 text-xs">{a.kasse}</p>
@@ -201,6 +202,29 @@ export default function Demo4Page() {
             <div className="h-40 bg-gray-100 rounded-xl flex items-center justify-center text-gray-400 text-sm border border-gray-200">
               🗺️ Google Maps Einbettung
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BEWERTUNGEN */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-blue-600 uppercase tracking-widest">Bewertungen</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Was unsere Patienten sagen</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { text: '„Endlich ein Zentrum, wo alles unter einem Dach ist. Ich war bei zwei Ärzten an einem Tag – ohne lange Wartezeiten."', name: 'Herbert S.' },
+              { text: '„Dr. Nowak ist unglaublich gründlich und erklärt alles verständlich. Das Labor-Ergebnis hatte ich am gleichen Tag."', name: 'Renate M.' },
+              { text: '„Super Organisation, freundliches Personal. Die interne Überweisung zur Orthopädie hat alles so einfach gemacht."', name: 'Thomas A.' },
+            ].map((r, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <p className="text-amber-400 text-sm mb-3">⭐⭐⭐⭐⭐</p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">{r.text}</p>
+                <p className="text-blue-600 text-xs font-semibold">— {r.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

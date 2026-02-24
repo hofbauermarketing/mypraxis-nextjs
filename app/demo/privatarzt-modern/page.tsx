@@ -18,9 +18,12 @@ export default function Demo2Page() {
       <CookieBanner />
 
       {/* Demo-Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 text-center py-1.5 text-xs font-semibold">
-        Demo-Seite · Stil 2: Modern Premium ·{' '}
-        <Link href="/demo" className="underline">Alle Demos ansehen</Link>
+      <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
+          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <span className="text-center">Demo · Stil 2: Modern Premium</span>
+          <span />
+        </div>
       </div>
 
       {/* NAV */}
@@ -69,15 +72,13 @@ export default function Demo2Page() {
               </a>
             </div>
           </div>
-          {/* Photo placeholder */}
+          {/* Foto */}
           <div className="flex justify-center">
             <div className="relative w-72 h-96">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-400/20 to-purple-500/20 blur-2xl" />
-              <div className="relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur overflow-hidden flex flex-col items-center justify-center">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-amber-400/30 to-amber-400/10 border border-amber-400/30 flex items-center justify-center text-5xl font-bold text-amber-400/80 mb-4">JS</div>
-                <p className="font-bold text-white">Dr. Julia Stern</p>
-                <p className="text-white/50 text-xs">Fachärztin für Dermatologie</p>
-                <div className="mt-6 border-t border-white/10 w-full px-6 pt-4 flex justify-center gap-6 text-center">
+              <div className="relative h-full rounded-2xl border border-white/10 overflow-hidden">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Julia Stern" className="w-full h-3/4 object-cover object-top" />
+                <div className="border-t border-white/10 px-6 py-4 flex justify-center gap-6 text-center bg-white/5">
                   <div><p className="text-amber-400 font-bold">15+</p><p className="text-white/40 text-xs">Jahre</p></div>
                   <div><p className="text-amber-400 font-bold">⭐ 5,0</p><p className="text-white/40 text-xs">Bewertung</p></div>
                   <div><p className="text-amber-400 font-bold">4.200+</p><p className="text-white/40 text-xs">Patienten</p></div>
@@ -173,6 +174,52 @@ export default function Demo2Page() {
               className="block w-full bg-amber-400 text-[#0a0f1e] text-center py-3.5 rounded-xl font-bold text-sm hover:bg-amber-300 transition-colors">
               Erstgespräch anfragen
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BEWERTUNGEN */}
+      <section className="py-24 px-6 bg-[#0d1225]">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-14">
+            <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Patientenstimmen</span>
+            <h2 className="text-4xl font-bold text-white mt-2">Was Patientinnen sagen</h2>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {[
+              { text: '„Dr. Stern ist die beste Dermatologin, die ich je hatte. Kompetent, ehrlich und mit einem absoluten Gespür für natürliche Ästhetik."', name: 'Sandra M.' },
+              { text: '„Nach der Botox-Behandlung sehe ich aus wie ich mich fühle – ausgeruht und frisch. Kein übertriebenes Ergebnis, alles sehr natürlich."', name: 'Katharina V.' },
+              { text: '„Endlich jemand, der nicht gleich zu Produkten greift, sondern wirklich erklärt, was mit meiner Haut passiert. Sehr empfehlenswert."', name: 'Julia R.' },
+            ].map((r, i) => (
+              <div key={i} className="border border-white/10 rounded-xl p-6 bg-white/5">
+                <p className="text-amber-400 text-sm mb-3">⭐⭐⭐⭐⭐</p>
+                <p className="text-white/70 text-sm leading-relaxed mb-4 italic">{r.text}</p>
+                <p className="text-amber-400/70 text-xs font-semibold">— {r.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 px-6 bg-[#0a0f1e]">
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-14">
+            <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Häufige Fragen</span>
+            <h2 className="text-4xl font-bold text-white mt-2">Ihre Fragen</h2>
+          </div>
+          <div className="space-y-3">
+            {[
+              { q: 'Wie ist die Praxis erreichbar?', a: 'Nur nach telefonischer Voranmeldung. Wir legen Wert auf ausreichend Zeit für jede Patientin – daher keine offene Sprechstunde.' },
+              { q: 'Sind ästhetische Behandlungen kassenfinanziert?', a: 'Nein. Ästhetische Behandlungen wie Botox, Filler oder Laserbehandlungen sind Wahlleistungen und werden privat verrechnet. Medizinische Dermatologie ist nach Absprache über Kasse möglich.' },
+              { q: 'Wie lange dauert eine Erstberatung?', a: 'Für das Erstgespräch planen wir 30–45 Minuten ein. Ich nehme mir die Zeit, Ihren Hautzustand gründlich zu beurteilen und einen individuellen Behandlungsplan zu erarbeiten.' },
+              { q: 'Wie lange sind die Ergebnisse sichtbar?', a: 'Das hängt stark von der Behandlung und Ihrem Stoffwechsel ab. Botox hält in der Regel 3–6 Monate, Hyaluron-Filler 6–18 Monate. Wir besprechen realistische Erwartungen im Erstgespräch.' },
+            ].map((faq, i) => (
+              <div key={i} className="border border-white/10 rounded-xl p-5">
+                <p className="font-bold text-white text-sm mb-2">{faq.q}</p>
+                <p className="text-white/50 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
