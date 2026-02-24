@@ -4,72 +4,96 @@ const kiSysteme = [
     anbieter: 'OpenAI',
     nutzer: '800 Mio. Nutzer',
     relevanz: 'Jeder 4. Patient nutzt KI für Gesundheitsfragen.',
+    url: 'https://chatgpt.com',
+    domain: 'openai.com',
   },
   {
     name: 'Google Gemini',
     anbieter: 'Google',
     nutzer: '650 Mio. Nutzer',
     relevanz: 'Auf jedem Android-Handy vorinstalliert.',
+    url: 'https://gemini.google.com',
+    domain: 'gemini.google.com',
   },
   {
     name: 'Google AI Overviews',
     anbieter: 'Google',
     nutzer: 'Milliarden Suchen',
     relevanz: 'Bei bis zu 60 % aller Google-Suchen sichtbar.',
+    url: 'https://google.com',
+    domain: 'google.com',
   },
   {
     name: 'Microsoft Copilot',
     anbieter: 'Microsoft',
     nutzer: '100 Mio. Nutzer',
     relevanz: 'In Windows & Edge integriert – jeder PC-Nutzer.',
+    url: 'https://copilot.microsoft.com',
+    domain: 'microsoft.com',
   },
   {
     name: 'Perplexity',
     anbieter: 'Perplexity AI',
     nutzer: '50+ Mio. Nutzer',
     relevanz: 'Direkter Link auf Ihre Website in jeder Antwort.',
+    url: 'https://www.perplexity.ai',
+    domain: 'perplexity.ai',
   },
   {
     name: 'Claude',
     anbieter: 'Anthropic',
     nutzer: '30+ Mio. Nutzer',
     relevanz: 'Apple-Integration: jeder iPhone-Nutzer erreicht.',
+    url: 'https://claude.ai',
+    domain: 'anthropic.com',
   },
   {
     name: 'Apple Siri',
     anbieter: 'Apple',
     nutzer: '1+ Mrd. Geräte',
     relevanz: '30 % iPhone-Marktanteil in Österreich.',
+    url: 'https://www.apple.com/siri/',
+    domain: 'apple.com',
   },
   {
     name: 'Meta AI',
     anbieter: 'Meta',
     nutzer: '3+ Mrd. Nutzer',
     relevanz: '7 Mio. Österreicher nutzen WhatsApp täglich.',
+    url: 'https://ai.meta.com',
+    domain: 'meta.com',
   },
   {
     name: 'Amazon Alexa',
     anbieter: 'Amazon',
     nutzer: '500+ Mio. Geräte',
     relevanz: 'Sprachsuche zuhause – auch nach Ärzten.',
+    url: 'https://alexa.amazon.com',
+    domain: 'amazon.com',
   },
   {
     name: 'Samsung Galaxy AI',
     anbieter: 'Samsung',
     nutzer: 'Hunderte Mio. Geräte',
     relevanz: 'Meistverkaufte Smartphone-Marke in Österreich.',
+    url: 'https://www.samsung.com/global/galaxy/galaxy-ai/',
+    domain: 'samsung.com',
   },
   {
     name: 'Brave Search',
     anbieter: 'Brave',
     nutzer: '50+ Mio. Suchen/Tag',
     relevanz: 'Liefert Daten an Claude. Datenschutzbewusste Patienten.',
+    url: 'https://search.brave.com',
+    domain: 'brave.com',
   },
   {
     name: 'DuckDuckGo',
     anbieter: 'DuckDuckGo',
     nutzer: '100 Mio. Suchen/Tag',
     relevanz: 'KI-Antworten ohne Tracking – im Gesundheitsbereich beliebt.',
+    url: 'https://duckduckgo.com',
+    domain: 'duckduckgo.com',
   },
 ]
 
@@ -98,15 +122,25 @@ export default function KiSystemeMarquee() {
 
         <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
           {doubled.map((ki, i) => (
-            <div
+            <a
               key={i}
-              className="flex-shrink-0 w-[196px] bg-white border border-gray-100 rounded-xl p-4 shadow-sm"
+              href={ki.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 w-[196px] bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:border-primary/40 hover:shadow-md transition-all group"
             >
-              <p className="text-[15px] font-bold text-gray-900 leading-tight mb-0.5">{ki.name}</p>
+              <div className="flex items-center gap-2 mb-2">
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${ki.domain}&sz=64`}
+                  alt={ki.name}
+                  className="w-5 h-5 rounded-sm flex-shrink-0"
+                />
+                <p className="text-[14px] font-bold text-gray-900 leading-tight group-hover:text-primary transition-colors">{ki.name}</p>
+              </div>
               <p className="text-[11px] text-gray-400 mb-2">{ki.anbieter}</p>
               <p className="text-[13px] font-semibold text-primary mb-2">{ki.nutzer}</p>
               <p className="text-[11px] text-gray-500 leading-relaxed">{ki.relevanz}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

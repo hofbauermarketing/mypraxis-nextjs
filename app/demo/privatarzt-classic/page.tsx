@@ -1,7 +1,7 @@
+'use client'
+import { useState } from 'react'
 import Link from 'next/link'
 import CookieBanner from '@/components/CookieBanner'
-
-export const metadata = { title: 'Dr. Thomas Haas – Facharzt für Innere Medizin', robots: 'noindex' }
 
 const leistungen = [
   { icon: '🫀', title: 'Kardiologie', text: 'EKG, Langzeit-EKG, Belastungs-EKG, Echokardiographie' },
@@ -12,7 +12,46 @@ const leistungen = [
   { icon: '💊', title: 'Chronische Erkrankungen', text: 'Bluthochdruck, Diabetes, Schilddrüse, Fettstoffwechsel' },
 ]
 
+const faqs = [
+  { q: 'Nehmen Sie neue Patienten an?', a: 'Ja, wir nehmen laufend neue Patienten auf. Bitte vereinbaren Sie telefonisch oder per E-Mail Ihren Ersttermin.' },
+  { q: 'Welche Krankenkassen werden akzeptiert?', a: 'Wir haben einen Kassenvertrag mit WGKK, BVA und SVS. Privatpatienten sind ebenfalls herzlich willkommen.' },
+  { q: 'Wie schnell erhalte ich einen Termin?', a: 'In der Regel innerhalb von 1–3 Werktagen. Bei akuten Beschwerden bitten wir Sie, sich telefonisch zu melden – wir reservieren täglich Akutslots.' },
+  { q: 'Bieten Sie auch Hausbesuche an?', a: 'In begründeten Ausnahmefällen – etwa bei eingeschränkter Mobilität – sind Hausbesuche auf Anfrage möglich.' },
+]
+
+const openingRows = [
+  { day: 'Montag',    time: '08:00 – 12:00 · 14:00 – 17:00' },
+  { day: 'Dienstag',  time: '08:00 – 12:00' },
+  { day: 'Mittwoch',  time: '08:00 – 12:00 · 14:00 – 18:00' },
+  { day: 'Donnerstag',time: '08:00 – 12:00' },
+  { day: 'Freitag',   time: '08:00 – 13:00' },
+  { day: 'Sa / So',   time: 'Geschlossen' },
+]
+
+function getStatus(): { open: boolean; label: string } {
+  const now = new Date()
+  const d = now.getDay()
+  const m = now.getHours() * 60 + now.getMinutes()
+  const open =
+    (d === 1 && ((m >= 480 && m < 720) || (m >= 840 && m < 1020))) ||
+    ((d === 2 || d === 4) && m >= 480 && m < 720) ||
+    (d === 3 && ((m >= 480 && m < 720) || (m >= 840 && m < 1080))) ||
+    (d === 5 && m >= 480 && m < 780)
+  return { open, label: open ? '● Jetzt geöffnet' : '● Derzeit geschlossen' }
+}
+
 export default function Demo1Page() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle')
+  const status = getStatus()
+  const todayRowIdx = (() => { const d = new Date().getDay(); return d >= 1 && d <= 5 ? d - 1 : 5 })()
+
+  function handleSubmit(e: { preventDefault(): void }) {
+    e.preventDefault()
+    setFormState('submitting')
+    setTimeout(() => setFormState('success'), 1500)
+  }
+
   return (
     <div className="font-sans text-gray-800 antialiased">
       <CookieBanner />
@@ -37,7 +76,7 @@ export default function Demo1Page() {
             <a href="#leistungen" className="hover:text-[#1e3ab8] transition-colors">Leistungen</a>
             <a href="#ueber" className="hover:text-[#1e3ab8] transition-colors">Über mich</a>
             <a href="#zeiten" className="hover:text-[#1e3ab8] transition-colors">Ordinationszeiten</a>
-            <a href="#kontakt" className="bg-[#1e3ab8] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#1a33a8] transition-colors">Termin anfragen</a>
+            <a href="#termin" className="bg-[#1e3ab8] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#1a33a8] transition-colors">Termin anfragen</a>
           </div>
         </div>
       </nav>
@@ -57,20 +96,19 @@ export default function Demo1Page() {
               Umfassende internistische Diagnostik und Therapie – persönlich, kompetent und auf dem aktuellen Stand der Medizin. Termine auch kurzfristig möglich.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="#kontakt" className="bg-[#1e3ab8] text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-[#1a33a8] transition-colors shadow-md">
+              <a href="#termin" className="bg-[#1e3ab8] text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-[#1a33a8] transition-colors shadow-md">
                 Termin vereinbaren
               </a>
-              <a href="tel:+431512345" className="border-2 border-gray-200 text-gray-700 px-6 py-3 rounded-xl font-semibold text-sm hover:border-[#1e3ab8] hover:text-[#1e3ab8] transition-colors">
+              <a href="tel:+4315123456" className="border-2 border-gray-200 text-gray-700 px-6 py-3 rounded-xl font-semibold text-sm hover:border-[#1e3ab8] hover:text-[#1e3ab8] transition-colors">
                 +43 1 512 34 56
               </a>
             </div>
             <div className="mt-8 flex items-center gap-4 text-xs text-gray-500">
-              <span className="flex items-center gap-1">✓ DSGVO-konform</span>
-              <span className="flex items-center gap-1">✓ ÖÄK-Mitglied</span>
-              <span className="flex items-center gap-1">✓ Online-Termin</span>
+              <span>✓ DSGVO-konform</span>
+              <span>✓ ÖÄK-Mitglied</span>
+              <span>✓ Online-Termin</span>
             </div>
           </div>
-          {/* Foto */}
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-72 h-80 rounded-2xl overflow-hidden shadow-xl relative">
@@ -98,7 +136,7 @@ export default function Demo1Page() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {leistungen.map((l) => (
-              <div key={l.title} className="bg-gray-50 rounded-xl p-6 hover:bg-blue-50 transition-colors group">
+              <div key={l.title} className="bg-gray-50 rounded-xl p-6 hover:bg-blue-50 transition-colors group cursor-default">
                 <span className="text-3xl mb-3 block">{l.icon}</span>
                 <h3 className="font-bold text-gray-900 mb-1 group-hover:text-[#1e3ab8] transition-colors">{l.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{l.text}</p>
@@ -118,7 +156,7 @@ export default function Demo1Page() {
               Dr. Thomas Haas blickt auf über 15 Jahre Erfahrung in der Inneren Medizin zurück, zuletzt als Oberarzt am AKH Wien. Seine Schwerpunkte – Kardiologie und Diabetes – sind nicht nur medizinische Fachgebiete, sondern persönliche Anliegen.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              2021 eröffnete er seine Wahlarztpraxis im Herzen von Wien, um seinen Patientinnen und Patienten mehr Zeit widmen zu können. Neben seiner ärztlichen Tätigkeit engagiert er sich in Präventionsprojekten und hält Vorträge über Herzgesundheit und den Zusammenhang von Stress, Bewegung und Ernährung.
+              2021 eröffnete er seine Wahlarztpraxis im Herzen von Wien, um seinen Patientinnen und Patienten mehr Zeit widmen zu können. Neben seiner ärztlichen Tätigkeit engagiert er sich in Präventionsprojekten und hält Vorträge über Herzgesundheit.
             </p>
             <div className="border-l-2 border-[#1e3ab8] pl-4 text-gray-500 italic text-sm mb-6">
               „Viele Herzerkrankungen haben mit unserem Lebensstil zu tun. Mir geht es darum, Verständnis und Eigenverantwortung zu fördern – nicht nur Medikamente zu verschreiben."
@@ -156,19 +194,17 @@ export default function Demo1Page() {
       <section id="zeiten" className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
-            <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Ordinationszeiten</span>
+            <div className="flex flex-wrap items-center gap-3 mb-2">
+              <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Ordinationszeiten</span>
+              <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${status.open ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
+                {status.label}
+              </span>
+            </div>
             <h2 className="text-2xl font-bold text-gray-900 mt-2 mb-6">Wann Sie mich erreichen</h2>
-            <div className="space-y-2">
-              {[
-                { day: 'Montag', time: '08:00 – 12:00 · 14:00 – 17:00' },
-                { day: 'Dienstag', time: '08:00 – 12:00' },
-                { day: 'Mittwoch', time: '08:00 – 12:00 · 14:00 – 18:00' },
-                { day: 'Donnerstag', time: '08:00 – 12:00' },
-                { day: 'Freitag', time: '08:00 – 13:00' },
-                { day: 'Sa / So', time: 'Geschlossen' },
-              ].map((r) => (
-                <div key={r.day} className={`flex justify-between py-2 border-b border-gray-100 text-sm ${r.day === 'Sa / So' ? 'text-gray-400' : 'text-gray-700'}`}>
-                  <span className="font-medium">{r.day}</span>
+            <div className="space-y-1">
+              {openingRows.map((r, i) => (
+                <div key={r.day} className={`flex justify-between py-2.5 border-b border-gray-100 text-sm rounded px-2 -mx-2 transition-colors ${i === todayRowIdx ? 'bg-blue-50 text-[#1e3ab8] font-semibold' : r.day === 'Sa / So' ? 'text-gray-400' : 'text-gray-700'}`}>
+                  <span>{r.day}{i === todayRowIdx ? ' (heute)' : ''}</span>
                   <span>{r.time}</span>
                 </div>
               ))}
@@ -176,15 +212,16 @@ export default function Demo1Page() {
           </div>
           <div id="kontakt">
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Kontakt</span>
-            <h2 className="text-2xl font-bold text-gray-900 mt-2 mb-6">Termin anfragen</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-2 mb-6">So erreichen Sie uns</h2>
             <div className="space-y-3 mb-6 text-sm text-gray-600">
               <p>📍 Wollzeile 12, 1010 Wien</p>
-              <p>📞 +43 1 512 34 56</p>
-              <p>📧 ordination@dr-haas-wien.at</p>
+              <p>📞 <a href="tel:+4315123456" className="hover:text-[#1e3ab8] transition-colors">+43 1 512 34 56</a></p>
+              <p>📧 <a href="mailto:ordination@dr-haas-wien.at" className="hover:text-[#1e3ab8] transition-colors">ordination@dr-haas-wien.at</a></p>
+              <p>🚇 U1/U3 Stephansplatz (5 Min. Fußweg)</p>
+              <p>♿ Barrierefrei · Lift vorhanden</p>
             </div>
-            <a href="mailto:ordination@dr-haas-wien.at"
-              className="block w-full bg-[#1e3ab8] text-white text-center py-3 rounded-xl font-semibold text-sm hover:bg-[#1a33a8] transition-colors">
-              Termin per E-Mail anfragen
+            <a href="#termin" className="block w-full bg-[#1e3ab8] text-white text-center py-3 rounded-xl font-semibold text-sm hover:bg-[#1a33a8] transition-colors">
+              Online-Termin anfragen →
             </a>
           </div>
         </div>
@@ -204,7 +241,8 @@ export default function Demo1Page() {
               { text: '„Hervorragende Praxis. Das Team ist freundlich, Wartezeiten kurz. Ich bin jetzt seit 3 Jahren Patient hier."', name: 'Peter W.' },
             ].map((r, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <p className="text-amber-400 text-sm mb-3">⭐⭐⭐⭐⭐</p>
+                <p className="text-amber-400 text-sm mb-1">⭐⭐⭐⭐⭐</p>
+                <p className="text-gray-400 text-xs mb-3">Verifizierte Bewertung · Google</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">{r.text}</p>
                 <p className="text-[#1e3ab8] text-xs font-semibold">— {r.name}</p>
               </div>
@@ -213,23 +251,111 @@ export default function Demo1Page() {
         </div>
       </section>
 
+      {/* TERMIN FORMULAR */}
+      <section id="termin" className="py-20 px-6 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Online-Termin</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Termin anfragen</h2>
+            <p className="text-gray-500 text-sm mt-2">Wir melden uns innerhalb von 24 Stunden. Felder mit * sind Pflichtfelder.</p>
+          </div>
+          {formState === 'success' ? (
+            <div className="bg-green-50 border border-green-200 rounded-2xl p-12 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✅</div>
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Anfrage erfolgreich gesendet!</h3>
+              <p className="text-gray-500 text-sm">Wir melden uns in Kürze bei Ihnen. Bitte prüfen Sie auch Ihren Spam-Ordner.</p>
+              <button onClick={() => setFormState('idle')} className="mt-6 text-[#1e3ab8] text-sm underline hover:no-underline">Neue Anfrage stellen</button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">Vorname *</label>
+                  <input required type="text" placeholder="Maria" className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors" />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">Nachname *</label>
+                  <input required type="text" placeholder="Mustermann" className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">Telefon *</label>
+                  <input required type="tel" placeholder="+43 1 ..." className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors" />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">E-Mail *</label>
+                  <input required type="email" placeholder="ihre@email.at" className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">Anliegen</label>
+                  <select className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors">
+                    <option>Ersttermin</option>
+                    <option>Folgetermin</option>
+                    <option>Befundbesprechung</option>
+                    <option>Vorsorgeuntersuchung</option>
+                    <option>Akutkonsultation</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-500 mb-1.5">Wunschtermin</label>
+                  <input type="date" className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors" />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-gray-500 mb-1.5">Kurze Beschreibung (optional)</label>
+                <textarea rows={3} placeholder="Was sollen wir wissen? z.B. Symptome, Vorbefunde, besondere Wünsche..." className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#1e3ab8]/20 focus:border-[#1e3ab8] transition-colors resize-none" />
+              </div>
+              <div className="flex items-start gap-3">
+                <input required type="checkbox" id="dsgvo1" className="mt-0.5 accent-[#1e3ab8]" />
+                <label htmlFor="dsgvo1" className="text-xs text-gray-500 leading-relaxed">
+                  Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#" className="text-[#1e3ab8] underline">Datenschutzerklärung</a> zu. *
+                </label>
+              </div>
+              <button
+                type="submit"
+                disabled={formState === 'submitting'}
+                className="w-full bg-[#1e3ab8] text-white py-3.5 rounded-xl font-bold text-sm hover:bg-[#1a33a8] transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
+              >
+                {formState === 'submitting' ? (
+                  <>
+                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    Wird gesendet…
+                  </>
+                ) : 'Termin anfragen →'}
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#f0f4ff]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Häufige Fragen</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2">Ihre Fragen – unsere Antworten</h2>
           </div>
-          <div className="space-y-4">
-            {[
-              { q: 'Nehmen Sie neue Patienten an?', a: 'Ja, wir nehmen laufend neue Patienten auf. Bitte vereinbaren Sie telefonisch oder per E-Mail Ihren Ersttermin.' },
-              { q: 'Welche Krankenkassen werden akzeptiert?', a: 'Wir haben einen Kassenvertrag mit WGKK, BVA und SVS. Privatpatienten sind ebenfalls herzlich willkommen.' },
-              { q: 'Wie schnell erhalte ich einen Termin?', a: 'In der Regel innerhalb von 1–3 Werktagen. Bei akuten Beschwerden bitten wir Sie, sich telefonisch zu melden.' },
-              { q: 'Bieten Sie auch Hausbesuche an?', a: 'In begründeten Ausnahmefällen – etwa bei eingeschränkter Mobilität – sind Hausbesuche auf Anfrage möglich.' },
-            ].map((faq, i) => (
-              <div key={i} className="border border-gray-200 rounded-xl p-5">
-                <p className="font-bold text-gray-900 text-sm mb-2">{faq.q}</p>
-                <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+                >
+                  <span className="font-bold text-gray-900 text-sm pr-4">{faq.q}</span>
+                  <span className={`text-[#1e3ab8] shrink-0 text-lg leading-none transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}>▾</span>
+                </button>
+                {openFaq === i && (
+                  <div className="px-5 pb-5 border-t border-gray-100">
+                    <p className="text-gray-500 text-sm leading-relaxed pt-4">{faq.a}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
