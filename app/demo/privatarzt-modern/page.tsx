@@ -141,7 +141,7 @@ export default function Demo2Page() {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" className="py-24 px-6 bg-[#0d1225]" id="termin">
+      <section id="kontakt" className="py-24 px-6 bg-[#0d1225]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Ordinationszeiten</span>

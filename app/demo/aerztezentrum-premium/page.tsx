@@ -143,7 +143,7 @@ export default function Demo5Page() {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" className="py-24 px-6 bg-[#0d1117]" id="termin">
+      <section id="kontakt" className="py-24 px-6 bg-[#0d1117]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Öffnungszeiten</span>

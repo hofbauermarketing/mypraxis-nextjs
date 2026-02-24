@@ -164,7 +164,7 @@ export default function Demo4Page() {
       </section>
 
       {/* ORDINATIONSZEITEN + ANFAHRT */}
-      <section id="kontakt" className="py-20 px-6 bg-white" id="termin">
+      <section id="kontakt" className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold text-blue-600 uppercase tracking-widest">Öffnungszeiten</span>
