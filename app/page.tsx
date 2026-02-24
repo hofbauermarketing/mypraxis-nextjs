@@ -3,6 +3,7 @@ import ContactForm from '@/components/ContactForm'
 import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
+import ScannerEmbed from '@/components/ScannerEmbed'
 
 /** Inline brand helper: "my" always orange, "praxis.at" inherits parent color */
 function Mp() {
@@ -504,14 +505,7 @@ export default function HomePage() {
 
           {/* iframe */}
           <div className="bg-white rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-            <iframe
-              src="https://agenturkunden.io/mypraxis/embed-scan.html?t=277a6b337c9d91dba16c2aa7bc6a03426032f1290ab915fa"
-              width="100%"
-              height="760"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
+            <ScannerEmbed />
           </div>
 
           <p className="text-center text-slate-500 text-xs mt-4">
