@@ -4,8 +4,8 @@ import Navigation from '@/components/Navigation'
 import BlogGrid from '@/components/BlogGrid'
 
 export const metadata = {
-  title: 'Blog – mypraxis.at',
-  description: 'Praxisnahe Artikel über digitale Positionierung, KI-Sichtbarkeit und Website-Kosten für niedergelassene Ärzte in Österreich.',
+  title: 'Blog: KI-Sichtbarkeit & Arzt-Website Tipps | mypraxis.at',
+  description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Website-Kosten für niedergelassene Ärzte in Österreich. Von ChatGPT bis Google AI Overviews – alles was Ärzte 2025 wissen müssen.',
 }
 
 export default function BlogPage() {

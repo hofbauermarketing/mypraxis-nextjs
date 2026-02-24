@@ -150,9 +150,9 @@ const schemaMarkup = {
 }
 
 export const metadata: Metadata = {
-  title: 'Arzt Website & KI-Sichtbarkeit | mypraxis.at',
-  description: 'Digitale Positionierung für Ärztinnen und Ärzte in Österreich. Praxis-Websites ab € 3.900, KI-Readiness und strukturierte Daten. Bis zu 30 % KMU.DIGITAL Förderung.',
-  keywords: 'Arzt Website, Praxis Website, KI-Sichtbarkeit, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, KMU.DIGITAL Förderung, Digitale Positionierung Ärzte, Österreich',
+  title: 'Arzt Website Agentur Österreich | KI-Sichtbarkeit | mypraxis.at',
+  description: 'Praxis-Websites & digitale Positionierung für niedergelassene Ärzte in Österreich – ab € 3.900. KI-Readiness für ChatGPT & Google AI, Schema Markup, DSGVO-konform. Bis zu 30 % KMU.DIGITAL Förderung.',
+  keywords: 'Arzt Website Agentur Österreich, Praxis Website erstellen, KI-Sichtbarkeit Arztpraxis, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, KMU.DIGITAL Förderung Arzt, Digitale Positionierung Ärzte, Webdesign Ärzte Wien, Wahlarzt Website',
   authors: [{ name: 'Kevin Hofbauer', url: 'https://www.hofbauer.marketing' }],
   creator: 'mypraxis.at',
   publisher: 'Kevin Hofbauer e.U.',
@@ -162,12 +162,17 @@ export const metadata: Metadata = {
     languages: { 'de-AT': '/' },
   },
   openGraph: {
-    title: 'mypraxis.at – Digitale Positionierung für Ärzte',
-    description: 'KI-Sichtbarkeit, strukturierte Daten und rechtssichere Praxis-Websites für niedergelassene Ärzte in Österreich.',
+    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Österreich',
+    description: 'Praxis-Websites ab € 3.900, KI-Readiness für ChatGPT & Google AI, rechtssicher & DSGVO-konform. Bis zu 30 % KMU.DIGITAL Förderung für niedergelassene Ärzte.',
     url: 'https://www.mypraxis.at',
     siteName: 'mypraxis.at',
     locale: 'de_AT',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit',
+    description: 'Praxis-Websites & KI-Readiness für Ärzte in Österreich. Ab € 3.900, bis zu 30 % förderbar.',
   },
   robots: {
     index: true,
