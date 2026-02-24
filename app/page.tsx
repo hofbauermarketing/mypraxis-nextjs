@@ -687,29 +687,56 @@ export default function HomePage() {
       </section>
 
       {/* ===== DEMO-SEITEN ===== */}
-      <section className="py-20 px-6 bg-white" id="demos">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-4">
-            <span className="inline-block bg-orange-50 text-[#cc6600] text-sm font-semibold px-4 py-1.5 rounded-full">
-              Referenzen
+      <section className="py-16 px-6 bg-white" id="demos">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-orange-50 text-[#cc6600] text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
+              Demo-Seiten
             </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-primary">Demoseiten ansehen</h2>
-          <p className="text-base sm:text-lg text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Sehen Sie, wie eine professionelle Praxis-Website für verschiedene Fachrichtungen aussieht. Unsere
-            Demoseiten zeigen reale Umsetzungen – von der Allgemeinmedizin bis zur Dermatologie.
-          </p>
-          <div className="bg-gray-50 rounded-2xl border border-gray-200 p-10 sm:p-16">
-            <div className="text-5xl mb-4">🚧</div>
-            <p className="text-gray-500 font-medium text-base sm:text-lg mb-2">Demoseiten werden gerade aufgebaut.</p>
-            <p className="text-gray-400 text-sm sm:text-base">
-              Sprechen Sie uns direkt an – wir zeigen Ihnen bestehende Projekte im persönlichen Gespräch.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-primary">So könnte Ihre Website aussehen</h2>
+            <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">
+              3 Stile für Wahlarzt-Ordinationen, 2 für Ärztezentren – alle DSGVO-konform, KI-ready, ÖÄK-konform.
             </p>
-            <a
-              href="#kontakt"
-              className="inline-block mt-6 bg-primary hover:bg-[#162890] text-white font-semibold px-8 py-3.5 rounded-xl transition-all hover:scale-105 text-sm sm:text-base"
-            >
-              Erstberatung vereinbaren
+          </div>
+          <div className="grid sm:grid-cols-3 gap-4 mb-4">
+            {[
+              { href: '/demo/privatarzt-classic', label: 'Stil 1 – Classic Trust', name: 'Dr. Thomas Haas', fach: 'Innere Medizin', color: 'from-[#1e3ab8] to-[#2a50cc]' },
+              { href: '/demo/privatarzt-modern', label: 'Stil 2 – Modern Premium', name: 'Dr. Julia Stern', fach: 'Dermatologie & Ästhetik', color: 'from-[#0a0f1e] to-[#1a1f3e]' },
+              { href: '/demo/privatarzt-warm', label: 'Stil 3 – Warm & Persönlich', name: 'Dr. Anna Berger', fach: 'Kinderheilkunde', color: 'from-[#0d9488] to-[#0f766e]' },
+            ].map((d) => (
+              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
+                className="group rounded-xl overflow-hidden border border-gray-100 hover:shadow-md transition-all hover:-translate-y-0.5">
+                <div className={`h-20 bg-gradient-to-br ${d.color} flex items-end p-3`}>
+                  <span className="text-white/60 text-[10px] font-mono">{d.label}</span>
+                </div>
+                <div className="p-4 bg-gray-50 group-hover:bg-white transition-colors">
+                  <p className="font-bold text-gray-900 text-sm">{d.name}</p>
+                  <p className="text-gray-400 text-xs">{d.fach}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            {[
+              { href: '/demo/aerztezentrum-classic', label: 'Stil 4 – Ärztezentrum Classic', name: 'Ärztezentrum Mariahilf', fach: '4 Fachrichtungen', color: 'from-[#1d4ed8] to-[#2563eb]' },
+              { href: '/demo/aerztezentrum-premium', label: 'Stil 5 – Ärztezentrum Premium', name: 'MedCenter Alsergrund', fach: '8 Fachrichtungen', color: 'from-[#111827] to-[#1f2937]' },
+            ].map((d) => (
+              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
+                className="group rounded-xl overflow-hidden border border-gray-100 hover:shadow-md transition-all hover:-translate-y-0.5">
+                <div className={`h-20 bg-gradient-to-br ${d.color} flex items-end p-3`}>
+                  <span className="text-white/60 text-[10px] font-mono">{d.label}</span>
+                </div>
+                <div className="p-4 bg-gray-50 group-hover:bg-white transition-colors">
+                  <p className="font-bold text-gray-900 text-sm">{d.name}</p>
+                  <p className="text-gray-400 text-xs">{d.fach}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center">
+            <a href="/demo" target="_blank" rel="noopener noreferrer"
+              className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-xl transition-all text-sm">
+              Alle Demo-Seiten ansehen
             </a>
           </div>
         </div>

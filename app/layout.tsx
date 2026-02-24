@@ -177,6 +177,7 @@ export const metadata: Metadata = {
 }
 
 import Navigation from '@/components/Navigation'
+import CookieBanner from '@/components/CookieBanner'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -192,6 +193,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-white text-dark antialiased">
         <Navigation />
+        <CookieBanner />
         {children}
       </body>
     </html>
