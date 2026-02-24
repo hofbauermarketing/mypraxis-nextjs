@@ -492,11 +492,15 @@ export default function HomePage() {
           {/* Header */}
           <div className="text-center mb-10">
             <span className="inline-block bg-[#ff8a00]/20 border border-[#ff8a00]/30 text-[#ff8a00] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-              Kostenfreie Analyse · Regulärer Aufwand: € 199 · Heute für Sie: 0 €
+              Kostenfreie Analyse · Regulärer Aufwand: € 199 · Heute für Sie: 0 € – und dennoch{' '}
+              <span className="uppercase tracking-wide">UNBEZAHLBAR</span>
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               Gehören Sie zu den 10 % – oder zu den 90 %?
             </h2>
+            <p className="text-white/50 text-sm italic mb-4">
+              Was gibt es Schöneres als zu wissen, wo man ansetzen muss?
+            </p>
             <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
               Jetzt in 2 Minuten herausfinden: Unser Scanner prüft, ob Ihre Ordination von Google, ChatGPT und
               Co. wirklich gefunden wird – inklusive konkreter Schwachstellen und Verbesserungsvorschläge.
