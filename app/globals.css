@@ -35,8 +35,8 @@ body {
 }
 
 @keyframes shimmer {
-  0% { background-position: -300% center; }
-  100% { background-position: 300% center; }
+  0% { background-position: 300% center; }
+  100% { background-position: -300% center; }
 }
 
 @keyframes slideInRight {
