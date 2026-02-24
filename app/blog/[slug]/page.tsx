@@ -19,6 +19,18 @@ export async function generateMetadata({ params }: Props) {
     return {
       title: `${post.title} – mypraxis.at`,
       description: post.description,
+      alternates: {
+        canonical: `/blog/${slug}`,
+      },
+      openGraph: {
+        title: post.title,
+        description: post.description,
+        url: `https://www.mypraxis.at/blog/${slug}`,
+        type: 'article',
+        publishedTime: post.date,
+        authors: [post.author],
+        siteName: 'mypraxis.at',
+      },
     }
   } catch {
     return { title: 'Artikel nicht gefunden – mypraxis.at' }

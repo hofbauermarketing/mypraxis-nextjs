@@ -23,7 +23,7 @@ export default function HomePage() {
 
         {/* Hero background image */}
         <div className="absolute inset-0">
-          <Image src="/hero-bg.webp" alt="" fill priority className="object-cover opacity-20" sizes="100vw" />
+          <Image src="/hero-bg.webp" alt="Digitales Netzwerk – KI-Sichtbarkeit für Arztpraxen in Österreich" fill priority className="object-cover opacity-20" sizes="100vw" />
         </div>
         <div className="absolute inset-0 hero-pattern" />
 
