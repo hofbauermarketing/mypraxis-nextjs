@@ -5,6 +5,13 @@ import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
 import ScannerEmbed from '@/components/ScannerEmbed'
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+    languages: { 'de-AT': '/' },
+  },
+}
+
 /** Inline brand helper: "my" always orange, "praxis.at" inherits parent color */
 function Mp() {
   return (

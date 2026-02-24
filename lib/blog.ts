@@ -17,6 +17,7 @@ export interface BlogPostMeta {
 
 export interface BlogPost extends BlogPostMeta {
   contentHtml: string
+  readingTime: number
 }
 
 export function getSortedPostsData(): BlogPostMeta[] {
@@ -56,6 +57,9 @@ export async function getPostData(slug: string): Promise<BlogPost> {
     .use(remarkHtml, { sanitize: false })
     .process(content)
 
+  const wordCount = content.trim().split(/\s+/).length
+  const readingTime = Math.max(1, Math.ceil(wordCount / 200))
+
   return {
     slug,
     title: data.title as string,
@@ -63,6 +67,7 @@ export async function getPostData(slug: string): Promise<BlogPost> {
     description: data.description as string,
     author: data.author as string,
     contentHtml: processedContent.toString(),
+    readingTime,
   }
 }
 

@@ -41,3 +41,57 @@ Allgemeinmedizin, Innere Medizin, Orthopädie, Kardiologie, Dermatologie, Gynäk
 ## Regionen
 
 Niederösterreich, Wien, Oberösterreich, Salzburg, Steiermark, Kärnten, Burgenland, Tirol, Vorarlberg – ganz Österreich.
+
+## Blog – Fachartikel zu KI & Digitalisierung für Ärzte
+
+Alle Artikel: https://www.mypraxis.at/blog
+
+### Warum Ihre Ordination bei ChatGPT nicht empfohlen wird
+URL: https://www.mypraxis.at/blog/ki-sichtbarkeit-aerzte
+Über 90 % der österreichischen Ordinationen sind für KI-Systeme unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern.
+
+### Was kostet eine Website für Ärzte in Österreich?
+URL: https://www.mypraxis.at/blog/was-kostet-website-arzt
+Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 % und worauf Ärzte bei der Auswahl achten sollten.
+
+### KMU.DIGITAL Förderung für Ärzte: So bekommen Sie bis zu 30 % zurück
+URL: https://www.mypraxis.at/blog/kmu-digital-foerderung-aerzte
+Das KMU.DIGITAL-Programm fördert Website-Kosten für Arztpraxen mit bis zu 30 %. Wer förderberechtigt ist, wie der Antrag funktioniert und welche Fehler Sie vermeiden sollten.
+
+### DSGVO für Arzt-Websites: Was muss drauf, was darf nicht drauf?
+URL: https://www.mypraxis.at/blog/dsgvo-arzt-website
+DSGVO, ÖÄK-Werberichtlinien und Impressumspflicht: Die rechtlichen Anforderungen für Ordinationswebsites in Österreich kompakt erklärt.
+
+### DocFinder, Herold, Google: Wo Patienten 2026 wirklich nach Ärzten suchen
+URL: https://www.mypraxis.at/blog/docfinder-herold-google-vergleich
+Google dominiert, KI-Systeme gewinnen an Bedeutung. Ein ehrlicher Vergleich aller Kanäle und die ideale Strategie für Ärzte in Österreich.
+
+### Brauche ich als Arzt überhaupt eine eigene Website?
+URL: https://www.mypraxis.at/blog/brauche-ich-website-als-arzt
+2026 ist eine eigene Website keine Option mehr – sie ist digitale Grundinfrastruktur. Warum das für Kassen- und Wahlärzte gleichermaßen gilt.
+
+### Was ist ein KI-Telefonassistent für Arztpraxen?
+URL: https://www.mypraxis.at/blog/ki-telefonassistent-arztpraxis
+Ein KI-Telefonassistent nimmt Anrufe automatisch entgegen, beantwortet Standardfragen und entlastet das Praxisteam spürbar – rund um die Uhr.
+
+### Barrierefreiheitsgesetz 2025: Was Ärzte jetzt über ihre Website wissen müssen
+URL: https://www.mypraxis.at/blog/barrierefreiheitsgesetz-aerzte
+Seit dem 28. Juni 2025 gilt das Barrierefreiheitsgesetz in Österreich. Was das für Arzt-Websites bedeutet – und wie Barrierefreiheit gleichzeitig KI-Sichtbarkeit verbessert.
+
+### Website-Wechsel als Arzt: 7 Bedenken – und was wirklich dahintersteckt
+URL: https://www.mypraxis.at/blog/website-wechsel-bedenken
+Die 7 häufigsten Gründe, warum Ärzte den Website-Wechsel aufschieben – und warum keiner davon ein wirklicher Hinderungsgrund ist.
+
+## KI-Videothek
+
+URL: https://www.mypraxis.at/videothek
+Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich. Alle Videos sind frei zugänglich und verlinken auf externe Quellen (YouTube).
+
+### KI gegen Krebs – Revolution der Medizin? (KI WELT)
+YouTube: https://www.youtube.com/watch?v=T3hzI7ZMpFw
+
+### Ich habe meine Gesundheit von KI analysieren lassen
+YouTube: https://www.youtube.com/watch?v=gxjjAV-oFMA
+
+### Wie funktioniert die Medizin von morgen? (Bayrischer Rundfunk)
+YouTube: https://www.youtube.com/watch?v=O0IVw_0R5eU

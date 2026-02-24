@@ -157,10 +157,6 @@ export const metadata: Metadata = {
   creator: 'mypraxis.at',
   publisher: 'Kevin Hofbauer e.U.',
   metadataBase: new URL('https://www.mypraxis.at'),
-  alternates: {
-    canonical: '/',
-    languages: { 'de-AT': '/' },
-  },
   openGraph: {
     title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Österreich',
     description: 'Praxis-Websites ab € 3.900, KI-Readiness für ChatGPT & Google AI, rechtssicher & DSGVO-konform. Bis zu 30 % KMU.DIGITAL Förderung für niedergelassene Ärzte.',
@@ -193,8 +189,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
-        <link rel="canonical" href="https://www.mypraxis.at/" />
-        <link rel="alternate" hrefLang="de-AT" href="https://www.mypraxis.at/" />
       </head>
       <body className="bg-white text-dark antialiased">
         <Navigation />

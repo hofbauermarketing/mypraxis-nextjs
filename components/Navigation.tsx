@@ -20,6 +20,7 @@ export default function Navigation() {
 
   return (
     <header
+      role="banner"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
@@ -28,9 +29,9 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" aria-label="mypraxis.at – zur Startseite" className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="mypraxis.at Logo"
             width={140}
             height={40}
@@ -40,7 +41,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav – centered */}
-        <nav className="hidden md:flex items-center justify-center gap-6">
+        <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-6">
           {[
             { label: 'Leistungen', href: '#leistungen' },
             { label: 'KI-Sichtbarkeit', href: '#ki' },

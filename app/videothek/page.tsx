@@ -2,8 +2,12 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
 export const metadata = {
-  title: 'KI-Videothek – mypraxis.at',
-  description: 'Kuratierte Videos zu KI, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich.',
+  title: 'KI-Videothek für Ärzte – mypraxis.at',
+  description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich. Kostenlos ansehen.',
+  alternates: {
+    canonical: '/videothek',
+    languages: { 'de-AT': '/videothek' },
+  },
 }
 
 interface Video {
@@ -124,6 +128,7 @@ function VideoCard({ video }: { video: Video }) {
       href={href}
       target={hasId ? '_blank' : undefined}
       rel="noopener noreferrer"
+      aria-label={hasId ? `${video.title} – auf YouTube ansehen` : video.title}
       className={`bg-white rounded-2xl shadow-sm border overflow-hidden transition-all group flex flex-col ${
         video.placeholder
           ? 'border-dashed border-gray-200 opacity-60 cursor-default pointer-events-none'
@@ -135,7 +140,8 @@ function VideoCard({ video }: { video: Video }) {
         {thumbnail ? (
           <img
             src={thumbnail}
-            alt={video.title}
+            alt={`Vorschaubild: ${video.title}`}
+            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
@@ -145,7 +151,7 @@ function VideoCard({ video }: { video: Video }) {
         )}
         {/* Play button overlay – nur bei echten Videos */}
         {hasId && (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
             <div className="w-14 h-14 bg-black/50 rounded-full flex items-center justify-center group-hover:bg-black/70 transition-colors">
               <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
@@ -194,7 +200,7 @@ function VideoCard({ video }: { video: Video }) {
           {video.description}
         </p>
         {hasId && (
-          <div className="mt-4 flex items-center gap-1.5 text-[#1e3ab8] font-semibold text-xs">
+          <div className="mt-4 flex items-center gap-1.5 text-[#1e3ab8] font-semibold text-xs" aria-hidden="true">
             <svg className="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.9C6.8 19 12 19 12 19s4.4 0 7-.1c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM9.8 14.5V9l5.4 2.8-5.4 2.7z" />
             </svg>
@@ -214,13 +220,63 @@ export default function VideothekPage() {
   const placeholderVideos = videos.filter((v) => v.placeholder)
   const categories = [...new Set(realVideos.map((v) => v.category))]
 
+  const videothekSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://www.mypraxis.at/videothek#page',
+        name: 'KI-Videothek für Ärzte',
+        description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich.',
+        url: 'https://www.mypraxis.at/videothek',
+        inLanguage: 'de-AT',
+        publisher: { '@id': 'https://www.mypraxis.at/#organization' },
+        mainEntity: {
+          '@type': 'ItemList',
+          name: 'Kuratierte Videos zu KI & Digitalisierung für Ärzte',
+          numberOfItems: realVideos.length,
+          itemListElement: realVideos.map((video, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'VideoObject',
+              name: video.title,
+              description: video.description,
+              thumbnailUrl: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`,
+              url: `https://www.youtube.com/watch?v=${video.youtubeId}`,
+              embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+              uploadDate: '2024-01-01',
+              ...(video.source ? { author: { '@type': 'Organization', name: video.source } } : {}),
+            },
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'mypraxis.at', item: 'https://www.mypraxis.at' },
+          { '@type': 'ListItem', position: 2, name: 'KI-Videothek', item: 'https://www.mypraxis.at/videothek' },
+        ],
+      },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videothekSchema) }}
+      />
       <Navigation />
       <main className="min-h-screen bg-gray-50 pt-24 pb-20">
         {/* Header */}
         <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
+            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-blue-200/70 text-xs mb-4">
+              <Link href="/" className="hover:text-white transition-colors">mypraxis.at</Link>
+              <span aria-hidden="true">/</span>
+              <span className="text-blue-200">KI-Videothek</span>
+            </nav>
             <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Kuratierte Inhalte</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">KI-Videothek</h1>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
@@ -231,10 +287,11 @@ export default function VideothekPage() {
 
         <div className="max-w-6xl mx-auto px-6">
           {/* Category pills */}
-          <div className="mt-10 flex flex-wrap gap-2 justify-center mb-10">
+          <div className="mt-10 flex flex-wrap gap-2 justify-center mb-10" role="list" aria-label="Kategorien">
             {categories.map((cat) => (
               <span
                 key={cat}
+                role="listitem"
                 className={`text-sm font-semibold px-4 py-1.5 rounded-full ${categoryColors[cat] ?? 'bg-gray-100 text-gray-700'}`}
               >
                 {cat}
@@ -275,7 +332,7 @@ export default function VideothekPage() {
 
           {/* CTA */}
           <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-3">Kostenlose Erstberatung</h3>
+            <h2 className="text-2xl font-bold mb-3">Kostenlose Erstberatung</h2>
             <p className="text-blue-100 mb-6">
               30 Minuten, unverbindlich. Wir analysieren Ihre aktuelle Online-Präsenz und zeigen, was möglich ist.
             </p>
@@ -293,10 +350,10 @@ export default function VideothekPage() {
       <footer className="bg-gray-900 text-gray-400 py-8 text-center text-sm">
         <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span>© {new Date().getFullYear()} mypraxis.at – Hofbauer Marketing</span>
-          <div className="flex gap-6">
+          <nav aria-label="Footer Navigation" className="flex gap-6">
             <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
-          </div>
+          </nav>
         </div>
       </footer>
     </>
