@@ -2,7 +2,23 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { formatDate, BlogPostMeta } from '@/lib/blog'
+
+interface BlogPostMeta {
+  slug: string
+  title: string
+  date: string
+  description: string
+  author: string
+}
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr)
+  return date.toLocaleDateString('de-AT', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+}
 
 const categoryColors: Record<string, string> = {
   'was-kostet-website-arzt': 'bg-blue-100 text-blue-700',
@@ -66,7 +82,7 @@ export default function BlogGrid({ posts }: { posts: BlogPostMeta[] }) {
             type="text"
             placeholder="Artikel suchen – z. B. KI, DSGVO, Kosten …"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e: { target: { value: string } }) => setSearch(e.target.value)}
             className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
           />
         </div>
