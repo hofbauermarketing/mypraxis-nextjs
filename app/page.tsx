@@ -360,7 +360,6 @@ export default function HomePage() {
                   'Suchbegriff-Verifizierung (nur belegbare Aussagen)',
                   'KI-Readiness: Erweiterte strukturierte Daten (Schema Markup)',
                   'llms.txt Implementierung',
-                  'KI-Telefonassistent (Setup & Konfiguration)',
                   'KI-Sichtbarkeitsanalyse (Vorher/Nachher)',
                   'FAQ-System (reduziert Routine-Anrufe)',
                   '12 Monate technische Betreuung inkl. Updates',
@@ -371,6 +370,10 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
+              <div className="bg-white/10 border border-white/20 rounded-xl p-3 mb-3 text-xs text-blue-200 flex items-start gap-2">
+                <span className="text-[#ffaa40] flex-shrink-0 mt-0.5">＋</span>
+                <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent – Setup & Konfiguration nach Aufwand zubuchbar</span>
+              </div>
               <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-4">
                 <p className="text-xs text-blue-200">Paketpreis: € 7.500</p>
                 <p className="text-xs text-[#ffaa40] font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
