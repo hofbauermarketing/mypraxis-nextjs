@@ -7,12 +7,17 @@ export default function ScannerEmbed() {
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
+    let lastSet = 0
+
     function handleMessage(ev: MessageEvent) {
       if (!ev || !ev.data || ev.data.type !== 'AKI_EMBED_SCAN_HEIGHT') return
       if (!ev.origin || ev.origin.indexOf('agenturkunden.io') === -1) return
       const h = parseInt(ev.data.height, 10)
       if (!h || h < 420) return
       const clamped = Math.max(420, Math.min(1400, h + 12))
+      // Skip if we already set this height – prevents feedback loop
+      if (Math.abs(clamped - lastSet) < 2) return
+      lastSet = clamped
       if (frameRef.current) {
         frameRef.current.style.height = clamped + 'px'
         setReady(true)
