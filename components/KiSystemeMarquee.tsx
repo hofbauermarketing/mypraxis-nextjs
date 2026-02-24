@@ -76,7 +76,7 @@ const kiSysteme = [
     anbieter: 'Samsung',
     nutzer: 'Hunderte Mio. Geräte',
     relevanz: 'Meistverkaufte Smartphone-Marke in Österreich.',
-    url: 'https://www.samsung.com/global/galaxy/galaxy-ai/',
+    url: 'https://www.samsung.com/de/smartphones/galaxy-ai/',
     domain: 'samsung.com',
   },
   {
