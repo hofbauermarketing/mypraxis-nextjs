@@ -392,60 +392,52 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Paket 3 – Ärztezentren & PVEs (volle Breite, horizontal) */}
-          <div className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-            <div className="flex flex-col lg:flex-row">
-              {/* Links: Titel, Beschreibung, Preis, CTA */}
-              <div className="lg:w-72 xl:w-80 p-6 sm:p-8 bg-gradient-to-br from-gray-50 to-blue-50/30 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Ärztezentren &amp; PVEs</h3>
-                  <p className="text-gray-500 mb-3 text-sm">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
-                  <p className="text-xs text-gray-500 mb-6 leading-relaxed">
-                    Für interdisziplinäre Ärztezentren, Gruppenpraxen und PVEs. Wir entwickeln eine digitale
-                    Infrastruktur, die alle Fachrichtungen verbindet – und jedem einzelnen Arzt maximale
-                    KI-Sichtbarkeit verschafft.
-                  </p>
-                  <p className="text-xl sm:text-2xl font-extrabold text-primary mb-1">Individuelles Konzept</p>
-                  <p className="text-xs text-gray-400 mb-2">auf Anfrage</p>
-                </div>
-                <div>
-                  <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4">
-                    <p className="text-xs text-gray-600">Pro Arzt förderbar: bis € 6.000</p>
-                    <p className="text-sm font-bold text-orange-800">Bei 10 Ärzten: bis € 60.000 Förderung</p>
-                  </div>
-                  <p className="text-xs text-gray-400 mb-4 italic">
-                    Jeder niedergelassene Arzt ist ein eigenständiges KMU und kann die Förderung individuell
-                    beantragen.
-                  </p>
-                  <a
-                    href="#kontakt"
-                    className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
-                  >
-                    Projekt besprechen
-                  </a>
+          {/* Paket 3 – Ärztezentren & PVEs (kompakter Enterprise-Strip) */}
+          <div className="rounded-2xl overflow-hidden border border-slate-200 bg-[#0f1623]">
+            <div className="flex flex-col sm:flex-row sm:items-stretch">
+
+              {/* Titel-Block */}
+              <div className="p-5 sm:w-52 lg:w-60 bg-gradient-to-br from-[#1a2845] to-[#0f1623] border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-center gap-2">
+                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">Enterprise</span>
+                <h3 className="text-lg font-bold text-white leading-snug">Ärztezentren &amp; PVEs</h3>
+                <p className="text-white/40 text-xs leading-relaxed">Individuelle digitale Infrastruktur für Ihr gesamtes Haus.</p>
+              </div>
+
+              {/* Feature-Chips */}
+              <div className="flex-1 p-5 flex items-center">
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    'Zentrum-Strategie',
+                    'Schema-Architektur',
+                    'KI-Readiness',
+                    'Arzt-Profilseiten',
+                    'llms.txt',
+                    'Förderberatung',
+                    'Mehrsprachigkeit (opt.)',
+                    'Technische Betreuung',
+                  ].map((f) => (
+                    <span key={f} className="text-xs text-white/60 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+                      {f}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              {/* Rechts: Features in 2 Spalten */}
-              <div className="flex-1 p-6 sm:p-8 flex items-center">
-                <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-gray-700 text-xs sm:text-sm w-full">
-                  {[
-                    'Analyse & Strategiekonzept fürs Zentrum',
-                    'Interdisziplinäre Schema-Architektur',
-                    'KI-Readiness für alle Fachrichtungen',
-                    'Individuelle Arzt-Profilseiten',
-                    'Gemeinsame llms.txt',
-                    'KMU.DIGITAL Förderberatung (jeder Arzt förderbar)',
-                    'Recruiting & Mehrsprachigkeit (optional)',
-                    'Laufende technische Betreuung',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* CTA-Block */}
+              <div className="p-5 sm:w-52 lg:w-60 bg-amber-500/5 border-t sm:border-t-0 sm:border-l border-white/10 flex flex-col justify-center gap-3 text-center">
+                <div>
+                  <p className="text-white/40 text-[11px]">Pro Arzt förderbar</p>
+                  <p className="text-amber-400 text-xl font-extrabold">bis € 6.000</p>
+                  <p className="text-white/25 text-[10px]">Bei 10 Ärzten → bis € 60.000</p>
+                </div>
+                <a
+                  href="#kontakt"
+                  className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-2.5 rounded-xl transition-all text-sm"
+                >
+                  Projekt besprechen
+                </a>
               </div>
+
             </div>
           </div>
           <p className="text-xs text-gray-400 text-center mt-6">

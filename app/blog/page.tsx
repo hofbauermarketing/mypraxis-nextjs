@@ -1,34 +1,11 @@
 import Link from 'next/link'
-import { getSortedPostsData, formatDate } from '@/lib/blog'
+import { getSortedPostsData } from '@/lib/blog'
 import Navigation from '@/components/Navigation'
+import BlogGrid from '@/components/BlogGrid'
 
 export const metadata = {
   title: 'Blog – mypraxis.at',
   description: 'Praxisnahe Artikel über digitale Positionierung, KI-Sichtbarkeit und Website-Kosten für niedergelassene Ärzte in Österreich.',
-}
-
-const categoryColors: Record<string, string> = {
-  'was-kostet-website-arzt': 'bg-blue-100 text-blue-700',
-  'website-wechsel-bedenken': 'bg-orange-100 text-orange-700',
-  'ki-sichtbarkeit-aerzte': 'bg-purple-100 text-purple-700',
-  'brauche-ich-website-als-arzt': 'bg-green-100 text-green-700',
-  'dsgvo-arzt-website': 'bg-red-100 text-red-700',
-  'barrierefreiheitsgesetz-aerzte': 'bg-yellow-100 text-yellow-700',
-  'kmu-digital-foerderung-aerzte': 'bg-blue-100 text-blue-700',
-  'docfinder-herold-google-vergleich': 'bg-orange-100 text-orange-700',
-  'ki-telefonassistent-arztpraxis': 'bg-purple-100 text-purple-700',
-}
-
-const categoryLabels: Record<string, string> = {
-  'was-kostet-website-arzt': 'Kosten & Förderung',
-  'website-wechsel-bedenken': 'Website-Relaunch',
-  'ki-sichtbarkeit-aerzte': 'KI-Sichtbarkeit',
-  'brauche-ich-website-als-arzt': 'Website & Online-Präsenz',
-  'dsgvo-arzt-website': 'DSGVO & Recht',
-  'barrierefreiheitsgesetz-aerzte': 'DSGVO & Recht',
-  'kmu-digital-foerderung-aerzte': 'Kosten & Förderung',
-  'docfinder-herold-google-vergleich': 'Vergleich & Analyse',
-  'ki-telefonassistent-arztpraxis': 'KI-Tools',
 }
 
 export default function BlogPage() {
@@ -50,34 +27,8 @@ export default function BlogPage() {
         </div>
 
         {/* Articles */}
-        <div className="max-w-4xl mx-auto px-6 mt-12">
-          <div className="grid gap-8">
-            {posts.map((post) => (
-              <article
-                key={post.slug}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group"
-              >
-                <Link href={`/blog/${post.slug}`} className="block p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-600'}`}>
-                      {categoryLabels[post.slug] ?? 'Artikel'}
-                    </span>
-                    <span className="text-gray-400 text-sm">{formatDate(post.date)}</span>
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1e3ab8] transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-500 leading-relaxed mb-5">{post.description}</p>
-                  <div className="flex items-center gap-2 text-[#1e3ab8] font-semibold text-sm">
-                    <span>Artikel lesen</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
+        <div className="max-w-6xl mx-auto px-6 mt-12">
+          <BlogGrid posts={posts} />
 
           {/* CTA */}
           <div className="mt-16 bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">

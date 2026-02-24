@@ -69,6 +69,16 @@ export default function Navigation() {
           >
             Blog
           </Link>
+          <Link
+            href="/videothek"
+            className={`text-sm font-medium transition-colors ${
+              scrolled
+                ? 'text-gray-700 hover:text-blue-700'
+                : 'text-white/90 hover:text-white'
+            }`}
+          >
+            KI-Videothek
+          </Link>
           <a
             href="#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
@@ -119,6 +129,13 @@ export default function Navigation() {
             onClick={() => setMenuOpen(false)}
           >
             Blog
+          </Link>
+          <Link
+            href="/videothek"
+            className="text-gray-700 font-medium hover:text-blue-700"
+            onClick={() => setMenuOpen(false)}
+          >
+            KI-Videothek
           </Link>
           <a
             href="#kontakt"
