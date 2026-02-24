@@ -11,12 +11,24 @@ const categoryColors: Record<string, string> = {
   'was-kostet-website-arzt': 'bg-blue-100 text-blue-700',
   'website-wechsel-bedenken': 'bg-orange-100 text-orange-700',
   'ki-sichtbarkeit-aerzte': 'bg-purple-100 text-purple-700',
+  'brauche-ich-website-als-arzt': 'bg-green-100 text-green-700',
+  'dsgvo-arzt-website': 'bg-red-100 text-red-700',
+  'barrierefreiheitsgesetz-aerzte': 'bg-yellow-100 text-yellow-700',
+  'kmu-digital-foerderung-aerzte': 'bg-blue-100 text-blue-700',
+  'docfinder-herold-google-vergleich': 'bg-orange-100 text-orange-700',
+  'ki-telefonassistent-arztpraxis': 'bg-purple-100 text-purple-700',
 }
 
 const categoryLabels: Record<string, string> = {
   'was-kostet-website-arzt': 'Kosten & Förderung',
   'website-wechsel-bedenken': 'Website-Relaunch',
   'ki-sichtbarkeit-aerzte': 'KI-Sichtbarkeit',
+  'brauche-ich-website-als-arzt': 'Website & Online-Präsenz',
+  'dsgvo-arzt-website': 'DSGVO & Recht',
+  'barrierefreiheitsgesetz-aerzte': 'DSGVO & Recht',
+  'kmu-digital-foerderung-aerzte': 'Kosten & Förderung',
+  'docfinder-herold-google-vergleich': 'Vergleich & Analyse',
+  'ki-telefonassistent-arztpraxis': 'KI-Tools',
 }
 
 export default function BlogPage() {

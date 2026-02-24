@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import { getSortedPostsData } from '@/lib/blog'
+import BlogCarousel from '@/components/BlogCarousel'
+import KiSystemeMarquee from '@/components/KiSystemeMarquee'
 
 /** Inline brand helper: "my" always orange, "praxis.at" inherits parent color */
 function Mp() {
@@ -12,9 +13,8 @@ function Mp() {
   )
 }
 
-const BLOG_POSTS = getSortedPostsData()
-
 export default function HomePage() {
+  const blogPosts = getSortedPostsData()
   return (
     <main>
       {/* ===== HERO ===== */}
@@ -97,23 +97,16 @@ export default function HomePage() {
 
           <p className="mt-5 text-blue-300 text-sm animate-fade-in-up delay-500">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
 
-          {/* AI logos – scattered row */}
+          {/* KI systems text strip */}
           <div className="mt-10 flex flex-col items-center gap-3 animate-fade-in-up delay-600">
             <p className="text-blue-400/50 text-xs tracking-[0.2em] uppercase">Wir optimieren für</p>
-            <div className="flex items-center justify-center gap-8 flex-wrap">
-              {[
-                { src: '/logos/chatgpt.webp', label: 'ChatGPT', w: 38, h: 24 },
-                { src: '/logos/gemini.webp', label: 'Google Gemini', w: 32, h: 32 },
-                { src: '/logos/perplexity.webp', label: 'Perplexity', w: 32, h: 32 },
-                { src: '/logos/claude.webp', label: 'Anthropic Claude', w: 32, h: 32 },
-              ].map(({ src, label, w, h }) => (
-                <div key={label} className="group relative flex flex-col items-center gap-1.5">
-                  <Image src={src} alt={label} width={w} height={h} className="opacity-50 group-hover:opacity-85 transition-opacity" style={{ objectFit: 'contain' }} />
-                  <span className="text-white/60 text-[10px] tracking-wide opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                    {label}
-                  </span>
-                </div>
+            <div className="flex items-center justify-center gap-2 flex-wrap max-w-lg mx-auto">
+              {['ChatGPT', 'Google Gemini', 'Perplexity', 'Claude', 'Copilot', 'Siri', 'Meta AI', 'Alexa'].map((name) => (
+                <span key={name} className="text-white/55 text-xs px-2.5 py-1 border border-white/10 rounded-full">
+                  {name}
+                </span>
               ))}
+              <span className="text-white/30 text-xs">& mehr</span>
             </div>
           </div>
         </div>
@@ -134,6 +127,8 @@ export default function HomePage() {
           </svg>
         </div>
       </section>
+
+      <KiSystemeMarquee />
 
       {/* ===== PROBLEMVERSTÄNDNIS ===== */}
       <section className="py-24 px-6 bg-white">
@@ -721,17 +716,17 @@ export default function HomePage() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section className="py-20 px-6 bg-gray-50" id="faq">
+      <section className="py-12 px-6 bg-gray-50" id="faq">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-4">
+          <div className="text-center mb-3">
             <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
               FAQ
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 text-center text-primary">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-primary">
             Häufige Fragen
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-2">
             {[
               {
                 q: 'Was kostet eine Website für Ärzte in Österreich?',
@@ -778,19 +773,19 @@ export default function HomePage() {
                 key={i}
                 className="bg-white rounded-2xl border border-gray-200 shadow-sm group overflow-hidden"
               >
-                <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-5 sm:p-6 text-sm sm:text-base">
+                <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-4 sm:p-5 text-sm">
                   {faq.q}
-                  <span className="ml-4 flex-shrink-0 w-6 h-6 bg-blue-50 rounded-full flex items-center justify-center text-secondary font-bold text-sm group-open:rotate-45 transition-transform duration-300">
+                  <span className="ml-4 flex-shrink-0 w-5 h-5 bg-blue-50 rounded-full flex items-center justify-center text-secondary font-bold text-sm group-open:rotate-45 transition-transform duration-300">
                     +
                   </span>
                 </summary>
-                <p className="text-gray-600 px-5 sm:px-6 pb-5 sm:pb-6 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-600 px-4 sm:px-5 pb-4 sm:pb-5 leading-relaxed text-sm">
                   {faq.a}
                 </p>
               </details>
             ))}
           </div>
-          <div className="mt-10 text-center">
+          <div className="mt-6 text-center">
             <p className="text-gray-500 text-sm sm:text-base mb-3">Noch eine Frage, die hier nicht beantwortet wurde?</p>
             <a
               href="#kontakt"
@@ -804,41 +799,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== BLOG VORSCHAU ===== */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
-              Wissen für Ihre Praxis
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Aktuelle Artikel</h2>
-            <p className="text-gray-500 max-w-xl mx-auto">Praxisnahe Einblicke zu Kosten, KI-Sichtbarkeit und digitalem Aufbau für niedergelassene Ärzte.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-6 flex flex-col gap-3 transition-all hover:shadow-md"
-              >
-                <p className="text-xs font-semibold text-secondary uppercase tracking-wide">{post.date.slice(0, 7)}</p>
-                <h3 className="text-base font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed flex-1">{post.description}</p>
-                <span className="text-sm font-semibold text-primary flex items-center gap-1 mt-1">
-                  Lesen
-                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link href="/blog" className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-xl transition-all text-sm">
-              Alle Artikel ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BlogCarousel posts={blogPosts} />
 
       {/* ===== KONTAKT / CTA ===== */}
       <section
