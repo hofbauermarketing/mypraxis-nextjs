@@ -26,7 +26,7 @@ export default function Navigation() {
           : 'bg-black/25 backdrop-blur-sm py-5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -39,8 +39,8 @@ export default function Navigation() {
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav – centered */}
+        <nav className="hidden md:flex items-center justify-center gap-6">
           {[
             { label: 'Leistungen', href: '#leistungen' },
             { label: 'KI-Sichtbarkeit', href: '#ki' },
@@ -79,13 +79,17 @@ export default function Navigation() {
           >
             KI-Videothek
           </Link>
+        </nav>
+
+        {/* Desktop CTA – right aligned */}
+        <div className="hidden md:flex justify-end">
           <a
             href="#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
           >
             Beratung vereinbaren
           </a>
-        </nav>
+        </div>
 
         {/* Mobile Hamburger */}
         <button

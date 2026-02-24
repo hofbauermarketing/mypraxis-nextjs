@@ -449,7 +449,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== KI-SICHTBARKEIT ===== */}
-      <section className="py-20 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden" id="ki">
+      <section className="py-12 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden" id="ki">
         <div className="absolute inset-0 hero-pattern" />
         <div className="absolute inset-0 tech-grid opacity-20" />
 
@@ -470,15 +470,15 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="text-center mb-4">
+          <div className="text-center mb-3">
             <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full">
               Ihr entscheidender Vorteil
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
             Werden Sie von ChatGPT empfohlen?
           </h2>
-          <p className="text-base sm:text-lg text-blue-100 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-blue-100 text-center mb-0 max-w-3xl mx-auto leading-relaxed">
             Testen Sie es selbst: Fragen Sie ChatGPT nach einem Facharzt Ihrer Richtung in Ihrer Stadt. Werden Sie
             genannt? Falls nicht – und das betrifft über 90 % aller Ordinationen in Österreich – dann ist Ihre
             Online-Präsenz für KI-Systeme unsichtbar.
@@ -487,19 +487,20 @@ export default function HomePage() {
       </section>
 
       {/* ===== WEBSITE SCANNER ===== */}
-      <section className="py-20 px-6 bg-[#0a0f1e]" id="scan">
+      <section className="py-16 px-6 bg-[#0a0f1e]" id="scan">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
             <span className="inline-block bg-[#ff8a00]/20 border border-[#ff8a00]/30 text-[#ff8a00] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-              Kostenfreie Analyse · Gegenwert € 199
+              Kostenfreie Analyse · Regulärer Aufwand: € 199 · Heute für Sie: 0 €
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Ist Ihre Ordination online wirklich sichtbar?
+              Gehören Sie zu den 10 % – oder zu den 90 %?
             </h2>
             <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
-              Unser Scanner prüft Ihre Website auf KI-Sichtbarkeit, technische Mängel und Auffindbarkeit.
-              Der vollständige Bericht geht in wenigen Minuten direkt an Sie – unverbindlich.
+              Jetzt in 2 Minuten herausfinden: Unser Scanner prüft, ob Ihre Ordination von Google, ChatGPT und
+              Co. wirklich gefunden wird – inklusive konkreter Schwachstellen und Verbesserungsvorschläge.
+              Der Bericht kommt direkt zu Ihnen. Kostenlos. Unverbindlich.
             </p>
           </div>
 
