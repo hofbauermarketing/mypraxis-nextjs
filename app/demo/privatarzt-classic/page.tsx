@@ -369,7 +369,7 @@ export default function Demo1Page() {
           <a href="#" className="hover:text-gray-400">Impressum</a> ·{' '}
           <a href="#" className="hover:text-gray-400">Datenschutz</a>
         </p>
-        <a href="https://mypraxis.at" className="inline-block bg-gray-800 border border-gray-700 text-gray-400 text-xs px-4 py-2 rounded-full hover:border-gray-500 transition-colors">
+        <a href="https://www.mypraxis.at" className="inline-block bg-gray-800 border border-gray-700 text-gray-400 text-xs px-4 py-2 rounded-full hover:border-gray-500 transition-colors">
           Erstellt von <span className="text-[#ff8a00]">my</span>praxis.at
         </a>
       </footer>

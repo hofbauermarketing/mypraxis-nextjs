@@ -247,7 +247,7 @@ export default function Demo5Page() {
           <a href="#" className="hover:text-white/60">Impressum</a> ·{' '}
           <a href="#" className="hover:text-white/60">Datenschutz</a>
         </p>
-        <a href="https://mypraxis.at" className="inline-block border border-white/10 text-white/20 text-xs px-4 py-2 rounded-full hover:border-white/20 transition-colors">
+        <a href="https://www.mypraxis.at" className="inline-block border border-white/10 text-white/20 text-xs px-4 py-2 rounded-full hover:border-white/20 transition-colors">
           Erstellt von <span className="text-[#ff8a00]">my</span>praxis.at
         </a>
       </footer>

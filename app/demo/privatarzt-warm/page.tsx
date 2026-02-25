@@ -221,7 +221,7 @@ export default function Demo3Page() {
           <a href="#" className="hover:text-white">Impressum</a> ·{' '}
           <a href="#" className="hover:text-white">Datenschutz</a>
         </p>
-        <a href="https://mypraxis.at" className="inline-block bg-teal-900 border border-teal-700 text-teal-300 text-xs px-4 py-2 rounded-full hover:border-teal-500 transition-colors">
+        <a href="https://www.mypraxis.at" className="inline-block bg-teal-900 border border-teal-700 text-teal-300 text-xs px-4 py-2 rounded-full hover:border-teal-500 transition-colors">
           Erstellt von <span className="text-[#ff8a00]">my</span>praxis.at
         </a>
       </footer>
