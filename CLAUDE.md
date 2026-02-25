@@ -1,131 +1,128 @@
-# CLAUDE.md – mypraxis.at Projektstand
+# CLAUDE.md – mypraxis.at Next.js Projekt
 
 ## Wer ist Kevin?
 Kevin Hofbauer betreibt Kevin Hofbauer e.U., eine Digital-Marketing-Agentur in Vitis, Niederösterreich. Zwei Marken:
 - **hofbauer.marketing** – Websites, Videos, KI-Telefonassistenten für österreichische Unternehmen
 - **mypraxis.at** – spezialisiert auf digitale Positionierung für niedergelassene Ärzte in Österreich
 
-## Was ist mypraxis.at?
-Agentur die Ärzte-Websites baut und dabei als USP **KI-Sichtbarkeit** (Schema Markup, llms.txt, semantische Inhalte) anbietet – etwas das kein anderer österreichischer Anbieter hat.
+Soziale Profile:
+- LinkedIn: https://www.linkedin.com/in/kevin-hofbauer-b2660b274/
+- Facebook: https://www.facebook.com/profile.php?id=100035353760113
 
-### Pakete & Preise
+## Projekt-Übersicht
+- **Live-URL:** https://www.mypraxis.at
+- **GitHub:** https://github.com/hofbauermarketing/mypraxis-nextjs (branch: main)
+- **Hosting:** Vercel (auto-deploy bei push auf main)
+- **Framework:** Next.js 16, App Router, TypeScript, Tailwind CSS
+- **Blog:** Markdown-Dateien in `/content/blog/` via `lib/blog.ts`
+
+## Pakete & Preise
 | Paket | Preis netto | Nach KMU.DIGITAL (30%) |
-|-------|------------|----------------------|
+|---|---|---|
 | Praxis-Website | € 3.900 | € 2.730 |
 | Digitale Positionierung | € 7.500 | € 5.250 |
 | Ärztezentren & PVEs | Auf Anfrage | Pro Arzt bis € 6.000 Förderung |
 
-### KMU.DIGITAL Förderung
-- Umsetzungsförderung: 30 % der Kosten, max. € 6.000 pro Unternehmen
-- Voraussetzung: Strategieberatung durch externen zertifizierten Digital Consultant (CDC), ca. € 500 (davon € 250 gefördert)
-- Kevin hat einen externen Förderberater, der die Beratung und Antragstellung übernimmt
-- Bei Ärztezentren: Jeder Arzt = eigenes KMU = eigener Förderantrag möglich
+## Wichtige Dateipfade
 
-## Technischer Stand
+| Datei | Zweck |
+|---|---|
+| `app/layout.tsx` | Root Layout + globales JSON-LD Schema (@graph) |
+| `app/page.tsx` | Startseite (Hero, Scanner, Pakete, FAQ, Footer) |
+| `app/sitemap.ts` | Dynamische Sitemap via MetadataRoute API – 12 URLs |
+| `app/manifest.ts` | PWA Web App Manifest |
+| `app/icon.png` | Favicon – rundes mypraxis.at Logo (ChatGPT generiert, Feb 2026) |
+| `app/apple-icon.png` | Apple Touch Icon (gleiche Datei wie icon.png) |
+| `app/opengraph-image.tsx` | OG-Image Generator (1200×630, ImageResponse) |
+| `app/blog/page.tsx` | Blog-Übersicht |
+| `app/blog/[slug]/page.tsx` | Blog-Artikel mit BlogPosting Schema, Lesezeit, Breadcrumb |
+| `app/videothek/page.tsx` | KI-Videothek mit VideoObject Schema |
+| `app/datenschutz/page.tsx` | Datenschutz (noindex) |
+| `app/impressum/page.tsx` | Impressum (noindex) |
+| `app/demo/*/page.tsx` | Demo-Seiten (alle noindex) |
+| `components/Navigation.tsx` | Navigation mit logo.webp |
+| `components/ScannerEmbed.tsx` | KI-Scanner iframe mit Scroll-Hinweis |
+| `components/BlogGrid.tsx` | Blog-Übersicht Komponente |
+| `components/ContactForm.tsx` | Kontaktformular |
+| `lib/blog.ts` | Blog-Daten inkl. readingTime (200 WPM) |
+| `public/robots.txt` | 20+ KI-Crawler explizit erlaubt, Sitemap-URL |
+| `public/llms.txt` | KI-lesbare Inhalte (Leistungen, Blog, Videos) |
+| `public/logo.webp` | Optimiertes Logo (23KB, war 1.2MB PNG) |
+| `public/icon-512.png` | PWA Icon 512×512 |
+| `next.config.js` | Non-www → www Redirect (permanent: true) |
 
-### Website-Infrastruktur
-- **Alte Version:** Lovable → GitHub → Vercel (React SPA, Client-Side Rendering)
-  - Problem: KI-Crawler sehen nur `<div id="root"></div>` – kein Content
-  - URL war: https://mypraxis.vercel.app
-- **Neue Version:** Next.js mit Static Site Generation → GitHub → Vercel
-  - Repo: https://github.com/hofbauermarketing/mypraxis-nextjs
-  - Deploy: https://mypraxis-nextjs.vercel.app
-  - Crawler sehen jetzt den VOLLSTÄNDIGEN Content
-  - **OFFEN: Design/CSS noch nicht richtig** – Tailwind wird im Static Export nicht korrekt kompiliert, Seite funktioniert inhaltlich aber sieht visuell ungestylt aus
+## Schema Markup in layout.tsx (@graph)
+Vier Entitäten:
+1. **ProfessionalService** (`#organization`) – Firma, Leistungen, Preise, areaServed alle 9 Bundesländer
+2. **Person** (`#kevin-hofbauer`) – Kevin Hofbauer mit sameAs LinkedIn/Facebook/hofbauer.marketing
+3. **WebSite** (`#website`) – Website-Metadaten
+4. **FAQPage** (`#faq`) – 6 Fragen (Kosten, KI-Readiness, KMU.DIGITAL, Ärztezentren, llms.txt, Dauer)
 
-### Was bereits implementiert ist (im Next.js-Repo)
-1. **Schema Markup v3** – Vollständiges JSON-LD im `<head>` von layout.tsx:
-   - ProfessionalService mit allen Services, Preisen, Kontakt
-   - FAQPage mit 6 strukturierten Fragen
-   - WebSite-Schema
-   - Founder-Entity (Kevin Hofbauer)
-   - areaServed alle 9 Bundesländer
-   - knowsAbout mit allen relevanten Themen
-2. **robots.txt** – 20+ KI-Crawler explizit mit Allow (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, etc.)
-3. **llms.txt v3** – Strukturiertes KI-Profil unter /llms.txt
-4. **sitemap.xml** – Alle Seiten mit lastmod-Timestamps
-5. **Meta-Tags & Open Graph** – Vollständig in layout.tsx
-6. **Komplette Seitenstruktur** in page.tsx:
-   - Hero mit CTA
-   - Problemverständnis
-   - Differenzierung (4 Punkte)
-   - 3 Pakete mit Förderrechnung
-   - KI-Sichtbarkeit Drei-Schichten-Ansatz
-   - Förderungs-Sektion mit Vergleichstabelle
-   - 4-Schritte-Prozess
-   - 9 FAQ-Einträge
-   - Kontakt/CTA
-   - Footer mit Fachrichtungs-Keywords
+## Redirect-Konfiguration
+- **Vercel Dashboard:** mypraxis.at → 308 (permanent) → www.mypraxis.at ← MUSS SO BLEIBEN
+- **next.config.js:** Zusätzlicher non-www → www Redirect als Absicherung
+- HTTP→HTTPS macht Vercel automatisch in einem kombinierten Hop
 
-### Was noch NICHT implementiert ist
-- Domain mypraxis.at auf neues Vercel-Projekt umleiten
-- Tailwind CSS fixen (Design sieht aktuell ungestylt aus)
-- Impressum-Seite (/impressum)
-- Datenschutz-Seite (/datenschutz)
-- Unterseiten (Leistungen, KI-Sichtbarkeit, Förderung, FAQ, Kontakt)
-- Logo / Bilder
-- Cookie-Banner
-- Kontaktformular / Calendly-Integration
-- Google Fonts (Inter) laden
+## SEO-Status (Stand: 25. Feb 2026)
+- Canonical URLs: Jede Seite hat eigene Canonical — NICHT in layout.tsx global setzen!
+- Sitemap: `app/sitemap.ts` → 12 URLs (/, /blog, /videothek, 9 Blog-Artikel)
+- Non-www Links: In allen Demo-Seiten behoben (zeigen jetzt auf www.mypraxis.at)
+- Google Search Console: Umleitungsfehler in Bearbeitung (letzter Crawl 25.02.2026)
+- Sitemap in GSC eingereicht: https://www.mypraxis.at/sitemap.xml
+
+## ScannerEmbed (components/ScannerEmbed.tsx)
+- iframe von agenturkunden.io
+- Scroll-Hinweis: Desktop "Mit Mausrad scrollen" + Maus-Icon, Mobile "Mit Finger scrollen" + Finger-Icon
+- Gradient-Overlay blendet beim Hovern (group-hover:opacity-0) aus
+- `pointer-events: none` – iframe bleibt vollständig bedienbar
+
+## Blog-Artikel (content/blog/)
+9 Artikel mit vollständigem BlogPosting-Schema, Lesezeit und Breadcrumb:
+- ki-sichtbarkeit-aerzte
+- was-kostet-website-arzt
+- kmu-digital-foerderung-aerzte
+- dsgvo-arzt-website
+- docfinder-herold-google-vergleich
+- brauche-ich-website-als-arzt
+- ki-telefonassistent-arztpraxis
+- barrierefreiheitsgesetz-aerzte
+- website-wechsel-bedenken
+
+## Demo-Seiten (alle noindex)
+`/demo/privatarzt-classic`, `/demo/privatarzt-modern`, `/demo/privatarzt-warm`,
+`/demo/aerztezentrum-classic`, `/demo/aerztezentrum-premium`
+
+## KRITISCH: Bekannte Fallstricke
+
+### TypeScript-Fehler 7026 / 2307 → IGNORIEREN
+VSCode zeigt Phantom-Fehler ("JSX element implicitly has type 'any'", "Cannot find module 'next'").
+Das ist ein lokales VSCode tsconfig-Pfad-Alias-Problem. Vercel baut fehlerfrei.
+
+### app/sitemap.xml/ als Verzeichnis → VERBOTEN
+Verzeichnis mit `.xml` im Namen bricht Turbopack Build. Niemals `app/sitemap.xml/route.ts` anlegen.
+Stattdessen immer `app/sitemap.ts` (MetadataRoute API) verwenden.
+
+### Canonical URL in layout.tsx → VERBOTEN
+Kein hardcodiertes `<link rel="canonical">` in layout.tsx – das überschreibt alle Sub-Seiten.
+Jede Seite definiert ihre eigene Canonical via `alternates: { canonical: '/pfad' }`.
+
+### public/sitemap.xml statisch anlegen → VERMEIDEN
+Kollidiert mit der dynamischen `app/sitemap.ts`. Statische Datei wurde gelöscht.
+
+## Offene Maßnahmen (manuell, nicht im Code)
+- [ ] Google Search Console: Kaputte Sitemap-Einträge /blog und / löschen (drei-Punkte-Menü)
+- [ ] Google Search Console: Sitemap "Neu lesen" klicken
+- [ ] Google Business Profile einrichten und optimieren
+- [ ] Wikidata-Einträge: mypraxis.at + Kevin Hofbauer anlegen
+- [ ] Branchenverzeichnisse: herold.at, firmenabc.at, WKO, etc.
+- [ ] Kundenstimmen für E-E-A-T sammeln (Arzt, Fachrichtung, Bundesland)
+- [ ] Autor-Bio / About-Seite für Kevin Hofbauer
 
 ## GEO-Strategie (Generative Engine Optimization)
+Drei-Schichten-Ansatz:
+1. **Strukturierte Daten** – Schema Markup (JSON-LD) ✅
+2. **Semantische Inhalte** – Blog-Artikel, llms.txt ✅
+3. **KI-Readiness** – llms.txt, robots.txt mit KI-Crawlern ✅
 
-### Erstellt: KI-Dominanz-Playbook
-Umfassender Leitfaden in MYPRAXIS-KI-DOMINANZ-PLAYBOOK.md mit:
-
-**Phase 1 – Sofort (diese Woche):**
-- ✅ robots.txt deployed
-- ✅ llms.txt deployed
-- ✅ Schema Markup v3 deployed
-- ✅ SSR/SSG-Lösung implementiert (Next.js)
-- ✅ sitemap.xml deployed
-- ⬜ Google Business Profile optimieren
-- ⬜ Domain umleiten
-
-**Phase 2 – Wochen 2-3:**
-- ⬜ Wikidata-Einträge (mypraxis.at + Kevin Hofbauer)
-- ⬜ Branchenverzeichnisse (herold.at, firmenabc.at, WKO, etc.)
-- ⬜ LinkedIn Company Page
-- ⬜ Erster Blog-Artikel
-- ⬜ Wöchentlicher KI-Check starten
-
-**Phase 3 – Monate 2-3:**
-- ⬜ 5+ Blog-Artikel (Priorität: "Was kostet eine Website für Ärzte?", "KMU.DIGITAL Förderung", "ÖÄK Werberichtlinien", "DSGVO Arztpraxis")
-- ⬜ Erstes YouTube-Video
-- ⬜ Reddit-Engagement (r/Austria, r/selbstaendig)
-- ⬜ LinkedIn-Artikel
-- ⬜ GA4 KI-Traffic-Tracking
-
-**Phase 4 – Monate 4-6:**
-- ⬜ Restliche Blog-Artikel + regionale Seiten
-- ⬜ Weitere YouTube-Videos
-- ⬜ Guest Posts (medonline.at, brutkasten.com)
-- ⬜ Ergebnisse messen
-
-### Schlüssel-Erkenntnis: Lovable vs. Next.js
-Lovable ist ein App-Builder, kein Website-Builder. React SPAs rendern client-side – KI-Crawler sehen nichts. Das betrifft auch alle Ärzte-Websites die auf Lovable/Wix/ähnlichen SPA-Plattformen gebaut werden. **Das ist ein Verkaufsargument:** Kevins Wettbewerber (webdoctor.at, einfachordi.at) verkaufen Templates die für KI unsichtbar sind.
-
-**Workflow für Kunden-Websites:**
-- Lovable = Demo-Tool (schnelle Vorschau in 30 Min für Erstgespräch)
-- Produktion = Next.js oder WordPress (SSR, Schema funktioniert wirklich)
-
-## Dateien die erstellt wurden
-- `MYPRAXIS-KI-DOMINANZ-PLAYBOOK.md` – Vollständiges GEO-Playbook
-- `robots.txt` – KI-Crawler-Regeln
-- `llms.txt` – v3 KI-Profil
-- `sitemap.xml` – Sitemap
-- Next.js-Projektstruktur (layout.tsx, page.tsx, globals.css, configs)
-
-## Nächste Schritte
-1. **Tailwind CSS fixen** – Design der Next.js-Seite reparieren
-2. **Domain umleiten** – mypraxis.at → mypraxis-nextjs.vercel.app
-3. **Wikidata-Einträge** anlegen
-4. **Google Business Profile** einrichten/optimieren
-5. **Ersten Blog-Artikel** schreiben ("Was kostet eine Website für Ärzte?")
-6. **Impressum + Datenschutz** Seiten erstellen
-
-## Kontakt
-- Kevin Hofbauer
-- office@mypraxis.at
-- +43 664 19 15 447
-- Vitis, 3902, Niederösterreich
+USP: Einziger österreichischer Anbieter mit KI-Readiness als Kernleistung.
+Wettbewerber (webdoctor.at, einfachordi.at) nutzen SPA-Templates – für KI unsichtbar.
