@@ -4,9 +4,9 @@ import CookieBanner from '@/components/CookieBanner'
 export const metadata = { title: 'Ärztezentrum Mariahilf – Wien', robots: 'noindex' }
 
 const aerzte = [
-  { name: 'Dr. Michael Fürst', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA', photo: 'https://randomuser.me/api/portraits/men/46.jpg' },
-  { name: 'Dr. Claudia Nowak', fach: 'Innere Medizin', kasse: 'WGKK · SVS', photo: 'https://randomuser.me/api/portraits/women/26.jpg' },
-  { name: 'Dr. Stefan Hofer', fach: 'Orthopädie & Unfallchirurgie', kasse: 'Wahlarzt', photo: 'https://randomuser.me/api/portraits/men/33.jpg' },
+  { name: 'Dr. Michael Fürst', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA', photo: '/demo-dr-fuerst.jpg' },
+  { name: 'Dr. Claudia Nowak', fach: 'Innere Medizin', kasse: 'WGKK · SVS', photo: '/demo-dr-nowak.jpg' },
+  { name: 'Dr. Stefan Hofer', fach: 'Orthopädie & Unfallchirurgie', kasse: 'Wahlarzt', photo: '/demo-dr-hofer.jpg' },
   { name: 'Dr. Eva Zimmermann', fach: 'Gynäkologie', kasse: 'WGKK · BVA · SVS', photo: 'https://randomuser.me/api/portraits/women/58.jpg' },
 ]
 

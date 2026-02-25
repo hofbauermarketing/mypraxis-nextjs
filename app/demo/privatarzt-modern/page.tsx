@@ -77,7 +77,7 @@ export default function Demo2Page() {
             <div className="relative w-72 h-96">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-400/20 to-purple-500/20 blur-2xl" />
               <div className="relative h-full rounded-2xl border border-white/10 overflow-hidden">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Julia Stern" className="w-full h-3/4 object-cover object-top" />
+                <img src="/demo-dr-stern.jpg" alt="Dr. Julia Stern" className="w-full h-3/4 object-cover object-top" />
                 <div className="border-t border-white/10 px-6 py-4 flex justify-center gap-6 text-center bg-white/5">
                   <div><p className="text-amber-400 font-bold">15+</p><p className="text-white/40 text-xs">Jahre</p></div>
                   <div><p className="text-amber-400 font-bold">⭐ 5,0</p><p className="text-white/40 text-xs">Bewertung</p></div>

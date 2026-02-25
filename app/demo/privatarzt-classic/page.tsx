@@ -20,12 +20,12 @@ const faqs = [
 ]
 
 const openingRows = [
-  { day: 'Montag',    time: '08:00 – 12:00 · 14:00 – 17:00' },
-  { day: 'Dienstag',  time: '08:00 – 12:00' },
-  { day: 'Mittwoch',  time: '08:00 – 12:00 · 14:00 – 18:00' },
-  { day: 'Donnerstag',time: '08:00 – 12:00' },
-  { day: 'Freitag',   time: '08:00 – 13:00' },
-  { day: 'Sa / So',   time: 'Geschlossen' },
+  { day: 'Montag', time: '08:00 – 12:00 · 14:00 – 17:00' },
+  { day: 'Dienstag', time: '08:00 – 12:00' },
+  { day: 'Mittwoch', time: '08:00 – 12:00 · 14:00 – 18:00' },
+  { day: 'Donnerstag', time: '08:00 – 12:00' },
+  { day: 'Freitag', time: '08:00 – 13:00' },
+  { day: 'Sa / So', time: 'Geschlossen' },
 ]
 
 function getStatus(): { open: boolean; label: string } {
@@ -112,7 +112,7 @@ export default function Demo1Page() {
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-72 h-80 rounded-2xl overflow-hidden shadow-xl relative">
-                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Thomas Haas" className="w-full h-full object-cover" />
+                <img src="/demo-dr-haas.jpg" alt="Dr. Thomas Haas" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-[#1e3ab8]/80 backdrop-blur-sm p-4 text-white">
                   <p className="font-bold text-sm">Dr. Thomas Haas</p>
                   <p className="text-white/70 text-xs">Facharzt für Innere Medizin</p>
