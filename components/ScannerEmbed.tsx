@@ -13,11 +13,6 @@ export default function ScannerEmbed() {
         referrerPolicy="strict-origin-when-cross-origin"
       />
 
-      {/* Dekorativer Scrollbalken rechts */}
-      <div className="absolute right-2 top-3 bottom-3 w-1 bg-slate-200 rounded-full pointer-events-none">
-        <div className="absolute top-0 inset-x-0 h-1/3 bg-slate-400/60 rounded-full" />
-      </div>
-
       {/* Scroll-Hinweis: sichtbar im Ruhezustand, blendet beim Hovern aus */}
       <div
         className="absolute inset-x-0 bottom-0 h-24 flex flex-col items-center justify-end pb-4 pointer-events-none rounded-b-2xl opacity-100 group-hover:opacity-0 transition-opacity duration-500"
