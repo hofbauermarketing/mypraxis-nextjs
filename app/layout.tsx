@@ -29,13 +29,7 @@ const schemaMarkup = {
         "latitude": 48.7558,
         "longitude": 15.3172
       },
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.mypraxis.at/#kevin-hofbauer",
-        "name": "Kevin Hofbauer",
-        "jobTitle": "Inhaber & Digitalisierungsberater für Ärzte",
-        "worksFor": { "@id": "https://www.mypraxis.at/#organization" }
-      },
+      "founder": { "@id": "https://www.mypraxis.at/#kevin-hofbauer" },
       "areaServed": [
         { "@type": "Country", "name": "Österreich", "sameAs": "https://www.wikidata.org/wiki/Q40" },
         { "@type": "AdministrativeArea", "name": "Niederösterreich" },
@@ -96,10 +90,24 @@ const schemaMarkup = {
       },
       "sameAs": [
         "https://www.hofbauer.marketing",
-        "https://www.linkedin.com/in/kevin-hofbauer"
+        "https://www.linkedin.com/in/kevin-hofbauer-b2660b274/",
+        "https://www.facebook.com/profile.php?id=100035353760113"
       ],
       "priceRange": "€€€",
       "slogan": "Ihre Ordination. Digital positioniert. Von KI empfohlen."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.mypraxis.at/#kevin-hofbauer",
+      "name": "Kevin Hofbauer",
+      "jobTitle": "Inhaber & Digitalisierungsberater für Ärzte",
+      "worksFor": { "@id": "https://www.mypraxis.at/#organization" },
+      "url": "https://www.mypraxis.at",
+      "sameAs": [
+        "https://www.linkedin.com/in/kevin-hofbauer-b2660b274/",
+        "https://www.facebook.com/profile.php?id=100035353760113",
+        "https://www.hofbauer.marketing"
+      ]
     },
     {
       "@type": "WebSite",
