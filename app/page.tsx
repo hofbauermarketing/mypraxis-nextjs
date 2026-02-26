@@ -961,79 +961,55 @@ export default function HomePage() {
             {[
               {
                 q: 'Wie lange dauert es, bis meine Website bei Google sichtbar ist?',
-                a: 'Das ist eine der häufigsten Fragen – und die ehrliche Antwort: zwischen 2 und 12 Wochen, abhängig von Fachrichtung, Region und Wettbewerb. Neue Websites brauchen Zeit, bis Google sie vollständig indexiert und bewertet. Was sofort funktioniert: KI-Systeme wie ChatGPT und Perplexity. Diese lesen Ihre strukturierten Daten (Schema Markup) oft innerhalb weniger Tage aus – und nennen Ihre Ordination in Antworten. Google-Rankings folgen danach organisch, wenn Inhalte, Struktur und lokale Signale stimmen.',
-              },
-              {
-                q: 'Meine Mitbewerber haben längst eine Website – ist es nicht schon zu spät?',
-                a: 'Für Google: vielleicht. Wer früher startet, hat einen Vorsprung bei organischen Rankings – der ist real, aber aufholbar. Für KI-Sichtbarkeit: nein. Der Großteil der Ordinationen in Österreich – auch Ihre Mitbewerber – hat keine strukturierten Daten, kein Schema Markup, keine llms.txt. KI-Systeme können Ihre Mitbewerber-Websites meist nicht vollständig lesen. Wer jetzt startet und es richtig macht, hat in der KI-Suche tatsächlich einen echten First-Mover-Vorteil.',
+                a: 'Zwischen 2 und 12 Wochen, abhängig von Fachrichtung, Region und Wettbewerb. Was sofort funktioniert: KI-Systeme wie ChatGPT und Perplexity lesen strukturierte Daten oft innerhalb weniger Tage aus. Google-Rankings folgen danach organisch.',
               },
               {
                 q: 'Was kostet eine Website für Ärzte in Österreich?',
-                a: 'Unsere Praxis-Website liegt bei € 3.900 netto, die Digitale Positionierung mit Tiefenrecherche und KI-Readiness bei € 7.500 netto. Für Ärztezentren und PVEs erstellen wir individuelle Konzepte. Über KMU.DIGITAL sind bis zu 30 % förderbar.',
+                a: 'Praxis-Website: € 3.900 netto. Digitale Positionierung mit KI-Readiness: € 7.500 netto. Über KMU.DIGITAL sind bis zu 30 % förderbar. Für Ärztezentren individuelle Konzepte auf Anfrage.',
               },
               {
-                q: 'Was ist KI-Readiness und warum braucht meine Ordination das?',
-                a: 'KI-Readiness beschreibt, wie gut Ihre Online-Präsenz für KI-Suchsysteme wie ChatGPT, Perplexity und Google AI Overviews aufbereitet ist. Immer mehr Patienten suchen über KI-Assistenten nach Ärzten. Ohne strukturierte Daten und semantische Inhalte wird Ihre Ordination in diesen Antworten nicht genannt.',
+                q: 'Was ist KI-Readiness und warum brauche ich das?',
+                a: 'KI-Readiness beschreibt, wie gut Ihre Website für KI-Suchsysteme wie ChatGPT und Perplexity aufbereitet ist. Ohne strukturierte Daten wird Ihre Ordination dort schlicht nicht genannt – egal wie gut Ihre Website aussieht.',
               },
               {
-                q: 'Was sind strukturierte Daten (Schema Markup)?',
-                a: 'Maschinenlesbare Informationen im Hintergrund Ihrer Website, die Google, Bing und KI-Systemen mitteilen: Wer Sie sind, welche Fachrichtung Sie haben, welche Leistungen Sie anbieten, wo Ihre Ordination liegt und wie Sie erreichbar sind.',
+                q: 'Wie beantrage ich die KMU.DIGITAL-Förderung?',
+                a: 'In zwei Schritten: (1) Strategieberatung durch einen zertifizierten Digital Consultant (€ 500, davon € 250 gefördert). (2) Antrag auf Umsetzungsförderung (30 %, max. € 6.000). Wir begleiten Sie durch den gesamten Prozess.',
               },
               {
-                q: 'Was ist ein KI-Telefonassistent?',
-                a: 'Ein KI-Telefonassistent beantwortet eingehende Anrufe automatisch – auf natürlichem österreichischem Deutsch. Er gibt Auskunft über Ordinationszeiten, nimmt Terminwünsche entgegen und entlastet Ihr Team spürbar bei Routineanfragen.',
+                q: 'Wie wird meine Praxis in ChatGPT oder Perplexity sichtbar?',
+                a: 'Durch KI-lesbare Website-Struktur: Schema Markup, semantische Inhalte und eine llms.txt-Datei. KI-Assistenten lesen diese Daten aus und nennen Ihre Ordination in Antworten. Wer jetzt startet, hat einen echten First-Mover-Vorteil.',
               },
               {
-                q: 'Wie funktioniert die KMU.DIGITAL Förderung?',
-                a: 'Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind als KMU förderbar. Die Umsetzungsförderung beträgt 30 % der Investitionskosten (max. € 6.000). Voraussetzung ist eine Strategieberatung durch einen zertifizierten Digital Consultant (CDC) – Kosten ca. € 500, davon € 250 gefördert.',
+                q: 'Was ist der Unterschied zwischen DocFinder / Herold und einer eigenen Website?',
+                a: 'Portale geben Ihnen keine Kontrolle über Darstellung und Ranking. Ihre eigene Domain bleibt immer Ihnen – inklusive KI-Optimierung, eigener Marke und vollständiger Unabhängigkeit von Portalbedingungen.',
               },
               {
-                q: 'Können Ärztezentren die Förderung mehrfach nutzen?',
-                a: 'Ja – jeder niedergelassene Arzt ist ein eigenständiges Unternehmen und kann die Förderung individuell beantragen. Bei einem Ärztezentrum mit 16 Ärzten können bis zu 16 separate Förderanträge gestellt werden.',
+                q: 'Brauche ich technisches Know-how?',
+                a: 'Nein. Wir übernehmen alles – von der Förderabwicklung bis zum Launch. Nach Fertigstellung erhalten Sie eine Einschulung, damit Sie einfache Änderungen selbst vornehmen können.',
               },
               {
-                q: 'Was bedeutet llms.txt?',
-                a: 'Eine strukturierte Datei auf Ihrer Website, die KI-Crawler gezielt auslesen – ähnlich wie robots.txt für Suchmaschinen, aber speziell für KI-Systeme. Sie enthält eine maschinenoptimierte Zusammenfassung Ihrer Praxis und Leistungen.',
-              },
-              {
-                q: 'Wie lange dauert die Umsetzung?',
-                a: 'Praxis-Website: 2–3 Wochen. Digitale Positionierung: 4–6 Wochen. Ärztezentren: 8–12 Wochen. Dazu kommt vorab die Förderabwicklung (ca. 2–4 Wochen).',
-              },
-              {
-                q: 'Brauche ich technisches Wissen?',
-                a: 'Nein. Wir übernehmen alles – von der Recherche über die Förderabwicklung bis zum Launch. Nach der Fertigstellung erhalten Sie eine Einschulung, damit Sie einfache Änderungen selbst vornehmen können.',
-              },
-              {
-                q: 'Was passiert nach den 12 Monaten Betreuung?',
-                a: 'Nach den inkludierten 12 Monaten können Sie die technische Betreuung jederzeit zu günstigen Konditionen verlängern. Viele unserer Kunden entscheiden sich für ein laufendes Wartungspaket – alternativ übergeben wir alles vollständig in Ihre Hände.',
+                q: 'Ist die Website DSGVO-konform und ÖÄK-konform?',
+                a: 'Ja. Cookiebanner, Datenschutzerklärung, EU-Hosting, ÖÄK-konforme Texte ohne marktschreierische Werbung. Unsere Kunden hatten bisher keine Beanstandungen.',
               },
             ].map((faq, i) => (
-              <details
-                key={i}
-                className="bg-white rounded-2xl border border-gray-200 shadow-sm group overflow-hidden"
-              >
+              <details key={i} className="bg-white rounded-2xl border border-gray-200 shadow-sm group overflow-hidden">
                 <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-4 sm:p-5 text-sm">
                   {faq.q}
-                  <span className="ml-4 flex-shrink-0 w-5 h-5 bg-blue-50 rounded-full flex items-center justify-center text-secondary font-bold text-sm group-open:rotate-45 transition-transform duration-300">
-                    +
-                  </span>
+                  <span className="ml-4 flex-shrink-0 w-5 h-5 bg-blue-50 rounded-full flex items-center justify-center text-secondary font-bold text-sm group-open:rotate-45 transition-transform duration-300">+</span>
                 </summary>
-                <p className="text-gray-600 px-4 sm:px-5 pb-4 sm:pb-5 leading-relaxed text-sm">
-                  {faq.a}
-                </p>
+                <p className="text-gray-600 px-4 sm:px-5 pb-4 sm:pb-5 leading-relaxed text-sm">{faq.a}</p>
               </details>
             ))}
           </div>
-          <div className="mt-6 text-center">
-            <p className="text-gray-500 text-sm sm:text-base mb-3">Noch eine Frage, die hier nicht beantwortet wurde?</p>
-            <a
-              href="#kontakt"
-              className="text-secondary hover:text-primary font-semibold text-sm sm:text-base underline underline-offset-2 transition-colors"
-            >
-              Kontaktieren Sie uns – wir antworten ehrlich und verständlich
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/faq" className="inline-flex items-center gap-2 text-[#1e3ab8] hover:text-[#1a33a8] font-semibold text-sm border border-[#1e3ab8]/20 hover:border-[#1e3ab8]/40 bg-white px-5 py-2.5 rounded-xl transition-all">
+              📋 Alle Fragen & Antworten ansehen →
             </a>
-            <p className="text-gray-400 text-xs mt-2">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
+            <a href="#kontakt" className="inline-flex items-center gap-2 text-[#ff8a00] hover:text-[#e67a00] font-semibold text-sm transition-colors">
+              Frage nicht dabei? Schreiben Sie uns →
+            </a>
           </div>
+
         </div>
       </section>
 

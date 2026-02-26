@@ -45,7 +45,7 @@ export default function Navigation() {
             { label: 'Leistungen', href: '/#leistungen' },
             { label: 'KI-Sichtbarkeit', href: '/#ki' },
             { label: 'Förderung', href: '/#foerderung' },
-            { label: 'FAQ', href: '/#faq' },
+            { label: 'FAQ', href: '/faq' },
           ].map((item) => (
             <a
               key={item.href}
