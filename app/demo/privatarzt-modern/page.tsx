@@ -92,7 +92,7 @@ export default function Demo2Page() {
       </section>
 
       {/* LEISTUNGEN */}
-      <section id="leistungen" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 40%, #0f1530 80%, #0a0f1e 100%)' }}>
+      <section id="leistungen" className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #0d1630 50%, #060a14 100%)' }}>
         {/* Ambient glow */}
         <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full bg-amber-400/3 blur-3xl pointer-events-none" />
         <div className="absolute bottom-20 right-1/4 w-96 h-96 rounded-full bg-purple-500/5 blur-3xl pointer-events-none" />
@@ -217,7 +217,7 @@ export default function Demo2Page() {
       </section>
 
       {/* MEIN ANSATZ */}
-      <section id="ansatz" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #080c18 50%, #0a0f1e 100%)' }}>
+      <section id="ansatz" className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #03060e 50%, #060a14 100%)' }}>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-400/2 to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-3">
@@ -252,7 +252,7 @@ export default function Demo2Page() {
       </section>
 
       {/* TEAM */}
-      <section id="team" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 50%, #0b1020 100%)' }}>
+      <section id="team" className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #0d1630 50%, #060a14 100%)' }}>
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Das Team</span>
@@ -301,7 +301,7 @@ export default function Demo2Page() {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0b1020 0%, #080c18 60%, #0a0f1e 100%)' }}>
+      <section id="kontakt" className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #03060e 50%, #060a14 100%)' }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Ordinationszeiten</span>
@@ -326,7 +326,7 @@ export default function Demo2Page() {
       </section>
 
       {/* BEWERTUNGEN */}
-      <section className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 40%, #0f1430 80%, #0a0f1e 100%)' }}>
+      <section className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #0d1630 50%, #060a14 100%)' }}>
         <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(ellipse at 20% 50%, rgba(212,168,67,0.03) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(139,92,246,0.04) 0%, transparent 60%)' }} />
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
@@ -353,7 +353,7 @@ export default function Demo2Page() {
       </section>
 
       {/* TERMIN */}
-      <section id="termin" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #080d1a 50%, #0a0f1e 100%)' }}>
+      <section id="termin" className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #03060e 50%, #060a14 100%)' }}>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Erstgespräch</span>
@@ -394,7 +394,7 @@ export default function Demo2Page() {
       </section>
 
       {/* FAQ */}
-      <section className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 50%, #0a0f1e 100%)' }}>
+      <section className="py-14 px-6 relative" style={{ background: 'linear-gradient(180deg, #060a14 0%, #0d1630 50%, #060a14 100%)' }}>
         <div className="max-w-3xl mx-auto">
           <div className="mb-12"><span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Häufige Fragen</span><h2 className="text-4xl font-bold text-white mt-2">Ihre Fragen</h2></div>
           <div className="space-y-3">
