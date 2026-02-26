@@ -174,12 +174,18 @@ export default function Demo3Page() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { name: 'Monika Huber', rolle: 'Diplomierte Kinderkrankenschwester', jahre: '20 Jahre Berufserfahrung · seit 2012 im Team', text: 'Monika hat ein besonderes Händchen für Kinder jedes Alters – ob Säugling oder Teenager. Sie führt Impfungen und Messungen durch und hat immer ein Pflaster und ein Lächeln parat.', initials: 'MH', color: 'from-teal-400 to-emerald-500' },
-              { name: 'Sandra Aichner', rolle: 'Rezeption & Terminkoordination', jahre: 'seit 2015 in der Ordination', text: 'Sandra ist die gute Seele unserer Ordination. Sie koordiniert alle Termine, beantwortet Fragen rund um Mutter-Kind-Pass und Impfpass und sorgt dafür, dass niemand lange wartet.', initials: 'SA', color: 'from-yellow-300 to-amber-400' },
+              { name: 'Monika Huber', rolle: 'Diplomierte Kinderkrankenschwester', jahre: '20 Jahre Berufserfahrung · seit 2012 im Team', text: 'Monika hat ein besonderes Händchen für Kinder jedes Alters – ob Säugling oder Teenager. Sie führt Impfungen und Messungen durch und hat immer ein Pflaster und ein Lächeln parat.', photo: '/demo-team-huber.jpg', initials: 'MH', color: 'from-teal-400 to-emerald-500' },
+              { name: 'Sandra Aichner', rolle: 'Rezeption & Terminkoordination', jahre: 'seit 2015 in der Ordination', text: 'Sandra ist die gute Seele unserer Ordination. Sie koordiniert alle Termine, beantwortet Fragen rund um Mutter-Kind-Pass und Impfpass und sorgt dafür, dass niemand lange wartet.', photo: null, initials: 'SA', color: 'from-yellow-300 to-amber-400' },
             ].map((t) => (
               <div key={t.name} className="flex gap-5 bg-teal-50 rounded-2xl p-6 border border-teal-100">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${t.color} flex items-center justify-center shrink-0 shadow-sm`}>
-                  <span className="text-white font-bold text-xl">{t.initials}</span>
+                <div className="shrink-0">
+                  {t.photo ? (
+                    <img src={t.photo} alt={t.name} className="w-20 h-20 rounded-2xl object-cover" />
+                  ) : (
+                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${t.color} flex items-center justify-center shadow-sm`}>
+                      <span className="text-white font-bold text-xl">{t.initials}</span>
+                    </div>
+                  )}
                 </div>
                 <div>
                   <p className="font-bold text-gray-900 text-sm">{t.name}</p>

@@ -51,7 +51,7 @@ export default function Demo5Page() {
             <a href="#fachbereiche" className="hover:text-white transition-colors">Fachbereiche</a>
             <a href="#team" className="hover:text-white transition-colors">Team</a>
             <a href="#kontakt" className="hover:text-white transition-colors">Kontakt</a>
-            <a href="#termin" className="bg-teal-500 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-teal-400 transition-colors">Termin buchen</a>
+            <a href="#kontakt" className="bg-teal-500 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-teal-400 transition-colors">Termin buchen</a>
           </div>
         </div>
       </nav>
@@ -79,7 +79,7 @@ export default function Demo5Page() {
                 Das MedCenter Alsergrund vereint 8 Fachrichtungen unter einem Dach. Kürzere Wege, koordinierte Diagnostik, gemeinsame Patientenakte.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
-                <a href="#termin" className="bg-teal-500 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
+                <a href="#kontakt" className="bg-teal-500 text-white px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
                   Online-Termin buchen
                 </a>
                 <a href="#fachbereiche" className="border border-white/20 text-white/80 px-7 py-3.5 rounded-xl font-semibold text-sm hover:border-white/40 transition-colors">
