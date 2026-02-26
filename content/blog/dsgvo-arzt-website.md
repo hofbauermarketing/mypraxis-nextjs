@@ -3,6 +3,8 @@ title: "DSGVO für Arzt-Websites: Was muss drauf, was darf nicht drauf?"
 date: "2026-02-23"
 description: "DSGVO, ÖÄK-Werberichtlinien und Impressumspflicht: Die rechtlichen Anforderungen für Ordinationswebsites in Österreich kompakt erklärt."
 author: "Kevin Hofbauer"
+image: "/blog/dsgvo-arzt-website.png"
+imageAlt: "Arzt sitzt vor einem Monitor mit digitalem Datenschutzschild-Symbol, Rechtsdokumente liegen auf dem Schreibtisch"
 ---
 
 Eine Arzt-Website in Österreich muss sowohl die DSGVO als auch die Werberichtlinien der Österreichischen Ärztekammer (ÖÄK) einhalten. Verstöße können Abmahnungen, Bußgelder und berufsrechtliche Konsequenzen nach sich ziehen. Dieser Artikel fasst die wichtigsten Anforderungen zusammen, die jede Ordinationswebsite erfüllen muss.

@@ -3,6 +3,8 @@ title: "Was ist ein KI-Telefonassistent für Arztpraxen?"
 date: "2026-02-23"
 description: "Ein KI-Telefonassistent nimmt Anrufe automatisch entgegen, beantwortet Standardfragen und entlastet das Praxisteam spürbar – rund um die Uhr."
 author: "Kevin Hofbauer"
+image: "/blog/ki-telefonassistent-arztpraxis.png"
+imageAlt: "KI-Sprachassistent-Interface neben einem Telefon am Empfangstrisch einer Arztpraxis mit futuristischer Benutzeroberfläche"
 ---
 
 Ein KI-Telefonassistent ist eine Software, die eingehende Anrufe in der Ordination automatisch entgegennimmt, Patientenanliegen versteht und einfache Anfragen selbstständig beantwortet – rund um die Uhr, auch außerhalb der Ordinationszeiten. Statt eines Anrufbeantworters oder einer Warteschleife spricht der Patient mit einer natürlich klingenden Stimme, die Ordinationszeiten nennen, Terminwünsche aufnehmen und häufige Fragen beantworten kann.

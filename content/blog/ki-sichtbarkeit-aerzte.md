@@ -3,6 +3,8 @@ title: "Warum Ihre Ordination bei ChatGPT nicht empfohlen wird"
 date: "2026-02-23"
 description: "Über 90 % der österreichischen Ordinationen sind für KI-Systeme unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern."
 author: "Kevin Hofbauer"
+image: "/blog/ki-sichtbarkeit-aerzte.png"
+imageAlt: "Ärztin mit AR-Brille interagiert mit schwebenden KI-Suchergebnissen und digitalen Datenpanelen in einem modernen Krankenhaus"
 ---
 
 Wenn ein Patient ChatGPT fragt „Welcher Hautarzt in Linz hat gute Bewertungen?", werden in der Antwort typischerweise 3 bis 5 Ordinationen genannt. Über 90 % der niedergelassenen Ärztinnen und Ärzte in Österreich tauchen in diesen Antworten nicht auf – unabhängig von ihrer Reputation, ihren Bewertungen oder ihrer Erfahrung. Der Grund ist nicht mangelnde Qualität, sondern fehlende technische Aufbereitung der Online-Präsenz.

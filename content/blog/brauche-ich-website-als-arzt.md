@@ -3,6 +3,8 @@ title: "Brauche ich als Arzt überhaupt eine eigene Website?"
 date: "2026-02-23"
 description: "2026 ist eine eigene Website keine Option mehr – sie ist digitale Grundinfrastruktur. Warum das für Kassen- und Wahlärzte gleichermaßen gilt."
 author: "Kevin Hofbauer"
+image: "/blog/brauche-ich-website-als-arzt.png"
+imageAlt: "Ärztin hält ein Smartphone mit einer professionellen Praxis-Website in der Hand, modernes Krankenhaus im Hintergrund"
 ---
 
 Ja – und zwar unabhängig davon, ob Sie Wahlarzt oder Kassenarzt sind. Eine eigene Website ist 2026 kein Marketinginstrument mehr, sondern digitale Grundinfrastruktur. Ohne eigene Website existieren Sie für KI-Systeme wie ChatGPT, Google Gemini und Perplexity praktisch nicht – und diese Systeme beeinflussen zunehmend, welche Ärzte Patienten finden.

@@ -3,6 +3,8 @@ title: "KMU.DIGITAL Förderung für Ärzte: So bekommen Sie bis zu 30 % zurück"
 date: "2026-02-23"
 description: "Das KMU.DIGITAL-Programm fördert Website-Kosten für Arztpraxen mit bis zu 30 %. Wer förderberechtigt ist, wie der Antrag funktioniert und welche Fehler Sie vermeiden sollten."
 author: "Kevin Hofbauer"
+image: "/blog/kmu-digital-foerderung-aerzte.png"
+imageAlt: "Unternehmer empfängt symbolische digitale Förderung aus einem Laptop, österreichische Alpen im Hintergrund durch ein Fenster"
 ---
 
 Das KMU.DIGITAL-Förderprogramm der österreichischen Bundesregierung übernimmt bis zu 30 % der Kosten für Digitalisierungsprojekte – darunter auch Websites für Arztpraxen. Bei einer Praxis-Website im Wert von 3.900 € bedeutet das eine Ersparnis von bis zu 1.170 €. Der Förderantrag ist unkompliziert, wird aber von vielen Ärztinnen und Ärzten nicht genutzt, weil sie nicht wissen, dass sie anspruchsberechtigt sind.

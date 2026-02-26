@@ -3,6 +3,8 @@ title: "Barrierefreiheitsgesetz 2025: Was Ärzte jetzt über ihre Website wissen
 date: "2026-02-23"
 description: "Seit dem 28. Juni 2025 gilt das Barrierefreiheitsgesetz in Österreich. Was das für Arzt-Websites bedeutet – und wie Barrierefreiheit gleichzeitig KI-Sichtbarkeit verbessert."
 author: "Kevin Hofbauer"
+image: "/blog/barrierefreiheitsgesetz-aerzte.png"
+imageAlt: "Monitor in einer Arztpraxis zeigt eine barrierefreie Website mit Rollstuhl-, Auge- und Ohren-Symbolen"
 ---
 
 Seit dem 28. Juni 2025 gilt das Barrierefreiheitsgesetz (BaFG) in Österreich. Es setzt die europäische Richtlinie (European Accessibility Act) in nationales Recht um und verpflichtet Dienstleister – darunter auch niedergelassene Ärztinnen und Ärzte – zu digitaler Barrierefreiheit. Für Arzt-Websites bedeutet das: Wer die Anforderungen nicht erfüllt, riskiert Beschwerden, Abmahnungen und perspektivisch Bußgelder.

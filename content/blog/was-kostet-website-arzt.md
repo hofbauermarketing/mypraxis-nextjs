@@ -3,6 +3,8 @@ title: "Was kostet eine Website für Ärzte in Österreich?"
 date: "2026-02-23"
 description: "Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 % und worauf Ärzte bei der Auswahl achten sollten."
 author: "Kevin Hofbauer"
+image: "/blog/was-kostet-website-arzt.png"
+imageAlt: "Arzt am Schreibtisch vor Laptop und Monitor mit Kostendiagrammen, modernes Ordinationszimmer mit Panoramafenster"
 ---
 
 Eine professionelle Website für niedergelassene Ärztinnen und Ärzte in Österreich kostet zwischen 1.500 € und 8.000 € netto. Der Preis hängt davon ab, ob es sich um eine einfache Visitenkarten-Website oder eine vollständige digitale Positionierung mit KI-Sichtbarkeit handelt. Über das Förderprogramm KMU.DIGITAL sind bis zu 30 % der Kosten rückerstattbar – das reduziert den Eigenanteil auf 1.050 € bis 5.600 €.

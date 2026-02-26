@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface BlogPostMeta {
   slug: string
@@ -9,6 +10,8 @@ interface BlogPostMeta {
   date: string
   description: string
   author: string
+  image?: string
+  imageAlt?: string
 }
 
 function formatDate(dateStr: string): string {
@@ -59,10 +62,10 @@ export default function BlogGrid({ posts }: { posts: BlogPostMeta[] }) {
 
   const filtered = search.trim()
     ? posts.filter((p) =>
-        p.title.toLowerCase().includes(search.toLowerCase()) ||
-        p.description.toLowerCase().includes(search.toLowerCase()) ||
-        (categoryLabels[p.slug] ?? '').toLowerCase().includes(search.toLowerCase())
-      )
+      p.title.toLowerCase().includes(search.toLowerCase()) ||
+      p.description.toLowerCase().includes(search.toLowerCase()) ||
+      (categoryLabels[p.slug] ?? '').toLowerCase().includes(search.toLowerCase())
+    )
     : posts
 
   return (
@@ -115,11 +118,23 @@ export default function BlogGrid({ posts }: { posts: BlogPostMeta[] }) {
                 key={post.slug}
                 className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group flex flex-col"
               >
-                {/* Thumbnail placeholder with category */}
-                <div className={`h-36 bg-gradient-to-br ${gradient} flex items-end p-4`}>
-                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-700'} bg-white/90`}>
-                    {label}
-                  </span>
+                {/* Thumbnail */}
+                <div className={`relative h-44 overflow-hidden ${post.image ? '' : `bg-gradient-to-br ${gradient}`} flex items-end`}>
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt ?? post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : null}
+                  {/* Category badge overlay */}
+                  <div className="relative z-10 p-4">
+                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-700'} bg-white/90`}>
+                      {label}
+                    </span>
+                  </div>
                 </div>
 
                 <Link href={`/blog/${post.slug}`} className="flex flex-col flex-1 p-5">

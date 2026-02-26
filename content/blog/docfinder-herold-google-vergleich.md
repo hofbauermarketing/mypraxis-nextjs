@@ -3,6 +3,8 @@ title: "DocFinder, Herold, Google: Wo Patienten 2026 wirklich nach Ärzten suche
 date: "2026-02-23"
 description: "Google dominiert, KI-Systeme gewinnen an Bedeutung. Ein ehrlicher Vergleich aller Kanäle und die ideale Strategie für Ärzte in Österreich."
 author: "Kevin Hofbauer"
+image: "/blog/docfinder-herold-google-vergleich.png"
+imageAlt: "Arzt analysiert auf einem Tablet einen Vergleich der Plattformen DocFinder, Herold und Google mit Diagrammen im Hintergrund"
 ---
 
 Die meisten Patientinnen und Patienten in Österreich nutzen mehrere Kanäle parallel, um einen Arzt zu finden. Google dominiert als Einstiegspunkt, aber Plattformen wie DocFinder und Herold spielen weiterhin eine Rolle – und seit 2025 mischen KI-Systeme wie ChatGPT, Perplexity und Google Gemini den Markt grundlegend auf.

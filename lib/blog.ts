@@ -13,6 +13,8 @@ export interface BlogPostMeta {
   date: string
   description: string
   author: string
+  image?: string
+  imageAlt?: string
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -35,6 +37,8 @@ export function getSortedPostsData(): BlogPostMeta[] {
         date: data.date as string,
         description: data.description as string,
         author: data.author as string,
+        image: data.image as string | undefined,
+        imageAlt: data.imageAlt as string | undefined,
       }
     })
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -66,6 +70,8 @@ export async function getPostData(slug: string): Promise<BlogPost> {
     date: data.date as string,
     description: data.description as string,
     author: data.author as string,
+    image: data.image as string | undefined,
+    imageAlt: data.imageAlt as string | undefined,
     contentHtml: processedContent.toString(),
     readingTime,
   }

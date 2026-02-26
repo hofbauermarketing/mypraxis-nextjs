@@ -3,6 +3,8 @@ title: "Website-Wechsel als Arzt: 7 Bedenken – und was wirklich dahintersteckt
 date: "2026-02-23"
 description: "Die 7 häufigsten Gründe, warum Ärzte den Website-Wechsel aufschieben – und warum keiner davon ein wirklicher Hinderungsgrund ist."
 author: "Kevin Hofbauer"
+image: "/blog/website-wechsel-bedenken.png"
+imageAlt: "Arzt sitzt selbstbewusst vor zwei Laptops mit verschiedenen Websites, modernes helles Büro mit orange-grüner Einrichtung"
 ---
 
 Die meisten niedergelassenen Ärztinnen und Ärzte wissen, dass ihre Website veraltet ist. Sie wissen, dass Patienten heute online suchen. Und trotzdem zögern sie – oft jahrelang. Das ist kein Unwissen, sondern nachvollziehbare Vorsicht. Dieser Artikel geht auf die sieben häufigsten Bedenken ein, die wir in Erstgesprächen hören, und erklärt, was wirklich dahintersteckt.
