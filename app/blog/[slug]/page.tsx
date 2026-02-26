@@ -16,26 +16,43 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params
   try {
     const post = await getPostData(slug)
+    // Keep title under 60 chars: truncate post title if needed
+    const suffix = ' | mypraxis.at'
+    const maxTitleLen = 60 - suffix.length
+    const safeTitle = post.title.length > maxTitleLen
+      ? post.title.slice(0, maxTitleLen - 1).trimEnd() + '…'
+      : post.title
+    // Description: truncate to 155 chars if needed
+    const safeDesc = post.description.length > 155
+      ? post.description.slice(0, 154).trimEnd() + '…'
+      : post.description
+
     return {
-      title: `${post.title} – mypraxis.at`,
-      description: post.description,
+      title: `${safeTitle}${suffix}`,
+      description: safeDesc,
       alternates: {
         canonical: `/blog/${slug}`,
         languages: { 'de-AT': `/blog/${slug}` },
       },
       openGraph: {
         title: post.title,
-        description: post.description,
+        description: safeDesc,
         url: `https://www.mypraxis.at/blog/${slug}`,
         type: 'article',
         publishedTime: post.date,
         authors: [post.author],
         siteName: 'mypraxis.at',
         locale: 'de_AT',
+        ...(post.image ? { images: [{ url: `https://www.mypraxis.at${post.image}`, alt: post.imageAlt ?? post.title }] } : {}),
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.title,
+        description: safeDesc,
       },
     }
   } catch {
-    return { title: 'Artikel nicht gefunden – mypraxis.at' }
+    return { title: 'Artikel nicht gefunden | mypraxis.at' }
   }
 }
 
