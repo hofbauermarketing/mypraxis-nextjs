@@ -4,10 +4,10 @@ import CookieBanner from '@/components/CookieBanner'
 export const metadata = { title: 'MedCenter Alsergrund – Wien', robots: 'noindex' }
 
 const team = [
-  { name: 'Dr. Sophie Hartmann', fach: 'Innere Medizin & Kardiologie', kasse: 'WGKK · BVA', photo: 'https://randomuser.me/api/portraits/women/28.jpg' },
-  { name: 'Dr. Markus Eder', fach: 'Neurologie', kasse: 'Wahlarzt', photo: 'https://randomuser.me/api/portraits/men/32.jpg' },
-  { name: 'Dr. Lena Vogt', fach: 'Orthopädie', kasse: 'WGKK · SVS', photo: 'https://randomuser.me/api/portraits/women/55.jpg' },
-  { name: 'Dr. Andreas Pichler', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA · SVS', photo: 'https://randomuser.me/api/portraits/men/68.jpg' },
+  { name: 'Dr. Sophie Hartmann', fach: 'Innere Medizin & Kardiologie', kasse: 'WGKK · BVA', photo: '/demo-dr-hartmann.png' },
+  { name: 'Dr. Markus Eder', fach: 'Neurologie', kasse: 'Wahlarzt', photo: '/demo-dr-eder.png' },
+  { name: 'Dr. Lena Vogt', fach: 'Orthopädie', kasse: 'WGKK · SVS', photo: '/demo-dr-vogt.png' },
+  { name: 'Dr. Andreas Pichler', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA · SVS', photo: '/demo-dr-pichler.png' },
 ]
 
 const fachbereiche = [

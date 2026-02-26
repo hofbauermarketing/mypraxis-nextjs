@@ -7,7 +7,7 @@ const aerzte = [
   { name: 'Dr. Michael Fürst', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA', photo: '/demo-dr-fuerst.jpg' },
   { name: 'Dr. Claudia Nowak', fach: 'Innere Medizin', kasse: 'WGKK · SVS', photo: '/demo-dr-nowak.jpg' },
   { name: 'Dr. Stefan Hofer', fach: 'Orthopädie & Unfallchirurgie', kasse: 'Wahlarzt', photo: '/demo-dr-hofer.jpg' },
-  { name: 'Dr. Eva Zimmermann', fach: 'Gynäkologie', kasse: 'WGKK · BVA · SVS', photo: 'https://randomuser.me/api/portraits/women/58.jpg' },
+  { name: 'Dr. Eva Zimmermann', fach: 'Gynäkologie', kasse: 'WGKK · BVA · SVS', photo: '/demo-dr-zimmermann.png' },
 ]
 
 const leistungen = [
