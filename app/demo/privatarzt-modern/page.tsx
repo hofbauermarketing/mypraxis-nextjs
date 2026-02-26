@@ -119,7 +119,7 @@ export default function Demo2Page() {
                 num: '02',
                 title: 'Hautkrebs-Screening',
                 subtitle: 'Auflichtmikroskopie · Muttermalmapping',
-                img: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=85&fit=crop',
+                img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=85&fit=crop',
                 imgGradient: 'from-blue-900/80 via-blue-800/40 to-transparent',
                 detail: 'Früherkennung rettet Leben. Wir empfehlen jährliche Kontrollen ab 30 Jahren – besonders bei heller Haut, vielen Muttermalen oder familiärer Vorbelastung.',
                 meta: 'Digitale Dermatoskopie ermöglicht die Dokumentation und den Verlaufsvergleich jedes einzelnen Muttermals. Veränderungen werden frühzeitig erkannt.',
@@ -141,7 +141,7 @@ export default function Demo2Page() {
                 num: '04',
                 title: 'Lasermedizin',
                 subtitle: 'Narben · Pigmente · Gefäße · Haarentfernung',
-                img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=85&fit=crop',
+                img: 'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=800&q=85&fit=crop',
                 imgGradient: 'from-purple-900/80 via-purple-800/40 to-transparent',
                 detail: 'Modernste Lasertechnologie (Nd:YAG, CO₂, fraktionierter Laser). Fellowship-Training in Zürich. Realistische Aufklärung über Ergebnis und Heilungsverlauf gehört für mich zum Standard.',
                 meta: 'Laserbehandlungen erzielen nachhaltige Ergebnisse bei Narbentherapie, Pigmentflecken und Gefäßveränderungen. Mehrere Sitzungen sind oft nötig – ich erkläre Ihnen warum.',
@@ -260,12 +260,33 @@ export default function Demo2Page() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { name: 'Nina Bauer', rolle: 'Ordinationsassistentin', spez: 'Spezialisiert auf Laser- & Ästhetik-Patientenbetreuung · 6 Jahre im Team', text: 'Nina begleitet unsere Patientinnen durch alle Behandlungsschritte – von der Vorbereitung bis zur Nachsorge. Ihre empathische Art ist gerade bei ästhetischen Eingriffen ein echter Mehrwert.', initials: 'NB' },
-              { name: 'Lisa Engel', rolle: 'Empfang & Terminkoordination', spez: '4 Jahre in der Praxis', text: 'Lisa ist die erste Stimme, die Sie hören. Sie sorgt für reibungslose Abläufe und – ganz wichtig – für absolute Diskretion.', initials: 'LE' },
+              {
+                name: 'Nina Bauer',
+                rolle: 'Ordinationsassistentin',
+                spez: 'Laser- & Ästhetik-Patientenbetreuung · 6 Jahre im Team',
+                text: 'Nina begleitet unsere Patientinnen durch alle Behandlungsschritte – von der Vorbereitung bis zur Nachsorge. Ihre empathische Art ist gerade bei ästhetischen Eingriffen ein echter Mehrwert.',
+                img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=85&fit=crop&crop=face',
+              },
+              {
+                name: 'Lisa Engel',
+                rolle: 'Empfang & Terminkoordination',
+                spez: '4 Jahre in der Praxis',
+                text: 'Lisa ist die erste Stimme, die Sie hören. Sie sorgt für reibungslose Abläufe und – ganz wichtig – für absolute Diskretion.',
+                img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=85&fit=crop&crop=face',
+              },
             ].map((t) => (
-              <div key={t.name} className="flex gap-5 border border-white/10 rounded-2xl p-6 hover:border-amber-400/20 transition-all">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400/20 to-purple-500/20 flex items-center justify-center shrink-0">
-                  <span className="text-amber-400 font-bold text-lg">{t.initials}</span>
+              <div key={t.name} className="flex gap-5 border border-white/10 rounded-2xl p-6 hover:border-amber-400/20 transition-all group">
+                <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border border-white/10 group-hover:border-amber-400/20 transition-all">
+                  <img
+                    src={t.img}
+                    alt={t.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      const el = e.target as HTMLImageElement
+                      el.style.display = 'none'
+                      el.parentElement!.classList.add('bg-gradient-to-br', 'from-amber-400/20', 'to-purple-500/20', 'flex', 'items-center', 'justify-center')
+                    }}
+                  />
                 </div>
                 <div>
                   <p className="font-bold text-white text-sm">{t.name}</p>
