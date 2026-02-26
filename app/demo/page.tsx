@@ -14,8 +14,7 @@ const demos = [
     name: 'Dr. Thomas Haas',
     fach: 'Innere Medizin · Wien',
     desc: 'Seriös, klar, vertrauenserweckend. Ideal für Internisten, Allgemeinmediziner, Hausärzte.',
-    color: 'from-[#1e3ab8] to-[#2a50cc]',
-    badge: 'bg-blue-100 text-blue-700',
+    screenshot: '/demo-preview-classic.jpg',
   },
   {
     href: '/demo/privatarzt-modern',
@@ -24,8 +23,7 @@ const demos = [
     name: 'Dr. Julia Stern',
     fach: 'Dermatologie & Ästhetik · Wien',
     desc: 'Dunkel, hochwertig, mutig. Für Spezialisten und Ästhetik-Medizin, die herausstechen wollen.',
-    color: 'from-[#0a0f1e] to-[#1a1f3e]',
-    badge: 'bg-gray-800 text-amber-400',
+    screenshot: '/demo-preview-modern.jpg',
   },
   {
     href: '/demo/privatarzt-warm',
@@ -34,8 +32,7 @@ const demos = [
     name: 'Dr. Anna Berger',
     fach: 'Kinder- und Jugendheilkunde · Linz',
     desc: 'Warm, einladend, menschlich. Perfekt für Kinderärzte, Gynäkologie, Familienmedizin.',
-    color: 'from-[#0d9488] to-[#0f766e]',
-    badge: 'bg-teal-100 text-teal-700',
+    screenshot: '/demo-preview-warm.jpg',
   },
   {
     href: '/demo/aerztezentrum-classic',
@@ -44,8 +41,7 @@ const demos = [
     name: 'Ärztezentrum Mariahilf',
     fach: '4 Fachrichtungen · Wien',
     desc: 'Professionell, übersichtlich, institutionell. Mehrere Ärzte, klare Fachbereiche.',
-    color: 'from-[#1d4ed8] to-[#2563eb]',
-    badge: 'bg-blue-100 text-blue-700',
+    screenshot: '/demo-preview-aerztezentrum.jpg',
   },
   {
     href: '/demo/aerztezentrum-premium',
@@ -54,8 +50,7 @@ const demos = [
     name: 'MedCenter Alsergrund',
     fach: '8 Fachrichtungen · Wien',
     desc: 'Modern, dunkel, corporate. Für größere Zentren mit starkem Markenanspruch.',
-    color: 'from-[#111827] to-[#1f2937]',
-    badge: 'bg-gray-100 text-teal-600',
+    screenshot: '/demo-preview-premium.jpg',
   },
 ]
 
@@ -92,10 +87,15 @@ export default function DemoIndexPage() {
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Privatärzte & Wahlarzt-Ordinationen</h2>
         <div className="grid sm:grid-cols-3 gap-5 mb-12">
           {demos.slice(0, 3).map((d) => (
-            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-              {/* Color preview */}
-              <div className={`h-28 bg-gradient-to-br ${d.color} flex items-end p-4`}>
-                <span className="text-white/80 text-xs font-mono">{d.title}</span>
+            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              {/* Screenshot preview */}
+              <div className="relative h-44 overflow-hidden bg-gray-100">
+                <img
+                  src={d.screenshot}
+                  alt={`Vorschau ${d.title} – ${d.name}`}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
               <div className="p-5">
                 <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">{d.fach}</p>
@@ -110,9 +110,14 @@ export default function DemoIndexPage() {
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Ärztezentren & Gruppenpraxen</h2>
         <div className="grid sm:grid-cols-2 gap-5 mb-12">
           {demos.slice(3).map((d) => (
-            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-              <div className={`h-28 bg-gradient-to-br ${d.color} flex items-end p-4`}>
-                <span className="text-white/80 text-xs font-mono">{d.title}</span>
+            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+              <div className="relative h-44 overflow-hidden bg-gray-100">
+                <img
+                  src={d.screenshot}
+                  alt={`Vorschau ${d.title} – ${d.name}`}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
               <div className="p-5">
                 <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-1">{d.fach}</p>
