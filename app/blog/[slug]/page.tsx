@@ -151,6 +151,18 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Article body */}
         <div className="max-w-3xl mx-auto px-6 mt-10">
+
+          {/* Hero Image */}
+          {post.image && (
+            <div className="mb-8 rounded-2xl overflow-hidden shadow-md border border-gray-100">
+              <img
+                src={post.image}
+                alt={post.imageAlt ?? post.title}
+                className="w-full object-cover max-h-[420px]"
+              />
+            </div>
+          )}
+
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <article
               aria-label={post.title}
