@@ -22,8 +22,8 @@ export default function Navigation() {
     <header
       role="banner"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
-          : 'bg-black/25 backdrop-blur-sm py-5'
+        ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
+        : 'bg-black/25 backdrop-blur-sm py-5'
         }`}
     >
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 items-center">
@@ -40,7 +40,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav – centered */}
-        <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-4 lg:gap-6">
+        <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-3 lg:gap-5">
           {[
             { label: 'Leistungen', href: '#leistungen' },
             { label: 'KI-Sichtbarkeit', href: '#ki' },
@@ -50,9 +50,9 @@ export default function Navigation() {
             <a
               key={item.href}
               href={item.href}
-              className={`text-[13px] font-medium transition-colors ${scrolled
-                  ? 'text-gray-700 hover:text-blue-700'
-                  : 'text-white/90 hover:text-white'
+              className={`text-[13px] font-medium transition-colors whitespace-nowrap ${scrolled
+                ? 'text-gray-700 hover:text-blue-700'
+                : 'text-white/90 hover:text-white'
                 }`}
             >
               {item.label}
@@ -60,18 +60,18 @@ export default function Navigation() {
           ))}
           <Link
             href="/blog"
-            className={`text-[13px] font-medium transition-colors ${scrolled
-                ? 'text-gray-700 hover:text-blue-700'
-                : 'text-white/90 hover:text-white'
+            className={`text-[13px] font-medium transition-colors whitespace-nowrap ${scrolled
+              ? 'text-gray-700 hover:text-blue-700'
+              : 'text-white/90 hover:text-white'
               }`}
           >
             Blog
           </Link>
           <Link
             href="/videothek"
-            className={`text-[13px] font-medium transition-colors ${scrolled
-                ? 'text-gray-700 hover:text-blue-700'
-                : 'text-white/90 hover:text-white'
+            className={`text-[13px] font-medium transition-colors whitespace-nowrap ${scrolled
+              ? 'text-gray-700 hover:text-blue-700'
+              : 'text-white/90 hover:text-white'
               }`}
           >
             Videothek
@@ -82,9 +82,9 @@ export default function Navigation() {
         <div className="hidden md:flex justify-end">
           <a
             href="#kontakt"
-            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-4 py-2.5 rounded-lg transition-all whitespace-nowrap"
+            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-3 py-2.5 rounded-lg transition-all whitespace-nowrap"
           >
-            Beratung vereinbaren
+            Beratung anfragen
           </a>
         </div>
 
