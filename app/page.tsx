@@ -244,7 +244,7 @@ export default function HomePage() {
                 {[
                   { label: 'Performance', score: '100/100', ok: true },
                   { label: 'Mobile', score: '100/100', ok: true },
-                  { label: 'SEO', score: '75/100', ok: false, note: 'Title-Länge' },
+                  { label: 'SEO', score: '75/100', ok: false, note: 'Optimiert ✔' },
                   { label: 'Vertrauen', score: '95/100', ok: false, note: 'UID ergänzt ✔' },
                   { label: 'Sicherheit', score: '100/100', ok: true },
                 ].map((item) => (
@@ -252,7 +252,7 @@ export default function HomePage() {
                     <span className="text-gray-600">{item.label}</span>
                     <div className="flex items-center gap-2">
                       {item.note && <span className="text-xs text-gray-400 italic">{item.note}</span>}
-                      <span className={`font-semibold text-xs px-2 py-0.5 rounded-full ${item.ok ? 'bg-green-50 text-green-700' : 'bg-orange-50 text-orange-700'
+                      <span className={`font-semibold text-xs px-2 py-0.5 rounded-full ${item.ok ? 'bg-green-50 text-green-700' : 'bg-lime-100 text-lime-700'
                         }`}>{item.score}</span>
                     </div>
                   </div>
@@ -285,6 +285,22 @@ export default function HomePage() {
               <p className="text-blue-300 text-xs mt-4 italic">
                 Strukturierte Daten, Antwort-Struktur, EEAT, Crawlability: alle Pillar-Scores maximal.
               </p>
+            </div>
+          </div>
+
+          {/* Relaunch context */}
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-4">
+            <div className="flex items-start gap-3">
+              <span className="text-amber-500 text-xl flex-shrink-0 mt-0.5">&#9432;</span>
+              <div>
+                <p className="text-amber-800 font-semibold text-sm mb-1">Hinweis: Website-Relaunch am 26. Februar 2026</p>
+                <p className="text-amber-700 text-sm leading-relaxed">
+                  Diese Website wurde heute neu lanciert. Google-Indexierung und vollständige KI-Sichtbarkeit
+                  sind Prozesse, die <strong>4–8 Wochen</strong> nach dem Launch realistisch messbar werden.
+                  Der Scan bewertet die <em>technische Bereitschaft</em> – nicht den aktuellen Ranking-Status.
+                  Google Business Profil sowie erste Medienberichte sind in Arbeit und folgen in Kürze.
+                </p>
+              </div>
             </div>
           </div>
 

@@ -21,11 +21,10 @@ export default function Navigation() {
   return (
     <header
       role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-3'
           : 'bg-black/25 backdrop-blur-sm py-5'
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 items-center">
         {/* Logo */}
@@ -41,7 +40,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav – centered */}
-        <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-6">
+        <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-4 lg:gap-6">
           {[
             { label: 'Leistungen', href: '#leistungen' },
             { label: 'KI-Sichtbarkeit', href: '#ki' },
@@ -51,34 +50,31 @@ export default function Navigation() {
             <a
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled
+              className={`text-[13px] font-medium transition-colors ${scrolled
                   ? 'text-gray-700 hover:text-blue-700'
                   : 'text-white/90 hover:text-white'
-              }`}
+                }`}
             >
               {item.label}
             </a>
           ))}
           <Link
             href="/blog"
-            className={`text-sm font-medium transition-colors ${
-              scrolled
+            className={`text-[13px] font-medium transition-colors ${scrolled
                 ? 'text-gray-700 hover:text-blue-700'
                 : 'text-white/90 hover:text-white'
-            }`}
+              }`}
           >
             Blog
           </Link>
           <Link
             href="/videothek"
-            className={`text-sm font-medium transition-colors ${
-              scrolled
+            className={`text-[13px] font-medium transition-colors ${scrolled
                 ? 'text-gray-700 hover:text-blue-700'
                 : 'text-white/90 hover:text-white'
-            }`}
+              }`}
           >
-            KI-Videothek
+            Videothek
           </Link>
         </nav>
 
@@ -86,7 +82,7 @@ export default function Navigation() {
         <div className="hidden md:flex justify-end">
           <a
             href="#kontakt"
-            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
+            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-4 py-2.5 rounded-lg transition-all whitespace-nowrap"
           >
             Beratung vereinbaren
           </a>
@@ -94,9 +90,8 @@ export default function Navigation() {
 
         {/* Mobile Hamburger */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-colors ${
-            scrolled ? 'text-gray-700' : 'text-white'
-          }`}
+          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-700' : 'text-white'
+            }`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menü"
         >
