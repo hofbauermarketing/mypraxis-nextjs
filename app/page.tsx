@@ -373,6 +373,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== DEMO PREVIEWS ===== */}
+      <section className="py-14 px-6 bg-white" id="demos">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-2">Beispiel-Websites</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-primary mb-3">So könnte Ihre Ordination aussehen.</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">Klicken Sie auf ein Design – und sehen Sie es live in Aktion.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {[
+              { href: '/demo/privatarzt-classic', img: '/demo-preview-classic.jpg', label: 'Classic Trust' },
+              { href: '/demo/privatarzt-modern', img: '/demo-preview-modern.jpg', label: 'Modern Premium' },
+              { href: '/demo/privatarzt-warm', img: '/demo-preview-warm.jpg', label: 'Warm & Persönlich' },
+              { href: '/demo/aerztezentrum-classic', img: '/demo-preview-aerztezentrum.jpg', label: 'Ärztezentrum Classic' },
+              { href: '/demo/aerztezentrum-premium', img: '/demo-preview-premium.jpg', label: 'Ärztezentrum Premium' },
+            ].map((d) => (
+              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 block">
+                <img src={d.img} alt={d.label} className="w-full object-cover object-top h-40 sm:h-44 group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <span className="absolute bottom-2 left-2 right-2 text-white text-xs font-semibold truncate">{d.label}</span>
+                <span className="absolute top-2 right-2 bg-white/90 text-[#1e3ab8] text-[10px] font-bold px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Ansehen →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== WAS UNS UNTERSCHEIDET ===== */}
 
       <section className="py-20 px-6 bg-gray-50 relative overflow-hidden">
