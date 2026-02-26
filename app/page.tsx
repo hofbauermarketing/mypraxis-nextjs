@@ -106,13 +106,13 @@ export default function HomePage() {
           <p className="mt-5 text-blue-300 text-sm animate-fade-in-up delay-500">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
 
           {/* Social Media Icons */}
-          <div className="mt-7 flex items-center justify-center gap-3 animate-fade-in-up delay-500">
-            <span className="text-white/30 text-xs">Folgen Sie uns:</span>
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up delay-500">
+            <span className="text-white/50 text-xs font-medium">Hier mit mir persönlich Kontakt aufnehmen →</span>
             <a
               href="https://www.linkedin.com/in/kevin-hofbauer-b2660b274/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/10 hover:bg-[#0077b5] border border-white/20 hover:border-[#0077b5] text-white/80 hover:text-white text-xs font-semibold px-3.5 py-2 rounded-full transition-all duration-200 group"
+              className="flex items-center gap-2 bg-[#0077b5] hover:bg-[#005f93] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow-md shadow-black/20 hover:scale-105"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -124,7 +124,7 @@ export default function HomePage() {
               href="https://www.facebook.com/profile.php?id=100035353760113"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/10 hover:bg-[#1877f2] border border-white/20 hover:border-[#1877f2] text-white/80 hover:text-white text-xs font-semibold px-3.5 py-2 rounded-full transition-all duration-200 group"
+              className="flex items-center gap-2 bg-[#1877f2] hover:bg-[#1464d8] text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow-md shadow-black/20 hover:scale-105"
               aria-label="Facebook"
             >
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -136,7 +136,8 @@ export default function HomePage() {
               href="https://www.instagram.com/hofbauer.mypraxis"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-white/10 hover:bg-gradient-to-br hover:from-[#833ab4] hover:to-[#fd1d1d] border border-white/20 hover:border-[#fd1d1d] text-white/80 hover:text-white text-xs font-semibold px-3.5 py-2 rounded-full transition-all duration-200"
+              className="flex items-center gap-2 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow-md shadow-black/20 hover:scale-105"
+              style={{ background: 'linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%)' }}
               aria-label="Instagram"
             >
               <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
