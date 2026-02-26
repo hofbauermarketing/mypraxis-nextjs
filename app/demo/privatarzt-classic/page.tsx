@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import CookieBanner from '@/components/CookieBanner'
 
 const leistungen = [
@@ -10,6 +11,25 @@ const leistungen = [
   { icon: '🫁', title: 'Lungenfunktion', text: 'Spirometrie, Bodyplethysmographie, Allergietest' },
   { icon: '🩺', title: 'Vorsorge', text: 'Gesundenuntersuchung, Vorsorgecheck, Risikoanalyse' },
   { icon: '💊', title: 'Chronische Erkrankungen', text: 'Bluthochdruck, Diabetes, Schilddrüse, Fettstoffwechsel' },
+]
+
+const team = [
+  {
+    name: 'Maria Koller',
+    rolle: 'Ordinationsassistentin',
+    jahre: '15 Jahre im Team',
+    text: 'Maria ist das Herz unserer Ordination. Sie kennt viele unserer Patienten seit Jahren und sorgt dafür, dass sich jeder von Anfang an wohl fühlt.',
+    photo: '/demo-team-koller.jpg',
+    initials: 'MK',
+  },
+  {
+    name: 'Klaus Brandtner',
+    rolle: 'Medizinisch-technischer Assistent',
+    jahre: '8 Jahre im Team',
+    text: 'Klaus führt alle technischen Untersuchungen durch – vom EKG bis zur Lungenfunktion. Seine ruhige Art nimmt Patienten die Nervosität.',
+    photo: null,
+    initials: 'KB',
+  },
 ]
 
 const faqs = [
@@ -74,8 +94,9 @@ export default function Demo1Page() {
           </div>
           <div className="hidden sm:flex items-center gap-6 text-sm text-gray-600">
             <a href="#leistungen" className="hover:text-[#1e3ab8] transition-colors">Leistungen</a>
-            <a href="#ueber" className="hover:text-[#1e3ab8] transition-colors">Über mich</a>
-            <a href="#zeiten" className="hover:text-[#1e3ab8] transition-colors">Ordinationszeiten</a>
+            <a href="#ueber" className="hover:text-[#1e3ab8] transition-colors">Über uns</a>
+            <a href="#team" className="hover:text-[#1e3ab8] transition-colors">Team</a>
+            <a href="#zeiten" className="hover:text-[#1e3ab8] transition-colors">Zeiten</a>
             <a href="#termin" className="bg-[#1e3ab8] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#1a33a8] transition-colors">Termin anfragen</a>
           </div>
         </div>
@@ -127,6 +148,23 @@ export default function Demo1Page() {
         </div>
       </section>
 
+      {/* PRAXIS-FAKTEN */}
+      <section className="py-8 px-6 bg-[#1e3ab8]">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {[
+            { icon: '♿', text: 'Barrierefrei & Lift' },
+            { icon: '🚇', text: 'U1/U3 Stephansplatz' },
+            { icon: '☕', text: 'Kaffee im Wartezimmer' },
+            { icon: '⏱️', text: 'Kurze Wartezeiten' },
+          ].map((f) => (
+            <div key={f.text} className="flex items-center gap-2 text-white/90 text-sm">
+              <span className="text-lg">{f.icon}</span>
+              <span>{f.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* LEISTUNGEN */}
       <section id="leistungen" className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -148,7 +186,7 @@ export default function Demo1Page() {
 
       {/* ÜBER MICH */}
       <section id="ueber" className="py-20 px-6 bg-[#f0f4ff]">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Über mich</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">Ihr Arzt im 1. Bezirk</h2>
@@ -156,19 +194,26 @@ export default function Demo1Page() {
               Dr. Thomas Haas blickt auf über 15 Jahre Erfahrung in der Inneren Medizin zurück, zuletzt als Oberarzt am AKH Wien. Seine Schwerpunkte – Kardiologie und Diabetes – sind nicht nur medizinische Fachgebiete, sondern persönliche Anliegen.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              2021 eröffnete er seine Wahlarztpraxis im Herzen von Wien, um seinen Patientinnen und Patienten mehr Zeit widmen zu können. Neben seiner ärztlichen Tätigkeit engagiert er sich in Präventionsprojekten und hält Vorträge über Herzgesundheit.
+              2021 eröffnete er seine Wahlarztpraxis im Herzen von Wien. Der Schritt war bewusst: „Im Krankenhaus hatte ich 8 Minuten pro Patient. Das reicht mir nicht. Ich will Menschen wirklich kennenlernen, ihre Geschichte verstehen – nicht nur ihre Laborwerte."
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Neben seiner ärztlichen Tätigkeit engagiert er sich in Präventionsprojekten und hält Vorträge über Herzgesundheit bei der Wiener Ärztekammer.
             </p>
             <div className="border-l-2 border-[#1e3ab8] pl-4 text-gray-500 italic text-sm mb-6">
               „Viele Herzerkrankungen haben mit unserem Lebensstil zu tun. Mir geht es darum, Verständnis und Eigenverantwortung zu fördern – nicht nur Medikamente zu verschreiben."
             </div>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-3 gap-4 text-sm">
               <div className="bg-white rounded-xl p-4 text-center shadow-sm">
                 <p className="text-2xl font-bold text-[#1e3ab8]">15+</p>
                 <p className="text-gray-500 text-xs mt-1">Jahre Erfahrung</p>
               </div>
               <div className="bg-white rounded-xl p-4 text-center shadow-sm">
                 <p className="text-2xl font-bold text-[#1e3ab8]">3.500+</p>
-                <p className="text-gray-500 text-xs mt-1">Behandelte Patienten</p>
+                <p className="text-gray-500 text-xs mt-1">Patienten</p>
+              </div>
+              <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                <p className="text-2xl font-bold text-[#1e3ab8]">⭐ 4,9</p>
+                <p className="text-gray-500 text-xs mt-1">Bewertung</p>
               </div>
             </div>
           </div>
@@ -179,10 +224,11 @@ export default function Demo1Page() {
               { year: '2010–2015', text: 'Facharztausbildung Innere Medizin, AKH Wien' },
               { year: '2015–2021', text: 'Oberarzt Kardiologie, AKH Wien' },
               { year: '2021', text: 'Niederlassung als Wahlarzt, Wien 1010' },
+              { year: '2022', text: 'Mitglied ÖKG – Österreichische Kardiologische Gesellschaft' },
               { year: '2023', text: 'Diplom Ernährungsmedizin, ÖÄK' },
             ].map((q) => (
-              <div key={q.year} className="flex gap-4 text-sm">
-                <span className="text-[#1e3ab8] font-semibold shrink-0 w-16">{q.year}</span>
+              <div key={q.year} className="flex gap-4 text-sm border-b border-gray-50 pb-2">
+                <span className="text-[#1e3ab8] font-semibold shrink-0 w-20">{q.year}</span>
                 <span className="text-gray-600">{q.text}</span>
               </div>
             ))}
@@ -190,8 +236,46 @@ export default function Demo1Page() {
         </div>
       </section>
 
+      {/* TEAM */}
+      <section id="team" className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Unser Team</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Die Menschen hinter der Ordination</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
+              Medizin ist Teamarbeit. Unsere Assistentinnen und Assistenten sind so wichtig wie der Arzt selbst.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {team.map((t) => (
+              <div key={t.name} className="flex gap-5 bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div className="shrink-0">
+                  {t.photo ? (
+                    <img
+                      src={t.photo}
+                      alt={t.name}
+                      className="w-20 h-20 rounded-2xl object-cover"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">{t.initials}</span>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">{t.name}</p>
+                  <p className="text-[#1e3ab8] text-xs font-semibold mb-0.5">{t.rolle}</p>
+                  <p className="text-gray-400 text-xs mb-2">{t.jahre}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{t.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ORDINATIONSZEITEN + KONTAKT */}
-      <section id="zeiten" className="py-20 px-6 bg-white">
+      <section id="zeiten" className="py-20 px-6 bg-[#f0f4ff]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <div className="flex flex-wrap items-center gap-3 mb-2">
@@ -228,21 +312,24 @@ export default function Demo1Page() {
       </section>
 
       {/* BEWERTUNGEN */}
-      <section className="py-20 px-6 bg-[#f0f4ff]">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Bewertungen</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2">Was Patienten sagen</h2>
+            <p className="text-gray-400 text-sm mt-2">127 verifizierte Google-Bewertungen · Ø 4,9 Sterne</p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { text: '„Dr. Haas nimmt sich wirklich Zeit für jeden Patienten. Endlich ein Arzt, der zuhört und erklärt."', name: 'Martin K.' },
-              { text: '„Sehr professionell und kompetent. Die Diagnose war schnell, die Behandlung erfolgreich. Sehr empfehlenswert!"', name: 'Ursula B.' },
-              { text: '„Hervorragende Praxis. Das Team ist freundlich, Wartezeiten kurz. Ich bin jetzt seit 3 Jahren Patient hier."', name: 'Peter W.' },
+              { text: '„Dr. Haas nimmt sich wirklich Zeit für jeden Patienten. Endlich ein Arzt, der zuhört und erklärt – nicht nur eine Nummer."', name: 'Martin K.', date: 'Jänner 2026' },
+              { text: '„Sehr professionell und kompetent. Die Diagnose war schnell, die Behandlung erfolgreich. Ich bin seit 3 Jahren Patient hier."', name: 'Ursula B.', date: 'Februar 2026' },
+              { text: '„Die Assistent Maria hat mich sofort beruhigt. Man spürt, dass das ganze Team mit Herzblut dabei ist."', name: 'Peter W.', date: 'Dezember 2025' },
+              { text: '„Mein Cholesterin war über Jahre ein Problem. Dr. Haas hat mit mir eine Strategie entwickelt – keine Tabletten, Lebensstiländerung. Es hat funktioniert."', name: 'Gerhard M.', date: 'November 2025' },
+              { text: '„Kurze Wartezeiten, moderne Ausstattung und ein Arzt, der sich wirklich Zeit nimmt. Was will man mehr?"', name: 'Hanna L.', date: 'Oktober 2025' },
             ].map((r, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div key={i} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <p className="text-amber-400 text-sm mb-1">⭐⭐⭐⭐⭐</p>
-                <p className="text-gray-400 text-xs mb-3">Verifizierte Bewertung · Google</p>
+                <p className="text-gray-400 text-xs mb-3">Google · {r.date}</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">{r.text}</p>
                 <p className="text-[#1e3ab8] text-xs font-semibold">— {r.name}</p>
               </div>
@@ -252,7 +339,7 @@ export default function Demo1Page() {
       </section>
 
       {/* TERMIN FORMULAR */}
-      <section id="termin" className="py-20 px-6 bg-white">
+      <section id="termin" className="py-20 px-6 bg-[#f0f4ff]">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Online-Termin</span>
@@ -267,7 +354,7 @@ export default function Demo1Page() {
               <button onClick={() => setFormState('idle')} className="mt-6 text-[#1e3ab8] text-sm underline hover:no-underline">Neue Anfrage stellen</button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 space-y-5">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-semibold text-gray-500 mb-1.5">Vorname *</label>
@@ -335,7 +422,7 @@ export default function Demo1Page() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-6 bg-[#f0f4ff]">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold text-[#1e3ab8] uppercase tracking-widest">Häufige Fragen</span>
@@ -343,10 +430,10 @@ export default function Demo1Page() {
           </div>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+              <div key={i} className="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-blue-50 transition-colors"
                 >
                   <span className="font-bold text-gray-900 text-sm pr-4">{faq.q}</span>
                   <span className={`text-[#1e3ab8] shrink-0 text-lg leading-none transition-transform duration-200 ${openFaq === i ? 'rotate-180' : ''}`}>▾</span>

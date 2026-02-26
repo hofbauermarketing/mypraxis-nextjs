@@ -4,10 +4,10 @@ import CookieBanner from '@/components/CookieBanner'
 export const metadata = { title: 'MedCenter Alsergrund – Wien', robots: 'noindex' }
 
 const team = [
-  { name: 'Dr. Sophie Hartmann', fach: 'Innere Medizin & Kardiologie', kasse: 'WGKK · BVA', photo: '/demo-dr-hartmann.png' },
-  { name: 'Dr. Markus Eder', fach: 'Neurologie', kasse: 'Wahlarzt', photo: '/demo-dr-eder.png' },
-  { name: 'Dr. Lena Vogt', fach: 'Orthopädie', kasse: 'WGKK · SVS', photo: '/demo-dr-vogt.png' },
-  { name: 'Dr. Andreas Pichler', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA · SVS', photo: '/demo-dr-pichler.png' },
+  { name: 'Dr. Sophie Hartmann', fach: 'Innere Medizin & Kardiologie', kasse: 'WGKK · BVA', photo: '/demo-dr-hartmann.png', bio: 'Dr. Hartmann ist die medizinische Leiterin des MedCenters. Mit 18 Jahren Erfahrung in der Inneren Medizin ist sie für komplexe internistische Fälle die erste Anlaufstelle im Zentrum. Ihr Herz schlägt buchstäblich für die Kardiologie – und für ihre Patienten.', spez: '18 Jahre Erfahrung' },
+  { name: 'Dr. Markus Eder', fach: 'Neurologie', kasse: 'Wahlarzt', photo: '/demo-dr-eder.png', bio: 'Dr. Eder leitet die Neurologie-Ambulanz und ist auf Multiple Sklerose und Epilepsie spezialisiert. Er ist bekannt für seine ruhige, strukturierte Art – selbst bei schwierigen Diagnosen behält er die Übersicht und erklärt alles verständlich.', spez: '14 Jahre · Fellowship Amsterdam' },
+  { name: 'Dr. Lena Vogt', fach: 'Orthopädie', kasse: 'WGKK · SVS', photo: '/demo-dr-vogt.png', bio: 'Als aktive Triathletin weiß Dr. Vogt, wie frustrierend Verletzungen sind. Ihre konservativen Behandlungskonzepte helfen Patienten, schnell und nachhaltig in Bewegung zu bleiben. „Oftmals ist Bewegung die beste Medizin – wenn man weiß, wie."', spez: '11 Jahre · Sportmedizin' },
+  { name: 'Dr. Andreas Pichler', fach: 'Allgemeinmedizin', kasse: 'WGKK · BVA · SVS', photo: '/demo-dr-pichler.png', bio: 'Dr. Pichler ist der Allgemeinmediziner im MedCenter – und der Erste, den Patienten meist sehen. Er begleitet Familien, koordiniert Weiterbehandlungen zu Spezialisten und sorgt dafür, dass kein Fall „zwischen den Stühlen“ verloren geht.', spez: '12 Jahre · Präventivmedizin' },
 ]
 
 const fachbereiche = [
@@ -142,9 +142,11 @@ export default function Demo5Page() {
               <div key={a.name} className="border border-white/10 rounded-2xl overflow-hidden hover:border-teal-500/40 transition-all group">
                 <img src={a.photo} alt={a.name} className="w-full h-48 object-cover object-top" />
                 <div className="p-5">
-                  <h3 className="font-bold text-white text-sm mb-1 group-hover:text-teal-400 transition-colors">{a.name}</h3>
-                  <p className="text-teal-400 text-xs font-semibold mb-1">{a.fach}</p>
-                  <p className="text-white/30 text-xs">{a.kasse}</p>
+                  <p className="text-white/30 text-xs mb-1">{a.spez}</p>
+                  <h3 className="font-bold text-white text-sm mb-0.5 group-hover:text-teal-400 transition-colors">{a.name}</h3>
+                  <p className="text-teal-400 text-xs font-semibold mb-2">{a.fach}</p>
+                  <p className="text-white/40 text-xs leading-relaxed mb-2">{a.bio}</p>
+                  <p className="text-white/25 text-xs">{a.kasse}</p>
                 </div>
               </div>
             ))}
@@ -152,7 +154,54 @@ export default function Demo5Page() {
         </div>
       </section>
 
-      {/* WARUM WIR */}
+      {/* LEITBILD */}
+      <section className="py-16 px-6 bg-gradient-to-br from-teal-500/10 to-transparent">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Unser Leitbild</span>
+            <h2 className="text-3xl font-bold text-white mt-2 mb-5">Modern denken. Menschlich handeln.</h2>
+            <p className="text-white/60 leading-relaxed mb-4">Das MedCenter Alsergrund ist kein Gesundheitstempel für Elite-Patienten. Es ist ein Ort, der zeigt, dass Qualität und Zugänglichkeit kein Widerspruch sind. Ob Kassenpatient oder Privatpatient – wer hier herkommt, bekommt dasselbe: Zeit, Kompetenz und ehrliche Beratung.</p>
+            <p className="text-white/60 leading-relaxed mb-6">Unsere vier Fachbereiche sind vernetzt – durch ein gemeinsames digitales System und durch regelmäßige Fallbesprechungen. Was in vielen Zentren "Teamarbeit" genannt wird, wird hier gelebt.</p>
+            <div className="border-l-2 border-teal-400 pl-4 text-white/40 italic text-sm">"Vernetzt, weil Gesundheit niemals nur ein Fachgebiet betrifft."</div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {[{ icon: '🤝', title: 'Gemeinsame Akte', text: 'Alle Befunde sofort für alle Behandler abrufbar' }, { icon: '🕐', title: 'Kurze Wege', text: 'Intern überweisen ohne externe Wartezeiten' }, { icon: '🧬', title: 'Labor im Haus', text: 'Ergebnisse in 2 Stunden – ohne externen Versand' }, { icon: '💬', title: 'Fallbesprechungen', text: 'Wöchentlicher Austausch zwischen den Fachärzten' }].map((v) => (
+              <div key={v.title} className="border border-white/10 rounded-xl p-4">
+                <span className="text-2xl mb-2 block">{v.icon}</span>
+                <p className="font-bold text-white text-xs mb-1">{v.title}</p>
+                <p className="text-white/40 text-xs leading-relaxed">{v.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PATIENTENREISE */}
+      <section className="py-16 px-6 bg-[#0d1117]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold text-teal-400/70 uppercase tracking-[0.3em]">Ablauf</span>
+            <h2 className="text-3xl font-bold text-white mt-2">Ihr Weg durch das MedCenter</h2>
+          </div>
+          <div className="grid sm:grid-cols-4 gap-6">
+            {[
+              { step: '01', icon: '📱', title: 'Termin buchen', text: 'Online, per Telefon oder E-Mail. Auch kurzfristig möglich.' },
+              { step: '02', icon: '🧑‍💼', title: 'Empfang & Aufnahme', text: 'Sie werden freundlich empfangen. Wartezeiten unter 10 Minuten.' },
+              { step: '03', icon: '🤎', title: 'Behandlung & Diagnostik', text: 'Labor, Bildgebung, Fachärzte – alles intern koordiniert.' },
+              { step: '04', icon: '📄', title: 'Nachsorge & Befund', text: 'Befundbrief, Folgetermin, und Rückmeldung innerhalb von 24h.' },
+            ].map((s) => (
+              <div key={s.step} className="relative">
+                <div className="text-teal-400/20 text-6xl font-bold mb-3 leading-none">{s.step}</div>
+                <span className="text-3xl mb-2 block">{s.icon}</span>
+                <p className="font-bold text-white text-sm mb-2">{s.title}</p>
+                <p className="text-white/40 text-xs leading-relaxed">{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section className="py-24 px-6 bg-[#0d1117]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
