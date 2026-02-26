@@ -310,9 +310,23 @@ export default function HomePage() {
               Wir liefern Websites, die nicht nur gut aussehen – sie sind technisch, inhaltlich und für KI-Systeme
               optimal aufgestellt. Lassen Sie Ihren kostenlosen Scan durchlaufen und sehen Sie, wo Ihre Ordination steht.
             </p>
-            <a href="#scan" className="inline-block mt-4 bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors">
-              Jetzt kostenlos scannen
-            </a>
+            <div className="flex items-center justify-center gap-4 mt-4">
+              {/* Static arrow left */}
+              <svg className="w-5 h-5 text-[#ff8a00] opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+              {/* Pulsing button */}
+              <a
+                href="#scan"
+                className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors animate-pulse hover:[animation:none]"
+              >
+                Jetzt kostenlos scannen
+              </a>
+              {/* Static arrow right */}
+              <svg className="w-5 h-5 text-[#ff8a00] opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
