@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: Props) {
       <main className="min-h-screen bg-gray-50 pt-24 pb-20">
         {/* Hero */}
         <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-14">
-          <div className="max-w-3xl mx-auto px-6">
+          <div className="max-w-5xl mx-auto px-6">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-blue-200/70 text-xs mb-6">
               <Link href="/" className="hover:text-white transition-colors">mypraxis.at</Link>
@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Article body */}
-        <div className="max-w-3xl mx-auto px-6 mt-10">
+        <div className="max-w-5xl mx-auto px-6 mt-10">
 
           {/* Hero Image */}
           {post.image && (
@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <article
               aria-label={post.title}
-              className="prose prose-lg prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h3:text-xl prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-strong:text-gray-800 prose-a:text-[#1e3ab8] prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-gray-50 prose-th:text-gray-700 prose-td:text-gray-600 prose-hr:border-gray-200 max-w-none"
+              className="prose prose-base prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-xl prose-h2:mt-8 prose-h3:text-lg prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-strong:text-gray-800 prose-a:text-[#1e3ab8] prose-a:no-underline hover:prose-a:underline prose-table:text-sm prose-th:bg-gray-50 prose-th:text-gray-700 prose-td:text-gray-600 prose-hr:border-gray-200 max-w-none"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
           </div>
