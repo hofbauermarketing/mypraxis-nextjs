@@ -157,7 +157,8 @@ export default function HomePage() {
           </p>
           <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Aber: Wer Sie noch nicht kennt, findet Sie nicht. Nicht auf Google, nicht bei ChatGPT, nicht bei
-            Perplexity. Und die nächste Generation an Patienten sucht genau dort.
+            Perplexity. Und die nächste Generation an Patienten sucht genau dort –{' '}
+            <strong className="text-primary">während Ihre Mitbewerber bereits sichtbar sind.</strong>
           </p>
           <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Gleichzeitig stehen Sie vor einem regulatorischen Minenfeld: ÖÄK-Werberichtlinien, DSGVO,
@@ -213,7 +214,95 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== SCAN ERFOLG ===== */}
+      <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-blue-50/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-4">
+            <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full">
+              Eigener KI-Sichtbarkeits-Scan
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-primary">
+            Was unser eigener Scanner über uns sagt.
+          </h2>
+          <p className="text-center text-gray-500 text-sm sm:text-base mb-10 max-w-2xl mx-auto">
+            Wir messen uns selbst an den gleichen Maßstäben, die wir auch bei unseren Kunden anlegen.
+            Hier ist unser Scan-Ergebnis vom 25. Februar 2026 – unbearbeitet.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            {/* Website Score */}
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Website-Score</p>
+                  <p className="text-5xl font-extrabold text-primary">95<span className="text-xl text-gray-400">/100</span></p>
+                </div>
+                <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full">Stark</span>
+              </div>
+              <div className="space-y-2 text-sm">
+                {[
+                  { label: 'Performance', score: '100/100', ok: true },
+                  { label: 'Mobile', score: '100/100', ok: true },
+                  { label: 'SEO', score: '75/100', ok: false, note: 'Title-Länge' },
+                  { label: 'Vertrauen', score: '95/100', ok: false, note: 'UID ergänzt ✔' },
+                  { label: 'Sicherheit', score: '100/100', ok: true },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between">
+                    <span className="text-gray-600">{item.label}</span>
+                    <div className="flex items-center gap-2">
+                      {item.note && <span className="text-xs text-gray-400 italic">{item.note}</span>}
+                      <span className={`font-semibold text-xs px-2 py-0.5 rounded-full ${item.ok ? 'bg-green-50 text-green-700' : 'bg-orange-50 text-orange-700'
+                        }`}>{item.score}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* KI Score */}
+            <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl shadow-sm p-6 text-white">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <p className="text-xs font-semibold text-blue-300 uppercase tracking-widest mb-1">KI-Sichtbarkeits-Score</p>
+                  <p className="text-5xl font-extrabold">98<span className="text-xl text-blue-300">/100</span></p>
+                </div>
+                <span className="bg-white/20 text-white text-xs font-bold px-3 py-1.5 rounded-full">Sehr stark</span>
+              </div>
+              <div className="space-y-2 text-sm">
+                {[
+                  { label: 'ChatGPT', score: '99/100' },
+                  { label: 'Google Gemini', score: '98/100' },
+                  { label: 'Claude', score: '99/100' },
+                  { label: 'Perplexity', score: '97/100' },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between">
+                    <span className="text-blue-200">{item.label}</span>
+                    <span className="font-semibold text-xs px-2 py-0.5 rounded-full bg-white/15 text-white">{item.score}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-blue-300 text-xs mt-4 italic">
+                Strukturierte Daten, Antwort-Struktur, EEAT, Crawlability: alle Pillar-Scores maximal.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
+            <p className="text-gray-700 text-sm leading-relaxed">
+              <strong>Das ist der Standard, den wir für unsere Kunden anstreben.</strong>{' '}
+              Wir liefern Websites, die nicht nur gut aussehen – sie sind technisch, inhaltlich und für KI-Systeme
+              optimal aufgestellt. Lassen Sie Ihren kostenlosen Scan durchlaufen und sehen Sie, wo Ihre Ordination steht.
+            </p>
+            <a href="#scan" className="inline-block mt-4 bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors">
+              Jetzt kostenlos scannen
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ===== WAS UNS UNTERSCHEIDET ===== */}
+
       <section className="py-20 px-6 bg-gray-50 relative overflow-hidden">
         {/* Decorative angled accent */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-blue-50/60 to-transparent pointer-events-none" />
@@ -799,6 +888,14 @@ export default function HomePage() {
           <div className="space-y-2">
             {[
               {
+                q: 'Wie lange dauert es, bis meine Website bei Google sichtbar ist?',
+                a: 'Das ist eine der häufigsten Fragen – und die ehrliche Antwort: zwischen 2 und 12 Wochen, abhängig von Fachrichtung, Region und Wettbewerb. Neue Websites brauchen Zeit, bis Google sie vollständig indexiert und bewertet. Was sofort funktioniert: KI-Systeme wie ChatGPT und Perplexity. Diese lesen Ihre strukturierten Daten (Schema Markup) oft innerhalb weniger Tage aus – und nennen Ihre Ordination in Antworten. Google-Rankings folgen danach organisch, wenn Inhalte, Struktur und lokale Signale stimmen.',
+              },
+              {
+                q: 'Meine Mitbewerber haben längst eine Website – ist es nicht schon zu spät?',
+                a: 'Für Google: vielleicht. Wer früher startet, hat einen Vorsprung bei organischen Rankings – der ist real, aber aufholbar. Für KI-Sichtbarkeit: nein. Der Großteil der Ordinationen in Österreich – auch Ihre Mitbewerber – hat keine strukturierten Daten, kein Schema Markup, keine llms.txt. KI-Systeme können Ihre Mitbewerber-Websites meist nicht vollständig lesen. Wer jetzt startet und es richtig macht, hat in der KI-Suche tatsächlich einen echten First-Mover-Vorteil.',
+              },
+              {
                 q: 'Was kostet eine Website für Ärzte in Österreich?',
                 a: 'Unsere Praxis-Website liegt bei € 3.900 netto, die Digitale Positionierung mit Tiefenrecherche und KI-Readiness bei € 7.500 netto. Für Ärztezentren und PVEs erstellen wir individuelle Konzepte. Über KMU.DIGITAL sind bis zu 30 % förderbar.',
               },
@@ -1039,7 +1136,7 @@ export default function HomePage() {
                 className="hover:text-white transition-colors"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
               <a
@@ -1050,7 +1147,7 @@ export default function HomePage() {
                 className="hover:text-white transition-colors"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
               <span className="text-gray-600">© {new Date().getFullYear()} Kevin Hofbauer e.U.</span>

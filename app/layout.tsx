@@ -10,6 +10,7 @@ const schemaMarkup = {
       "@id": "https://www.mypraxis.at/#organization",
       "name": "mypraxis.at – Digitale Positionierung für Ärzte",
       "alternateName": "mypraxis.at by Kevin Hofbauer e.U.",
+      "vatID": "ATU78915818",
       "description": "Spezialisiert auf digitale Positionierung, KI-Sichtbarkeit und strukturierte Daten für niedergelassene Ärztinnen und Ärzte in Österreich. Tiefenrecherche, maßgeschneiderte Texte und KI-Readiness für Einzelordinationen und Ärztezentren. Bis zu 30 % KMU.DIGITAL Förderung.",
       "url": "https://www.mypraxis.at",
       "logo": "https://www.mypraxis.at/logo.png",
@@ -158,16 +159,16 @@ const schemaMarkup = {
 }
 
 export const metadata: Metadata = {
-  title: 'Arzt Website Agentur Österreich | KI-Sichtbarkeit | mypraxis.at',
-  description: 'Praxis-Websites & digitale Positionierung für niedergelassene Ärzte in Österreich – ab € 3.900. KI-Readiness für ChatGPT & Google AI, Schema Markup, DSGVO-konform. Bis zu 30 % KMU.DIGITAL Förderung.',
+  title: 'Arzt Website & KI-Sichtbarkeit Österreich | mypraxis.at',
+  description: 'Praxis-Websites ab € 3.900 & KI-Readiness für Ärzte in Österreich. DSGVO-konform, ÖÄK-konform, bis 30 % KMU.DIGITAL Förderung. Jetzt kostenlos analysieren lassen.',
   keywords: 'Arzt Website Agentur Österreich, Praxis Website erstellen, KI-Sichtbarkeit Arztpraxis, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, KMU.DIGITAL Förderung Arzt, Digitale Positionierung Ärzte, Webdesign Ärzte Wien, Wahlarzt Website',
   authors: [{ name: 'Kevin Hofbauer', url: 'https://www.hofbauer.marketing' }],
   creator: 'mypraxis.at',
   publisher: 'Kevin Hofbauer e.U.',
   metadataBase: new URL('https://www.mypraxis.at'),
   openGraph: {
-    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Österreich',
-    description: 'Praxis-Websites ab € 3.900, KI-Readiness für ChatGPT & Google AI, rechtssicher & DSGVO-konform. Bis zu 30 % KMU.DIGITAL Förderung für niedergelassene Ärzte.',
+    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit Österreich',
+    description: 'Praxis-Websites ab € 3.900, KI-Readiness für Ärzte, DSGVO- & ÖÄK-konform. Bis 30 % KMU.DIGITAL Förderung. Kostenlos scannen lassen.',
     url: 'https://www.mypraxis.at',
     siteName: 'mypraxis.at',
     locale: 'de_AT',

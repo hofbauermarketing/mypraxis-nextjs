@@ -56,7 +56,7 @@ export default function ImpressumPage() {
 
         <section className="mb-8">
           <h2 className="text-xl font-bold text-primary mb-3">UID-Nummer</h2>
-          <p className="text-gray-700">auf Anfrage</p>
+          <p className="text-gray-700">ATU78915818</p>
         </section>
 
         <section className="mb-8">
