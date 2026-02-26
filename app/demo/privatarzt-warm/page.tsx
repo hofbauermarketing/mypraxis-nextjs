@@ -75,7 +75,7 @@ export default function Demo3Page() {
           <div className="flex justify-center">
             <div className="relative">
               <div className="w-72 h-80 rounded-[2rem] overflow-hidden shadow-xl shadow-teal-100 relative">
-                <img src="/demo-dr-berger.jpg" alt="Dr. Anna Berger" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=85&fit=crop&crop=face,top" alt="Dr. Anna Berger" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-teal-800/80 backdrop-blur-sm p-4">
                   <p className="text-white font-bold text-sm">Dr. Anna Berger</p>
                   <p className="text-teal-100 text-xs">Kinderärztin seit 2008 in Linz</p>
