@@ -42,10 +42,10 @@ export default function Navigation() {
         {/* Desktop Nav – centered */}
         <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-3 lg:gap-5">
           {[
-            { label: 'Leistungen', href: '#leistungen' },
-            { label: 'KI-Sichtbarkeit', href: '#ki' },
-            { label: 'Förderung', href: '#foerderung' },
-            { label: 'FAQ', href: '#faq' },
+            { label: 'Leistungen', href: '/#leistungen' },
+            { label: 'KI-Sichtbarkeit', href: '/#ki' },
+            { label: 'Förderung', href: '/#foerderung' },
+            { label: 'FAQ', href: '/#faq' },
           ].map((item) => (
             <a
               key={item.href}
@@ -81,7 +81,7 @@ export default function Navigation() {
         {/* Desktop CTA – right aligned */}
         <div className="hidden md:flex justify-end">
           <a
-            href="#kontakt"
+            href="/#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-3 py-2.5 rounded-lg transition-all whitespace-nowrap"
           >
             Beratung anfragen
@@ -109,10 +109,10 @@ export default function Navigation() {
       {menuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg px-6 py-4 flex flex-col gap-4">
           {[
-            { label: 'Leistungen', href: '#leistungen' },
-            { label: 'KI-Sichtbarkeit', href: '#ki' },
-            { label: 'Förderung', href: '#foerderung' },
-            { label: 'FAQ', href: '#faq' },
+            { label: 'Leistungen', href: '/#leistungen' },
+            { label: 'KI-Sichtbarkeit', href: '/#ki' },
+            { label: 'Förderung', href: '/#foerderung' },
+            { label: 'FAQ', href: '/#faq' },
           ].map((item) => (
             <a
               key={item.href}
@@ -138,7 +138,7 @@ export default function Navigation() {
             KI-Videothek
           </Link>
           <a
-            href="#kontakt"
+            href="/#kontakt"
             className="bg-accent text-white font-semibold px-5 py-3 rounded-lg text-center"
             onClick={() => setMenuOpen(false)}
           >
