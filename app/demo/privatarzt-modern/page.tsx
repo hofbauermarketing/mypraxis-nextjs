@@ -92,29 +92,124 @@ export default function Demo2Page() {
       </section>
 
       {/* LEISTUNGEN */}
-      <section id="leistungen" className="py-24 px-6 bg-[#0d1225]">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-14">
+      <section id="leistungen" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 40%, #0f1530 80%, #0a0f1e 100%)' }}>
+        {/* Ambient glow */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full bg-amber-400/3 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 rounded-full bg-purple-500/5 blur-3xl pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="mb-16 text-center">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Leistungsspektrum</span>
-            <h2 className="text-4xl font-bold text-white mt-2">Was ich für Sie leiste</h2>
-            <p className="text-white/40 text-sm mt-2">Klicken Sie auf eine Leistung für Details.</p>
+            <h2 className="text-4xl font-bold text-white mt-2 mb-3">Was ich für Sie leiste</h2>
+            <p className="text-white/40 text-sm max-w-xl mx-auto">Jede Behandlung basiert auf einem ausführlichen Erstgespräch. Keine Standardlösungen – nur was medizinisch sinnvoll und zu Ihnen passt.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {leistungen.map((l, i) => (
-              <div key={l.title} className="border border-white/10 rounded-xl p-6 hover:border-amber-400/30 transition-all group cursor-pointer" onClick={() => setExpanded(expanded === i ? null : i)}>
-                <span className="text-amber-400/50 text-xs font-mono mb-3 block">{l.num}</span>
-                <h3 className="font-bold text-white text-sm mb-2 group-hover:text-amber-400 transition-colors">{l.title}</h3>
-                <p className="text-white/40 text-xs leading-relaxed mb-2">{l.text}</p>
-                {expanded === i && (
-                  <div className="border-t border-white/10 pt-3 space-y-2">
-                    <p className="text-white/55 text-xs leading-relaxed">{l.detail}</p>
-                    <div className="flex gap-2 text-xs">
-                      <span className="bg-amber-400/10 text-amber-400 px-2 py-0.5 rounded">⏱ {l.dauer}</span>
-                      <span className="bg-white/5 text-white/40 px-2 py-0.5 rounded">{l.preis}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                num: '01',
+                title: 'Ästhetische Dermatologie',
+                subtitle: 'Botox · Hyaluron · Laser · Peelings',
+                img: '/demo-stern-aesthetik.jpg',
+                imgGradient: 'from-amber-900/80 via-amber-800/40 to-transparent',
+                detail: 'Jede Behandlung beginnt mit einem ausführlichen Beratungsgespräch. Keine Standardlösungen – nur was medizinisch sinnvoll und zu Ihrem Gesicht passt. Natürlichkeit ist dabei kein Kompromiss, sondern das Ziel.',
+                meta: 'Ob diskrete Faltenreduktion, Volumenaufbau oder Hautverjüngung – ästhetische Medizin soll nicht "gemacht" aussehen, sondern Ihre Ausstrahlung unterstreichen.',
+                dauer: '30–60 Min.',
+                preis: 'ab € 290',
+              },
+              {
+                num: '02',
+                title: 'Hautkrebs-Screening',
+                subtitle: 'Auflichtmikroskopie · Muttermalmapping',
+                img: '/demo-stern-hautkrebs.jpg',
+                imgGradient: 'from-blue-900/80 via-blue-800/40 to-transparent',
+                detail: 'Früherkennung rettet Leben. Wir empfehlen jährliche Kontrollen ab 30 Jahren – besonders bei heller Haut, vielen Muttermalen oder familiärer Vorbelastung.',
+                meta: 'Digitale Dermatoskopie ermöglicht die Dokumentation und den Verlaufsvergleich jedes einzelnen Muttermals. Veränderungen werden frühzeitig erkannt.',
+                dauer: '20–30 Min.',
+                preis: 'Kasse möglich',
+              },
+              {
+                num: '03',
+                title: 'Medizinische Dermatologie',
+                subtitle: 'Psoriasis · Akne · Neurodermitis · Rosacea',
+                img: '/demo-stern-medizin.jpg',
+                imgGradient: 'from-teal-900/80 via-teal-800/40 to-transparent',
+                detail: 'Chronische Hauterkrankungen brauchen Geduld, Kontinuität und ein individuelles Konzept. Ich begleite Sie langfristig – von der Diagnose bis zur stabilen Remission.',
+                meta: 'Moderne Behandlungsmethoden, einschließlich Biologika und topischer Immunmodulatoren, werden nach dem aktuellen Stand der Wissenschaft eingesetzt.',
+                dauer: '25–45 Min.',
+                preis: 'Kasse & Wahlarzt',
+              },
+              {
+                num: '04',
+                title: 'Lasermedizin',
+                subtitle: 'Narben · Pigmente · Gefäße · Haarentfernung',
+                img: '/demo-stern-laser.jpg',
+                imgGradient: 'from-purple-900/80 via-purple-800/40 to-transparent',
+                detail: 'Modernste Lasertechnologie (Nd:YAG, CO₂, fraktionierter Laser). Fellowship-Training in Zürich. Realistische Aufklärung über Ergebnis und Heilungsverlauf gehört für mich zum Standard.',
+                meta: 'Laserbehandlungen erzielen nachhaltige Ergebnisse bei Narbentherapie, Pigmentflecken und Gefäßveränderungen. Mehrere Sitzungen sind oft nötig – ich erkläre Ihnen warum.',
+                dauer: '20–45 Min.',
+                preis: 'ab € 190',
+              },
+              {
+                num: '05',
+                title: 'Allergologie',
+                subtitle: 'Pricktest · IgE · Epikutan · Desensibilisierung',
+                img: '/demo-stern-allergie.jpg',
+                imgGradient: 'from-green-900/80 via-green-800/40 to-transparent',
+                detail: 'Ob Kontaktallergien, Nahrungsmittelunverträglichkeiten oder Umweltsensibilisierungen – wir finden die Ursache und entwickeln einen individuellen Therapieplan.',
+                meta: 'Allergologische Diagnostik am neuesten Stand: strukturiertes Vorgehen von der Anamnese über Hauttests bis zur spezifischen Immuntherapie (Desensibilisierung).',
+                dauer: '45–60 Min.',
+                preis: 'Kasse möglich',
+              },
+              {
+                num: '06',
+                title: 'Anti-Aging & Regeneration',
+                subtitle: 'Kollagen · PRP · Bioremodelling · Profhilo',
+                img: '/demo-stern-antiaging.jpg',
+                imgGradient: 'from-rose-900/80 via-rose-800/40 to-transparent',
+                detail: 'Nicht "jünger aussehen wollen", sondern besser. Kein Einheitsrezept, sondern ein auf Ihre Haut und Ihren Hautzustand abgestimmter Regenerationsplan.',
+                meta: 'PRP (Platelet Rich Plasma) und Bioremodelling nutzen körpereigene Mechanismen zur Hauterneuerung. Ergebnisse sind subtil, natürlich und langanhaltend.',
+                dauer: '45–60 Min.',
+                preis: 'ab € 390',
+              },
+            ].map((l, i) => (
+              <div key={l.title}
+                className="group relative rounded-2xl overflow-hidden border border-white/8 hover:border-amber-400/25 transition-all duration-300 cursor-pointer bg-[#0d1225] hover:shadow-2xl hover:shadow-amber-400/5 hover:-translate-y-1"
+                onClick={() => setExpanded(expanded === i ? null : i)}>
+                {/* Image area */}
+                <div className="relative h-48 overflow-hidden">
+                  {/* Gradient placeholder shown when image not available */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${l.imgGradient} opacity-80`} />
+                  <img
+                    src={l.img}
+                    alt={l.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                  {/* Bottom gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1225] via-[#0d1225]/20 to-transparent" />
+                  {/* Number badge */}
+                  <span className="absolute top-3 left-3 text-amber-400/60 text-xs font-mono bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">{l.num}</span>
+                  {/* Expand indicator */}
+                  <span className="absolute top-3 right-3 text-amber-400/50 text-xs bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">{expanded === i ? '▲' : '▼'}</span>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="font-bold text-white text-sm mb-1 group-hover:text-amber-400 transition-colors">{l.title}</h3>
+                  <p className="text-amber-400/50 text-[11px] font-medium mb-2 tracking-wide">{l.subtitle}</p>
+                  <p className="text-white/40 text-xs leading-relaxed">{l.meta}</p>
+
+                  {/* Expanded detail */}
+                  {expanded === i && (
+                    <div className="mt-4 border-t border-white/8 pt-4 space-y-3">
+                      <p className="text-white/60 text-xs leading-relaxed">{l.detail}</p>
+                      <div className="flex gap-2 text-xs flex-wrap">
+                        <span className="bg-amber-400/10 text-amber-400 px-2.5 py-1 rounded-full">⏱ {l.dauer}</span>
+                        <span className="bg-white/5 text-white/50 px-2.5 py-1 rounded-full">{l.preis}</span>
+                      </div>
+                      <a href="#termin" className="inline-block text-xs text-amber-400 hover:text-amber-300 font-semibold mt-1 transition-colors">Termin anfragen →</a>
                     </div>
-                  </div>
-                )}
-                <p className="text-amber-400/40 text-xs mt-2">{expanded === i ? '▲ Weniger' : '▼ Details'}</p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -122,7 +217,8 @@ export default function Demo2Page() {
       </section>
 
       {/* MEIN ANSATZ */}
-      <section id="ansatz" className="py-24 px-6 bg-[#0a0f1e]">
+      <section id="ansatz" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #080c18 50%, #0a0f1e 100%)' }}>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-400/2 to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-3">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Über mich</span>
@@ -156,7 +252,7 @@ export default function Demo2Page() {
       </section>
 
       {/* TEAM */}
-      <section id="team" className="py-24 px-6 bg-[#0d1225]">
+      <section id="team" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 50%, #0b1020 100%)' }}>
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Das Team</span>
@@ -184,7 +280,7 @@ export default function Demo2Page() {
       </section>
 
       {/* KONTAKT */}
-      <section id="kontakt" className="py-24 px-6 bg-[#0a0f1e]">
+      <section id="kontakt" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0b1020 0%, #080c18 60%, #0a0f1e 100%)' }}>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           <div>
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Ordinationszeiten</span>
@@ -209,7 +305,8 @@ export default function Demo2Page() {
       </section>
 
       {/* BEWERTUNGEN */}
-      <section className="py-24 px-6 bg-[#0d1225]">
+      <section className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 40%, #0f1430 80%, #0a0f1e 100%)' }}>
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(ellipse at 20% 50%, rgba(212,168,67,0.03) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(139,92,246,0.04) 0%, transparent 60%)' }} />
         <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Patientenstimmen</span>
@@ -235,7 +332,7 @@ export default function Demo2Page() {
       </section>
 
       {/* TERMIN */}
-      <section id="termin" className="py-24 px-6 bg-[#0a0f1e]">
+      <section id="termin" className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #080d1a 50%, #0a0f1e 100%)' }}>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Erstgespräch</span>
@@ -276,7 +373,7 @@ export default function Demo2Page() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 px-6 bg-[#0d1225]">
+      <section className="py-28 px-6 relative" style={{ background: 'linear-gradient(180deg, #0a0f1e 0%, #0d1225 50%, #0a0f1e 100%)' }}>
         <div className="max-w-3xl mx-auto">
           <div className="mb-12"><span className="text-xs font-semibold text-amber-400/70 uppercase tracking-[0.3em]">Häufige Fragen</span><h2 className="text-4xl font-bold text-white mt-2">Ihre Fragen</h2></div>
           <div className="space-y-3">
