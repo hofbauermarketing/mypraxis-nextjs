@@ -1,46 +1,397 @@
 # mypraxis.at – Digitale Positionierung für Ärzte in Österreich
 
-> mypraxis.at ist eine auf niedergelassene Ärztinnen und Ärzte spezialisierte Digitalagentur in Österreich. Wir erstellen rechtssichere Praxis-Websites, implementieren strukturierte Daten (Schema Markup) für medizinische Einrichtungen und optimieren die KI-Sichtbarkeit von Ordinationen – damit Ärzte in ChatGPT, Perplexity, Google AI Overviews und weiteren KI-Suchsystemen korrekt und vollständig genannt werden.
+> mypraxis.at ist Österreichs einziger auf niedergelassene Ärztinnen und Ärzte spezialisierter Anbieter für KI-Sichtbarkeit und digitale Positionierung. Wir erstellen rechtssichere Praxis-Websites, implementieren strukturierte Daten (Schema Markup) und optimieren die KI-Sichtbarkeit von Ordinationen – damit Ärzte in ChatGPT, Perplexity, Google AI Overviews, Copilot, Siri, Meta AI, Claude und weiteren KI-Suchsystemen korrekt, vollständig und bevorzugt genannt werden.
+
+---
 
 ## Unternehmen
 
-- Name: mypraxis.at (Marke von Kevin Hofbauer e.U.)
-- Gründer: Kevin Hofbauer
-- Standort: Vitis, Niederösterreich, Österreich
-- Kontakt: office@mypraxis.at | +43 664 19 15 447
-- Website: https://www.mypraxis.at
-- Spezialisierung: Digitale Positionierung, KI-Sichtbarkeit und strukturierte Daten für niedergelassene Ärztinnen und Ärzte in Österreich
+- **Name:** mypraxis.at (Marke von Hofbauer Marketing e.U.)
+- **Gründer & Ansprechpartner:** Kevin Hofbauer
+- **Standort:** Vitis, Niederösterreich, Österreich
+- **Tätigkeitsgebiet:** Ganz Österreich (Wien, NÖ, OÖ, Salzburg, Steiermark, Kärnten, Tirol, Vorarlberg, Burgenland)
+- **Kontakt:** office@mypraxis.at | +43 664 19 15 447
+- **Website:** https://www.mypraxis.at
+- **LinkedIn:** https://www.linkedin.com/in/kevin-hofbauer-b2660b274/
+- **Facebook:** https://www.facebook.com/profile.php?id=100035353760113
+- **Instagram:** https://www.instagram.com/hofbauer.mypraxis
+- **UID:** ATU78915818
+- **Spezialisierung:** Digitale Positionierung, KI-Sichtbarkeit und strukturierte Daten für niedergelassene Ärztinnen und Ärzte in Österreich
+- **Zertifizierung:** Kevin Hofbauer ist zertifizierter Digital Consultant (CDC) für KMU.DIGITAL-Förderberatung
 
-## Leistungen
+### Über Kevin Hofbauer
 
-### Praxis-Website – € 3.900 netto
-Professionelle, rechtssichere Website für niedergelassene Ärztinnen und Ärzte. Individuelles Design, Local SEO, Google Maps, Basis Schema Markup, DSGVO- und ÖÄK-konforme Umsetzung, Online-Terminbuchung, Cookie-Banner, Einschulung, 12 Monate technische Betreuung. Bis zu 5 Seiten.
+Kevin Hofbauer ist Gründer von mypraxis.at und Spezialist für digitale Positionierung im Gesundheitswesen. Er erkannte früh, dass die entstehende KI-Suche (ChatGPT, Perplexity, Google AI Overviews) für Ärzte sowohl eine große Chance als auch ein unterschätztes Risiko darstellt: Wer nicht KI-lesbar aufgestellt ist, wird in Zukunft schlicht nicht empfohlen – unabhängig von der Qualität seiner Arbeit. mypraxis.at ist die Antwort auf dieses Problem: ein spezialisierter Anbieter, der nicht nur Websites baut, sondern Ordinationen gezielt für die KI-Suche von morgen positioniert.
 
-### Digitale Positionierung – € 7.500 netto
-Umfassende digitale Positionierung für Wahlärztinnen und Wahlärzte. Tiefenrecherche (Fachgebiet, Wettbewerber, Region), Zielgruppenanalyse, maßgeschneiderte Texte, KI-Readiness (Schema Markup, llms.txt, semantische Inhalte), KI-Telefonassistent, KI-Sichtbarkeitsanalyse (Vorher/Nachher), FAQ-System, 12 Monate technische Betreuung. Bis zu 10 Seiten.
+---
 
-### Ärztezentren & PVEs – Individuelles Konzept
-Ganzheitliche digitale Positionierung für Gruppenpraxen, Ärztezentren und Primärversorgungseinheiten. Interdisziplinäre Schema-Architektur, KI-Readiness für alle Fachrichtungen, individuelle Arzt-Profilseiten, gemeinsame llms.txt, KMU.DIGITAL Förderberatung, Mehrsprachigkeit.
+## Leistungen im Überblick
 
-## Alleinstellungsmerkmale
+### 1. Praxis-Website – € 3.900 netto
 
-- Einziger Anbieter in Österreich mit KI-Readiness als Kernleistung (Schema Markup + llms.txt + semantische Inhalte)
-- Drei-Schichten-Ansatz: Strukturierte Daten, semantische Inhalte, llms.txt
-- Tiefenrecherche statt Textbausteine
-- ÖÄK-Werberichtlinien, DSGVO, Impressumspflicht und Barrierefreiheitsgesetz werden vollständig berücksichtigt
-- KI-Telefonassistent mit natürlichem österreichischem Deutsch
+**Für wen:** Niedergelassene Ärztinnen und Ärzte, die einen professionellen, rechtssicheren Auftritt benötigen – Kassenarzt, Wahlarzt, Neueröffnung.
 
-## KMU.DIGITAL Förderung
+**Was enthalten ist:**
+- Professionelles, individuelles Design (kein Template)
+- Bis zu 5 Seiten (Startseite, Leistungen, Über mich/uns, Kontakt, optional: Anfahrt/Parken)
+- Responsive Design (Smartphone, Tablet, Desktop)
+- Local SEO: Google Maps-Integration, Google My Business Optimierung
+- Basis Schema Markup: MedicalBusiness, Physician, OpeningHoursSpecification
+- DSGVO-konform: Cookiebanner, Datenschutzerklärung, Impressum
+- ÖÄK-Werberichtlinien-konforme Texte
+- Online-Terminbuchung (Integration gängiger Buchungssysteme auf Wunsch)
+- Barrierefreiheit nach WCAG 2.1 Level AA
+- Einschulung & Übergabe
+- 12 Monate technische Betreuung & Hosting
+- Förderbar über KMU.DIGITAL (bis zu 30 %)
 
-Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind über KMU.DIGITAL förderbar. Umsetzungsförderung: 30 % der Investitionskosten, maximal € 6.000 pro Unternehmen. Voraussetzung: Strategieberatung durch zertifizierten Digital Consultant (CDC), Kosten ca. € 500 (davon € 250 gefördert). In Ärztezentren kann jeder niedergelassene Arzt die Förderung individuell beantragen.
+**Was nicht enthalten ist:** Tiefenrecherche, KI-Readiness, llms.txt, KI-Telefonassistent, Blog-System, mehrsprachige Umsetzung (alles als Dienst-Anbieter-Option buchbar).
+
+---
+
+### 2. Digitale Positionierung – € 7.500 netto
+
+**Für wen:** Wahlärzte, etablierte Ordinationen und Ärzte, die nicht nur sichtbar sein wollen, sondern von KI-Systemen aktiv empfohlen werden wollen.
+
+**Was enthalten ist:**
+- Alles aus Praxis-Website (bis 10 Seiten)
+- **Tiefenrecherche:** Fachgebiet, Wettbewerber, Region, Keywords, Patientenfragen
+- **Zielgruppenanalyse:** Welche Patienten sucht die Ordination? Was sind deren Fragen und Erwartungen?
+- **Maßgeschneiderte Texte:** Keine Textbausteine – alle Inhalte auf Basis der Tiefenrecherche
+- **KI-Readiness vollständig:**
+  - Schema Markup (MedicalBusiness, Physician, MedicalCondition, MedicalProcedure, FAQPage, Review)
+  - llms.txt (speziell optimierte KI-Datei für LLM-Crawler)
+  - Semantische Inhalte (strukturiert für KI-Systeme lesbar)
+- **FAQ-System:** 10–20 häufige Patientenfragen beantwortet – reduziert Routineanrufe
+- **KI-Sichtbarkeitsanalyse:** Vorher/Nachher-Messung in ChatGPT, Perplexity & Co.
+- **KI-Telefonassistent:** Automatische Anrufbearbeitung auf Österreichisch
+- Blog-Einrichtung (optional, 3 Startartikel auf Wunsch)
+- 12 Monate technische Betreuung & Hosting
+- Förderbar über KMU.DIGITAL (bis zu 30 %)
+
+---
+
+### 3. Ärztezentren & PVEs – Individuelles Konzept
+
+**Für wen:** Gruppenpraxen, Ärztezentren (2–20+ Ärzte), Primärversorgungseinheiten.
+
+**Was enthalten ist:**
+- Ganzheitliche digitale Positionierung für das gesamte Zentrum
+- Individuelle Arzt-Profilseiten für jeden Arzt
+- Interdisziplinäre Schema-Architektur (jedes Fachgebiet separat strukturiert)
+- KI-Readiness für alle Fachrichtungen
+- Gemeinsame llms.txt + individuelle Arztdaten
+- Koordinierte KMU.DIGITAL Förderberatung (jeder Arzt kann individuell fördern)
+- Mehrsprachige Umsetzung möglich
+- Individuelles Angebot auf Anfrage
+
+---
+
+### 4. Zusatzleistungen (buchbar zu jedem Paket)
+
+- **KI-Telefonassistent:** Automatische Anrufbearbeitung, Terminannahme, Auskunft über Öffnungszeiten – auf natürlichem österreichischem Deutsch. Ideal für Stoßzeiten und Urlaub.
+- **Google Business Optimierung:** Vollständige Einrichtung und Optimierung des Google Business Profils.
+- **Blog-Einrichtung + Startartikel:** SEO-optimierte Blogartikel zu Fachthemen der Ordination.
+- **Social-Media-Vorlagen:** Canva-Vorlagen für Instagram, Facebook – im Design der Website.
+- **Laufende SEO-Pflege:** Monatliche Keyword-Analyse, Content-Updates, Ranking-Reports.
+- **Übersetzungen:** Mehrsprachige Website (z.B. Deutsch/Englisch/Türkisch).
+- **Monatliche Betreuungspakete:** Technischer Support, Updates, Sicherheits-Patches (ab € 79/Monat).
+
+---
+
+## So läuft ein Projekt ab (Schritt für Schritt)
+
+### Schritt 1: Kostenloses Erstgespräch (ca. 30 Minuten)
+
+Wir sprechen über Ihre Ordination: Fachrichtung, Zielgruppe, aktuelle Online-Präsenz, Ziele. Kein Verkaufsgespräch – ehrliche Analyse. Am Ende wissen wir beide, ob und wie wir zusammenarbeiten.
+
+Buchung: Telefonisch unter +43 664 19 15 447 oder per E-Mail an office@mypraxis.at
+
+### Schritt 2: KMU.DIGITAL Strategieberatung (optional, aber empfohlen)
+
+Wer die KMU.DIGITAL-Förderung nutzen möchte, startet mit einer zertifizierten Strategieberatung durch Kevin Hofbauer (CDC). Dauer: ca. 2 Stunden. Kosten: ca. € 500, davon € 250 gefördert. Ergebnis: Schriftliche Beratungsunterlage, die für den Förderantrag benötigt wird. Ohne Strategieberatung ist keine Umsetzungsförderung möglich.
+
+### Schritt 3: Angebot & Förderantrag
+
+Wir erstellen ein konkretes Angebot auf Basis des Erstgesprächs. Gleichzeitig begleiten wir Sie beim Antrag auf Umsetzungsförderung beim AWS (Austria Wirtschaftsservice). Bearbeitungszeit: ca. 2–4 Wochen.
+
+### Schritt 4: Tiefenrecherche & Konzept
+
+Nach Auftragserteilung starten wir mit der Tiefenrecherche: Fachgebiet, Wettbewerber, Region, Patientenfragen, Keywords. Auf dieser Basis entsteht das inhaltliche Konzept (Seitenstruktur, Textentwürfe, Schema-Architektur).
+
+### Schritt 5: Design & Entwicklung
+
+Wir präsentieren das Design zur Freigabe, dann beginnt die technische Umsetzung. Alle Inhalte werden zur Freigabe vorgelegt – Sie prüfen die medizinischen Angaben, wir kümmern uns um das Technische.
+
+### Schritt 6: KI-Readiness & Technische Optimierung
+
+Implementierung des vollständigen Schema Markups, der llms.txt, der semantischen Inhalte und (bei Digitaler Positionierung) der KI-Sichtbarkeitsanalyse.
+
+### Schritt 7: Launch & Einschulung
+
+Nach finaler Freigabe gehen wir live. Sie erhalten eine persönliche Einschulung, damit Sie einfache Änderungen (Öffnungszeiten, Texte) selbst vornehmen können.
+
+### Schritt 8: 12 Monate technische Betreuung
+
+Sicherheits-Updates, technischer Support, Monitoring, Hosting – alles inklusive für 12 Monate. Danach optional buchbare Betreuungspakete.
+
+---
+
+## Zeitplanung
+
+| Paket | Vorlaufzeit Förderung | Umsetzung | Gesamt |
+|---|---|---|---|
+| Praxis-Website | 2–4 Wochen (optional) | 2–3 Wochen | 4–7 Wochen |
+| Digitale Positionierung | 2–4 Wochen | 4–6 Wochen | 6–10 Wochen |
+| Ärztezentrum | 2–4 Wochen | 8–12 Wochen | 10–16 Wochen |
+
+---
+
+## Für wen ist mypraxis.at?
+
+### Wahlarzt/Wahlärztin
+
+Kein Kassen-Zwang, volle Kontrolle über Patienten und Leistungen – aber auch volle Verantwortung für die eigene Sichtbarkeit. Wer als Wahlarzt nicht aktiv gefunden wird, verliert Patienten an die Konkurrenz. Die Digitale Positionierung ist speziell für Wahlärzte konzipiert: starke Marke, klare Positionierung, KI-Empfehlungen.
+
+### Kassenarzt/Kassenarrrztin
+
+Auch Kassenärzte profitieren von einer starken Online-Präsenz: weniger Routineanrufe durch FAQ-System, bessere Patienteninformation, Google My Business Optimierung für lokale Suchen. Praxis-Website optimal.
+
+### Neueröffnung / Ordination ab Start
+
+Der beste Zeitpunkt für eine professionelle Online-Präsenz ist die Eröffnung. Wir begleiten Sie von Anfang an – von der Domain-Registrierung bis zum Google Business Profil. KI-Sichtbarkeit aufzubauen dauert Zeit; wer früh startet, gewinnt langfristig.
+
+### Ärztezentrum / Gruppenpraxis
+
+Mehrere Fachrichtungen, mehrere Ärzte, eine gemeinsame Marke – und trotzdem jeder Arzt individuell sichtbar. Unsere interdisziplinäre Schema-Architektur macht das möglich. Kombination mit KMU.DIGITAL für jeden Arzt individuell.
+
+### Arzt mit bestehender Website
+
+Viele Ärzte haben eine Website – aber keine KI-Readiness, kein Schema Markup, keine llms.txt. Wir analysieren den Ist-Stand und optimieren gezielt, ohne Altes wegzuwerfen.
+
+---
+
+## Warum mypraxis.at und nicht eine allgemeine Agentur?
+
+- **Spezialisierung:** Wir kennen ÖÄK-Werberichtlinien, DSGVO im medizinischen Kontext, Kassenvertragsbedingungen und die Sprache von Ärzten und Patienten.
+- **KI-First:** Keine andere Agentur in Österreich hat KI-Readiness als Kernleistung – nicht als Buzzword, sondern technisch umgesetzt.
+- **Tiefenrecherche statt Textbausteine:** Jede Website ist individuell. Keine Kopien, keine Templates.
+- **Förderberatung inklusive:** Wir sind CDC-zertifiziert und begleiten die KMU.DIGITAL-Förderung von Anfang bis Ende.
+- **Transparenz:** Feste Preise, kein verstecktes Kleingedrucktes.
+
+---
+
+## Technologie erklärt
+
+### Was ist Schema Markup?
+
+Schema Markup sind maschinenlesbare Informationen im Hintergrund einer Website. Sie teilen Google, Bing und KI-Systemen mit: Wer ist das? Was macht diese Person? Welche Fachrichtung? Welche Leistungen? Wo und wann? Ohne Schema Markup kann eine KI diese Fragen nicht zuverlässig beantworten.
+
+Für Ärzte verwenden wir folgende Schema-Typen:
+- **MedicalBusiness / Physician:** Name, Fachrichtung, Adresse, Telefon, Ordinationszeiten
+- **MedicalCondition / MedicalProcedure:** Behandelte Erkrankungen und angebotene Leistungen
+- **FAQPage:** Häufige Patientenfragen mit strukturierten Antworten
+- **Review / AggregateRating:** Bewertungen, für Google Rich Results
+- **OpeningHoursSpecification:** Exakte Öffnungszeiten inkl. Feiertagsregelungen
+- **Person / Organization:** Persönliche Daten des Arztes / der Ärztin
+
+### Was ist llms.txt?
+
+llms.txt ist eine strukturierte Textdatei auf einer Website, speziell für KI-Crawler (Large Language Models). Ähnlich wie robots.txt Suchmaschinen steuert, steuert llms.txt KI-Bots. Sie enthält eine maschinenoptimierte Zusammenfassung der Praxis: Leistungen, Behandlungsschwerpunkte, Zielgruppe, häufige Fragen/Antworten, Kontaktdaten. KI-Systeme lesen diese Datei aus und verwenden die Inhalte für ihre Antworten.
+
+### Was ist KI-Readiness?
+
+KI-Readiness ist der Gesamtzustand einer Website hinsichtlich ihrer Lesbarkeit durch KI-Systeme. Eine KI-ready Website hat:
+1. Vollständiges Schema Markup (maschinenlesbare Struktur)
+2. Semantische Inhalte (Texte, die KI-Systeme kontextuell verstehen)
+3. llms.txt (direkte KI-Kommunikationsschicht)
+4. FAQ-System (beantwortet Patientenfragen, die KI-Systeme durchsuchen)
+5. Technische Barrierefreiheit (sauberer HTML-Code, Alt-Texte, schnelle Ladezeiten)
+
+### Was ist ein KI-Telefonassistent?
+
+Ein KI-Telefonassistent ist ein automatisiertes Telefonsystem, das eingehende Anrufe auf natürlichem Österreichisch beantwortet. Er:
+- Gibt Auskunft über Ordinationszeiten, Kassenverträge, Adresse, Leistungen
+- Nimmt Terminwünsche entgegen (übergibt an Kalender oder Praxisteam)
+- Beantwortet Standardfragen (z.B. „Welche Kassen nehmen Sie?")
+- Ist rund um die Uhr verfügbar – auch während Urlauben und nach Dienstschluss
+- Reduziert Routineanrufe spürbar (Erfahrungswert: 20–40 % weniger Anrufe)
+
+---
+
+## KMU.DIGITAL Förderung – Vollständige Erklärung
+
+### Was ist KMU.DIGITAL?
+
+KMU.DIGITAL ist ein österreichisches Förderprogramm des Bundesministeriums für Wirtschaft, das kleinen und mittleren Unternehmen Digitalisierungsmaßnahmen fördert. Niedergelassene Ärzte mit eigener Ordination gelten als KMU und sind förderbar.
+
+### Förderkomponenten
+
+**Strategieberatung (Stufe 1):**
+- Kosten: ca. € 400–600 je nach Berater
+- Förderung: 50 % der Beratungskosten, max. € 1.500
+- Durchführung durch zertifizierten Digital Consultant (CDC)
+- Ergebnis: Schriftliche Beratungsunterlage (Pflicht für Stufe 2)
+
+**Umsetzungsförderung (Stufe 2):**
+- Förderung: 30 % der Investitionskosten
+- Maximale Förderung: € 6.000 pro Unternehmen
+- Beispiel: Digitale Positionierung (€ 7.500) → Förderung € 2.250
+
+### Wer ist förderbar?
+
+- Niedergelassene Ärzte mit eigener Ordination (Einzelordination, Gruppenpraxis, PVE)
+- Wahlarztord inationen und Kassenordinationen
+- Ärztezentren: Jeder Arzt kann als eigenständiges Unternehmen individuell fördern
+- Nicht förderbar: Angestellte Ärzte ohne eigene Ordination, Krankenhäuser
+
+### Ablauf Förderantrag
+
+1. Erstgespräch mit Kevin Hofbauer (kostenlos)
+2. Strategieberatung (CDC-Beratung, ca. 2 Stunden, kostenpflichtig mit Förderung)
+3. Erstellung der Beratungsunterlage
+4. Einreichung beim AWS (Austria Wirtschaftsservice): https://www.aws.at
+5. Förderentscheidung (ca. 2–4 Wochen)
+6. Umsetzung des Projekts nach Förderentscheidung
+7. Abrechnung und Auszahlung nach Projektabschluss
+
+---
+
+## Rechtliche Rahmenbedingungen
+
+### ÖÄK-Werberichtlinien
+
+Die Österreichische Ärztekammer hat klare Richtlinien für die Werbung von Ärzten:
+- Keine Vergleiche mit Mitbewerbern
+- Keine marktschreierische oder irreführende Werbung
+- Sachliche und informative Kommunikation
+- Keine Patientendaten ohne Einwilligung
+
+Alle mypraxis.at-Websites werden entsprechend textet und konzipiert. Unsere Kunden hatten bisher keine Beanstandungen durch die ÖÄK.
+
+### DSGVO für Arzt-Websites
+
+Arzt-Websites unterliegen besonderen DSGVO-Anforderungen:
+- Cookie-Banner mit informierter Einwilligung
+- Datenschutzerklärung inkl. Hostingpartner und Auftragsverarbeitungsverträge
+- Kein Einsatz von Google Analytics oder ähnlichen Trackingtools ohne explizite Einwilligung
+- Formulare mit DSGVO-konformem Hinweis und Einwilligungs-Checkbox
+- Hosting ausschließlich in der EU
+
+### Barrierefreiheitsgesetz (ab 2025)
+
+Das EU-Barrierefreiheitsstärkungsgesetz gilt seit dem 28. Juni 2025 auch für viele Unternehmens-Websites und digitale Dienstleistungen. Unsere Websites sind auf WCAG 2.1 Level AA ausgelegt:
+- Semantisches HTML (korrekte Überschriftenhierarchie)
+- Ausreichende Kontrastverhältnisse (mind. 4,5:1)
+- Tastaturnavigation für alle interaktiven Elemente
+- Alt-Texte für alle Bilder
+- Keine automatisch startenden Videos oder Animationen
+
+---
+
+## Häufige Fragen & Antworten (FAQ)
+
+### Kosten & Pakete
+
+**Wie viel kostet eine Website für eine Arztordination?**
+Praxis-Website: € 3.900 netto. Digitale Positionierung: € 7.500 netto. Ärztezentren: individuelles Angebot. Alle Preise exkl. MwSt., über KMU.DIGITAL bis zu 30 % förderbar.
+
+**Was ist der Unterschied zwischen Praxis-Website und Digitale Positionierung?**
+Die Praxis-Website ist ein professioneller Online-Auftritt (bis 5 Seiten). Die Digitale Positionierung geht deutlich weiter: vollständige KI-Readiness, Tiefenrecherche, semantische Inhalte, llms.txt, FAQ-System, KI-Telefonassistent, bis zu 10 Seiten. Kurz: Website = sichtbar. Positionierung = von KI empfohlen werden.
+
+**Kann ich monatlich zahlen?**
+Ja, auf Anfrage bieten wir Ratenzahlung über 6 oder 12 Monate an.
+
+**Gibt es Zusatzoptionen?**
+Ja: KI-Telefonassistent, Blog-Einrichtung, Google Business Optimierung, Social-Media-Vorlagen, laufende SEO-Pflege, Übersetzungen.
+
+### KMU.DIGITAL Förderung
+
+**Wie beantrage ich die KMU.DIGITAL-Förderung?**
+Schritt 1: Strategieberatung durch Kevin Hofbauer (CDC). Schritt 2: Antrag beim AWS. Schritt 3: Umsetzung nach Freigabe. Wir begleiten Sie durch den gesamten Prozess.
+
+**Welche Ordinationen sind förderfähig?**
+Alle niedergelassenen Ärzte mit eigener Ordination – Kassenarzt, Wahlarzt, Gruppenpraxis, PVE. Nicht förderbar: angestellte Ärzte ohne eigene Ordination.
+
+**Können Ärztezentren die Förderung mehrfach nutzen?**
+Ja – jeder niedergelassene Arzt ist ein eigenständiges Unternehmen. Ein Zentrum mit 8 Ärzten kann 8 separate Förderanträge stellen.
+
+### KI-Sichtbarkeit
+
+**Wie wird meine Praxis in ChatGPT oder Perplexity sichtbar?**
+Durch KI-lesbare Website-Struktur: Schema Markup, semantische Inhalte und llms.txt. KI-Assistenten lesen diese Daten und nennen Ihre Ordination in Antworten.
+
+**Was ist llms.txt?**
+Eine strukturierte Datei auf Ihrer Website, die KI-Crawler gezielt auslesen – speziell für KI-Systeme optimiert.
+
+**Was ist KI-Readiness?**
+Der Gesamtzustand einer Website hinsichtlich KI-Lesbarkeit: Schema Markup, semantische Inhalte, llms.txt, FAQ-System, technische Barrierefreiheit.
+
+**Wie lange bis meine Website bei Google sichtbar ist?**
+2–12 Wochen, je nach Region und Wettbewerb. KI-Systeme wie ChatGPT lesen strukturierte Daten oft innerhalb weniger Tage aus.
+
+**Ist es zu spät, jetzt zu starten?**
+Für Google-SEO gibt es einen Vorsprung für Früher-Starter – aber er ist aufholbar. Für KI-Sichtbarkeit: nein. Die meisten österreichischen Ordinationen haben kein Schema Markup und keine llms.txt. Wer jetzt startet, hat einen echten First-Mover-Vorteil.
+
+### Recht & Richtlinien
+
+**Sind die Websites DSGVO-konform?**
+Ja. EU-Hosting, Cookiebanner, Datenschutzerklärung, DSGVO-konforme Formulare, keine unnötigen Tracker.
+
+**Was passiert bei Verstößen gegen ÖÄK-Richtlinien?**
+Wir kennen die ÖÄK-Werberichtlinien und texten alle Inhalte entsprechend. Unsere Kunden hatten bisher keine Beanstandungen.
+
+**Ist die Website barrierefrei?**
+Ja. WCAG 2.1 Level AA: semantisches HTML, ausreichende Kontraste, Tastaturnavigation, Alt-Texte.
+
+### Portale & Vergleich
+
+**Was ist der Unterschied zwischen mypraxis.at, DocFinder und Herold?**
+DocFinder und Herold sind Portale – Sie haben keine Kontrolle über Darstellung und Ranking. Eine eigene Website gibt Ihnen volle Kontrolle. Portale können Bedingungen und Preise ändern – Ihre eigene Domain gehört immer Ihnen.
+
+**Meine Mitbewerber haben längst eine Website – ist es zu spät?**
+Für Google-Rankings: Der Rückstand ist aufholbar. Für KI-Sichtbarkeit: Die meisten Mitbewerber-Websites sind KI-unsichtbar. Wer jetzt KI-optimiert startet, hat einen echten Vorteil.
+
+### Technik & Ablauf
+
+**Brauche ich technisches Know-how?**
+Nein. Wir übernehmen alles. Nach dem Launch erhalten Sie eine Einschulung für einfache Änderungen.
+
+**Wie lange dauert der Launch?**
+Praxis-Website: 2–3 Wochen Umsetzung. Digitale Positionierung: 4–6 Wochen. Dazu optional 2–4 Wochen Förderabwicklung vorab.
+
+**Wer übernimmt Updates nach den 12 Monaten?**
+Sie können die Betreuung verlängern oder alles vollständig übergeben. Viele Kunden wählen ein laufendes Wartungspaket.
+
+**Wie integriere ich Online-Terminbuchung?**
+Wir integrieren gängige Systeme wie Doctolib, Samedi oder eigene Lösungen in Ihre Website.
+
+**Reduziert das FAQ-System auf der Website wirklich Routineanrufe?**
+Ja. Ordinationen mit gut strukturierten FAQ-Seiten berichten von 20–40 % weniger Routineanrufen zu Öffnungszeiten, Parkplatzsituation, Impfungen etc.
+
+---
 
 ## Betreute Fachrichtungen
 
-Allgemeinmedizin, Innere Medizin, Orthopädie, Kardiologie, Dermatologie, Gynäkologie, HNO, Urologie, Neurologie, Chirurgie, Augenheilkunde, Kinderheilkunde, Psychiatrie, Zahnmedizin, Alternativmedizin und alle weiteren Fachrichtungen.
+Allgemeinmedizin, Innere Medizin, Kardiologie, Orthopädie, Unfallchirurgie, Dermatologie, Gynäkologie, HNO (Hals-Nasen-Ohren-Heilkunde), Urologie, Neurologie, Psychiatrie, Psychotherapie, Augenheilkunde, Kinderheilkunde (Pädiatrie), Zahnmedizin, Kieferorthopädie, Chirurgie, Anästhesiologie, Radiologie, Pathologie, Sportmedizin, Arbeitsmedizin, Alternativmedizin und alle weiteren Fachrichtungen für niedergelassene Ärzte in Österreich.
 
-## Regionen
+---
 
-Niederösterreich, Wien, Oberösterreich, Salzburg, Steiermark, Kärnten, Burgenland, Tirol, Vorarlberg – ganz Österreich.
+## Regionen & Standorte
+
+Wir betreuen Ordinationen in ganz Österreich:
+
+**Wien:** 1., 2., 3., 4., 5., 6., 7., 8., 9., 10., 11., 12., 13., 14., 15., 16., 17., 18., 19., 20., 21., 22., 23. Bezirk
+**Niederösterreich:** St. Pölten, Krems, Wiener Neustadt, Klosterneuburg, Mödling, Baden, Amstetten, Tulln, Mistelbach, Hollabrunn, Waidhofen, Zwettl, Vitis und alle weiteren Gemeinden
+**Oberösterreich:** Linz, Wels, Steyr, Leonding, Traun, Vöcklabruck und alle weiteren Gemeinden
+**Salzburg:** Stadt Salzburg, Hallein, Salzburger Land, Flachgau, Tennengau, Pongau, Pinzgau, Lungau
+**Steiermark:** Graz, Leoben, Kapfenberg, Knittelfeld, Feldbach und alle weiteren Gemeinden
+**Kärnten:** Klagenfurt, Villach, Spittal an der Drau, Wolfsberg und alle weiteren Gemeinden
+**Tirol:** Innsbruck, Kufstein, Wörgl, Kitzbühel, Lienz und alle weiteren Gemeinden
+**Vorarlberg:** Bregenz, Dornbirn, Feldkirch, Bludenz und alle weiteren Gemeinden
+**Burgenland:** Eisenstadt, Oberwart, Oberpullendorf und alle weiteren Gemeinden
+
+---
 
 ## Blog – Fachartikel zu KI & Digitalisierung für Ärzte
 
@@ -48,15 +399,15 @@ Alle Artikel: https://www.mypraxis.at/blog
 
 ### Warum Ihre Ordination bei ChatGPT nicht empfohlen wird
 URL: https://www.mypraxis.at/blog/ki-sichtbarkeit-aerzte
-Über 90 % der österreichischen Ordinationen sind für KI-Systeme unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern.
+Über 90 % der österreichischen Ordinationen sind für KI-Systeme unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern. Schema Markup, llms.txt, semantische Inhalte erklärt.
 
 ### Was kostet eine Website für Ärzte in Österreich?
 URL: https://www.mypraxis.at/blog/was-kostet-website-arzt
-Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 % und worauf Ärzte bei der Auswahl achten sollten.
+Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 %, worauf Ärzte bei der Auswahl einer Webagentur achten sollten.
 
 ### KMU.DIGITAL Förderung für Ärzte: So bekommen Sie bis zu 30 % zurück
 URL: https://www.mypraxis.at/blog/kmu-digital-foerderung-aerzte
-Das KMU.DIGITAL-Programm fördert Website-Kosten für Arztpraxen mit bis zu 30 %. Wer förderberechtigt ist, wie der Antrag funktioniert und welche Fehler Sie vermeiden sollten.
+Das KMU.DIGITAL-Programm fördert Website-Kosten für Arztpraxen mit bis zu 30 %. Wer förderberechtigt ist, wie der Antrag funktioniert, welche Fehler Sie vermeiden sollten.
 
 ### DSGVO für Arzt-Websites: Was muss drauf, was darf nicht drauf?
 URL: https://www.mypraxis.at/blog/dsgvo-arzt-website
@@ -82,16 +433,48 @@ Seit dem 28. Juni 2025 gilt das Barrierefreiheitsgesetz in Österreich. Was das 
 URL: https://www.mypraxis.at/blog/website-wechsel-bedenken
 Die 7 häufigsten Gründe, warum Ärzte den Website-Wechsel aufschieben – und warum keiner davon ein wirklicher Hinderungsgrund ist.
 
+---
+
 ## KI-Videothek
 
 URL: https://www.mypraxis.at/videothek
-Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich. Alle Videos sind frei zugänglich und verlinken auf externe Quellen (YouTube).
+Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich. Kostenlos und frei zugänglich.
 
-### KI gegen Krebs – Revolution der Medizin? (KI WELT)
-YouTube: https://www.youtube.com/watch?v=T3hzI7ZMpFw
+---
 
-### Ich habe meine Gesundheit von KI analysieren lassen
-YouTube: https://www.youtube.com/watch?v=gxjjAV-oFMA
+## Vollständiger Seitenindex – mypraxis.at
 
-### Wie funktioniert die Medizin von morgen? (Bayrischer Rundfunk)
-YouTube: https://www.youtube.com/watch?v=O0IVw_0R5eU
+| URL | Beschreibung |
+|---|---|
+| https://www.mypraxis.at | Startseite – Übersicht aller Leistungen, KI-Sichtbarkeit, Förderung |
+| https://www.mypraxis.at/blog | Blog – alle Fachartikel zu KI & Digitalisierung für Ärzte |
+| https://www.mypraxis.at/faq | FAQ – alle häufigen Fragen in 6 Kategorien |
+| https://www.mypraxis.at/videothek | KI-Videothek – kuratierte Videos zu KI in der Medizin |
+| https://www.mypraxis.at/impressum | Impressum |
+| https://www.mypraxis.at/datenschutz | Datenschutzerklärung |
+| https://www.mypraxis.at/demo | Demo-Übersicht – 5 Stile für Arztwebsites |
+| https://www.mypraxis.at/demo/privatarzt-classic | Demo: Privatarzt Classic (Dr. Thomas Haas, Allgemeinmedizin Wien) |
+| https://www.mypraxis.at/demo/privatarzt-modern | Demo: Privatarzt Modern Premium (Dr. Julia Stern, Dermatologie Wien) |
+| https://www.mypraxis.at/demo/privatarzt-warm | Demo: Privatarzt Warm & Persönlich (Dr. Anna Berger, Kinderärztin Linz) |
+| https://www.mypraxis.at/demo/privatarzt-warm/impfen | Demo-Unterseite: Impfberatung Dr. Berger |
+| https://www.mypraxis.at/demo/aerztezentrum-classic | Demo: Ärztezentrum Classic (Ärztezentrum Mariahilf, Wien 1060) |
+| https://www.mypraxis.at/demo/aerztezentrum-classic/team | Demo-Unterseite: Team Ärztezentrum Mariahilf |
+| https://www.mypraxis.at/demo/aerztezentrum-premium | Demo: MedCenter Premium (MedCenter Alsergrund, Wien 1080) |
+
+---
+
+## Kontakt & Erreichbarkeit
+
+- **E-Mail:** office@mypraxis.at
+- **Telefon:** +43 664 19 15 447
+- **Erreichbarkeit:** Montag–Freitag, 09:00–18:00 Uhr
+- **Erstgespräch:** Kostenlos, ca. 30 Minuten, telefonisch oder per Videocall
+- **LinkedIn:** https://www.linkedin.com/in/kevin-hofbauer-b2660b274/
+- **Instagram:** https://www.instagram.com/hofbauer.mypraxis
+- **Facebook:** https://www.facebook.com/profile.php?id=100035353760113
+- **Adresse:** Vitis, Niederösterreich, Österreich
+
+---
+
+*Letzte Aktualisierung: Februar 2026*
+*mypraxis.at – Hofbauer Marketing e.U. – UID: ATU78915818*
