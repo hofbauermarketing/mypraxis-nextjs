@@ -1,0 +1,260 @@
+'use client'
+
+import { motion, useInView } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react'
+import Image from 'next/image'
+
+function Counter({ target, inView }: { target: number; inView: boolean }) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!inView) return
+    let startTime: number | null = null
+    const duration = 1400
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setCount(Math.round(eased * target))
+      if (progress < 1) requestAnimationFrame(step)
+    }
+    requestAnimationFrame(step)
+  }, [inView, target])
+
+  return <>{count}</>
+}
+
+function FadeUp({ delay, children, className }: { delay: number; children: React.ReactNode; className?: string }) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+function FadeIn({ delay, children, className }: { delay: number; children: React.ReactNode; className?: string }) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.7, delay, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export default function ReferenzkundenSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
+
+  return (
+    <div ref={ref} className="relative mb-16 rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0f1e] via-[#0f1623] to-[#1a2845] border border-white/10 shadow-2xl">
+      {/* Deco orbs */}
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#ff8a00]/8 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-blue-600/8 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-white/3 blur-2xl pointer-events-none" />
+
+      {/* Top section */}
+      <div className="relative z-10 text-center px-8 sm:px-12 pt-10 sm:pt-14 pb-8">
+        <FadeUp delay={0}>
+          <span className="inline-block bg-[#ff8a00]/15 border border-[#ff8a00]/35 text-[#ff8a00] text-sm font-bold px-4 py-1.5 rounded-full mb-6 tracking-wider uppercase">
+            Referenzkunden-Programm 2026
+          </span>
+        </FadeUp>
+
+        <FadeUp delay={0.15}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+            Ich suche{' '}
+            <span className="text-[#ff8a00]">
+              <Counter target={27} inView={isInView} /> Ordinationen.
+            </span>
+            <br />
+            <span className="text-white/70 text-2xl sm:text-3xl font-bold">
+              Nicht mehr. Nicht weniger.
+            </span>
+          </h2>
+        </FadeUp>
+
+        <FadeUp delay={0.35}>
+          <p className="text-blue-200/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+            Ich baue Ihre Praxis-Website neu – KI-optimiert, rechtssicher, handgemacht.
+          </p>
+        </FadeUp>
+      </div>
+
+      {/* "Sie bestimmen den Wert" */}
+      <div className="relative z-10 px-6 sm:px-12 pb-10">
+        <div className="mx-auto max-w-2xl text-center">
+          {/* Divider */}
+          <div className="flex items-center gap-4 justify-center mb-7">
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.5, delay: 0.55, ease: 'easeOut' }}
+              style={{ originX: 1 }}
+              className="h-px bg-white/15 w-16 sm:w-24"
+            />
+            <FadeIn delay={0.6}>
+              <p className="text-white/35 text-xs uppercase tracking-[0.35em] font-medium whitespace-nowrap">
+                Das Prinzip
+              </p>
+            </FadeIn>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.5, delay: 0.55, ease: 'easeOut' }}
+              style={{ originX: 0 }}
+              className="h-px bg-white/15 w-16 sm:w-24"
+            />
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 48 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.65, delay: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ff8a00] leading-tight tracking-tight"
+          >
+            Sie bestimmen
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 48 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.65, delay: 0.95, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-4"
+          >
+            den Wert.
+          </motion.p>
+
+          <FadeIn delay={1.2}>
+            <p className="text-white/40 text-sm sm:text-base italic mb-6">
+              Klingt verrückt? Ist es auch.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={1.35}>
+            <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
+              Nach Fertigstellung überweisen Sie, was es Ihnen wert ist.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={1.5}>
+            <div className="flex items-center gap-4 justify-center mt-7">
+              <div className="h-px bg-white/10 w-16 sm:w-24" />
+              <p className="text-white/20 text-xs whitespace-nowrap">Kein Fixpreis · Kein Risiko · Kein Pitch</p>
+              <div className="h-px bg-white/10 w-16 sm:w-24" />
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+
+      {/* 3 Kacheln – staggered */}
+      <div className="relative z-10 px-6 sm:px-12 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {[
+            {
+              src: '/ref-kassenarzt.jpg',
+              alt: 'Kassenarzt Website mypraxis.at',
+              title: 'Kassenärzte',
+              desc: 'Allgemeinmedizin & Fachärzte mit Kassenvertrag',
+              bg: 'bg-gradient-to-br from-[#0f2070] to-[#1e3ab8]',
+              overlay: 'from-[#0a1540] via-[#0f2070]/40',
+              dark: 'bg-[#0a1540]',
+              border: 'border-blue-500/25 hover:border-blue-400/50',
+              textColor: 'text-blue-300/80',
+              delay: 1.65,
+            },
+            {
+              src: '/ref-wahlarzt.jpg',
+              alt: 'Wahlarzt Website mypraxis.at',
+              title: 'Privatärzte',
+              desc: 'Wahlärzte & Privatordinationen aller Fachrichtungen',
+              bg: 'bg-gradient-to-br from-[#2a1400] to-[#3d1e00]',
+              overlay: 'from-[#1a0c00] via-[#2a1400]/40',
+              dark: 'bg-[#1a0c00]',
+              border: 'border-[#ff8a00]/30 hover:border-[#ff8a00]/60',
+              textColor: 'text-amber-300/70',
+              delay: 1.8,
+            },
+            {
+              src: '/ref-zentrum.jpg',
+              alt: 'Ärztezentrum Website mypraxis.at',
+              title: 'Ärztezentren',
+              desc: 'Gruppenpraxen, PVEs & medizinische Zentren',
+              bg: 'bg-gradient-to-br from-[#051e1e] to-[#0a3030]',
+              overlay: 'from-[#031414] via-[#051e1e]/40',
+              dark: 'bg-[#031414]',
+              border: 'border-teal-500/25 hover:border-teal-400/50',
+              textColor: 'text-teal-300/70',
+              delay: 1.95,
+            },
+          ].map((card) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.55, delay: card.delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className={`rounded-2xl overflow-hidden border ${card.border} shadow-xl hover:scale-[1.03] transition-all duration-300 group`}
+            >
+              <div className={`relative h-48 ${card.bg}`}>
+                <Image
+                  src={card.src}
+                  alt={card.alt}
+                  fill
+                  className="object-cover opacity-70 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${card.overlay} to-transparent`} />
+                <div className="absolute top-3 right-3 bg-[#ff8a00] text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
+                  9 Plätze
+                </div>
+                <div className="absolute bottom-3 left-4">
+                  <div className="text-white font-extrabold text-xl leading-none">{card.title}</div>
+                </div>
+              </div>
+              <div className={`p-4 ${card.dark}`}>
+                <p className={`${card.textColor} text-xs leading-relaxed`}>{card.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.5, delay: 2.15, ease: 'easeOut' }}
+        className="relative z-10 px-8 sm:px-12 pb-10 text-center"
+      >
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+          <a
+            href="#kontakt"
+            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-orange-500/25 text-base"
+          >
+            15 Minuten Gespräch vereinbaren
+          </a>
+          <span className="text-blue-400/80 text-sm">Unverbindlich · Kein Pitch · Kein Druck</span>
+        </div>
+        <p className="text-white/25 text-xs">
+          Einzige Bedingung: 15 Min. Vorgespräch · Nachbetreuung (für mein Feedback) · Hosting- & Toolkosten
+        </p>
+      </motion.div>
+    </div>
+  )
+}

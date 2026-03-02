@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
 export const metadata = {
-    title: 'Demo & Preise | mypraxis.at',
-    description: 'Alle Preise, Pakete und Demo-Websites für Arzt-Websites von mypraxis.at. Inklusive KMU.DIGITAL Förderung bis zu 30 %.',
+    title: 'Demo & Referenzkunden | mypraxis.at',
+    description: 'Demo-Websites und Referenzkunden-Programm von mypraxis.at. Sie bestimmen den Wert nach Fertigstellung. KMU.DIGITAL Förderung demnächst verfügbar.',
     alternates: { canonical: '/preise', languages: { 'de-AT': '/preise' } },
 }
 
@@ -25,8 +25,8 @@ export default function PreisePage() {
                 <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-16 px-6">
                     <div className="max-w-5xl mx-auto text-center">
                         <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wide">Demo & Preise</span>
-                        <h1 className="text-3xl md:text-4xl font-bold mb-4">Sehen. Vergleichen. Entscheiden.</h1>
-                        <p className="text-blue-100 text-lg max-w-2xl mx-auto">Fünf echte Demo-Websites, transparente Festpreise und bis zu 30 % Förderung über KMU.DIGITAL.</p>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4">Sehen. Bewerben. Starten.</h1>
+                        <p className="text-blue-100 text-lg max-w-2xl mx-auto">Fünf echte Demo-Websites – und ein Programm, bei dem Sie den Preis selbst bestimmen.</p>
                     </div>
                 </div>
 
@@ -35,7 +35,8 @@ export default function PreisePage() {
                     <div className="max-w-6xl mx-auto">
                         <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] text-center mb-2">Beispiel-Websites</p>
                         <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">5 Stile – alle live & klickbar</h2>
-                        <p className="text-center text-gray-500 text-sm mb-10">Klicken Sie auf ein Design und erleben Sie es live. Kein Template – jede Website wird individuell umgesetzt.</p>
+                        <p className="text-center text-gray-500 text-sm mb-2">Diese Demos dienen ausschließlich der Anschauung – als Ausgangspunkt, nicht als Endprodukt.</p>
+                        <p className="text-center text-gray-400 text-xs mb-10">Farben, Typografie, Struktur und Inhalte werden für jede Ordination von Grund auf neu entwickelt. Kein Template, das einfach befüllt wird.</p>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
                             {demos.map((d) => (
@@ -51,118 +52,78 @@ export default function PreisePage() {
                                 </a>
                             ))}
                         </div>
-                        <p className="text-center text-gray-400 text-xs">Keiner dieser Stile trifft es genau? <Link href="/#kontakt" className="text-[#1e3ab8] font-semibold hover:underline">Wir gestalten nach Ihren Wünschen →</Link></p>
+                        <p className="text-center text-gray-400 text-xs">Keiner dieser Stile trifft es genau? <Link href="/#kontakt" className="text-[#1e3ab8] font-semibold hover:underline">Ihre Ordination bekommt ein vollständig eigenes Design →</Link></p>
                     </div>
                 </section>
 
-                {/* ===== PREISE ===== */}
+                {/* ===== REFERENZKUNDEN ===== */}
                 <section className="py-16 px-6 bg-white" id="pakete">
                     <div className="max-w-5xl mx-auto">
-                        <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] text-center mb-2">Transparente Festpreise</p>
-                        <h2 className="text-2xl font-bold text-center text-gray-900 mb-2">Zwei Pakete. Ein Ziel.</h2>
-                        <p className="text-center text-gray-500 text-sm mb-10">Keine versteckten Kosten, keine laufenden Lizenzgebühren. Und über KMU.DIGITAL bis zu 30 % förderbar.</p>
-
-                        <div className="grid md:grid-cols-2 gap-6 mb-8">
-                            {/* Paket 1 */}
-                            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-7 flex flex-col">
-                                <div className="mb-4">
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">Paket 1</span>
-                                    <h3 className="text-xl font-bold text-gray-900 mt-1">Praxis-Website</h3>
-                                    <p className="text-gray-500 text-sm mt-1">Ihr professioneller Online-Auftritt.</p>
+                        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0f1e] via-[#0f1623] to-[#1a2845] border border-white/10 shadow-xl p-8 sm:p-12 text-center">
+                            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#ff8a00]/6 blur-3xl pointer-events-none" />
+                            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-blue-600/6 blur-3xl pointer-events-none" />
+                            <div className="relative z-10">
+                                <span className="inline-block bg-[#ff8a00]/15 border border-[#ff8a00]/35 text-[#ff8a00] text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-wider uppercase">
+                                    Referenzkunden-Programm 2026
+                                </span>
+                                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                                    Ich suche <span className="text-[#ff8a00]">27 Ordinationen.</span> Nicht mehr.
+                                </h2>
+                                <div className="flex items-center gap-4 justify-center my-6">
+                                    <div className="h-px bg-white/15 w-12 sm:w-20" />
+                                    <p className="text-white/35 text-xs uppercase tracking-[0.3em] font-medium whitespace-nowrap">Das Prinzip</p>
+                                    <div className="h-px bg-white/15 w-12 sm:w-20" />
                                 </div>
-                                <p className="text-4xl font-extrabold text-[#1e3ab8] mb-1">€ 3.900</p>
-                                <p className="text-xs text-gray-400 mb-6">netto, einmalig · <span className="text-green-600 font-semibold">bis zu € 1.170 förderbar</span></p>
-                                <ul className="space-y-2 flex-1 mb-6">
+                                <p className="text-3xl sm:text-4xl font-bold text-[#ff8a00] leading-tight">Sie bestimmen</p>
+                                <p className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-2">den Wert.</p>
+                                <p className="text-white/40 text-sm italic mb-6">Klingt verrückt? Ist es auch.</p>
+                                <p className="text-white/60 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
+                                    Nach Fertigstellung überweisen Sie, was es Ihnen wert ist. Kein Fixpreis. Kein Risiko.
+                                </p>
+                                <div className="grid grid-cols-3 gap-3 mb-8 max-w-sm mx-auto">
                                     {[
-                                        'Bis 5 Seiten (individuelles Design)',
-                                        'Local SEO & Google Maps',
-                                        'DSGVO- & ÖÄK-konform',
-                                        'Basis Schema Markup',
-                                        'Online-Terminbuchung (optional)',
-                                        'Barrierefreiheit WCAG 2.1',
-                                        '12 Monate technische Betreuung',
-                                    ].map((item) => (
-                                        <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                                            <span className="text-green-500 mt-0.5 shrink-0">✓</span>{item}
-                                        </li>
+                                        { label: 'Kassenärzte', n: '9' },
+                                        { label: 'Privatärzte', n: '9' },
+                                        { label: 'Ärztezentren', n: '9' },
+                                    ].map((c) => (
+                                        <div key={c.label} className="bg-white/5 border border-white/10 rounded-xl py-3 px-2 text-center">
+                                            <div className="text-xl font-extrabold text-[#ff8a00]">{c.n}</div>
+                                            <div className="text-white/50 text-[10px] mt-0.5">{c.label}</div>
+                                        </div>
                                     ))}
-                                </ul>
-                                <Link href="/#kontakt" className="block text-center bg-[#1e3ab8] hover:bg-[#1a33a8] text-white font-semibold py-3 rounded-xl transition-colors text-sm">
-                                    Jetzt anfragen
-                                </Link>
-                            </div>
-
-                            {/* Paket 2 */}
-                            <div className="bg-[#1e3ab8] rounded-2xl border border-[#1a33a8] p-7 flex flex-col relative overflow-hidden">
-                                <div className="absolute top-4 right-4 bg-[#ff8a00] text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Empfohlen</div>
-                                <div className="mb-4">
-                                    <span className="text-xs font-bold text-blue-300 uppercase tracking-wide">Paket 2</span>
-                                    <h3 className="text-xl font-bold text-white mt-1">Digitale Positionierung</h3>
-                                    <p className="text-blue-200 text-sm mt-1">Mit KI-Readiness & Tiefenrecherche.</p>
                                 </div>
-                                <p className="text-4xl font-extrabold text-white mb-1">€ 7.500</p>
-                                <p className="text-xs text-blue-300 mb-6">netto, einmalig · <span className="text-green-300 font-semibold">bis zu € 2.250 förderbar</span></p>
-                                <ul className="space-y-2 flex-1 mb-6">
-                                    {[
-                                        'Alles aus Paket 1 (bis 10 Seiten)',
-                                        'Tiefenrecherche Fachgebiet & Region',
-                                        'KI-Readiness: Schema Markup, llms.txt',
-                                        'Semantische Inhalte für ChatGPT & Co.',
-                                        'FAQ-System (reduziert Routineanrufe)',
-                                        'KI-Sichtbarkeitsanalyse (Vorher/Nachher)',
-                                        'KI-Telefonassistent inklusive',
-                                    ].map((item) => (
-                                        <li key={item} className="flex items-start gap-2 text-sm text-blue-100">
-                                            <span className="text-[#ff8a00] mt-0.5 shrink-0">✓</span>{item}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Link href="/#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold py-3 rounded-xl transition-colors text-sm">
-                                    Jetzt anfragen
+                                <Link href="/#kontakt" className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-3.5 rounded-xl transition-all hover:scale-105 shadow-lg shadow-orange-500/20 text-sm">
+                                    15 Minuten Gespräch vereinbaren
                                 </Link>
+                                <p className="text-white/25 text-xs mt-4">Unverbindlich · Kein Pitch · Kein Druck</p>
                             </div>
-                        </div>
-
-                        {/* Ärztezentren */}
-                        <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 text-center">
-                            <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-1">Für Gruppenpraxen & PVEs</p>
-                            <h3 className="text-lg font-bold text-gray-900 mb-2">Ärztezentren – Individuelles Konzept</h3>
-                            <p className="text-gray-500 text-sm mb-4 max-w-2xl mx-auto">Mehrere Ärzte, mehrere Fachrichtungen – ein gemeinsamer Auftritt. Individuelle Arzt-Profilseiten, interdisziplinäre Schema-Architektur, koordinierte KMU.DIGITAL Förderung für jeden Arzt.</p>
-                            <Link href="/#kontakt" className="inline-block bg-white border border-gray-300 hover:border-[#1e3ab8] text-gray-700 hover:text-[#1e3ab8] font-semibold px-6 py-2.5 rounded-xl transition-all text-sm">
-                                Angebot anfragen →
-                            </Link>
                         </div>
                     </div>
                 </section>
 
-                {/* ===== FÖRDERUNG ===== */}
-                <section className="py-16 px-6 bg-gradient-to-br from-green-50 to-emerald-50" id="foerderung">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="grid md:grid-cols-2 gap-10 items-center">
-                            <div>
-                                <span className="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">KMU.DIGITAL</span>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Bis zu 30 % zurück vom Staat</h2>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-4">Alle niedergelassenen Ärztinnen und Ärzte mit eigener Ordination sind über das KMU.DIGITAL-Programm förderbar. Die Umsetzungsförderung beträgt 30 % der Investitionskosten – maximal € 6.000.</p>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6">Bei einem Ärztezentrum mit mehreren Ärzten kann <strong>jeder Arzt individuell fördern</strong> – da jeder als eigenständiges Unternehmen gilt.</p>
-                                <Link href="/#kontakt" className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-                                    Förderung nutzen – kostenlos anfragen
-                                </Link>
-                            </div>
-                            <div className="space-y-4">
-                                {[
-                                    { step: '1', title: 'Kostenloses Erstgespräch', desc: 'Wir besprechen Ihre Ordination und prüfen die Förderfähigkeit.' },
-                                    { step: '2', title: 'Strategieberatung (CDC)', desc: 'Ca. 2 Stunden, ~€ 500 (davon € 250 gefördert). Pflicht für Stufe 2.' },
-                                    { step: '3', title: 'Förderantrag beim AWS', desc: 'Wir begleiten Sie. Bearbeitungszeit: 2–4 Wochen.' },
-                                    { step: '4', title: 'Umsetzung & Launch', desc: '30 % der Projektkosten werden nach Abschluss erstattet.' },
-                                ].map((s) => (
-                                    <div key={s.step} className="flex items-start gap-4 bg-white rounded-xl p-4 border border-green-100 shadow-sm">
-                                        <div className="w-8 h-8 rounded-full bg-green-600 text-white font-bold text-sm flex items-center justify-center shrink-0">{s.step}</div>
-                                        <div>
-                                            <p className="font-semibold text-gray-900 text-sm">{s.title}</p>
-                                            <p className="text-gray-500 text-xs mt-0.5">{s.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
+                {/* ===== FÖRDERUNG (Coming Soon) ===== */}
+                <section className="py-16 px-6 bg-gray-50" id="foerderung">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0f1e] to-[#1a2845] border border-white/10 shadow-xl p-8 sm:p-10 text-center">
+                            <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-[#ff8a00]/6 blur-3xl pointer-events-none" />
+                            <div className="relative z-10">
+                                <span className="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/50 text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">
+                                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                    </svg>
+                                    Demnächst verfügbar
+                                </span>
+                                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">KMU.DIGITAL Förderung</h2>
+                                <p className="text-[#ff8a00] font-semibold mb-4">Bis zu 30 % kommen zurück.</p>
+                                <p className="text-white/45 text-sm leading-relaxed max-w-lg mx-auto mb-6">
+                                    Nach dem Referenzkundenprogramm stehen reguläre Pakete mit voller KMU.DIGITAL-Förderung
+                                    zur Verfügung. Bis zu <strong className="text-white/65">€ 6.000 pro Arzt</strong> förderfähig.
+                                </p>
+                                <div className="flex flex-wrap justify-center gap-4 text-xs text-white/30">
+                                    <span>✓ 30 % Förderquote</span>
+                                    <span>✓ Max. € 6.000 pro Unternehmen</span>
+                                    <span>✓ Antragstellung inklusive</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -170,7 +131,7 @@ export default function PreisePage() {
 
                 {/* ===== CTA ===== */}
                 <section className="py-14 px-6 bg-white">
-                    <div className="max-w-3xl mx-auto bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-10 text-white text-center">
+                    <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-10 text-white text-center">
                         <h2 className="text-2xl font-bold mb-3">Kostenloses Erstgespräch vereinbaren</h2>
                         <p className="text-blue-100 mb-6">30 Minuten, unverbindlich. Analyse Ihrer aktuellen Online-Präsenz und konkreter Handlungsempfehlungen.</p>
                         <Link href="/#kontakt" className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-3 rounded-xl transition-colors shadow-md">

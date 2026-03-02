@@ -447,6 +447,7 @@ Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit 
 | URL | Beschreibung |
 |---|---|
 | https://www.mypraxis.at | Startseite – Übersicht aller Leistungen, KI-Sichtbarkeit, Förderung |
+| https://www.mypraxis.at/preise | Demo & Preise – 5 Stilvorlagen, Referenzkunden-Programm 2026 |
 | https://www.mypraxis.at/blog | Blog – alle Fachartikel zu KI & Digitalisierung für Ärzte |
 | https://www.mypraxis.at/faq | FAQ – alle häufigen Fragen in 6 Kategorien |
 | https://www.mypraxis.at/videothek | KI-Videothek – kuratierte Videos zu KI in der Medizin |
@@ -476,5 +477,5 @@ Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit 
 
 ---
 
-*Letzte Aktualisierung: Februar 2026*
+*Letzte Aktualisierung: März 2026*
 *mypraxis.at – Hofbauer Marketing e.U. – UID: ATU78915818*

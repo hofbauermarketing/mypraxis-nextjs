@@ -4,6 +4,7 @@ import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
 import ScannerEmbed from '@/components/ScannerEmbed'
+import ReferenzkundenSection from '@/components/ReferenzkundenSection'
 
 export const metadata = {
   alternates: {
@@ -96,7 +97,7 @@ export default function HomePage() {
               Erstberatung vereinbaren
             </a>
             <a
-              href="#demos"
+              href="/preise"
               className="glass-card hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl text-base sm:text-lg transition-all"
             >
               Demoseiten ansehen
@@ -258,7 +259,7 @@ export default function HomePage() {
 
       {/* ===== SCAN ERFOLG ===== */}
       <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-blue-50/30">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="inline-block bg-green-100 text-green-700 text-sm font-semibold px-4 py-1.5 rounded-full">
               Eigener KI-Sichtbarkeits-Scan
@@ -346,55 +347,22 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 text-center">
-            <p className="text-gray-700 text-sm leading-relaxed">
-              <strong>Das ist der Standard, den wir für unsere Kunden anstreben.</strong>{' '}
-              Wir liefern Websites, die nicht nur gut aussehen – sie sind technisch, inhaltlich und für KI-Systeme
-              optimal aufgestellt. Lassen Sie Ihren kostenlosen Scan durchlaufen und sehen Sie, wo Ihre Ordination steht.
+          <div className="bg-gradient-to-br from-[#0a0f1e] to-[#1a2845] rounded-2xl p-6 sm:p-8 text-center">
+            <p className="text-white/40 text-xs uppercase tracking-[0.2em] font-semibold mb-3">Und Ihre Ordination?</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+              Werden Sie von ChatGPT empfohlen?
+            </h3>
+            <p className="text-blue-200/70 text-sm max-w-lg mx-auto mb-6 leading-relaxed">
+              Fragen Sie ChatGPT nach einem Facharzt Ihrer Richtung in Ihrer Stadt. Werden Sie genannt?
+              Falls nicht – das betrifft <strong className="text-white/80">über 90 % aller Ordinationen</strong> in Österreich.
             </p>
-            <div className="flex items-center justify-center gap-4 mt-4">
-              {/* Static arrow left */}
-              <svg className="w-5 h-5 text-[#ff8a00] opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-              </svg>
-              {/* Pulsing button */}
-              <a
-                href="#scan"
-                className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors animate-pulse hover:[animation:none]"
-              >
-                Jetzt kostenlos scannen
-              </a>
-              {/* Static arrow right */}
-              <svg className="w-5 h-5 text-[#ff8a00] opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== DEMO PREVIEWS ===== */}
-      <section className="py-14 px-6 bg-white" id="demos">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-2">Beispiel-Websites</p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-primary mb-3">So könnte Ihre Ordination aussehen.</h2>
-          <p className="text-center text-gray-500 text-sm mb-8">Klicken Sie auf ein Design – und sehen Sie es live in Aktion.</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            {[
-              { href: '/demo/privatarzt-classic', img: '/demo-preview-classic.jpg', label: 'Classic Trust' },
-              { href: '/demo/privatarzt-modern', img: '/demo-preview-modern.jpg', label: 'Modern Premium' },
-              { href: '/demo/privatarzt-warm', img: '/demo-preview-warm.jpg', label: 'Warm & Persönlich' },
-              { href: '/demo/aerztezentrum-classic', img: '/demo-preview-aerztezentrum.jpg', label: 'Ärztezentrum Classic' },
-              { href: '/demo/aerztezentrum-premium', img: '/demo-preview-premium.jpg', label: 'Ärztezentrum Premium' },
-            ].map((d) => (
-              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 block">
-                <img src={d.img} alt={d.label} className="w-full object-cover object-top h-40 sm:h-44 group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <span className="absolute bottom-2 left-2 right-2 text-white text-xs font-semibold truncate">{d.label}</span>
-                <span className="absolute top-2 right-2 bg-white/90 text-[#1e3ab8] text-[10px] font-bold px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Ansehen →</span>
-              </a>
-            ))}
+            <a
+              href="#scan"
+              className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-7 py-3 rounded-xl text-sm transition-colors shadow-lg shadow-orange-500/20"
+            >
+              Jetzt kostenlos scannen →
+            </a>
+            <p className="text-white/25 text-xs mt-3">Kostenlos · 2 Minuten · Ergebnis direkt per E-Mail</p>
           </div>
         </div>
       </section>
@@ -407,106 +375,92 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-gradient-to-tr from-orange-50/30 to-transparent pointer-events-none" />
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-4">
-            <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
-              Was uns unterscheidet
-            </span>
+          <div className="flex items-center justify-between mb-8 gap-6">
+            <div>
+              <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                Was uns unterscheidet
+              </span>
+              <h2 className="text-xl sm:text-2xl font-bold text-primary leading-tight">
+                Nicht einfach eine Website.{' '}
+                <span className="shimmer-text">Eine digitale Positionierung.</span>
+              </h2>
+            </div>
+            <p className="hidden sm:block text-gray-400 text-sm text-right flex-shrink-0">Vier Gründe,<br />warum Ärzte uns wählen</p>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-center text-primary">
-            Nicht einfach eine Website.
-          </h2>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-center">
-            <span className="shimmer-text">Eine digitale Positionierung.</span>
-          </h2>
-          <p className="text-center text-gray-500 mb-12 text-base sm:text-lg">
-            Vier Gründe, warum Ärzte uns wählen
-          </p>
 
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
                 icon: '🔍',
                 title: 'Tiefenrecherche statt Template',
-                text: 'Wir analysieren Ihr Fachgebiet, Ihren Werdegang, Ihre Region und Ihre Mitbewerber. Jeder Text auf Ihrer Website basiert auf echten Daten – nicht auf Platzhaltern.',
+                text: 'Jeder Text basiert auf echten Daten – Fachgebiet, Werdegang, Region, Mitbewerber.',
               },
               {
                 icon: '🤖',
                 title: 'KI-Sichtbarkeit statt nur Google',
-                text: 'Immer mehr Patienten suchen über KI-Assistenten nach Ärzten. Wir implementieren strukturierte Daten, semantische Inhalte und llms.txt – damit Ihre Ordination in KI-Antworten genannt wird.',
+                text: 'Schema Markup, semantische Inhalte und llms.txt – damit KI-Assistenten Ihre Ordination nennen.',
               },
               {
                 icon: '⚖️',
                 title: 'Rechtskonform ohne Ihr Zutun',
-                text: 'ÖÄK-Werberichtlinien, DSGVO, Impressumspflicht, Barrierefreiheitsgesetz – wir kennen die Anforderungen und setzen sie um. Sie konzentrieren sich auf Ihre Patienten.',
+                text: 'ÖÄK, DSGVO, Impressum, Barrierefreiheit – wir kennen die Anforderungen und setzen sie um.',
               },
               {
                 icon: '🎯',
                 title: 'Wunschpatienten statt Laufkundschaft',
-                text: 'Durch gezielte Positionierung erreichen Sie genau die Patienten, die zu Ihrer Spezialisierung passen. Nicht mehr Patienten – die richtigen Patienten.',
+                text: 'Nicht mehr Patienten – die richtigen Patienten für Ihre Spezialisierung.',
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-white p-6 sm:p-8 shadow-sm border border-gray-100 card-hover angular-clip"
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className="w-12 h-12 flex items-center justify-center bg-blue-50 text-2xl flex-shrink-0"
-                    style={{
-                      clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))',
-                    }}
-                  >
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2 text-primary">{item.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{item.text}</p>
-                  </div>
-                </div>
+              <div key={item.title} className="bg-white p-5 shadow-sm border border-gray-100 card-hover angular-clip-sm">
+                <div className="text-2xl mb-3">{item.icon}</div>
+                <h3 className="text-sm font-semibold mb-1.5 text-primary leading-snug">{item.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== PAKETE ===== */}
+      {/* ===== REFERENZKUNDEN-PROGRAMM ===== */}
       <section className="py-20 px-6 bg-white" id="leistungen">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
-            <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
-              Leistungen & Preise
-            </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-primary">
-            Zwei Wege zu Ihrer digitalen Praxis-Präsenz.
-          </h2>
-          <p className="text-center text-gray-500 mb-12 text-base sm:text-lg">
-            Transparente Festpreise. Bis zu 30 % über KMU.DIGITAL förderbar.
-          </p>
 
-          {/* Praxis-Website & Digitale Positionierung – nebeneinander */}
+          {/* Referenzkunden-Banner – animated */}
+          <ReferenzkundenSection />
+
+          {/* Was Sie bekommen – Features ohne Preise */}
+          <div className="text-center mb-8">
+            <span className="inline-block bg-blue-50 text-secondary text-sm font-semibold px-4 py-1.5 rounded-full">
+              Was Sie bekommen
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold mt-3 text-primary">
+              Handgemacht. Kein Template. Kein Baukasten.
+            </h2>
+            <p className="text-gray-500 mt-2 text-sm sm:text-base max-w-xl mx-auto">
+              Jede Ordination ist anders – deshalb wird jede Website individuell entwickelt.
+            </p>
+          </div>
+
+          {/* Feature Cards – kein Preis, nur Wert */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Paket 1 */}
+            {/* Karte 1: Praxis-Website */}
             <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-gray-200 card-hover flex flex-col">
               <h3 className="text-xl sm:text-2xl font-bold text-primary mb-2">Praxis-Website</h3>
-              <p className="text-gray-500 mb-3 text-sm">Ihre professionelle Online-Präsenz.</p>
-              <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-                Für Ärztinnen und Ärzte, die eine professionelle, rechtssichere Website brauchen – sauber umgesetzt,
-                ohne Kompromisse bei Qualität und Compliance.
+              <p className="text-gray-500 mb-4 text-sm leading-relaxed">
+                Für Ärztinnen und Ärzte, die eine professionelle, rechtssichere Website brauchen – individuell
+                entwickelt, ohne Kompromisse bei Qualität und Compliance.
               </p>
-              <p className="text-4xl sm:text-5xl font-extrabold text-primary mb-1">€ 3.900</p>
-              <p className="text-xs text-gray-400 mb-6">netto, einmalig</p>
-              <ul className="space-y-2 text-gray-700 mb-8 flex-1 text-xs sm:text-sm">
+              <ul className="space-y-2 text-gray-700 flex-1 text-xs sm:text-sm">
                 {[
                   'Bis 5 Seiten (Home, Über mich, Leistungen, Kontakt, Impressum)',
-                  'Individuelles Design (kein Template)',
-                  'Local SEO & Google Maps',
+                  'Individuelles Design – kein Template, kein Baukasten',
+                  'Local SEO & Google Maps Einbindung',
                   'DSGVO- & ÖÄK-konform',
-                  'Basis Schema Markup',
+                  'Basis Schema Markup (strukturierte Daten)',
                   'Mobile-Optimierung & SSL',
                   'Online-Terminbuchung (Anbindung)',
                   'Cookie-Banner & Impressum',
-                  'Einschulung (Inhalte selbst ändern)',
+                  'Einschulung – Inhalte selbst ändern',
                   'Domain-Verbindung & Hosting-Setup',
                   '12 Monate technische Betreuung',
                 ].map((f) => (
@@ -516,46 +470,31 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-4">
-                <p className="text-xs text-gray-600">Paketpreis: € 3.900</p>
-                <p className="text-xs text-orange-700 font-medium">KMU.DIGITAL (30 %): − € 1.170</p>
-                <p className="text-sm font-bold text-orange-800">Ihr Eigenanteil: € 2.730</p>
-              </div>
-              <p className="text-xs text-gray-400 mb-4 italic">
-                Ideal für Kassenärzte und Wahlärzte, die eine solide digitale Visitenkarte brauchen.
-              </p>
-              <a
-                href="#kontakt"
-                className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
-              >
-                Erstberatung anfordern
+              <a href="#kontakt" className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm mt-6">
+                Jetzt bewerben
               </a>
             </div>
 
-            {/* Paket 2 – Empfohlen */}
+            {/* Karte 2: Digitale Positionierung */}
             <div className="bg-gradient-to-b from-[#1e3ab8] to-[#2a50cc] rounded-2xl shadow-2xl p-6 sm:p-8 relative card-hover flex flex-col neon-border-orange">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#ff8a00] text-white text-sm font-bold px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
                 EMPFOHLEN
               </span>
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Digitale Positionierung</h3>
-              <p className="text-blue-200 mb-3 text-sm">Gefunden werden, wo Patienten suchen.</p>
-              <p className="text-xs text-blue-200/90 mb-4 leading-relaxed">
-                Für Wahlärztinnen und Wahlärzte, die gezielt Wunschpatienten erreichen wollen. Wir recherchieren Ihr
-                Fachgebiet, analysieren Ihren Wettbewerb und positionieren Sie in Google UND KI-Systemen.
+              <p className="text-blue-200 mb-4 text-sm leading-relaxed">
+                Für Wahlärztinnen und Wahlärzte, die gezielt Wunschpatienten erreichen wollen – in Google
+                UND in KI-Systemen wie ChatGPT und Perplexity.
               </p>
-              <p className="text-4xl sm:text-5xl font-extrabold text-white mb-1">€ 7.500</p>
-              <p className="text-xs text-blue-300 mb-6">netto, einmalig</p>
-              <ul className="space-y-2 text-blue-100 mb-8 flex-1 text-xs sm:text-sm">
+              <ul className="space-y-2 text-blue-100 flex-1 text-xs sm:text-sm">
                 {[
                   'Alles aus Praxis-Website, plus:',
                   'Bis 10 Seiten (inkl. FAQ, Spezialisierungen, Ablauf)',
-                  'Tiefenrecherche: Fachgebiet, Werdegang, Wettbewerber, Region',
+                  'Tiefenrecherche: Fachgebiet, Wettbewerber, Region',
                   'Zielgruppenanalyse (Wunschpatienten-Profil)',
-                  'Maßgeschneiderte Texte (basierend auf Recherche)',
-                  'Suchbegriff-Verifizierung (nur belegbare Aussagen)',
-                  'KI-Readiness: Erweiterte strukturierte Daten (Schema Markup)',
+                  'Maßgeschneiderte Texte basierend auf Recherche',
+                  'KI-Readiness: Erweiterte strukturierte Daten',
                   'llms.txt Implementierung',
-                  'KI-Sichtbarkeitsanalyse (Vorher/Nachher)',
+                  'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
                   'FAQ-System (reduziert Routine-Anrufe)',
                   '12 Monate technische Betreuung inkl. Updates',
                 ].map((f) => (
@@ -565,118 +504,39 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="bg-white/10 border border-white/20 rounded-xl p-3 mb-3 text-xs text-blue-200 flex items-start gap-2">
+              <div className="bg-white/10 border border-white/20 rounded-xl p-3 mt-4 mb-4 text-xs text-blue-200 flex items-start gap-2">
                 <span className="text-[#ffaa40] flex-shrink-0 mt-0.5">＋</span>
-                <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent – Setup & Konfiguration nach Aufwand zubuchbar</span>
+                <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent zubuchbar</span>
               </div>
-              <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-4">
-                <p className="text-xs text-blue-200">Paketpreis: € 7.500</p>
-                <p className="text-xs text-[#ffaa40] font-medium">KMU.DIGITAL (30 %): − € 2.250</p>
-                <p className="text-sm font-bold text-white">Ihr Eigenanteil: € 5.250</p>
-              </div>
-              <p className="text-xs text-blue-300 mb-4 italic">
-                Nicht einfach eine Website – eine Strategie. Für Wahlärzte, die online die richtigen Patienten
-                erreichen wollen.
-              </p>
-              <a
-                href="#kontakt"
-                className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm"
-              >
-                Erstberatung anfordern
+              <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm">
+                Jetzt bewerben
               </a>
             </div>
           </div>
 
-          {/* Paket 3 – Ärztezentren & PVEs (kompakter Enterprise-Strip) */}
+          {/* Ärztezentren Strip */}
           <div className="rounded-2xl overflow-hidden border border-slate-200 bg-[#0f1623]">
             <div className="flex flex-col sm:flex-row sm:items-stretch">
-
-              {/* Titel-Block */}
               <div className="p-5 sm:w-52 lg:w-60 bg-gradient-to-br from-[#1a2845] to-[#0f1623] border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-center gap-2">
-                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">Enterprise</span>
+                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">9 Plätze</span>
                 <h3 className="text-lg font-bold text-white leading-snug">Ärztezentren &amp; PVEs</h3>
-                <p className="text-white/40 text-xs leading-relaxed">Individuelle digitale Infrastruktur für Ihr gesamtes Haus.</p>
+                <p className="text-white/40 text-xs leading-relaxed">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
               </div>
-
-              {/* Feature-Chips */}
               <div className="flex-1 p-5 flex items-center">
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    'Zentrum-Strategie',
-                    'Schema-Architektur',
-                    'KI-Readiness',
-                    'Arzt-Profilseiten',
-                    'llms.txt',
-                    'Förderberatung',
-                    'Mehrsprachigkeit (opt.)',
-                    'Technische Betreuung',
-                  ].map((f) => (
-                    <span key={f} className="text-xs text-white/60 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
-                      {f}
-                    </span>
+                  {['Zentrum-Strategie', 'Schema-Architektur', 'KI-Readiness', 'Arzt-Profilseiten', 'llms.txt', 'Förderberatung', 'Mehrsprachigkeit (opt.)', 'Technische Betreuung'].map((f) => (
+                    <span key={f} className="text-xs text-white/60 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">{f}</span>
                   ))}
                 </div>
               </div>
-
-              {/* CTA-Block */}
               <div className="p-5 sm:w-52 lg:w-60 bg-amber-500/5 border-t sm:border-t-0 sm:border-l border-white/10 flex flex-col justify-center gap-3 text-center">
-                <div>
-                  <p className="text-white/40 text-[11px]">Pro Arzt förderbar</p>
-                  <p className="text-amber-400 text-xl font-extrabold">bis € 6.000</p>
-                  <p className="text-white/25 text-[10px]">Bei 10 Ärzten → bis € 60.000</p>
-                </div>
-                <a
-                  href="#kontakt"
-                  className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-2.5 rounded-xl transition-all text-sm"
-                >
-                  Projekt besprechen
+                <p className="text-white/50 text-xs leading-relaxed">KMU.DIGITAL förderbar –<br />bis zu €&nbsp;6.000 pro Arzt</p>
+                <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-2.5 rounded-xl transition-all text-sm">
+                  Jetzt bewerben
                 </a>
               </div>
-
             </div>
           </div>
-          <p className="text-xs text-gray-400 text-center mt-6">
-            Alle Preise verstehen sich als unverbindliche Richtpreise (netto, zzgl. USt.). Hosting und laufende Kosten
-            individuell.
-          </p>
-        </div>
-      </section>
-
-      {/* ===== KI-SICHTBARKEIT ===== */}
-      <section className="py-12 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden" id="ki">
-        <div className="absolute inset-0 hero-pattern" />
-        <div className="absolute inset-0 tech-grid opacity-20" />
-
-        {/* Decorative SVG elements */}
-        <div className="absolute top-10 left-10 pointer-events-none opacity-20">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="118" height="118" stroke="white" strokeWidth="1" fill="none" />
-            <rect x="20" y="20" width="80" height="80" stroke="rgba(255,138,0,0.6)" strokeWidth="0.8" fill="none" />
-            <line x1="1" y1="60" x2="119" y2="60" stroke="white" strokeWidth="0.5" />
-            <line x1="60" y1="1" x2="60" y2="119" stroke="white" strokeWidth="0.5" />
-          </svg>
-        </div>
-        <div className="absolute bottom-10 right-10 pointer-events-none opacity-20 animate-spin-slow">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="40,2 78,60 2,60" stroke="rgba(255,138,0,0.8)" strokeWidth="1.5" fill="none" />
-            <polygon points="40,20 64,58 16,58" stroke="white" strokeWidth="0.8" fill="none" />
-          </svg>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="text-center mb-3">
-            <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 rounded-full">
-              Ihr entscheidender Vorteil
-            </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
-            Werden Sie von ChatGPT empfohlen?
-          </h2>
-          <p className="text-base sm:text-lg text-blue-100 text-center mb-0 max-w-3xl mx-auto leading-relaxed">
-            Testen Sie es selbst: Fragen Sie ChatGPT nach einem Facharzt Ihrer Richtung in Ihrer Stadt. Werden Sie
-            genannt? Falls nicht – und das betrifft über 90 % aller Ordinationen in Österreich – dann ist Ihre
-            Online-Präsenz für KI-Systeme unsichtbar.
-          </p>
         </div>
       </section>
 
@@ -710,6 +570,23 @@ export default function HomePage() {
           <p className="text-center text-slate-500 text-xs mt-4">
             Der Bericht wird direkt an Sie gesendet – kein Anruf nötig, keine Verpflichtung.
           </p>
+
+          {/* Step 3: Termin */}
+          <div className="mt-8 border border-white/10 rounded-2xl p-6 text-center">
+            <p className="text-white/35 text-xs uppercase tracking-[0.2em] font-semibold mb-2">Nächster Schritt</p>
+            <h3 className="text-lg font-bold text-white mb-2">
+              Bericht erhalten – und dann?
+            </h3>
+            <p className="text-slate-400 text-sm mb-5 max-w-md mx-auto">
+              In einem kostenlosen 15-Minuten-Gespräch gehen wir gemeinsam durch Ihren Scan – und zeigen Ihnen konkret, was sich ändern muss.
+            </p>
+            <a
+              href="#kontakt"
+              className="inline-block bg-primary hover:bg-[#1a33a8] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors"
+            >
+              15-Minuten-Gespräch vereinbaren
+            </a>
+          </div>
         </div>
       </section>
 
@@ -757,68 +634,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== FÖRDERUNG ===== */}
-      <section className="py-20 px-6 bg-gray-50" id="foerderung">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-4">
-            <span className="inline-block bg-orange-50 text-[#cc6600] text-sm font-semibold px-4 py-1.5 rounded-full">
-              KMU.DIGITAL Förderung
-            </span>
+      {/* ===== DEMOS EYECATCHER ===== */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] text-center mb-2">Beispiel-Websites</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-primary mb-2">5 Stile – alle live & klickbar</h2>
+          <p className="text-center text-gray-500 text-sm mb-1">Diese Demos dienen ausschließlich der Anschauung – als Ausgangspunkt, nicht als Endprodukt.</p>
+          <p className="text-center text-gray-400 text-xs mb-10">Farben, Typografie, Struktur und Inhalte werden für jede Ordination von Grund auf neu entwickelt.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+            {[
+              { href: '/demo/privatarzt-classic', img: '/demo-preview-classic.jpg', label: 'Classic Trust', desc: 'Seriös & vertrauenserweckend' },
+              { href: '/demo/privatarzt-modern', img: '/demo-preview-modern.jpg', label: 'Modern Premium', desc: 'Dunkel, hochwertig, mutig' },
+              { href: '/demo/privatarzt-warm', img: '/demo-preview-warm.jpg', label: 'Warm & Persönlich', desc: 'Einladend & menschlich' },
+              { href: '/demo/aerztezentrum-classic', img: '/demo-preview-aerztezentrum.jpg', label: 'Ärztezentrum Classic', desc: 'Übersichtlich & institutionell' },
+              { href: '/demo/aerztezentrum-premium', img: '/demo-preview-premium.jpg', label: 'Ärztezentrum Premium', desc: 'Modern & corporate' },
+            ].map((d) => (
+              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 block">
+                <img src={d.img} alt={d.label} className="w-full object-cover object-top h-44 group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <p className="text-white text-xs font-bold leading-tight">{d.label}</p>
+                  <p className="text-white/70 text-[10px]">{d.desc}</p>
+                </div>
+                <span className="absolute top-2 right-2 bg-[#ff8a00] text-white text-[10px] font-bold px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">Ansehen →</span>
+              </a>
+            ))}
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-center text-primary">
-            Bis zu 30 % Ihrer Investition kommt zurück.
-          </h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
-            Über das österreichische Förderprogramm KMU.DIGITAL erhalten niedergelassene Ärztinnen und Ärzte bis zu
-            30 % der Investitionskosten als Förderung zurück. Maximal € 6.000 pro Unternehmen.
-          </p>
-          <p className="text-base sm:text-lg text-gray-700 mb-10 leading-relaxed">
-            Voraussetzung ist eine einmalige Strategieberatung durch einen zertifizierten Digital Consultant (CDC).
-            Kosten: ca. € 500 – davon werden 50 % (€ 250) ebenfalls gefördert. Wir arbeiten mit einem erfahrenen,
-            externen Förderberater zusammen, der die gesamte Beratung und Antragstellung für Sie übernimmt.
-          </p>
-          <div className="overflow-x-auto rounded-2xl shadow-sm border border-gray-200">
-            <table className="w-full bg-white">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="text-left p-4 sm:p-5 text-gray-500 font-medium text-sm sm:text-base"></th>
-                  <th className="text-center p-4 sm:p-5 text-primary font-bold text-sm sm:text-base">
-                    Praxis-Website
-                  </th>
-                  <th className="text-center p-4 sm:p-5 text-primary font-bold text-sm sm:text-base">
-                    Digitale Positionierung
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { label: 'Paketpreis', v1: '€ 3.900', v2: '€ 7.500', bold: false },
-                  { label: 'Förderung (30 %)', v1: '− € 1.170', v2: '− € 2.250', orange: true },
-                  { label: 'Ihr Eigenanteil', v1: '€ 2.730', v2: '€ 5.250', bold: true },
-                ].map((row) => (
-                  <tr key={row.label} className="border-b border-gray-100 last:border-0">
-                    <td
-                      className={`p-4 sm:p-5 text-sm sm:text-base ${row.bold ? 'font-bold text-gray-900' : 'text-gray-600'}`}
-                    >
-                      {row.label}
-                    </td>
-                    <td
-                      className={`p-4 sm:p-5 text-center text-sm sm:text-base ${row.bold ? 'font-bold text-base sm:text-lg' : ''} ${row.orange ? 'text-[#cc6600] font-medium' : ''}`}
-                    >
-                      {row.v1}
-                    </td>
-                    <td
-                      className={`p-4 sm:p-5 text-center text-sm sm:text-base ${row.bold ? 'font-bold text-base sm:text-lg' : ''} ${row.orange ? 'text-[#cc6600] font-medium' : ''}`}
-                    >
-                      {row.v2}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs sm:text-sm text-gray-400 mt-4 text-center">
-            Strategieberatung (CDC): ca. € 500, davon € 250 gefördert. Netto-Aufwand für Sie: ca. € 250.
+          <p className="text-center text-gray-400 text-xs">
+            Keiner dieser Stile trifft es genau?{' '}
+            <a href="/preise" className="text-primary font-semibold hover:underline">Alle Demos & Programm ansehen →</a>
           </p>
         </div>
       </section>
@@ -845,8 +690,8 @@ export default function HomePage() {
               },
               {
                 nr: '2',
-                title: 'Förderberatung & Freigabe',
-                text: 'Unser externer Förderberater führt die KMU.DIGITAL Strategieberatung durch. Erst nach Förderzusage starten wir.',
+                title: 'Konzept & Strategie',
+                text: 'Wir analysieren Ihr Fachgebiet, Ihre Region und Ihre Mitbewerber. Daraus entsteht ein konkretes Konzept – bevor eine Zeile Code geschrieben wird.',
               },
               {
                 nr: '3',
@@ -893,81 +738,10 @@ export default function HomePage() {
               medizinische Einrichtungen und optimieren die Sichtbarkeit von Ordinationen in KI-Suchsystemen wie
               ChatGPT, Perplexity und Google AI Overviews.
             </p>
-            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               Unsere Leistungen reichen von der Praxis-Website für Einzelordinationen über die komplette digitale
               Positionierung mit KI-Readiness bis zur interdisziplinären Infrastruktur für Ärztezentren und PVEs.
             </p>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { icon: '🇦🇹', label: 'Österreichisches Unternehmen' },
-                { icon: '✅', label: 'Förderfähiger Digitalisierungspartner' },
-                { icon: '🏛️', label: 'WKÖ / AWS akkreditiert' },
-              ].map((badge) => (
-                <span
-                  key={badge.label}
-                  className="inline-flex items-center gap-2 bg-blue-50 text-primary text-sm font-medium px-4 py-2 rounded-full border border-blue-100"
-                >
-                  <span>{badge.icon}</span>
-                  <span>{badge.label}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== DEMO-SEITEN ===== */}
-      <section className="py-16 px-6 bg-white" id="demos">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="inline-block bg-orange-50 text-[#cc6600] text-sm font-semibold px-4 py-1.5 rounded-full mb-3">
-              Demo-Seiten
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-primary">So könnte Ihre Website aussehen</h2>
-            <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">
-              3 Stile für Wahlarzt-Ordinationen, 2 für Ärztezentren – alle DSGVO-konform, KI-ready, ÖÄK-konform.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-4 mb-4">
-            {[
-              { href: '/demo/privatarzt-classic', label: 'Stil 1 – Classic Trust', name: 'Dr. Thomas Haas', fach: 'Innere Medizin', color: 'from-[#1e3ab8] to-[#2a50cc]' },
-              { href: '/demo/privatarzt-modern', label: 'Stil 2 – Modern Premium', name: 'Dr. Julia Stern', fach: 'Dermatologie & Ästhetik', color: 'from-[#0a0f1e] to-[#1a1f3e]' },
-              { href: '/demo/privatarzt-warm', label: 'Stil 3 – Warm & Persönlich', name: 'Dr. Anna Berger', fach: 'Kinderheilkunde', color: 'from-[#0d9488] to-[#0f766e]' },
-            ].map((d) => (
-              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
-                className="group rounded-xl overflow-hidden border border-gray-100 hover:shadow-md transition-all hover:-translate-y-0.5">
-                <div className={`h-20 bg-gradient-to-br ${d.color} flex items-end p-3`}>
-                  <span className="text-white/60 text-[10px] font-mono">{d.label}</span>
-                </div>
-                <div className="p-4 bg-gray-50 group-hover:bg-white transition-colors">
-                  <p className="font-bold text-gray-900 text-sm">{d.name}</p>
-                  <p className="text-gray-400 text-xs">{d.fach}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 mb-8">
-            {[
-              { href: '/demo/aerztezentrum-classic', label: 'Stil 4 – Ärztezentrum Classic', name: 'Ärztezentrum Mariahilf', fach: '4 Fachrichtungen', color: 'from-[#1d4ed8] to-[#2563eb]' },
-              { href: '/demo/aerztezentrum-premium', label: 'Stil 5 – Ärztezentrum Premium', name: 'MedCenter Alsergrund', fach: '8 Fachrichtungen', color: 'from-[#111827] to-[#1f2937]' },
-            ].map((d) => (
-              <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer"
-                className="group rounded-xl overflow-hidden border border-gray-100 hover:shadow-md transition-all hover:-translate-y-0.5">
-                <div className={`h-20 bg-gradient-to-br ${d.color} flex items-end p-3`}>
-                  <span className="text-white/60 text-[10px] font-mono">{d.label}</span>
-                </div>
-                <div className="p-4 bg-gray-50 group-hover:bg-white transition-colors">
-                  <p className="font-bold text-gray-900 text-sm">{d.name}</p>
-                  <p className="text-gray-400 text-xs">{d.fach}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="text-center">
-            <a href="/demo" target="_blank" rel="noopener noreferrer"
-              className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-3 rounded-xl transition-all text-sm">
-              Alle Demo-Seiten ansehen
-            </a>
           </div>
         </div>
       </section>

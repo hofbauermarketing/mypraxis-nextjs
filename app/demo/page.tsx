@@ -87,7 +87,7 @@ export default function DemoIndexPage() {
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Privatärzte & Wahlarzt-Ordinationen</h2>
         <div className="grid sm:grid-cols-3 gap-5 mb-12">
           {demos.slice(0, 3).map((d) => (
-            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+            <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
               {/* Screenshot preview */}
               <div className="relative h-44 overflow-hidden bg-gray-100">
                 <img
@@ -103,14 +103,14 @@ export default function DemoIndexPage() {
                 <p className="text-xs text-gray-500 leading-relaxed mb-3">{d.desc}</p>
                 <span className="text-xs font-semibold text-[#1e3ab8] group-hover:underline">Demo ansehen →</span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Ärztezentren & Gruppenpraxen</h2>
         <div className="grid sm:grid-cols-2 gap-5 mb-12">
           {demos.slice(3).map((d) => (
-            <Link key={d.href} href={d.href} className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+            <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
               <div className="relative h-44 overflow-hidden bg-gray-100">
                 <img
                   src={d.screenshot}
@@ -125,7 +125,7 @@ export default function DemoIndexPage() {
                 <p className="text-xs text-gray-500 leading-relaxed mb-3">{d.desc}</p>
                 <span className="text-xs font-semibold text-[#1e3ab8] group-hover:underline">Demo ansehen →</span>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 

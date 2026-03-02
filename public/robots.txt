@@ -7,7 +7,11 @@ Allow: /
 # Google
 User-agent: Googlebot
 Allow: /
+User-agent: Googlebot-Image
+Allow: /
 User-agent: Google-Extended
+Allow: /
+User-agent: Storebot-Google
 Allow: /
 
 # OpenAI / ChatGPT
@@ -21,17 +25,29 @@ Allow: /
 # Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
+User-agent: Claude-Web
+Allow: /
 User-agent: anthropic-ai
 Allow: /
 
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
+User-agent: Perplexity-User
+Allow: /
 
 # Microsoft / Bing / Copilot
 User-agent: Bingbot
 Allow: /
 User-agent: BingPreview
+Allow: /
+User-agent: msnbot
+Allow: /
+
+# xAI / Grok
+User-agent: Grok
+Allow: /
+User-agent: xAI
 Allow: /
 
 # Apple
@@ -40,7 +56,7 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Meta
+# Meta AI
 User-agent: Facebookbot
 Allow: /
 User-agent: FacebookExternalHit
@@ -63,5 +79,15 @@ User-agent: YouBot
 Allow: /
 User-agent: Timpibot
 Allow: /
+User-agent: AI2Bot
+Allow: /
+User-agent: omgili
+Allow: /
+User-agent: Kangaroo Bot
+Allow: /
+
+# Keine Demo-Seiten in Suchmaschinen-Ergebnissen
+User-agent: *
+Disallow: /demo/
 
 Sitemap: https://www.mypraxis.at/sitemap.xml
