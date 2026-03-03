@@ -10,7 +10,7 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
   useEffect(() => {
     if (!inView) return
     let startTime: number | null = null
-    const duration = 1400
+    const duration = 1000
 
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
@@ -25,13 +25,12 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
   return <>{count}</>
 }
 
-function FadeUp({ delay, children, className }: { delay: number; children: React.ReactNode; className?: string }) {
+function FadeUp({ delay, isInView, children, className }: { delay: number; isInView: boolean; children: React.ReactNode; className?: string }) {
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
       transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {children}
@@ -39,13 +38,12 @@ function FadeUp({ delay, children, className }: { delay: number; children: React
   )
 }
 
-function FadeIn({ delay, children, className }: { delay: number; children: React.ReactNode; className?: string }) {
+function FadeIn({ delay, isInView, children, className }: { delay: number; isInView: boolean; children: React.ReactNode; className?: string }) {
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: '-80px' }}
+      animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.7, delay, ease: 'easeOut' }}
     >
       {children}
@@ -66,17 +64,17 @@ export default function ReferenzkundenSection() {
 
       {/* Top section */}
       <div className="relative z-10 text-center px-8 sm:px-12 pt-10 sm:pt-14 pb-8">
-        <FadeUp delay={0}>
+        <FadeUp delay={0} isInView={isInView}>
           <span className="inline-block bg-[#ff8a00]/15 border border-[#ff8a00]/35 text-[#ff8a00] text-sm font-bold px-4 py-1.5 rounded-full mb-6 tracking-wider uppercase">
             Referenzkunden-Programm 2026
           </span>
         </FadeUp>
 
-        <FadeUp delay={0.15}>
+        <FadeUp delay={0.15} isInView={isInView}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
             Ich suche{' '}
             <span className="text-[#ff8a00]">
-              <Counter target={27} inView={isInView} /> Ordinationen.
+              <Counter target={9} inView={isInView} /> Ordinationen.
             </span>
             <br />
             <span className="text-white/70 text-2xl sm:text-3xl font-bold">
@@ -85,7 +83,7 @@ export default function ReferenzkundenSection() {
           </h2>
         </FadeUp>
 
-        <FadeUp delay={0.35}>
+        <FadeUp delay={0.35} isInView={isInView}>
           <p className="text-blue-200/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
             Ich baue Ihre Praxis-Website neu – KI-optimiert, rechtssicher, handgemacht.
           </p>
@@ -99,21 +97,19 @@ export default function ReferenzkundenSection() {
           <div className="flex items-center gap-4 justify-center mb-7">
             <motion.div
               initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: '-80px' }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
               transition={{ duration: 0.5, delay: 0.55, ease: 'easeOut' }}
               style={{ originX: 1 }}
               className="h-px bg-white/15 w-16 sm:w-24"
             />
-            <FadeIn delay={0.6}>
+            <FadeIn delay={0.6} isInView={isInView}>
               <p className="text-white/35 text-xs uppercase tracking-[0.35em] font-medium whitespace-nowrap">
                 Das Prinzip
               </p>
             </FadeIn>
             <motion.div
               initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: '-80px' }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
               transition={{ duration: 0.5, delay: 0.55, ease: 'easeOut' }}
               style={{ originX: 0 }}
               className="h-px bg-white/15 w-16 sm:w-24"
@@ -122,36 +118,27 @@ export default function ReferenzkundenSection() {
 
           <motion.p
             initial={{ opacity: 0, y: 48 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 48 }}
             transition={{ duration: 0.65, delay: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#ff8a00] leading-tight tracking-tight"
+            className="shimmer-gold text-4xl sm:text-5xl md:text-6xl font-bold italic leading-tight mb-4"
+            style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)', display: 'inline-block' }}
           >
-            Sie bestimmen
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 48 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.65, delay: 0.95, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-4"
-          >
-            den Wert.
+            Sie bestimmen den Wert.
           </motion.p>
 
-          <FadeIn delay={1.2}>
+          <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/40 text-sm sm:text-base italic mb-6">
               Klingt verrückt? Ist es auch.
             </p>
           </FadeIn>
 
-          <FadeIn delay={1.35}>
+          <FadeIn delay={1.15} isInView={isInView}>
             <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
               Nach Fertigstellung überweisen Sie, was es Ihnen wert ist.
             </p>
           </FadeIn>
 
-          <FadeIn delay={1.5}>
+          <FadeIn delay={1.3} isInView={isInView}>
             <div className="flex items-center gap-4 justify-center mt-7">
               <div className="h-px bg-white/10 w-16 sm:w-24" />
               <p className="text-white/20 text-xs whitespace-nowrap">Kein Fixpreis · Kein Risiko · Kein Pitch</p>
@@ -175,7 +162,7 @@ export default function ReferenzkundenSection() {
               dark: 'bg-[#0a1540]',
               border: 'border-blue-500/25 hover:border-blue-400/50',
               textColor: 'text-blue-300/80',
-              delay: 1.65,
+              delay: 1.45,
             },
             {
               src: '/ref-wahlarzt.jpg',
@@ -187,7 +174,7 @@ export default function ReferenzkundenSection() {
               dark: 'bg-[#1a0c00]',
               border: 'border-[#ff8a00]/30 hover:border-[#ff8a00]/60',
               textColor: 'text-amber-300/70',
-              delay: 1.8,
+              delay: 1.6,
             },
             {
               src: '/ref-zentrum.jpg',
@@ -199,14 +186,13 @@ export default function ReferenzkundenSection() {
               dark: 'bg-[#031414]',
               border: 'border-teal-500/25 hover:border-teal-400/50',
               textColor: 'text-teal-300/70',
-              delay: 1.95,
+              delay: 1.75,
             },
           ].map((card) => (
             <motion.div
               key={card.title}
               initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.55, delay: card.delay, ease: [0.25, 0.46, 0.45, 0.94] }}
               className={`rounded-2xl overflow-hidden border ${card.border} shadow-xl hover:scale-[1.03] transition-all duration-300 group`}
             >
@@ -220,7 +206,7 @@ export default function ReferenzkundenSection() {
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${card.overlay} to-transparent`} />
                 <div className="absolute top-3 right-3 bg-[#ff8a00] text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
-                  9 Plätze
+                  3 Plätze
                 </div>
                 <div className="absolute bottom-3 left-4">
                   <div className="text-white font-extrabold text-xl leading-none">{card.title}</div>
@@ -237,9 +223,8 @@ export default function ReferenzkundenSection() {
       {/* CTA */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.5, delay: 2.15, ease: 'easeOut' }}
+        animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+        transition={{ duration: 0.5, delay: 1.95, ease: 'easeOut' }}
         className="relative z-10 px-8 sm:px-12 pb-10 text-center"
       >
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">

@@ -73,6 +73,23 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ===== SHIMMER GOLD ===== */
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    #ff8a00 0%,
+    #ffcc80 30%,
+    #fff5e0 50%,
+    #ffcc80 70%,
+    #ff8a00 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
 /* ===== ANIMATION CLASSES ===== */
 
 .animate-fade-in-up {
