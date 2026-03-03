@@ -25,6 +25,37 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
   return <>{count}</>
 }
 
+function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boolean; delay?: number }) {
+  const [displayed, setDisplayed] = useState('')
+  const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    if (!isInView) return
+    const startTimer = setTimeout(() => {
+      let i = 0
+      const interval = setInterval(() => {
+        i++
+        setDisplayed(text.slice(0, i))
+        if (i >= text.length) {
+          clearInterval(interval)
+          setTimeout(() => setDone(true), 800)
+        }
+      }, 55)
+      return () => clearInterval(interval)
+    }, delay * 1000)
+    return () => clearTimeout(startTimer)
+  }, [isInView, text, delay])
+
+  return (
+    <span>
+      {displayed}
+      {!done && (
+        <span className="inline-block w-[3px] h-[0.85em] bg-[#ff8a00] ml-1 align-middle animate-typewriter-cursor" />
+      )}
+    </span>
+  )
+}
+
 function FadeUp({ delay, isInView, children, className }: { delay: number; isInView: boolean; children: React.ReactNode; className?: string }) {
   return (
     <motion.div
@@ -116,15 +147,14 @@ export default function ReferenzkundenSection() {
             />
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 48 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 48 }}
-            transition={{ duration: 0.65, delay: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="shimmer-gold text-4xl sm:text-5xl md:text-6xl font-bold italic leading-tight mb-4"
-            style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)', display: 'inline-block' }}
-          >
-            Sie bestimmen den Wert.
-          </motion.p>
+          <FadeIn delay={0.7} isInView={isInView}>
+            <p
+              className="text-4xl sm:text-5xl md:text-6xl font-bold italic text-[#ff8a00] leading-tight mb-4"
+              style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
+            >
+              <Typewriter text="Sie bestimmen den Wert." isInView={isInView} delay={0.7} />
+            </p>
+          </FadeIn>
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/40 text-sm sm:text-base italic mb-6">

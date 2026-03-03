@@ -73,6 +73,15 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ===== TYPEWRITER CURSOR ===== */
+@keyframes typewriterCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-typewriter-cursor {
+  animation: typewriterCursor 0.7s ease-in-out infinite;
+}
+
 /* ===== SHIMMER GOLD ===== */
 .shimmer-gold {
   background: linear-gradient(
