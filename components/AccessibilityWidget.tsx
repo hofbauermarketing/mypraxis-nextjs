@@ -129,7 +129,7 @@ export default function AccessibilityWidget({
     <>
       {settings.readingMask && <ReadingMask />}
 
-      <div ref={panelRef} className="fixed left-0 top-1/2 -translate-y-1/2 z-[9999]">
+      <div ref={panelRef} className="fixed left-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col items-start gap-1">
 
         {/* Trigger */}
         <button
@@ -137,13 +137,18 @@ export default function AccessibilityWidget({
           aria-label="Barrierefreiheit Einstellungen öffnen"
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="relative flex items-center justify-center w-11 h-[52px] rounded-r-2xl shadow-xl transition-all duration-200 hover:w-[52px] focus:outline-none"
+          className="relative flex items-center gap-2 pl-2 pr-3 h-[52px] rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none group"
           style={{ backgroundColor: accentColor }}
         >
+          {/* Icon */}
           <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
             <circle cx="12" cy="4" r="2.2" />
             <path d="M18 8.5c-1.5-.3-3.8-.5-6-.5s-4.5.2-6 .5l.4 1.5 5.6-.3v3.5L9.5 19h2.3l.7-3.5.7 3.5h2.3l-2.5-5.3V10.2l5.6.3z" />
           </svg>
+          {/* Label */}
+          <span className="text-white text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap">
+            Barriere-<br />freiheit
+          </span>
           {activeCount > 0 && (
             <span
               className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-white text-[10px] font-black rounded-full flex items-center justify-center px-1 shadow"
@@ -153,6 +158,16 @@ export default function AccessibilityWidget({
             </span>
           )}
         </button>
+
+        {/* WCAG Badge */}
+        <div
+          className="flex items-center gap-1 pl-2 pr-2.5 py-1 rounded-r-xl shadow text-white text-[10px] font-bold tracking-wider"
+          style={{ backgroundColor: accentColor + 'cc' }}
+          aria-hidden="true"
+        >
+          <span>♿</span>
+          <span>WCAG 2.1</span>
+        </div>
 
         {/* Panel */}
         {open && (
