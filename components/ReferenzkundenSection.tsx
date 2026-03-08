@@ -123,7 +123,7 @@ export default function ReferenzkundenSection() {
         </FadeUp>
       </div>
 
-      {/* "Sie bestimmen den Wert" */}
+      {/* Das Programm */}
       <div className="relative z-10 px-6 sm:px-12 pb-10">
         <div className="mx-auto max-w-2xl text-center">
           {/* Divider */}
@@ -137,7 +137,7 @@ export default function ReferenzkundenSection() {
             />
             <FadeIn delay={0.6} isInView={isInView}>
               <p className="text-white/35 text-xs uppercase tracking-[0.35em] font-medium whitespace-nowrap">
-                Das Prinzip
+                Das Programm
               </p>
             </FadeIn>
             <motion.div
@@ -154,26 +154,52 @@ export default function ReferenzkundenSection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold italic leading-tight mb-4 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
-              <Typewriter text="Sie bestimmen den Wert." isInView={isInView} delay={0.7} />
+              <Typewriter text="Nicht für jeden." isInView={isInView} delay={0.7} />
             </p>
           </FadeIn>
 
           <FadeIn delay={1.0} isInView={isInView}>
-            <p className="text-white/40 text-sm sm:text-base italic mb-6">
-              Klingt verrückt? Ist es auch.
+            <p className="text-white/50 text-sm sm:text-base italic mb-7">
+              Das ist kein Standard-Angebot. Sie bewerben sich – wir entscheiden gemeinsam.
             </p>
           </FadeIn>
 
           <FadeIn delay={1.15} isInView={isInView}>
-            <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
-              Nach Fertigstellung überweisen Sie, was es Ihnen wert ist.
-            </p>
+            <div className="grid sm:grid-cols-3 gap-3 text-left">
+              {[
+                {
+                  icon: '📋',
+                  label: 'Website-Paket',
+                  value: '€ 3.900 oder € 7.500 netto',
+                  sub: 'Je nach Leistungsumfang',
+                },
+                {
+                  icon: '🛡️',
+                  label: 'Pflicht-Betreuung',
+                  value: '24 Monate · ~€ 150/Monat',
+                  sub: 'Excl. Steuer · Persönliche Begleitung',
+                },
+                {
+                  icon: '✅',
+                  label: 'KMU.DIGITAL',
+                  value: 'Bis 30 % Förderung',
+                  sub: 'Auf Paketpreis anwendbar',
+                },
+              ].map((item) => (
+                <div key={item.label} className="bg-white/5 border border-white/10 rounded-xl p-4">
+                  <div className="text-lg mb-1">{item.icon}</div>
+                  <p className="text-white/40 text-[10px] uppercase tracking-wider font-semibold mb-0.5">{item.label}</p>
+                  <p className="text-white font-bold text-sm leading-snug">{item.value}</p>
+                  <p className="text-white/35 text-[10px] mt-0.5">{item.sub}</p>
+                </div>
+              ))}
+            </div>
           </FadeIn>
 
           <FadeIn delay={1.3} isInView={isInView}>
             <div className="flex items-center gap-4 justify-center mt-7">
               <div className="h-px bg-white/10 w-16 sm:w-24" />
-              <p className="text-white/20 text-xs whitespace-nowrap">Kein Fixpreis · Kein Risiko · Kein Pitch</p>
+              <p className="text-white/20 text-xs whitespace-nowrap">Bewerbung erforderlich · Nicht jeder wird aufgenommen</p>
               <div className="h-px bg-white/10 w-16 sm:w-24" />
             </div>
           </FadeIn>
@@ -264,12 +290,12 @@ export default function ReferenzkundenSection() {
             href="#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-orange-500/25 text-base"
           >
-            15 Minuten Gespräch vereinbaren
+            Jetzt bewerben
           </a>
-          <span className="text-blue-400/80 text-sm">Unverbindlich · Kein Pitch · Kein Druck</span>
+          <span className="text-blue-400/80 text-sm">15-Min. Erstgespräch · Unverbindlich</span>
         </div>
         <p className="text-white/25 text-xs">
-          Einzige Bedingung: 15 Min. Vorgespräch · Nachbetreuung (für mein Feedback) · Hosting- & Toolkosten
+          Solange Plätze verfügbar · 9 Ordinationen gesamt · Aufnahme nach Gespräch und Eignung
         </p>
       </motion.div>
     </div>

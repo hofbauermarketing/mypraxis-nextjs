@@ -359,12 +359,12 @@ export default function HomePage() {
               Falls nicht – das betrifft <strong className="text-white/80">über 90 % aller Ordinationen</strong> in Österreich.
             </p>
             <a
-              href="#scan"
+              href="/gratis-check"
               className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-7 py-3 rounded-xl text-sm transition-colors shadow-lg shadow-orange-500/20"
             >
-              Jetzt kostenlos scannen →
+              Gratis Check starten →
             </a>
-            <p className="text-white/25 text-xs mt-3">Kostenlos · 2 Minuten · Ergebnis direkt per E-Mail</p>
+            <p className="text-white/25 text-xs mt-3">Kostenlos · Kein Konto nötig · DSGVO-konform</p>
           </div>
         </div>
       </section>
@@ -475,7 +475,7 @@ export default function HomePage() {
                   'Cookie-Banner & Impressum',
                   'Einschulung – Inhalte selbst ändern',
                   'Domain-Verbindung & Hosting-Setup',
-                  '12 Monate technische Betreuung',
+                  '24 Monate Betreuungspaket (Pflicht · ~€ 150/Monat excl. Steuer)',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -509,7 +509,7 @@ export default function HomePage() {
                   'llms.txt Implementierung',
                   'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
                   'FAQ-System (reduziert Routine-Anrufe)',
-                  '12 Monate technische Betreuung inkl. Updates',
+                  '24 Monate Betreuungspaket (Pflicht · ~€ 150/Monat excl. Steuer)',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -531,7 +531,7 @@ export default function HomePage() {
           <div className="rounded-2xl overflow-hidden border border-slate-200 bg-[#0f1623]">
             <div className="flex flex-col sm:flex-row sm:items-stretch">
               <div className="p-5 sm:w-52 lg:w-60 bg-gradient-to-br from-[#1a2845] to-[#0f1623] border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-center gap-2">
-                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">9 Plätze</span>
+                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">3 Plätze im Programm</span>
                 <h3 className="text-lg font-bold text-white leading-snug">Ärztezentren &amp; PVEs</h3>
                 <p className="text-white/40 text-xs leading-relaxed">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
               </div>
