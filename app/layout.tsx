@@ -188,6 +188,7 @@ export const metadata: Metadata = {
 
 import Navigation from '@/components/Navigation'
 import CookieBanner from '@/components/CookieBanner'
+import AccessibilityWidget from '@/components/AccessibilityWidget'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -202,6 +203,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white text-dark antialiased">
         <Navigation />
         <CookieBanner />
+        <AccessibilityWidget accentColor="#1d4ed8" declarationHref="/barrierefreiheit" />
         {children}
       </body>
     </html>
