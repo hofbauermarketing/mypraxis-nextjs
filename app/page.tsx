@@ -80,7 +80,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in-up delay-300">
-            {['✓ ÖÄK- & DSGVO-konform', '✓ Bis zu 30 % KMU.DIGITAL Förderung', '✓ KI-Readiness inklusive'].map(
+            {['✓ ÖÄK- & DSGVO-konform', '✓ Bis zu 30 % KMU.DIGITAL Förderung', '✓ KI-Lesbarkeit & Auffindbarkeit inklusive'].map(
               (badge) => (
                 <span key={badge} className="glass-card text-white text-sm px-4 py-2 rounded-full">
                   {badge}
