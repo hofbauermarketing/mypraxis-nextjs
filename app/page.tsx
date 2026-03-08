@@ -198,6 +198,9 @@ export default function HomePage() {
             Patient, bessere Medizin. Ihre Expertise spricht für sich, Ihre Patienten empfehlen Sie weiter.
           </p>
           <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
+            Nur: <strong className="text-primary">97 % der Patienten recherchieren ihre nächste Ärztin oder ihren nächsten Arzt zuerst online</strong> – bevor sie auch nur anrufen. Wunschpatienten, die perfekt zu Ihrer Spezialisierung passen, suchen genau dort nach Ihnen.
+          </p>
+          <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Aber: Wer Sie noch nicht kennt, findet Sie nicht. Nicht auf Google, nicht bei ChatGPT, nicht bei
             Perplexity. Und die nächste Generation an Patienten sucht genau dort –{' '}
             <strong className="text-primary">während Ihre Mitbewerber bereits sichtbar sind.</strong>
@@ -231,8 +234,7 @@ export default function HomePage() {
               <div className="flex-1 px-6 py-6 sm:py-8 flex flex-col justify-center">
                 <div className="text-[#ff8a00] text-3xl font-serif leading-none mb-3 select-none">"</div>
                 <p className="text-gray-700 text-base sm:text-lg leading-relaxed italic mb-5">
-                  Wir bringen beides zusammen – Rechtskonformität und digitale Sichtbarkeit. Damit Ihre Ordination
-                  nicht nur existiert, sondern gefunden wird.
+                  Ärzte haben täglich genug Fachjargon. Mit uns reden Sie auf Augenhöhe – direkt, transparent, ohne Agentur-Blabla. Das Ergebnis: eine Ordination, die online so wirkt wie Sie offline.
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
@@ -416,6 +418,17 @@ export default function HomePage() {
                 <p className="text-gray-500 text-xs leading-relaxed">{item.text}</p>
               </div>
             ))}
+          </div>
+
+          {/* Killer-Vergleich */}
+          <div className="mt-6 bg-white border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-sm text-center">
+            <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Der Unterschied in einem Satz</p>
+            <p className="text-primary font-bold text-lg sm:text-xl leading-snug">
+              Andere Agenturen bauen Ihnen eine Website.
+            </p>
+            <p className="text-[#ff8a00] font-bold text-lg sm:text-xl leading-snug mt-1">
+              Wir sorgen dafür, dass ChatGPT Ihre Ordination empfiehlt.
+            </p>
           </div>
         </div>
       </section>
@@ -809,10 +822,17 @@ export default function HomePage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 Bereit für Ihre<br />rechtssichere Praxis-Website?
               </h2>
-              <p className="text-base sm:text-lg text-blue-100 mb-10 leading-relaxed">
+              <p className="text-base sm:text-lg text-blue-100 mb-6 leading-relaxed">
                 Vereinbaren Sie ein kostenloses Erstgespräch. 30 Minuten. Unverbindlich. Wir zeigen Ihnen, wie Ihre
                 Ordination in KI-Systemen sichtbar wird.
               </p>
+              <div className="flex flex-wrap gap-3 mb-10">
+                {['Auf Augenhöhe', 'Transparent & direkt', 'Antwort in 1 Werktag'].map((t) => (
+                  <span key={t} className="bg-white/10 border border-white/20 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full">
+                    ✓ {t}
+                  </span>
+                ))}
+              </div>
 
               <div className="space-y-4">
                 {/* Phone Kevin */}
