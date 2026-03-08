@@ -47,8 +47,10 @@ function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boo
   }, [isInView, text, delay])
 
   return (
-    <span>
-      {displayed}
+    <span className="whitespace-nowrap">
+      <span className={!done ? 'shimmer-gold' : ''} style={done ? { color: '#ff8a00' } : {}}>
+        {displayed}
+      </span>
       {!done && (
         <span className="inline-block w-[3px] h-[0.85em] bg-[#ff8a00] ml-1 align-middle animate-typewriter-cursor" />
       )}
@@ -149,7 +151,7 @@ export default function ReferenzkundenSection() {
 
           <FadeIn delay={0.7} isInView={isInView}>
             <p
-              className="text-4xl sm:text-5xl md:text-6xl font-bold italic text-[#ff8a00] leading-tight mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold italic leading-tight mb-4 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
               <Typewriter text="Sie bestimmen den Wert." isInView={isInView} delay={0.7} />

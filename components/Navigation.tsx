@@ -74,19 +74,20 @@ export default function Navigation() {
           >
             Videothek
           </Link>
+          {/* Gratis Check – highlighted in nav */}
+          <Link
+            href="/gratis-check"
+            className={`text-[13px] font-semibold whitespace-nowrap transition-all px-3 py-1.5 rounded-full ${scrolled
+              ? 'text-[#ff8a00] bg-[#ff8a00]/8 hover:bg-[#ff8a00]/15'
+              : 'text-[#ff8a00] bg-white/10 hover:bg-white/20'
+              }`}
+          >
+            ✓ Gratis Check
+          </Link>
         </nav>
 
         {/* Desktop CTA – right aligned */}
-        <div className="hidden md:flex justify-end items-center gap-2">
-          <Link
-            href="/gratis-check"
-            className={`text-[13px] font-semibold px-3 py-2.5 rounded-lg border transition-all whitespace-nowrap ${scrolled
-              ? 'border-[#ff8a00] text-[#ff8a00] hover:bg-[#ff8a00] hover:text-white'
-              : 'border-white/60 text-white hover:border-white hover:bg-white/10'
-            }`}
-          >
-            Gratis Check
-          </Link>
+        <div className="hidden md:flex justify-end">
           <a
             href="/#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-3 py-2.5 rounded-lg transition-all whitespace-nowrap"
@@ -97,8 +98,7 @@ export default function Navigation() {
 
         {/* Mobile Hamburger */}
         <button
-          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-gray-700' : 'text-white'
-            }`}
+          className={`md:hidden p-2 rounded-lg transition-colors col-start-3 justify-self-end ${scrolled ? 'text-gray-700' : 'text-white'}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menü"
         >
@@ -128,23 +128,15 @@ export default function Navigation() {
               {item.label}
             </a>
           ))}
-          <Link
-            href="/blog"
-            className="text-gray-700 font-medium hover:text-blue-700"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/blog" className="text-gray-700 font-medium hover:text-blue-700" onClick={() => setMenuOpen(false)}>
             Blog
           </Link>
-          <Link
-            href="/videothek"
-            className="text-gray-700 font-medium hover:text-blue-700"
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/videothek" className="text-gray-700 font-medium hover:text-blue-700" onClick={() => setMenuOpen(false)}>
             KI-Videothek
           </Link>
           <Link
             href="/gratis-check"
-            className="border border-[#ff8a00] text-[#ff8a00] font-semibold px-5 py-3 rounded-lg text-center"
+            className="text-[#ff8a00] font-semibold hover:text-[#e67a00]"
             onClick={() => setMenuOpen(false)}
           >
             ✓ Gratis Check
