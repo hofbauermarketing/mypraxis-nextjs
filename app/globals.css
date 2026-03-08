@@ -116,6 +116,10 @@ html.a11y-fs-2 body, html.a11y-fs-2 p, html.a11y-fs-2 li, html.a11y-fs-2 span, h
 html.a11y-line-height * { line-height: 1.9 !important; }
 html.a11y-letter-spacing * { letter-spacing: 0.1em !important; word-spacing: 0.16em !important; }
 html.a11y-dyslexia * { font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial', sans-serif !important; }
+html.a11y-dark-mode { background: #111 !important; }
+html.a11y-dark-mode body { background: #111 !important; color: #e5e7eb !important; }
+html.a11y-dark-mode section, html.a11y-dark-mode div, html.a11y-dark-mode main { background-color: #1a1a1a !important; }
+html.a11y-hide-images img, html.a11y-hide-images video { visibility: hidden !important; }
 html.a11y-high-contrast { filter: contrast(160%) brightness(1.05); }
 html.a11y-grayscale { filter: grayscale(100%); }
 html.a11y-invert { filter: invert(90%) hue-rotate(180deg); }
