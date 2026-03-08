@@ -73,6 +73,17 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* ===== ACCESSIBILITY WIDGET PULSE ===== */
+@keyframes a11yPulse {
+  0%   { opacity: 0.55; transform: scale(1); }
+  60%  { opacity: 0;    transform: scale(1.35); }
+  100% { opacity: 0;    transform: scale(1.35); }
+}
+.animate-a11y-pulse {
+  animation: a11yPulse 2.4s ease-out infinite;
+  transform-origin: left center;
+}
+
 /* ===== TYPEWRITER CURSOR ===== */
 @keyframes typewriterCursor {
   0%, 100% { opacity: 1; }

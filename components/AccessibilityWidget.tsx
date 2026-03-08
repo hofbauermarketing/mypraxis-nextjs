@@ -131,6 +131,14 @@ export default function AccessibilityWidget({
 
       <div ref={panelRef} className="fixed left-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col items-start gap-1">
 
+        {/* Puls-Ring */}
+        {!open && (
+          <span
+            className="absolute -left-1 top-0 w-[calc(100%+4px)] h-[52px] rounded-r-2xl pointer-events-none animate-a11y-pulse"
+            style={{ backgroundColor: accentColor }}
+          />
+        )}
+
         {/* Trigger */}
         <button
           onClick={() => setOpen((o) => !o)}
