@@ -475,7 +475,7 @@ export default function HomePage() {
                   'Cookie-Banner & Impressum',
                   'Einschulung – Inhalte selbst ändern',
                   'Domain-Verbindung & Hosting-Setup',
-                  '24 Monate Betreuungspaket (Pflicht · ~€ 150/Monat excl. Steuer)',
+                  'Laufende Betreuung: mind. 6–12 Monate empfohlen',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -509,7 +509,7 @@ export default function HomePage() {
                   'llms.txt Implementierung',
                   'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
                   'FAQ-System (reduziert Routine-Anrufe)',
-                  '24 Monate Betreuungspaket (Pflicht · ~€ 150/Monat excl. Steuer)',
+                  'Laufende Betreuung: mind. 6–12 Monate empfohlen',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>

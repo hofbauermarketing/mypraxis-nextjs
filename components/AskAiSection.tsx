@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const QUESTION = 'Was bietet mypraxis.at für niedergelassene Ärzte in Österreich an? Ich interessiere mich für die Leistungen, Preise, KI-Sichtbarkeit und die KMU.DIGITAL Förderung.'
+const QUESTION = 'Was macht mypraxis.at und welche Leistungen bieten sie für niedergelassene Ärzte in Österreich an?'
 
 const AI_SERVICES = [
   {
@@ -60,19 +60,27 @@ const AI_SERVICES = [
 
 export default function AskAiSection() {
   const [toast, setToast] = useState<{ name: string; prefill: boolean } | null>(null)
+  const [copied, setCopied] = useState(false)
 
-  const handleClick = async (service: typeof AI_SERVICES[0]) => {
-    // Always copy to clipboard – works as autofill fallback for Claude & Gemini
+  const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(QUESTION)
     } catch {
       // clipboard not available (e.g. http) – continue anyway
     }
+  }
 
+  const handleClick = async (service: typeof AI_SERVICES[0]) => {
+    await copyToClipboard()
     setToast({ name: service.name, prefill: service.prefill })
     setTimeout(() => setToast(null), 4500)
-
     window.open(service.url(QUESTION), '_blank', 'noopener')
+  }
+
+  const handleCopy = async () => {
+    await copyToClipboard()
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2500)
   }
 
   return (
@@ -92,7 +100,7 @@ export default function AskAiSection() {
         </p>
 
         {/* AI Buttons */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
           {AI_SERVICES.map((service) => (
             <button
               key={service.name}
@@ -107,12 +115,34 @@ export default function AskAiSection() {
                 {service.name}
               </span>
               {service.prefill
-                ? <span className="text-green-400/70 text-[10px]">Auto-fill ✓</span>
-                : <span className="text-yellow-400/70 text-[10px]">Kopiert + einfügen</span>
+                ? <span className="text-green-400/70 text-[10px]">Einfügen &amp; Enter ✓</span>
+                : <span className="text-yellow-400/70 text-[10px]">Kopieren · Einfügen · Enter</span>
               }
             </button>
           ))}
         </div>
+
+        {/* Standalone copy button */}
+        <button
+          onClick={handleCopy}
+          className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/60 hover:text-white/90 text-xs font-medium px-5 py-2.5 rounded-xl transition-all mb-6"
+        >
+          {copied ? (
+            <>
+              <svg className="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-green-400">Kopiert!</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Frage kopieren – in beliebiger KI einfügen &amp; Enter drücken
+            </>
+          )}
+        </button>
 
         {/* Question preview */}
         <div className="bg-white/3 border border-white/8 rounded-xl px-5 py-3 text-white/40 text-xs italic text-left max-w-xl mx-auto">
@@ -128,12 +158,12 @@ export default function AskAiSection() {
             {toast.prefill ? (
               <>
                 <span className="text-green-400">✓</span>
-                <span><strong>{toast.name}</strong> wird geöffnet – Frage wurde vorausgefüllt.</span>
+                <span><strong>{toast.name}</strong> öffnet – Frage bereits eingefügt, einfach Enter drücken.</span>
               </>
             ) : (
               <>
                 <span className="text-yellow-400">📋</span>
-                <span>Frage kopiert! In <strong>{toast.name}</strong> einfach <kbd className="bg-white/10 px-1.5 py-0.5 rounded text-xs">⌘V</kbd> / <kbd className="bg-white/10 px-1.5 py-0.5 rounded text-xs">Strg+V</kbd> drücken.</span>
+                <span>Frage kopiert! In <strong>{toast.name}</strong> einfügen <kbd className="bg-white/10 px-1.5 py-0.5 rounded text-xs">⌘V</kbd> / <kbd className="bg-white/10 px-1.5 py-0.5 rounded text-xs">Strg+V</kbd> und Enter drücken.</span>
               </>
             )}
           </div>
