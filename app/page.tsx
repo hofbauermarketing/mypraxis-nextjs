@@ -104,7 +104,15 @@ export default function HomePage() {
             </a>
           </div>
 
-          <p className="mt-5 text-blue-300 text-sm animate-fade-in-up delay-500">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
+          <div className="mt-5 flex flex-col items-center gap-1 animate-fade-in-up delay-500">
+            <p className="text-blue-300 text-sm">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
+            <a
+              href="/wcag-check"
+              className="text-white/50 hover:text-white/80 text-xs underline underline-offset-2 transition-colors"
+            >
+              ♿ Ist Ihre Website barrierefrei? Jetzt kostenlos prüfen →
+            </a>
+          </div>
 
           {/* Social Media Icons */}
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up delay-500">
@@ -537,6 +545,25 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===== WCAG BANNER ===== */}
+      <section className="py-8 px-6 bg-[#0a0f1e] border-b border-white/5">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <span className="text-3xl">♿</span>
+            <div>
+              <p className="text-white font-bold text-sm">Barrierefreiheitscheck – kostenlos</p>
+              <p className="text-slate-400 text-xs leading-snug">Seit 28.06.2025 gilt das BaFG. Ist Ihre Arztpraxis-Website wirklich barrierefrei?</p>
+            </div>
+          </div>
+          <a
+            href="/wcag-check"
+            className="shrink-0 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all hover:scale-[1.02]"
+          >
+            Jetzt prüfen →
+          </a>
         </div>
       </section>
 
