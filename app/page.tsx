@@ -4,6 +4,7 @@ import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
 import ReferenzkundenSection from '@/components/ReferenzkundenSection'
+import AskAiSection from '@/components/AskAiSection'
 
 export const metadata = {
   alternates: {
@@ -797,6 +798,9 @@ export default function HomePage() {
 
         </div>
       </section>
+
+      {/* ===== KI FRAGEN ===== */}
+      <AskAiSection />
 
       {/* ===== BLOG VORSCHAU ===== */}
       <BlogCarousel posts={blogPosts} />
