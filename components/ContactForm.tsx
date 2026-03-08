@@ -86,13 +86,15 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" aria-label="Beratungsanfrage">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Name *</label>
+          <label htmlFor="cf-name" className={labelClass}>Name *</label>
           <input
+            id="cf-name"
             type="text"
             required
+            autoComplete="name"
             value={form.name}
             onChange={set('name')}
             placeholder="Dr. Max Mustermann"
@@ -100,10 +102,12 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className={labelClass}>E-Mail *</label>
+          <label htmlFor="cf-email" className={labelClass}>E-Mail *</label>
           <input
+            id="cf-email"
             type="email"
             required
+            autoComplete="email"
             value={form.email}
             onChange={set('email')}
             placeholder="ordination@example.at"
@@ -114,9 +118,11 @@ export default function ContactForm() {
 
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Telefon</label>
+          <label htmlFor="cf-phone" className={labelClass}>Telefon</label>
           <input
+            id="cf-phone"
             type="tel"
+            autoComplete="tel"
             value={form.phone}
             onChange={set('phone')}
             placeholder="+43 ..."
@@ -124,8 +130,9 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className={labelClass}>Fachrichtung</label>
+          <label htmlFor="cf-fachrichtung" className={labelClass}>Fachrichtung</label>
           <select
+            id="cf-fachrichtung"
             value={form.fachrichtung}
             onChange={set('fachrichtung')}
             className={inputClass + ' cursor-pointer'}
@@ -143,8 +150,9 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className={labelClass}>Nachricht / Fragen (optional)</label>
+        <label htmlFor="cf-message" className={labelClass}>Nachricht / Fragen (optional)</label>
         <textarea
+          id="cf-message"
           rows={3}
           value={form.message}
           onChange={set('message')}

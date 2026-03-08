@@ -190,9 +190,9 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-primary leading-tight">
             Sie sind Experte in Ihrem Fach.
           </h2>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight">
             <span className="shimmer-text">Online merkt man das nicht.</span>
-          </h2>
+          </p>
 
           <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
             Sie haben sich als Wahlärztin oder Wahlarzt selbstständig gemacht – für mehr Autonomie, mehr Zeit pro
