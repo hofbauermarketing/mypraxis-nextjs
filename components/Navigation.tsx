@@ -77,7 +77,16 @@ export default function Navigation() {
         </nav>
 
         {/* Desktop CTA – right aligned */}
-        <div className="hidden md:flex justify-end">
+        <div className="hidden md:flex justify-end items-center gap-2">
+          <Link
+            href="/gratis-check"
+            className={`text-[13px] font-semibold px-3 py-2.5 rounded-lg border transition-all whitespace-nowrap ${scrolled
+              ? 'border-[#ff8a00] text-[#ff8a00] hover:bg-[#ff8a00] hover:text-white'
+              : 'border-white/60 text-white hover:border-white hover:bg-white/10'
+            }`}
+          >
+            Gratis Check
+          </Link>
           <a
             href="/#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white text-[13px] font-semibold px-3 py-2.5 rounded-lg transition-all whitespace-nowrap"
@@ -132,6 +141,13 @@ export default function Navigation() {
             onClick={() => setMenuOpen(false)}
           >
             KI-Videothek
+          </Link>
+          <Link
+            href="/gratis-check"
+            className="border border-[#ff8a00] text-[#ff8a00] font-semibold px-5 py-3 rounded-lg text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            ✓ Gratis Check
           </Link>
           <a
             href="/#kontakt"

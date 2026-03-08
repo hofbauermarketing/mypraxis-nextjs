@@ -3,7 +3,6 @@ import ContactForm from '@/components/ContactForm'
 import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
-import ScannerEmbed from '@/components/ScannerEmbed'
 import ReferenzkundenSection from '@/components/ReferenzkundenSection'
 
 export const metadata = {
@@ -104,15 +103,7 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="mt-5 flex flex-col items-center gap-1 animate-fade-in-up delay-500">
-            <p className="text-blue-300 text-sm">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
-            <a
-              href="/wcag-check"
-              className="text-white/50 hover:text-white/80 text-xs underline underline-offset-2 transition-colors"
-            >
-              ♿ Ist Ihre Website barrierefrei? Jetzt kostenlos prüfen →
-            </a>
-          </div>
+          <p className="mt-5 text-blue-300 text-sm animate-fade-in-up delay-500">Mo–Fr, 09:00–18:00 Uhr erreichbar</p>
 
           {/* Social Media Icons */}
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up delay-500">
@@ -548,72 +539,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== WCAG BANNER ===== */}
-      <section className="py-8 px-6 bg-[#0a0f1e] border-b border-white/5">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <span className="text-3xl">♿</span>
-            <div>
-              <p className="text-white font-bold text-sm">Barrierefreiheitscheck – kostenlos</p>
-              <p className="text-slate-400 text-xs leading-snug">Seit 28.06.2025 gilt das BaFG. Ist Ihre Arztpraxis-Website wirklich barrierefrei?</p>
-            </div>
-          </div>
-          <a
-            href="/wcag-check"
-            className="shrink-0 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all hover:scale-[1.02]"
-          >
-            Jetzt prüfen →
-          </a>
-        </div>
-      </section>
-
-      {/* ===== WEBSITE SCANNER ===== */}
-      <section className="py-16 px-6 bg-[#0a0f1e]" id="scan">
-        <div className="max-w-3xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <span className="inline-block bg-[#ff8a00]/20 border border-[#ff8a00]/30 text-[#ff8a00] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
-              Kostenfreie Analyse · Regulärer Aufwand: € 199 · Heute für Sie: 0 € – und dennoch{' '}
-              <span className="uppercase tracking-wide">UNBEZAHLBAR</span>
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-              Gehören Sie zu den 10 % – oder zu den 90 %?
-            </h2>
-            <p className="text-white/50 text-sm italic mb-4">
-              Was gibt es Schöneres als zu wissen, wo man ansetzen muss?
-            </p>
-            <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
-              Jetzt in 2 Minuten herausfinden: Unser Scanner prüft, ob Ihre Ordination von Google, ChatGPT und
-              Co. wirklich gefunden wird – inklusive konkreter Schwachstellen und Verbesserungsvorschläge.
-              Der Bericht kommt direkt zu Ihnen. Kostenlos. Unverbindlich.
-            </p>
-          </div>
-
-          {/* iframe */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-            <ScannerEmbed />
-          </div>
-
-          <p className="text-center text-slate-500 text-xs mt-4">
-            Der Bericht wird direkt an Sie gesendet – kein Anruf nötig, keine Verpflichtung.
+      {/* ===== GRATIS CHECK CTA ===== */}
+      <section className="py-14 px-6 bg-[#0a0f1e]" id="scan">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block bg-[#ff8a00]/20 border border-[#ff8a00]/30 text-[#ff8a00] text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wider">
+            100 % kostenlos · kein Konto nötig
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Wie gut ist Ihre Ordination<br />wirklich aufgestellt?
+          </h2>
+          <p className="text-slate-400 text-base max-w-xl mx-auto leading-relaxed mb-8">
+            Zwei kostenlose Checks: Wird Ihre Praxis von ChatGPT & Co. gefunden?
+            Und ist Ihre Website barrierefrei nach BaFG? Ergebnis in Sekunden.
           </p>
-
-          {/* Step 3: Termin */}
-          <div className="mt-8 border border-white/10 rounded-2xl p-6 text-center">
-            <p className="text-white/35 text-xs uppercase tracking-[0.2em] font-semibold mb-2">Nächster Schritt</p>
-            <h3 className="text-lg font-bold text-white mb-2">
-              Bericht erhalten – und dann?
-            </h3>
-            <p className="text-slate-400 text-sm mb-5 max-w-md mx-auto">
-              In einem kostenlosen 15-Minuten-Gespräch gehen wir gemeinsam durch Ihren Scan – und zeigen Ihnen konkret, was sich ändern muss.
-            </p>
-            <a
-              href="#kontakt"
-              className="inline-block bg-primary hover:bg-[#1a33a8] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors"
-            >
-              15-Minuten-Gespräch vereinbaren
-            </a>
-          </div>
+          <a
+            href="/gratis-check"
+            className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-4 rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg animate-glow-orange"
+          >
+            Gratis Website-Analyse starten →
+          </a>
+          <p className="text-slate-500 text-xs mt-4">KI-Sichtbarkeit + Barrierefreiheit · Kein Download · DSGVO-konform</p>
         </div>
       </section>
 
