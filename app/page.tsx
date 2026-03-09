@@ -484,7 +484,7 @@ export default function HomePage() {
                 ))}
               </ul>
               <a href="#kontakt" className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3.5 rounded-xl transition-all hover:scale-105 text-sm mt-6">
-                Jetzt bewerben
+                Jetzt anfragen
               </a>
             </div>
 
@@ -522,7 +522,7 @@ export default function HomePage() {
                 <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent zubuchbar</span>
               </div>
               <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3.5 rounded-xl transition-all hover:scale-105 text-sm">
-                Jetzt bewerben
+                Jetzt anfragen
               </a>
             </div>
           </div>
