@@ -165,32 +165,23 @@ export default function ReferenzkundenSection() {
           </FadeIn>
 
           <FadeIn delay={1.15} isInView={isInView}>
-            <div className="grid sm:grid-cols-3 gap-3 text-left">
+            <div className="grid sm:grid-cols-2 gap-3 text-left max-w-sm mx-auto">
               {[
                 {
                   icon: '📋',
                   label: 'Website-Paket',
-                  value: '€ 3.900 oder € 7.500 netto',
-                  sub: 'Je nach Leistungsumfang',
+                  sub: 'Individuell entwickelt – kein Template',
                 },
                 {
                   icon: '🛡️',
                   label: 'Pflicht-Betreuung',
-                  value: '24 Monate · ~€ 150/Monat',
-                  sub: 'Excl. Steuer · Persönliche Begleitung',
-                },
-                {
-                  icon: '✅',
-                  label: 'KMU.DIGITAL',
-                  value: 'Bis 30 % Förderung',
-                  sub: 'Auf Paketpreis anwendbar',
+                  sub: '24 Monate · Persönliche Begleitung',
                 },
               ].map((item) => (
                 <div key={item.label} className="bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="text-lg mb-1">{item.icon}</div>
                   <p className="text-white/40 text-[10px] uppercase tracking-wider font-semibold mb-0.5">{item.label}</p>
-                  <p className="text-white font-bold text-sm leading-snug">{item.value}</p>
-                  <p className="text-white/35 text-[10px] mt-0.5">{item.sub}</p>
+                  <p className="text-white/55 text-[11px] mt-0.5">{item.sub}</p>
                 </div>
               ))}
             </div>
