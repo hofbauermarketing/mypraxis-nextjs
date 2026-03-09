@@ -154,13 +154,13 @@ export default function ReferenzkundenSection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold italic leading-tight mb-4 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
-              <Typewriter text="Nicht für jeden." isInView={isInView} delay={0.7} />
+              <Typewriter text="Sie bestimmen den Wert." isInView={isInView} delay={0.7} />
             </p>
           </FadeIn>
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/50 text-sm sm:text-base italic mb-7">
-              Das ist kein Standard-Angebot. Sie bewerben sich – wir entscheiden gemeinsam.
+              Nach Fertigstellung überweisen Sie, was es Ihnen wert ist. Danach gelten normale Preise.
             </p>
           </FadeIn>
 
