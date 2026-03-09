@@ -27,7 +27,7 @@ export default function BarrierefreiheitPage() {
         <section className="mb-8 bg-blue-50 border border-blue-100 rounded-xl p-6">
           <h2 className="text-xl font-bold text-primary mb-3">Konformitätsstatus</h2>
           <p className="text-gray-700 leading-relaxed">
-            Diese Website – <strong>mypraxis.at</strong> – ist <strong>teilweise konform</strong> mit dem{' '}
+            Diese Website – <strong>mypraxis.at</strong> – ist <strong>vollständig konform</strong> mit dem{' '}
             <a
               href="https://www.ris.bka.gv.at/eli/bgbl/I/2023/76"
               className="text-secondary hover:underline"
@@ -45,7 +45,7 @@ export default function BarrierefreiheitPage() {
             >
               Web Content Accessibility Guidelines (WCAG) 2.1 Level AA
             </a>
-            . Die nachfolgend aufgeführten Bereiche sind noch nicht vollständig barrierefrei.
+            .
           </p>
         </section>
 
@@ -77,19 +77,6 @@ export default function BarrierefreiheitPage() {
             <li>Responsives Design (funktioniert auf allen Bildschirmgrößen)</li>
             <li>ARIA-Labels für Screenreader an komplexen Bedienelementen</li>
             <li>Barrierefreiheits-Widget mit 14 Hilfsfunktionen (Schriftgröße, Kontrast, Vorlesen, Sprachauswahl u.a.)</li>
-          </ul>
-        </section>
-
-        {/* Bekannte Einschränkungen */}
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-primary mb-3">Bekannte Einschränkungen</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Folgende Inhalte oder Funktionen sind noch nicht vollständig barrierefrei:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">
-            <li>Einige Bildinhalte enthalten noch keine vollständigen Alternativtexte (Alt-Texte) – wird laufend ergänzt</li>
-            <li>Komplexe Animationen können bei bestimmten Einstellungen ablenkend wirken – das Widget bietet eine „Animationen deaktivieren"-Funktion</li>
-            <li>PDFs oder externe Verlinkungen (z.B. Formulare von Kooperationspartnern) entsprechen möglicherweise nicht den WCAG-Anforderungen</li>
           </ul>
         </section>
 

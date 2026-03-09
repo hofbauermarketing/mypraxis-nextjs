@@ -98,8 +98,6 @@ const kiSysteme = [
 ]
 
 export default function KiSystemeMarquee() {
-  const doubled = [...kiSysteme, ...kiSysteme]
-
   return (
     <section className="py-14 bg-gray-50 border-y border-gray-100 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 text-center mb-10">
@@ -121,18 +119,43 @@ export default function KiSystemeMarquee() {
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
 
         <div className="flex gap-4 animate-marquee" style={{ width: 'max-content' }}>
-          {doubled.map((ki, i) => (
+          {kiSysteme.map((ki, i) => (
             <a
               key={i}
               href={ki.url}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${ki.name} – ${ki.relevanz} (öffnet neuen Tab)`}
               className="flex-shrink-0 w-[196px] bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:border-primary/40 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-2 mb-2">
                 <img
                   src={`https://www.google.com/s2/favicons?domain=${ki.domain}&sz=64`}
                   alt={ki.name}
+                  className="w-5 h-5 rounded-sm flex-shrink-0"
+                />
+                <p className="text-[14px] font-bold text-gray-900 leading-tight group-hover:text-primary transition-colors">{ki.name}</p>
+              </div>
+              <p className="text-[11px] text-gray-400 mb-2">{ki.anbieter}</p>
+              <p className="text-[13px] font-semibold text-primary mb-2">{ki.nutzer}</p>
+              <p className="text-[11px] text-gray-500 leading-relaxed">{ki.relevanz}</p>
+            </a>
+          ))}
+          {/* Visual duplicates for infinite scroll – hidden from screen readers */}
+          {kiSysteme.map((ki, i) => (
+            <a
+              key={`dup-${i}`}
+              href={ki.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-hidden="true"
+              tabIndex={-1}
+              className="flex-shrink-0 w-[196px] bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:border-primary/40 hover:shadow-md transition-all group"
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${ki.domain}&sz=64`}
+                  alt=""
                   className="w-5 h-5 rounded-sm flex-shrink-0"
                 />
                 <p className="text-[14px] font-bold text-gray-900 leading-tight group-hover:text-primary transition-colors">{ki.name}</p>

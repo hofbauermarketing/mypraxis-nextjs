@@ -27,8 +27,6 @@ const categoryLabels: Record<string, string> = {
 }
 
 export default function BlogCarousel({ posts }: { posts: BlogPostMeta[] }) {
-  const doubled = [...posts, ...posts]
-
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 mb-10 text-center">
@@ -49,10 +47,39 @@ export default function BlogCarousel({ posts }: { posts: BlogPostMeta[] }) {
         <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         <div className="flex gap-5 animate-marquee-slow pb-2" style={{ width: 'max-content' }}>
-          {doubled.map((post, i) => (
+          {posts.map((post, i) => (
             <Link
               key={i}
               href={`/blog/${post.slug}`}
+              className="flex-shrink-0 w-[268px] bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-5 flex flex-col gap-2.5 transition-all hover:shadow-md group"
+            >
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-600'}`}>
+                  {categoryLabels[post.slug] ?? 'Artikel'}
+                </span>
+                <span className="text-gray-400 text-[11px]">{formatDate(post.date)}</span>
+              </div>
+              <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+                {post.title}
+              </h3>
+              <p className="text-[12px] text-gray-500 leading-relaxed flex-1 line-clamp-3">
+                {post.description}
+              </p>
+              <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-1">
+                Lesen
+                <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          ))}
+          {/* Visual duplicates for infinite scroll – hidden from screen readers */}
+          {posts.map((post, i) => (
+            <Link
+              key={`dup-${i}`}
+              href={`/blog/${post.slug}`}
+              aria-hidden="true"
+              tabIndex={-1}
               className="flex-shrink-0 w-[268px] bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-5 flex flex-col gap-2.5 transition-all hover:shadow-md group"
             >
               <div className="flex items-center gap-2 flex-wrap">
