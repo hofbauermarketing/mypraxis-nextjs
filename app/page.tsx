@@ -931,6 +931,42 @@ export default function HomePage() {
 
             {/* Right: Contact Form */}
             <div className="glass-card rounded-2xl p-6 sm:p-8 angular-clip-sm">
+
+              {/* Persönlicher Brief von Kevin */}
+              <div className="relative mb-6 rounded-xl overflow-hidden border border-[#ff8a00]/25 bg-gradient-to-br from-[#1c1200] via-[#221800] to-[#1a1000]">
+                {/* Papier-Ecke oben rechts */}
+                <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-r-[28px] border-t-[#ff8a00]/20 border-r-transparent" style={{ borderLeft: '28px solid transparent', borderBottom: '28px solid transparent', transform: 'rotate(180deg)' }} />
+                <div className="absolute top-0 right-0 w-[28px] h-[28px] bg-[#ff8a00]/10" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
+
+                <div className="p-5">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#ff8a00]/60 font-semibold mb-3">Persönliche Nachricht</p>
+                  <p
+                    className="text-blue-100/85 text-sm leading-relaxed italic mb-4"
+                    style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                  >
+                    „Ich nehme mir für jede Anfrage persönlich Zeit – nicht weil ich muss, sondern weil ich nur so verstehen kann, was Ihre Ordination wirklich braucht. Kein Verkaufsgespräch. Nur ein ehrliches Gespräch."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/kevin.webp"
+                      alt="Kevin Hofbauer"
+                      width={36}
+                      height={36}
+                      className="rounded-full object-cover ring-1 ring-[#ff8a00]/30 flex-shrink-0"
+                    />
+                    <div>
+                      <p
+                        className="text-white text-sm font-semibold leading-none"
+                        style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                      >
+                        Kevin Hofbauer
+                      </p>
+                      <p className="text-blue-300/70 text-[10px] mt-0.5">Gründer · mypraxis.at</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <h3 className="text-white font-bold text-xl mb-6">Anfrage senden</h3>
               <ContactForm />
             </div>
