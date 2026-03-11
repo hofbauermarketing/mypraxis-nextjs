@@ -598,7 +598,7 @@ export default function HomePage() {
               {
                 nr: '3',
                 title: 'llms.txt',
-                text: 'Eine spezielle Datei, die KI-Crawler von OpenAI, Anthropic und Perplexity gezielt auslesen. Ihr digitales Profil für die KI-Suche.',
+                text: 'Eine ergänzende Datei, die bestimmte LLM-Workflows und KI-Agenten besser unterstützt. Kombiniert mit sauberer Technik und Inhalten verbessert sie Ihre KI-Lesbarkeit.',
               },
             ].map((item) => (
               <div key={item.nr} className="glass-card rounded-2xl p-6 sm:p-8 text-center card-hover angular-clip-sm">
@@ -613,8 +613,8 @@ export default function HomePage() {
           <div className="mt-12 bg-white/10 border border-white/20 rounded-2xl p-6 sm:p-8 text-center">
             <p className="text-base sm:text-lg text-blue-100 leading-relaxed">
               Wenn ein Patient ChatGPT fragt{' '}
-              <em>„Welcher Hautarzt in St. Pölten hat gute Bewertungen?"</em>, wird Ihre Ordination in der Antwort
-              genannt – mit Ihrem Namen, Ihrer Fachrichtung und Ihrem Standort.
+              <em>„Welcher Hautarzt in St. Pölten hat gute Bewertungen?"</em>, steigt die Chance deutlich,
+              dass Ihre Ordination korrekt erfasst und in der Antwort genannt wird – mit Namen, Fachrichtung und Standort.
             </p>
           </div>
         </div>
@@ -755,7 +755,7 @@ export default function HomePage() {
               },
               {
                 q: 'Was ist KI-Readiness und warum brauche ich das?',
-                a: 'KI-Readiness beschreibt, wie gut Ihre Website für KI-Suchsysteme wie ChatGPT und Perplexity aufbereitet ist. Ohne strukturierte Daten wird Ihre Ordination dort schlicht nicht genannt – egal wie gut Ihre Website aussieht.',
+                a: 'KI-Readiness beschreibt, wie gut Ihre Website technisch und inhaltlich für KI-Systeme wie ChatGPT und Perplexity aufbereitet ist. Saubere Struktur, strukturierte Daten und zugängliche Inhalte erhöhen die Chance deutlich, dass Ihre Ordination dort korrekt erfasst und genannt wird.',
               },
               {
                 q: 'Wie beantrage ich die KMU.DIGITAL-Förderung?',

@@ -26,7 +26,7 @@ export default function PreisePage() {
                     <div className="max-w-5xl mx-auto text-center">
                         <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wide">Demo & Preise</span>
                         <h1 className="text-3xl md:text-4xl font-bold mb-4">Sehen. Bewerben. Starten.</h1>
-                        <p className="text-blue-100 text-lg max-w-2xl mx-auto">Fünf echte Demo-Websites – und ein Programm, bei dem Sie den Preis selbst bestimmen.</p>
+                        <p className="text-blue-100 text-lg max-w-2xl mx-auto">Fünf echte Demo-Websites – und ein begrenztes Referenzkunden-Programm mit reduzierten Pilotkonditionen.</p>
                     </div>
                 </div>
 
