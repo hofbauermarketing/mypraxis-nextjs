@@ -29,11 +29,16 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
 }
 
 function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boolean; delay?: number }) {
-  const [displayed, setDisplayed] = useState('')
+  // SSR renders full text so crawlers always read "Pilotkonditionen."
+  const [displayed, setDisplayed] = useState(text)
   const [done, setDone] = useState(false)
+  const [animated, setAnimated] = useState(false)
 
   useEffect(() => {
-    if (!isInView) return
+    if (!isInView || animated) return
+    setAnimated(true)
+    setDisplayed('')
+    setDone(false)
     const startTimer = setTimeout(() => {
       let i = 0
       const interval = setInterval(() => {
@@ -47,7 +52,7 @@ function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boo
       return () => clearInterval(interval)
     }, delay * 1000)
     return () => clearTimeout(startTimer)
-  }, [isInView, text, delay])
+  }, [isInView, text, delay, animated])
 
   return (
     <span className="whitespace-nowrap">
