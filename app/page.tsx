@@ -777,6 +777,14 @@ export default function HomePage() {
                 q: 'Ist die Website DSGVO-konform und ÖÄK-konform?',
                 a: 'Ja. Cookiebanner, Datenschutzerklärung, EU-Hosting, ÖÄK-konforme Texte ohne marktschreierische Werbung. Unsere Kunden hatten bisher keine Beanstandungen.',
               },
+              {
+                q: 'Was bedeutet Referenzkunde konkret?',
+                a: 'Als Referenzkunde nehmen Sie an einem reduzierten Pilotmodell teil. Sie erhalten vergünstigte Konditionen und eine besonders enge Begleitung über 24 Monate. Im Gegenzug erklären Sie sich bereit, die Zusammenarbeit später als Referenz freizugeben – zum Beispiel durch eine namentliche Nennung, ein kurzes Testimonial oder eine Fallstudie. Das Referenzkunden-Programm ist klar vom regulären Angebot getrennt.',
+              },
+              {
+                q: 'Warum gelten im Referenzprogramm 24 Monate, im Standardangebot aber 12 Monate?',
+                a: 'Unsere regulären Website-Pakete enthalten 12 Monate technische Betreuung inklusive. Das Referenzkunden-Programm ist ein Sondermodell: Es läuft über 24 Monate, weil daraus belastbare Referenzen, Erfahrungswerte und Fallstudien entstehen sollen. So sind beide Modelle klar voneinander getrennt.',
+              },
             ].map((faq, i) => (
               <details key={i} className="bg-white rounded-2xl border border-gray-200 shadow-sm group overflow-hidden">
                 <summary className="font-semibold text-primary cursor-pointer list-none flex justify-between items-center p-4 sm:p-5 text-sm">

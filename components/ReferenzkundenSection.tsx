@@ -118,7 +118,7 @@ export default function ReferenzkundenSection() {
 
         <FadeUp delay={0.35} isInView={isInView}>
           <p className="text-blue-200/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-            Ich baue Ihre Praxis-Website neu – KI-optimiert, rechtssicher, handgemacht.
+            Ich baue Ihre Praxis-Website neu – rechtssicher, individuell entwickelt und für Suchmaschinen sowie KI-Systeme sauber vorbereitet.
           </p>
         </FadeUp>
       </div>
@@ -160,7 +160,7 @@ export default function ReferenzkundenSection() {
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/50 text-sm sm:text-base italic mb-7">
-              Reduzierte Investition gegen Referenzfreigabe. Danach gelten normale Preise.
+              Reduzierte Pilotkonditionen gegen 24 Monate Zusammenarbeit und Freigabe als Referenzkunde. Danach gelten reguläre Pakete und Konditionen.
             </p>
           </FadeIn>
 
