@@ -428,7 +428,7 @@ export default function HomePage() {
               Andere Agenturen bauen Ihnen eine Website.
             </p>
             <p className="text-[#ff8a00] font-bold text-lg sm:text-xl leading-snug mt-1">
-              Wir sorgen dafür, dass ChatGPT Ihre Ordination empfiehlt.
+              Wir erhöhen die Chance deutlich, dass ChatGPT Ihre Ordination kennt und nennt.
             </p>
           </div>
         </div>
