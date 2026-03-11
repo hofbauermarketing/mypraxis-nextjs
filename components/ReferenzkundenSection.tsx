@@ -8,11 +8,11 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
   // Start at target so SSR/LLM-crawlers always see the correct number.
   // Animation resets to 0 and counts up once the element enters the viewport.
   const [count, setCount] = useState(target)
-  const [animated, setAnimated] = useState(false)
+  const animated = useRef(false)
 
   useEffect(() => {
-    if (!inView || animated) return
-    setAnimated(true)
+    if (!inView || animated.current) return
+    animated.current = true
     let startTime: number | null = null
     const duration = 1000
     const step = (timestamp: number) => {
@@ -23,7 +23,7 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
       if (progress < 1) requestAnimationFrame(step)
     }
     requestAnimationFrame(step)
-  }, [inView, target, animated])
+  }, [inView, target])
 
   return <>{count}</>
 }
@@ -32,11 +32,11 @@ function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boo
   // SSR renders full text so crawlers always read "Pilotkonditionen."
   const [displayed, setDisplayed] = useState(text)
   const [done, setDone] = useState(false)
-  const [animated, setAnimated] = useState(false)
+  const animated = useRef(false)
 
   useEffect(() => {
-    if (!isInView || animated) return
-    setAnimated(true)
+    if (!isInView || animated.current) return
+    animated.current = true
     setDisplayed('')
     setDone(false)
     const startTimer = setTimeout(() => {
@@ -52,7 +52,7 @@ function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boo
       return () => clearInterval(interval)
     }, delay * 1000)
     return () => clearTimeout(startTimer)
-  }, [isInView, text, delay, animated])
+  }, [isInView, text, delay])
 
   return (
     <span className="whitespace-nowrap">
