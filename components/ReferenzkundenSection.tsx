@@ -5,13 +5,16 @@ import { useRef, useEffect, useState } from 'react'
 import Image from 'next/image'
 
 function Counter({ target, inView }: { target: number; inView: boolean }) {
-  const [count, setCount] = useState(0)
+  // Start at target so SSR/LLM-crawlers always see the correct number.
+  // Animation resets to 0 and counts up once the element enters the viewport.
+  const [count, setCount] = useState(target)
+  const [animated, setAnimated] = useState(false)
 
   useEffect(() => {
-    if (!inView) return
+    if (!inView || animated) return
+    setAnimated(true)
     let startTime: number | null = null
     const duration = 1000
-
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
@@ -20,7 +23,7 @@ function Counter({ target, inView }: { target: number; inView: boolean }) {
       if (progress < 1) requestAnimationFrame(step)
     }
     requestAnimationFrame(step)
-  }, [inView, target])
+  }, [inView, target, animated])
 
   return <>{count}</>
 }
