@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { BlogPostMeta } from '@/lib/blog'
 import { formatDate } from '@/lib/blog'
 
@@ -12,6 +13,7 @@ const categoryColors: Record<string, string> = {
   'kmu-digital-foerderung-aerzte': 'bg-emerald-100 text-emerald-700',
   'docfinder-herold-google-vergleich': 'bg-sky-100 text-sky-700',
   'ki-telefonassistent-arztpraxis': 'bg-violet-100 text-violet-700',
+  'barrierefreiheits-widget-arzt-website': 'bg-teal-100 text-teal-700',
 }
 
 const categoryLabels: Record<string, string> = {
@@ -24,6 +26,54 @@ const categoryLabels: Record<string, string> = {
   'kmu-digital-foerderung-aerzte': 'Förderung',
   'docfinder-herold-google-vergleich': 'Plattformen',
   'ki-telefonassistent-arztpraxis': 'KI-Telefon',
+  'barrierefreiheits-widget-arzt-website': 'Barrierefreiheit',
+}
+
+function BlogCard({ post, tabIndex }: { post: BlogPostMeta; tabIndex?: number }) {
+  return (
+    <Link
+      href={`/blog/${post.slug}`}
+      tabIndex={tabIndex}
+      className="flex-shrink-0 w-[268px] bg-white border border-gray-100 hover:border-blue-100 rounded-2xl overflow-hidden flex flex-col transition-all hover:shadow-md group"
+    >
+      {/* Cover image */}
+      <div className="relative w-full h-[148px] bg-gray-100 overflow-hidden">
+        {post.image ? (
+          <Image
+            src={post.image}
+            alt={post.imageAlt ?? post.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="268px"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
+            <span className="text-blue-300 text-4xl">📄</span>
+          </div>
+        )}
+        <span className={`absolute top-3 left-3 text-[11px] font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-600'}`}>
+          {categoryLabels[post.slug] ?? 'Artikel'}
+        </span>
+      </div>
+
+      {/* Content */}
+      <div className="p-4 flex flex-col gap-2 flex-1">
+        <span className="text-gray-400 text-[11px]">{formatDate(post.date)}</span>
+        <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+          {post.title}
+        </h3>
+        <p className="text-[12px] text-gray-500 leading-relaxed flex-1 line-clamp-2">
+          {post.description}
+        </p>
+        <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-1">
+          Lesen
+          <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </div>
+    </Link>
+  )
 }
 
 export default function BlogCarousel({ posts }: { posts: BlogPostMeta[] }) {
@@ -48,59 +98,11 @@ export default function BlogCarousel({ posts }: { posts: BlogPostMeta[] }) {
 
         <div className="flex gap-5 animate-marquee-slow pb-2" style={{ width: 'max-content' }}>
           {posts.map((post, i) => (
-            <Link
-              key={i}
-              href={`/blog/${post.slug}`}
-              className="flex-shrink-0 w-[268px] bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-5 flex flex-col gap-2.5 transition-all hover:shadow-md group"
-            >
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-600'}`}>
-                  {categoryLabels[post.slug] ?? 'Artikel'}
-                </span>
-                <span className="text-gray-400 text-[11px]">{formatDate(post.date)}</span>
-              </div>
-              <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-[12px] text-gray-500 leading-relaxed flex-1 line-clamp-3">
-                {post.description}
-              </p>
-              <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-1">
-                Lesen
-                <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
+            <BlogCard key={i} post={post} />
           ))}
           {/* Visual duplicates for infinite scroll – hidden from screen readers */}
           {posts.map((post, i) => (
-            <Link
-              key={`dup-${i}`}
-              href={`/blog/${post.slug}`}
-              aria-hidden="true"
-              tabIndex={-1}
-              className="flex-shrink-0 w-[268px] bg-gray-50 hover:bg-white border border-gray-100 hover:border-blue-100 rounded-2xl p-5 flex flex-col gap-2.5 transition-all hover:shadow-md group"
-            >
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${categoryColors[post.slug] ?? 'bg-gray-100 text-gray-600'}`}>
-                  {categoryLabels[post.slug] ?? 'Artikel'}
-                </span>
-                <span className="text-gray-400 text-[11px]">{formatDate(post.date)}</span>
-              </div>
-              <h3 className="text-sm font-bold text-gray-900 group-hover:text-primary transition-colors leading-snug line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-[12px] text-gray-500 leading-relaxed flex-1 line-clamp-3">
-                {post.description}
-              </p>
-              <span className="text-xs font-semibold text-primary flex items-center gap-1 mt-1">
-                Lesen
-                <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
+            <BlogCard key={`dup-${i}`} post={post} tabIndex={-1} />
           ))}
         </div>
       </div>

@@ -475,7 +475,7 @@ export default function HomePage() {
                   'Cookie-Banner & Impressum',
                   'Einschulung – Inhalte selbst ändern',
                   'Domain-Verbindung & Hosting-Setup',
-                  'Laufende Betreuung: mind. 6–12 Monate empfohlen',
+                  '12 Monate technische Betreuung inklusive',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -509,7 +509,7 @@ export default function HomePage() {
                   'llms.txt Implementierung',
                   'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
                   'FAQ-System (reduziert Routine-Anrufe)',
-                  'Laufende Betreuung: mind. 6–12 Monate empfohlen',
+                  '12 Monate technische Betreuung inklusive',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2">
                     <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -671,18 +671,18 @@ export default function HomePage() {
             {[
               {
                 nr: '1',
-                title: 'Erstgespräch (30 Min, kostenlos)',
-                text: 'Wir lernen Ihre Ordination kennen: Fachrichtung, Positionierung, Ziele. Sie erzählen – wir hören zu.',
+                title: 'Erstcheck (15 Min, kostenlos)',
+                text: 'Kurzes Kennenlernen: Wir klären, ob wir zueinander passen – Fachrichtung, Situation, Ziele. Unverbindlich und ohne Druck.',
               },
               {
                 nr: '2',
-                title: 'Konzept & Strategie',
-                text: 'Wir analysieren Ihr Fachgebiet, Ihre Region und Ihre Mitbewerber. Daraus entsteht ein konkretes Konzept – bevor eine Zeile Code geschrieben wird.',
+                title: 'Strategiegespräch (30 Min)',
+                text: 'Tiefes Gespräch: Wir analysieren Ihre Ordination, Ihren Wettbewerb und Ihre Zielgruppe. Daraus entsteht ein konkretes Konzept.',
               },
               {
                 nr: '3',
-                title: 'Recherche, Strategie & Umsetzung',
-                text: 'Analyse Ihres Fachgebiets, Wettbewerbs und Ihrer Region – daraus entstehen Texte, Design, Technik und KI-Readiness.',
+                title: 'Umsetzung',
+                text: 'Texte, Design, Technik und KI-Readiness – alles individuell entwickelt. Kein Template, kein Baukasten.',
               },
               {
                 nr: '4',

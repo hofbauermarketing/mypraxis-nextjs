@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation'
 
 export const metadata = {
     title: 'Demo & Referenzkunden | mypraxis.at',
-    description: 'Demo-Websites und Referenzkunden-Programm von mypraxis.at. Sie bestimmen den Wert nach Fertigstellung. KMU.DIGITAL Förderung demnächst verfügbar.',
+    description: 'Demo-Websites und Referenzkunden-Programm von mypraxis.at. Pilotkonditionen für 9 Ordinationen. KMU.DIGITAL Förderung bis 30 % verfügbar.',
     alternates: { canonical: '/preise', languages: { 'de-AT': '/preise' } },
 }
 
@@ -71,14 +71,12 @@ export default function PreisePage() {
                                 </h2>
                                 <div className="flex items-center gap-4 justify-center my-6">
                                     <div className="h-px bg-white/15 w-12 sm:w-20" />
-                                    <p className="text-white/35 text-xs uppercase tracking-[0.3em] font-medium whitespace-nowrap">Das Prinzip</p>
+                                    <p className="text-white/35 text-xs uppercase tracking-[0.3em] font-medium whitespace-nowrap">Die Konditionen</p>
                                     <div className="h-px bg-white/15 w-12 sm:w-20" />
                                 </div>
-                                <p className="text-3xl sm:text-4xl font-bold text-[#ff8a00] leading-tight">Sie bestimmen</p>
-                                <p className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-2">den Wert.</p>
-                                <p className="text-white/40 text-sm italic mb-6">Klingt verrückt? Ist es auch.</p>
+                                <p className="text-3xl sm:text-4xl font-bold italic text-[#ff8a00] leading-tight mb-3" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>Pilotkonditionen.</p>
                                 <p className="text-white/60 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
-                                    Nach Fertigstellung überweisen Sie, was es Ihnen wert ist. Kein Fixpreis. Kein Risiko. Danach gelten normale Preise.
+                                    Reduzierte Investition gegen Referenzfreigabe. Danach gelten normale Preise.
                                 </p>
                                 <div className="grid grid-cols-3 gap-3 mb-8 max-w-sm mx-auto">
                                     {[
@@ -133,7 +131,7 @@ export default function PreisePage() {
                                         'Cookie-Banner & Impressum',
                                         'Einschulung – Inhalte selbst ändern',
                                         'Domain-Verbindung & Hosting-Setup',
-                                        'Laufende Betreuung: mind. 6–12 Monate empfohlen',
+                                        '12 Monate technische Betreuung inklusive',
                                     ].map((f) => (
                                         <li key={f} className="flex items-start gap-2">
                                             <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
@@ -168,7 +166,7 @@ export default function PreisePage() {
                                         'llms.txt Implementierung',
                                         'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
                                         'FAQ-System (reduziert Routine-Anrufe)',
-                                        'Laufende Betreuung: mind. 6–12 Monate empfohlen',
+                                        '12 Monate technische Betreuung inklusive',
                                     ].map((f) => (
                                         <li key={f} className="flex items-start gap-2">
                                             <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>

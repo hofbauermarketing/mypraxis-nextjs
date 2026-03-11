@@ -154,13 +154,13 @@ export default function ReferenzkundenSection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold italic leading-tight mb-4 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
-              <Typewriter text="Sie bestimmen den Wert." isInView={isInView} delay={0.7} />
+              <Typewriter text="Pilotkonditionen." isInView={isInView} delay={0.7} />
             </p>
           </FadeIn>
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/50 text-sm sm:text-base italic mb-7">
-              Nach Fertigstellung überweisen Sie, was es Ihnen wert ist. Danach gelten normale Preise.
+              Reduzierte Investition gegen Referenzfreigabe. Danach gelten normale Preise.
             </p>
           </FadeIn>
 
@@ -283,7 +283,7 @@ export default function ReferenzkundenSection() {
           >
             Jetzt bewerben
           </a>
-          <span className="text-blue-400/80 text-sm">15-Min. Erstgespräch · Unverbindlich</span>
+          <span className="text-blue-400/80 text-sm">15 Min. Erstcheck · 30 Min. Strategiegespräch</span>
         </div>
         <p className="text-white/25 text-xs">
           Solange Plätze verfügbar · 9 Ordinationen gesamt · Aufnahme nach Gespräch und Eignung
