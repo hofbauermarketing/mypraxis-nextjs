@@ -1,30 +1,33 @@
-# CLAUDE.md – mypraxis.at Projektstand (Stand: März 2026)
+# CLAUDE.md – mypraxis-nextjs
+
+> Projektgedächtnis für KI-Agenten (Google Antigravity, Claude Code, Cline, etc.)
+> Letzte Aktualisierung: März 2026
 
 ---
 
-## Wer ist Kevin?
+## Wer ist Kevin Hofbauer?
 
 Kevin Hofbauer betreibt **Kevin Hofbauer e.U.**, eine Digital-Marketing-Agentur in Vitis, Niederösterreich.
 
-**Zwei Marken:**
-- **hofbauer.marketing** – Websites, Videos, KI-Telefonassistenten für österreichische Unternehmen
-- **mypraxis.at** – spezialisiert auf digitale Positionierung für niedergelassene Ärzte in Österreich
-
-**Kontakt:**
 - E-Mail: office@mypraxis.at
 - Telefon: +43 664 19 15 447
 - Adresse: Hauptplatz 12, 3902 Vitis, Niederösterreich
 - UID: ATU78915818
 - LinkedIn: https://www.linkedin.com/in/kevin-hofbauer-b2660b274/
-- Facebook: https://www.facebook.com/profile.php?id=100035353760113
+
+**Zwei Marken:**
+- **hofbauer.marketing** – Websites, Videos, KI-Telefonassistenten für österreichische Unternehmen (separates Repo: `hofbauer-marketing-nextjs`, Port 3000)
+- **mypraxis.at** – digitale Positionierung + KI-Sichtbarkeit für niedergelassene Ärzte in Österreich (dieses Repo, Port 3002)
 
 ---
 
 ## Was ist mypraxis.at?
 
-Agentur die Ärzte-Websites baut. **USP: KI-Sichtbarkeit** (Schema Markup, llms.txt, semantische Inhalte) – etwas das kein anderer österreichischer Anbieter hat.
+Spezialagentur für Arzt-Websites in Österreich. Einziger österreichischer Anbieter mit:
 
-**Wettbewerber:** webdoctor.at, einfachordi.at – nutzen SPA-Templates die für KI unsichtbar sind (Client-Side Rendering).
+1. **KI-Sichtbarkeit als USP** – Schema Markup v3, llms.txt, semantische Inhalte, SSR-first (Konkurrenten webdoctor.at, einfachordi.at bauen SPA-Templates die für KI unsichtbar sind)
+2. **Barrierefreiheits-Widget** – 16 Features, WCAG 2.1 AA, DeepL-Übersetzung in 10 Sprachen, im Standard inklusive
+3. **KMU.DIGITAL Förderung** – 30 % Zuschuss, bis € 6.000 pro Arzt
 
 ---
 
@@ -39,37 +42,37 @@ Agentur die Ärzte-Websites baut. **USP: KI-Sichtbarkeit** (Schema Markup, llms.
 | **Lokaler Port** | 3002 (`npm run dev -- -p 3002`) |
 | **Framework** | Next.js 15, App Router, TypeScript |
 | **Styling** | Tailwind CSS 3.4 |
-| **Animationen** | Framer Motion 12 |
+| **Animationen** | Framer Motion |
 | **E-Mail** | Nodemailer via SMTP |
 | **Übersetzung** | DeepL API (Free Tier) |
 
 ---
 
-## Referenzkunden-Programm 2026 – DAS WICHTIGSTE KONZEPT
+## Referenzkunden-Programm 2026 – WICHTIGSTES KONZEPT
 
-### Aktueller Modus (JETZT):
-Kevin sucht **9 Ordinationen gesamt** (3 Kassenärzte + 3 Privatärzte + 3 Ärztezentren).
+### Aktueller Modus: Pilotkonditionen
+Kevin sucht **9 Ordinationen gesamt** (3 Kassenärzte + 3 Privatärzte/Wahlärzte + 3 Ärztezentren).
 
 **Das Prinzip:**
-- Die Website wird fertiggestellt
-- Danach überweist der Arzt **was es ihm wert ist** – kein Fixpreis
-- Pflicht: **24 Monate Betreuungspaket** (~€ 150/Monat excl. Steuer) – das ist verpflichtend für Referenzkunden
-- Man muss sich **bewerben** und den Anforderungen entsprechen – nicht jeder wird aufgenommen
+- Reduzierte Pilotkonditionen gegen **24 Monate Zusammenarbeit + Referenzfreigabe**
+- Referenzfreigabe = namentliche Nennung, Testimonial oder Fallstudie
+- Man muss sich **bewerben** – nicht jeder wird aufgenommen
 - CTA auf Hauptseite: **"Jetzt bewerben"**
 
-### Nach dem Programm (DANN – reguläre Preise):
+⚠️ **VERALTET – NICHT MEHR VERWENDEN:** "Sie bestimmen den Wert" / "Nach Fertigstellung überweisen Sie, was es Ihnen wert ist" – das war das alte Konzept. Jetzt: "Pilotkonditionen."
+
+### Nach dem Programm – reguläre Preise:
 | Paket | Preis netto | Mit KMU.DIGITAL (–30%) |
 |-------|------------|------------------------|
 | Praxis-Website | € 3.900 | € 2.730 |
 | Digitale Positionierung | € 7.500 | € 5.250 |
 | Ärztezentren & PVEs | Auf Anfrage | Pro Arzt bis € 6.000 Förderung |
 
-Betreuung für reguläre Kunden: **mind. 6–12 Monate empfohlen** (NICHT Pflicht).
-CTA für reguläre Pakete: **"Jetzt anfragen"** (NICHT bewerben).
+Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo).
 
-### Wichtige Unterscheidung:
-- **"Jetzt bewerben"** → nur Referenzkundenprogramm
-- **"Jetzt anfragen"** → reguläre Pakete (auf /preise Seite und Hauptseite-Featurekarten)
+### CTA-Unterscheidung (wichtig!):
+- **"Jetzt bewerben"** → NUR Referenzkundenprogramm
+- **"Jetzt anfragen"** → reguläre Pakete (auf /preise und Hauptseite-Featurekarten)
 
 ---
 
@@ -77,22 +80,22 @@ CTA für reguläre Pakete: **"Jetzt anfragen"** (NICHT bewerben).
 
 | Seite | Pfad | Beschreibung |
 |-------|------|-------------|
-| Startseite | `/` | Hero, Referenzkundenprogramm, Feature-Karten (ohne Preise), Demos, KI-Sichtbarkeit, FAQ, AskAI, Kontakt |
-| Demo & Preise | `/preise` | Demos (5 Stile), Referenzkundenprogramm-Block, Reguläre Pakete (€3.900/€7.500), KMU.DIGITAL |
+| Startseite | `/` | Hero, Referenzkundenprogramm, Feature-Karten (ohne Preise), KI-Sichtbarkeit, FAQ, AskAI, BlogCarousel, Kontakt |
+| Preise & Demos | `/preise` | 5 Demo-Stile, Reguläre Pakete (€3.900/€7.500), Referenzprogramm-Erklärung, KMU.DIGITAL |
 | Blog-Übersicht | `/blog` | Alle Blogartikel |
 | Blog-Artikel | `/blog/[slug]` | Einzelartikel mit Schema, Lesezeit, Breadcrumb |
 | KI-Videothek | `/videothek` | Videos mit VideoObject Schema |
 | FAQ | `/faq` | Häufige Fragen |
-| Gratis-Check | `/gratis-check` | KI-Scanner Seite |
-| Demo Classic | `/demo/privatarzt-classic` | Demo-Website (noindex) |
-| Demo Modern | `/demo/privatarzt-modern` | Demo-Website (noindex) |
-| Demo Warm | `/demo/privatarzt-warm` | Demo-Website (noindex) |
-| Demo ÄZ Classic | `/demo/aerztezentrum-classic` | Demo-Website (noindex) |
-| Demo ÄZ Premium | `/demo/aerztezentrum-premium` | Demo-Website (noindex) |
+| Gratis-Check | `/gratis-check` | WCAG Scanner Landing Page |
+| WCAG-Check | `/wcag-check` | Scanner UI (intern) |
+| Demo Classic | `/demo/privatarzt-classic` | Demo (noindex) |
+| Demo Modern | `/demo/privatarzt-modern` | Demo (noindex) |
+| Demo Warm | `/demo/privatarzt-warm` | Demo + /impfen Unterseite (noindex) |
+| Demo ÄZ Classic | `/demo/aerztezentrum-classic` | Demo + /team (noindex) |
+| Demo ÄZ Premium | `/demo/aerztezentrum-premium` | Demo (noindex) |
 | Impressum | `/impressum` | noindex |
 | Datenschutz | `/datenschutz` | noindex |
-| Barrierefreiheit | `/barrierefreiheit` | Barrierefreiheitserklärung (WCAG 2.1 AA, BFSG) |
-| WCAG-Check | `/wcag-check` | Internes Tool |
+| Barrierefreiheit | `/barrierefreiheit` | WCAG 2.1 AA Erklärung |
 
 ---
 
@@ -100,16 +103,16 @@ CTA für reguläre Pakete: **"Jetzt anfragen"** (NICHT bewerben).
 
 | Komponente | Datei | Beschreibung |
 |-----------|-------|-------------|
-| Navigation | `components/Navigation.tsx` | Navbar mit logo.webp |
-| Referenzkunden-Section | `components/ReferenzkundenSection.tsx` | Animierter Dark-Block. Typewriter: **"Sie bestimmen den Wert."** Untertitel: "Nach Fertigstellung überweisen Sie, was es Ihnen wert ist. Danach gelten normale Preise." 2 Karten (ohne Preise!): Website-Paket, Pflicht-Betreuung 24 Monate. Kein KMU.DIGITAL. Counter: 9 Ordinationen. |
-| Ask AI Section | `components/AskAiSection.tsx` | Buttons für Perplexity/ChatGPT (prefill via ?q=) + Claude/Gemini (clipboard). Standalone-Kopierbutton. Toast-Notifications. |
-| Blog Carousel | `components/BlogCarousel.tsx` | Scroll-Karussell der Blog-Artikel |
-| Blog Grid | `components/BlogGrid.tsx` | Blog-Übersicht |
-| Contact Form | `components/ContactForm.tsx` | Felder: Name, E-Mail, Telefon, Fachrichtung, Nachricht. Sendet via /api/contact |
+| Navigation | `components/Navigation.tsx` | Navbar |
+| Referenzkunden-Section | `components/ReferenzkundenSection.tsx` | Animierter Dark-Block. **Typewriter: "Pilotkonditionen."** (nicht mehr "Sie bestimmen den Wert"). Counter: 9 Ordinationen. 3 Referenz-Kacheln. CTA: Jetzt bewerben. |
+| Ask AI Section | `components/AskAiSection.tsx` | Buttons ChatGPT/Perplexity (URL prefill) + Claude/Gemini (clipboard). Toast-Notifications. |
+| Blog Carousel | `components/BlogCarousel.tsx` | Infiniter Marquee. Jede Karte: 148px Cover-Bild, Kategorie-Badge (Overlay), Datum, Titel, Beschreibung. BlogCard-Komponente extrahiert (für Original + Duplikate). |
+| Blog Grid | `components/BlogGrid.tsx` | Blog-Übersicht-Grid |
+| Contact Form | `components/ContactForm.tsx` | Felder: Name, E-Mail, Telefon, Fachrichtung, Nachricht → /api/contact |
 | Cookie Banner | `components/CookieBanner.tsx` | DSGVO Cookie-Consent |
 | KI-Systeme Marquee | `components/KiSystemeMarquee.tsx` | Scrollendes Markenband |
-| Scanner Embed | `components/ScannerEmbed.tsx` | iframe von agenturkunden.io |
-| Accessibility Widget | `components/AccessibilityWidget.tsx` | Links floating, WCAG 2.1 AA. 14 Funktionen: Schriftgröße, Kontrast, Vorlesen, Übersetzung (DeepL), Lese-Lineal, Graustufen etc. |
+| Scanner Embed | `components/ScannerEmbed.tsx` | iframe Einbettung |
+| Accessibility Widget | `components/AccessibilityWidget.tsx` | Links floating. 16 Features: Schriftgröße (3 Stufen), Zeilenabstand, Buchstabenabstand, Legasthenie-Schrift, Lese-Lineal, Vorlesen (TTS), Übersetzung DeepL 10 Sprachen, Hoher Kontrast, Dunkler Modus, Graustufen, Invertierte Farben, Bilder ausblenden, Links unterstreichen, Animationen stoppen, Fokus sichtbar, Mauszeiger groß. |
 | WCAG Scanner | `components/WcagScanner.tsx` | Internes Tool |
 
 ---
@@ -118,9 +121,9 @@ CTA für reguläre Pakete: **"Jetzt anfragen"** (NICHT bewerben).
 
 | Route | Datei | Funktion |
 |-------|-------|---------|
-| `POST /api/contact` | `app/api/contact/route.ts` | Kontaktformular → E-Mail via Nodemailer/SMTP an office@mypraxis.at. Felder: name, email, phone, fachrichtung, message. |
-| `POST /api/translate` | `app/api/translate/route.ts` | Übersetzung via DeepL Free API. Batch in 50er-Chunks. Quellsprache: DE. |
-| `GET /api/scan` | `app/api/scan/route.ts` | KI-Scanner (agenturkunden.io) |
+| `POST /api/contact` | `app/api/contact/route.ts` | Kontaktformular → Nodemailer SMTP → office@mypraxis.at. Felder: name, email, phone, fachrichtung, message. HTML-Escape für Sicherheit. |
+| `POST /api/translate` | `app/api/translate/route.ts` | DeepL Free API. Batch-Übersetzung. Quellsprache DE. 10 Zielsprachen. |
+| `GET /api/scan` | `app/api/scan/route.ts` | WCAG/Accessibility Scanner |
 
 ---
 
@@ -132,7 +135,7 @@ DEEPL_API_KEY=***          # DeepL Free API für Widget-Übersetzung
 WAVE_API_KEY=***           # WCAG Wave Scanner
 ```
 
-**Vercel Dashboard** (zusätzlich nötig für Kontaktformular):
+**Vercel Dashboard** (für Kontaktformular – NICHT in .env.local!):
 ```
 SMTP_HOST=smtp.strato.de   # oder smtp.gmail.com etc.
 SMTP_PORT=465              # 465 (SSL) oder 587 (STARTTLS)
@@ -140,7 +143,123 @@ SMTP_SECURE=true           # "true" für Port 465
 SMTP_USER=office@mypraxis.at
 SMTP_PASS=***
 ```
-⚠️ SMTP-Vars sind NUR im Vercel Dashboard, nicht in .env.local!
+
+**Blog-Bild-Generierung** (lokal, einmalig):
+```
+Together AI Key: tgp_v1_GHP2B0RP5UjY6pKROyhEMyOe6DYAATnyQLbMJxvw6tw
+Bestes Modell für photorealistische Szenen: google/imagen-4.0-preview
+Bildgröße: 1408×768 (JPEG, in public/blog/ als .png speichern)
+```
+
+---
+
+## Blog-System
+
+### Artikel hinzufügen (Schritt für Schritt)
+1. Neue `.md` Datei in `content/blog/` anlegen
+2. Pflicht-Frontmatter:
+```yaml
+---
+title: "Titel des Artikels"
+date: "2026-03-11"
+description: "Meta-Description, 1-2 Sätze"
+author: "Kevin Hofbauer"
+image: "/blog/slug-name.png"
+imageAlt: "Beschreibender Alt-Text"
+---
+```
+3. Cover-Bild als PNG in `public/blog/` ablegen (ideal: 1408×768, via Together AI Google Imagen 4.0-preview)
+4. In `components/BlogCarousel.tsx` Eintrag in `categoryColors` + `categoryLabels` für den Slug ergänzen
+
+### Aktuelle Artikel (10 Stück)
+```
+was-kostet-website-arzt           → Kosten          → bg-blue-100
+website-wechsel-bedenken          → Relaunch         → bg-orange-100
+ki-sichtbarkeit-aerzte            → KI               → bg-purple-100
+brauche-ich-website-als-arzt      → Grundlagen       → bg-green-100
+dsgvo-arzt-website                → Datenschutz      → bg-red-100
+barrierefreiheitsgesetz-aerzte    → Recht            → bg-yellow-100
+kmu-digital-foerderung-aerzte     → Förderung        → bg-emerald-100
+docfinder-herold-google-vergleich → Plattformen      → bg-sky-100
+ki-telefonassistent-arztpraxis    → KI-Telefon       → bg-violet-100
+barrierefreiheits-widget-arzt-website → Barrierefreiheit → bg-teal-100
+```
+
+---
+
+## SSR / Crawler-Kritische Patterns
+
+### Problem: Animierte State-Werte im statischen HTML
+Next.js rendert Client Components (`'use client'`) server-seitig vor. `useState(0)` wird im HTML als `0` ausgegeben – LLM-Crawler (GPTBot, ClaudeBot, PerplexityBot) lesen den falschen Wert.
+
+### Lösung: `useState(finalValue)` + `animated` Guard
+
+**Counter (implementiert in ReferenzkundenSection.tsx):**
+```tsx
+// ✅ RICHTIG – SSR rendert "9", Browser animiert 0→9
+const [count, setCount] = useState(target)   // ← target, nicht 0
+const [animated, setAnimated] = useState(false)
+
+useEffect(() => {
+  if (!inView || animated) return
+  setAnimated(true)
+  setCount(0) // Reset für Animation
+  // ... Animation 0→target
+}, [inView, animated])
+```
+
+**Typewriter (implementiert in ReferenzkundenSection.tsx):**
+```tsx
+// ✅ RICHTIG – SSR rendert "Pilotkonditionen.", Browser tippt es ein
+const [displayed, setDisplayed] = useState(text)   // ← text, nicht ''
+const [animated, setAnimated] = useState(false)
+
+useEffect(() => {
+  if (!inView || animated) return
+  setAnimated(true)
+  setDisplayed('')    // Reset für Animation
+  // ... Typewriter-Effekt
+}, [isInView, animated])
+```
+
+**Framer Motion `initial={{ opacity: 0 }}`** → kein Problem. Framer Motion setzt Opacity erst nach JS-Hydration via Inline-Style. Der Text ist im SSR-HTML vorhanden und für statische Crawler lesbar.
+
+---
+
+## GEO / SEO-Infrastruktur
+
+### Deployed und aktiv:
+- **`/robots.txt`** – 20+ KI-Crawler mit `Allow` (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, OAI-SearchBot, etc.)
+- **`/llms.txt`** – Strukturiertes KI-Profil für LLM-Agenten
+- **`/sitemap.xml`** – Auto-generiert via `app/sitemap.ts` (MetadataRoute API)
+- **Schema Markup v3** in `app/layout.tsx` (@graph mit 4 Entitäten):
+  - `ProfessionalService` – Firma, Leistungen, Preise, Kontakt, 9 Bundesländer
+  - `Person` – Kevin Hofbauer mit sameAs-Verweisen
+  - `WebSite` – Website-Metadaten
+  - `FAQPage` – strukturierte FAQ-Fragen
+- **Meta-Tags + Open Graph** vollständig in `app/layout.tsx`
+- **Canonical** – jede Seite setzt eigene `alternates: { canonical: '/pfad' }`
+
+### Warum Next.js statt Lovable/Wix:
+React SPA = CSR → KI-Crawler sehen `<div id="root"></div>`.
+Next.js SSG = vollständiges HTML → Crawler lesen alles.
+**Das ist ein konkretes Verkaufsargument gegenüber Konkurrenten.**
+
+---
+
+## Design-Konventionen
+
+### Farben
+```
+Primär-Blau (Hero, Headings): #112080 / #1e3ab8 / #2a50cc
+Orange-Akzent (CTAs):          #ff8a00
+Dark-Background (Referenz):    #0a0f1e / #07090f
+```
+
+### Kritische Design-Regeln
+- Niemals das Referenzkunden-Block-Design ändern ohne explizite Anweisung – es ist das Kern-Verkaufselement
+- Keine generischen Template-Designs – Kevin legt auf Exklusivität großen Wert
+- Keine unnötigen Framer Motion Animationen hinzufügen – nur bestehende Muster nutzen
 
 ---
 
@@ -148,134 +267,103 @@ SMTP_PASS=***
 
 | Datei | Zweck |
 |-------|-------|
-| `app/layout.tsx` | Root Layout + JSON-LD Schema Markup (@graph) + AccessibilityWidget + Navigation + CookieBanner |
-| `app/page.tsx` | Startseite |
+| `app/layout.tsx` | Root Layout + JSON-LD Schema + AccessibilityWidget + Navigation + CookieBanner |
+| `app/page.tsx` | Startseite (gesamter Page-Content) |
 | `app/globals.css` | Globale Styles + alle `a11y-*` CSS-Klassen für AccessibilityWidget |
 | `app/sitemap.ts` | Dynamische Sitemap (MetadataRoute API) |
-| `app/manifest.ts` | PWA Web App Manifest |
 | `app/opengraph-image.tsx` | OG-Image Generator (1200×630) |
-| `content/blog/` | Markdown-Dateien für Blog-Artikel |
-| `lib/blog.ts` | Blog-Daten + readingTime (200 WPM) |
-| `public/robots.txt` | 20+ KI-Crawler explizit erlaubt (GPTBot, ClaudeBot etc.) |
-| `public/llms.txt` | KI-lesbares Profil (Leistungen, Preise, Blog, Videos) |
-| `public/logo.webp` | Logo (23KB optimiert, war 1.2MB PNG) |
-| `next.config.js` | non-www → www Redirect (permanent: true) |
+| `content/blog/` | Markdown-Dateien der Blogartikel |
+| `lib/blog.ts` | getSortedPostsData(), getPostData(), formatDate(). Lesezeit: 200 WPM |
+| `public/robots.txt` | 20+ KI-Crawler erlaubt |
+| `public/llms.txt` | KI-lesbares Profil |
+| `public/blog/` | Cover-Images der Blogartikel |
+| `next.config.js` | non-www → www Redirect (permanent: true) + images.unoptimized: true |
 
 ---
 
-## Schema Markup (layout.tsx – @graph)
+## Technische Sonderfälle / Fallstricke
 
-Vier Entitäten im JSON-LD:
-1. **ProfessionalService** (`#organization`) – Firma, Leistungen, Preise, areaServed alle 9 Bundesländer
-2. **Person** (`#kevin-hofbauer`) – Kevin Hofbauer mit sameAs LinkedIn/Facebook/hofbauer.marketing
-3. **WebSite** (`#website`) – Website-Metadaten
-4. **FAQPage** (`#faq`) – 6 Fragen (Kosten, KI-Readiness, KMU.DIGITAL, Ärztezentren, llms.txt, Dauer)
-
----
-
-## Redirect-Konfiguration
-
-- **Vercel Dashboard:** mypraxis.at → 308 (permanent) → www.mypraxis.at ← MUSS SO BLEIBEN
-- **next.config.js:** Zusätzlicher non-www → www Redirect als Absicherung
-- HTTP→HTTPS macht Vercel automatisch
+- **TypeScript-Fehler 7026/2307 in VSCode → ignorieren.** Phantom-Fehler im Editor, Vercel baut fehlerfrei.
+- **NIEMALS** `app/sitemap.xml/` als Verzeichnis anlegen → bricht Turbopack Build.
+- **NIEMALS** hardcodiertes `<link rel="canonical">` in layout.tsx → überschreibt Sub-Seiten.
+- **NIEMALS** statische `public/sitemap.xml` anlegen → kollidiert mit `app/sitemap.ts`.
+- **`images.unoptimized: true`** in next.config.js – Vercel Image Optimization deaktiviert, muss so bleiben.
+- **Vercel Dashboard:** mypraxis.at → 308 permanent → www.mypraxis.at. Nicht anfassen.
 
 ---
 
-## Blog-Artikel (content/blog/)
+## KI-Sprachregeln (Copy-Konventionen)
 
-9 Artikel mit vollständigem BlogPosting-Schema:
-1. `ki-sichtbarkeit-aerzte`
-2. `was-kostet-website-arzt`
-3. `kmu-digital-foerderung-aerzte`
-4. `dsgvo-arzt-website`
-5. `docfinder-herold-google-vergleich`
-6. `brauche-ich-website-als-arzt`
-7. `ki-telefonassistent-arztpraxis`
-8. `barrierefreiheitsgesetz-aerzte`
-9. `website-wechsel-bedenken`
+Kein absolutes Versprechen – nur Wahrscheinlichkeitsaussagen:
 
----
+```
+❌ "Wir sorgen dafür, dass ChatGPT Ihre Ordination empfiehlt"
+✅ "Wir erhöhen die Chance deutlich, dass ChatGPT Ihre Ordination kennt und nennt"
 
-## Barrierefreiheit (vollständig implementiert)
+❌ "Ihre Ordination wird in der Antwort genannt"
+✅ "steigt die Chance deutlich, dass Ihre Ordination korrekt erfasst und in der Antwort genannt wird"
 
-- **Widget:** Links floating, BFSG-konform, kein externes Tracking
-- **CSS-Klassen:** alle `a11y-*` in globals.css
-- **Erklärungsseite:** `/barrierefreiheit` (WCAG 2.1 AA, BaFG)
-- **DeepL Übersetzung:** 10 Sprachen (DE, EN, RU, TR, AR, RO, PL, HU, UK, CS)
-- **Widget eingebunden in:** `app/layout.tsx` mit `accentColor="#1d4ed8"`
+❌ "ohne KI-Readiness wird Ihre Ordination schlicht nicht genannt"
+✅ "ohne strukturierte Daten sinkt die Chance erheblich, korrekt erfasst zu werden"
+```
 
 ---
 
-## AskAiSection – Frage & Logik
+## Deployment
 
-**Aktuelle Frage:**
-`"Was macht mypraxis.at und welche Leistungen bieten sie für niedergelassene Ärzte in Österreich an?"`
+```bash
+# Lokale Entwicklung
+cd /Users/kevinhofbauer/Downloads/mypraxis-nextjs
+npm run dev   # Port 3002
 
-**Services:**
-- Perplexity: prefill via `?q=` URL-Parameter ✅
-- ChatGPT: prefill via `?q=` URL-Parameter ✅
-- Claude: clipboard (kein URL-Prefill möglich) ⚠️
-- Gemini: clipboard (kein URL-Prefill möglich) ⚠️
-
-**Bei prefill:** Toast "Frage bereits eingefügt, einfach Enter drücken"
-**Bei clipboard:** Toast "Frage kopiert! In [Name] einfügen und Enter drücken"
+# Deploy (GitHub → Vercel auto-deploy)
+git add <dateien>
+git commit -m "feat/fix/style: beschreibung"
+git push
+```
 
 ---
 
 ## KMU.DIGITAL Förderung
 
-- **Förderquote:** 30 % der Kosten, max. € 6.000 pro Unternehmen
+- **Förderquote:** 30 % der Netto-Kosten, max. € 6.000 pro Unternehmen
 - **Voraussetzung:** Strategieberatung durch zertifizierten Digital Consultant (CDC), ca. € 500 (davon € 250 gefördert)
-- **Kevin hat einen externen Förderberater** der Beratung + Antragstellung übernimmt
+- Kevin hat einen **externen Förderberater** der Beratung + Antragstellung übernimmt
 - **Ärztezentren:** Jeder Arzt = eigenes KMU = eigener Förderantrag möglich
 
 ---
 
-## GEO-Strategie (Generative Engine Optimization)
+## AskAiSection – Details
 
-**Drei-Schichten-Ansatz:**
-1. **Strukturierte Daten** – Schema Markup (JSON-LD) ✅
-2. **Semantische Inhalte** – 9 Blog-Artikel, llms.txt ✅
-3. **KI-Readiness** – llms.txt, robots.txt mit 20+ KI-Crawlern ✅
+**Aktuelle Frage:**
+`"Was macht mypraxis.at und welche Leistungen bieten sie für niedergelassene Ärzte in Österreich an?"`
 
----
-
-## KRITISCHE REGELN – NIEMALS VERGESSEN
-
-### Konzept-Regeln:
-- **"Jetzt bewerben"** = NUR für Referenzkundenprogramm
-- **"Jetzt anfragen"** = für reguläre Pakete (/preise + Hauptseite Feature-Karten)
-- **Preise auf Hauptseite:** KEINE fixen Preise (Referenzkundenmodus "Sie bestimmen den Wert")
-- **Preise auf /preise:** NUR in der "Reguläre Pakete"-Section (nach dem Programm)
-- **ReferenzkundenSection 2 Karten:** Website-Paket (kein Preis!), Pflicht-Betreuung 24 Monate (kein Preis!) – KEIN KMU.DIGITAL
-- **Pflicht-Betreuung 24 Monate** gilt NUR für Referenzkunden – reguläre Kunden: 6–12 Monate empfohlen (nicht Pflicht)
-- **9 Ordinationen gesamt** = 3 Kassa + 3 Privat + 3 Ärztezentren (NICHT 27!)
-
-### Technische Regeln:
-- **TypeScript-Fehler 7026/2307 in VSCode → ignorieren** (Phantom-Fehler, Vercel baut fehlerfrei)
-- **NIEMALS** `app/sitemap.xml/` als Verzeichnis anlegen → bricht Turbopack Build
-- **NIEMALS** hardcodiertes `<link rel="canonical">` in layout.tsx → überschreibt Sub-Seiten
-- **NIEMALS** statische `public/sitemap.xml` anlegen → kollidiert mit `app/sitemap.ts`
-- **Canonical:** Jede Seite definiert eigene Canonical via `alternates: { canonical: '/pfad' }`
-- **images.unoptimized: true** in next.config.js – Vercel Image Optimization deaktiviert (bleibt so!)
-
----
-
-## SEO-Status (Stand: März 2026)
-
-- Sitemap: `app/sitemap.ts` → dynamisch generiert
-- Non-www Links: In allen Demo-Seiten behoben (zeigen auf www.mypraxis.at)
-- Google Search Console: Sitemap eingereicht unter https://www.mypraxis.at/sitemap.xml
-- robots.txt: 20+ KI-Crawler explizit erlaubt
+| Service | Prefill-Methode |
+|---------|----------------|
+| Perplexity | URL `?q=` Parameter – Frage bereits eingefügt, Enter reicht |
+| ChatGPT | URL `?q=` Parameter – Frage bereits eingefügt, Enter reicht |
+| Claude | Clipboard (kein URL-Prefill möglich) |
+| Gemini | Clipboard (kein URL-Prefill möglich) |
 
 ---
 
 ## Offene Maßnahmen (manuell – nicht im Code)
 
-- [ ] SMTP-Variablen in Vercel Dashboard prüfen/setzen (für Kontaktformular)
-- [ ] Google Business Profile einrichten und optimieren
+- [ ] SMTP-Variablen in Vercel Dashboard prüfen/setzen
+- [ ] Google Business Profile einrichten
 - [ ] Wikidata-Einträge: mypraxis.at + Kevin Hofbauer anlegen
-- [ ] Branchenverzeichnisse: herold.at, firmenabc.at, WKO, etc.
-- [ ] Kundenstimmen für E-E-A-T sammeln (nach Referenzkundenprogramm)
+- [ ] Branchenverzeichnisse: herold.at, firmenabc.at, WKO
 - [ ] LinkedIn-Artikel schreiben
-- [ ] Reddit-Engagement (r/Austria, r/selbstaendig)
+- [ ] GA4 Setup + KI-Traffic-Tracking
+
+---
+
+## Verwandtes Projekt: hofbauer.marketing
+
+```
+Pfad:    /Users/kevinhofbauer/Downloads/hofbauer-marketing-nextjs
+Port:    3000
+Stack:   Next.js 16.1.6, React 19, Tailwind CSS 4, Framer Motion
+E-Mail:  kontakt@hofbauer.marketing
+API:     Resend (RESEND_API_KEY in .env.local – NICHT Nodemailer!)
+```
