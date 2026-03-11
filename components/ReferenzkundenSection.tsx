@@ -56,7 +56,7 @@ function Typewriter({ text, isInView, delay = 0 }: { text: string; isInView: boo
 
   return (
     <span className="whitespace-nowrap">
-      <span className={!done ? 'shimmer-gold' : ''} style={done ? { color: '#ff8a00' } : {}}>
+      <span className={done ? 'shimmer-gold' : ''} style={!done ? { color: '#ff8a00' } : {}}>
         {displayed}
       </span>
       {!done && (
