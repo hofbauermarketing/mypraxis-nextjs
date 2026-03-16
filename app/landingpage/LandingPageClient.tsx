@@ -754,6 +754,19 @@ function QualifyingFunnel() {
                 return
               }
               sendFunnelNotification('cal')
+              // Google Ads Conversion – nur einmal pro Session
+              if (!sessionStorage.getItem('funnel_converted')) {
+                sessionStorage.setItem('funnel_converted', '1')
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const gtag = (window as any).gtag
+                if (typeof gtag === 'function') {
+                  gtag('event', 'conversion', {
+                    send_to: 'AW-18019658217/CONVERSION_LABEL',
+                    value: 3950.0,
+                    currency: 'EUR',
+                  })
+                }
+              }
               setSubmitted(true)
             }}
             className="flex flex-col items-center gap-1.5 w-full bg-[#ff8a00] hover:bg-orange-600 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
