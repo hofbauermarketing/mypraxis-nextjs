@@ -419,13 +419,11 @@ function PilotPricingCards() {
 
 // ─── Qualifying Funnel ────────────────────────────────────────────────────────
 type FunnelStep = 1 | 2 | 3 | 4 | 5
-type CallStatus = 'idle' | 'calling' | 'success' | 'error'
 
 function QualifyingFunnel() {
   const [step, setStep] = useState<FunnelStep>(1)
   const [answers, setAnswers] = useState<Record<number, string>>({})
   const [formData, setFormData] = useState({ name: '', phone: '', fachrichtung: '', ort: '' })
-  const [callStatus, setCallStatus] = useState<CallStatus>('idle')
   const funnelRef = useRef<HTMLDivElement>(null)
 
   function scrollToFunnel() {
@@ -459,29 +457,6 @@ function QualifyingFunnel() {
       })
     } catch {
       // fire-and-forget — never block the user flow
-    }
-  }
-
-  async function handleJenny() {
-    if (!formData.name || !formData.phone) return
-    setCallStatus('calling')
-    // Send notification email in parallel — don't await to keep UX fast
-    sendFunnelNotification('jenny')
-    try {
-      const res = await fetch('/api/call', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          phone: formData.phone,
-          name: formData.name,
-          fachrichtung: formData.fachrichtung,
-          ort: formData.ort,
-        }),
-      })
-      if (res.ok) setCallStatus('success')
-      else setCallStatus('error')
-    } catch {
-      setCallStatus('error')
     }
   }
 
@@ -618,18 +593,8 @@ function QualifyingFunnel() {
       {/* Step 5 – Kontakt */}
       {step === 5 && (
         <div>
-          {callStatus === 'success' ? (
-            <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-              <div className="text-4xl mb-4">📞</div>
-              <h3 className="font-bold text-green-800 text-xl mb-2">Jenny ruft Sie gleich an!</h3>
-              <p className="text-green-700 text-sm">
-                Unser digitaler Assistent meldet sich in den nächsten Minuten unter{' '}
-                <strong>{formData.phone}</strong>. Bitte halten Sie das Telefon bereit.
-              </p>
-            </div>
-          ) : (
-            <>
-              {/* Dringlichkeits-Nudge für späte Starter */}
+          <>
+            {/* Dringlichkeits-Nudge für späte Starter */}
               {(answers[4] === 'bald' || answers[4] === 'spaeter') && (
                 <div className="bg-amber-50 border border-amber-300 rounded-2xl px-5 py-4 mb-4 flex gap-3">
                   <span className="text-lg shrink-0 mt-0.5">⏳</span>
@@ -706,48 +671,23 @@ function QualifyingFunnel() {
                 </div>
               </div>
 
-              <p className="text-xs text-gray-400 text-center mb-4">
-                Wählen Sie, wie Sie Kevin kennenlernen möchten:
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-3">
-                <button
-                  onClick={handleJenny}
-                  disabled={!formData.name || !formData.phone || callStatus === 'calling'}
-                  className="flex flex-col items-center gap-1.5 bg-[#ff8a00] hover:bg-orange-600 disabled:opacity-50 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg"
-                >
-                  <span className="text-2xl">{callStatus === 'calling' ? '⏳' : '📞'}</span>
-                  <span className="text-sm font-bold">
-                    {callStatus === 'calling' ? 'Wird verbunden...' : 'Jenny ruft mich an'}
-                  </span>
-                  <span className="text-xs font-normal opacity-80">Sofort · in ~4 Minuten</span>
-                </button>
-
-                <a
-                  href="https://cal.com/kevin-hofbauer-marketing/mypraxis.at"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => sendFunnelNotification('cal')}
-                  className="flex flex-col items-center gap-1.5 bg-[#112080] hover:bg-[#1e3ab8] text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
-                >
-                  <span className="text-2xl">📅</span>
-                  <span className="text-sm font-bold">Termin mit Kevin</span>
-                  <span className="text-xs font-normal opacity-80">Beratungsgespräch vereinbaren</span>
-                </a>
-              </div>
-
-              {callStatus === 'error' && (
-                <p className="text-red-500 text-xs text-center mt-3">
-                  Anruf konnte nicht ausgelöst werden – bitte wählen Sie alternativ den Termin mit Kevin.
-                </p>
-              )}
+              <a
+                href="https://cal.com/kevin-hofbauer-marketing/mypraxis.at"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => sendFunnelNotification('cal')}
+                className="flex flex-col items-center gap-1.5 w-full bg-[#ff8a00] hover:bg-orange-600 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
+              >
+                <span className="text-2xl">📅</span>
+                <span className="text-sm font-bold">Jetzt Termin mit Kevin buchen</span>
+                <span className="text-xs font-normal opacity-80">Kostenloses Beratungsgespräch</span>
+              </a>
 
               <p className="text-gray-400 text-xs text-center mt-4">
                 Mit dem Fortfahren stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer{' '}
                 <a href="/datenschutz" className="underline hover:text-gray-600">Datenschutzerklärung</a> zu.
               </p>
-            </>
-          )}
+          </>
         </div>
       )}
     </div>
