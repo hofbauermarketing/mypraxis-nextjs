@@ -1034,6 +1034,10 @@ const FAQ_ITEMS = [
     q: 'Wie baut mypraxis.at die Websites?',
     a: 'Wir arbeiten mit Next.js – der gleichen Technologie, die große internationale Plattformen antreibt. Die Bilder werden mit Adobe Firefly AI generiert, das bedeutet: kommerzielle Lizenz, kein Urheberrechtsproblem, und ein einheitlicher visueller Stil, der zu Ihrer Praxis passt. Jede Website ist ein Einzelstück – kein Copy-Paste, keine Vorlage. Hosting und Domain sind inklusive. Auf Wunsch erhalten Sie den vollständigen Quellcode – die Website gehört Ihnen, nicht uns. Und anders als bei Baukästen: Wenn Sie jemals wechseln möchten, können Sie das – Sie sind nicht eingesperrt.',
   },
+  {
+    q: 'Gibt es den kostenlosen KI-Scan wirklich?',
+    a: 'Ja – und wir stehen zu unserem Wort. Nach erfolgreicher Bewerbung erhalten Sie zum Vorgespräch hinzu eine vollständige Potenzialauswertung Ihrer Ordination von uns. Diese umfasst Ihre aktuelle KI-Lesbarkeit, Verbesserungspotenzial, Kundenansprache und vieles mehr. Kein Versprechen ohne Einlösung.',
+  },
 ]
 
 function FaqAccordion() {
