@@ -236,12 +236,13 @@ export default function AccessibilityWidget({
     <>
       {settings.readingMask && <ReadingMask />}
 
-      <div ref={panelRef} className="fixed left-0 top-1/2 -translate-y-1/2 z-[9999] flex flex-col items-start gap-1">
+      {/* Mobile: top-center tab; sm+: left-side tab */}
+      <div ref={panelRef} className="fixed z-[9999] top-0 left-1/2 -translate-x-1/2 sm:left-0 sm:top-1/2 sm:translate-x-0 sm:-translate-y-1/2 flex flex-col items-center sm:items-start gap-1">
 
-        {/* Puls-Ring */}
+        {/* Puls-Ring – only on sm+ (left-side shape) */}
         {!open && (
           <span
-            className="absolute -left-1 top-0 w-[calc(100%+4px)] h-[52px] rounded-r-2xl pointer-events-none animate-a11y-pulse"
+            className="absolute -left-1 top-0 w-[calc(100%+4px)] h-[52px] rounded-r-2xl pointer-events-none animate-a11y-pulse hidden sm:block"
             style={{ backgroundColor: accentColor }}
           />
         )}
@@ -252,14 +253,14 @@ export default function AccessibilityWidget({
           aria-label="Barrierefreiheit Einstellungen öffnen"
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="relative flex items-center gap-2 pl-2 pr-3 h-[52px] rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none"
+          className="relative flex items-center gap-2 px-3 py-2 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none"
           style={{ backgroundColor: accentColor }}
         >
           <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
             <circle cx="12" cy="4" r="2.2" />
             <path d="M18 8.5c-1.5-.3-3.8-.5-6-.5s-4.5.2-6 .5l.4 1.5 5.6-.3v3.5L9.5 19h2.3l.7-3.5.7 3.5h2.3l-2.5-5.3V10.2l5.6.3z" />
           </svg>
-          <span className="text-white text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap">
+          <span className="text-white text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap hidden sm:inline">
             Barriere-<br />freiheit
           </span>
           {activeCount > 0 && (
@@ -269,8 +270,8 @@ export default function AccessibilityWidget({
           )}
         </button>
 
-        {/* WCAG Badge */}
-        <div className="flex items-center gap-1 pl-2 pr-2.5 py-1 rounded-r-xl shadow text-white text-[10px] font-bold tracking-wider" style={{ backgroundColor: accentColor + 'cc' }} aria-hidden="true">
+        {/* WCAG Badge – only on sm+ */}
+        <div className="hidden sm:flex items-center gap-1 pl-2 pr-2.5 py-1 rounded-r-xl shadow text-white text-[10px] font-bold tracking-wider" style={{ backgroundColor: accentColor + 'cc' }} aria-hidden="true">
           <span>♿</span><span>WCAG 2.1</span>
         </div>
 
@@ -280,7 +281,7 @@ export default function AccessibilityWidget({
             role="dialog"
             aria-modal="false"
             aria-label="Barrierefreiheitseinstellungen"
-            className="absolute left-[46px] top-1/2 -translate-y-1/2 w-[288px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
+            className="absolute top-full mt-1 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:top-1/2 sm:-translate-y-1/2 sm:left-[46px] w-[288px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
             style={{ maxHeight: '90vh' }}
           >
             {/* Header */}
