@@ -416,6 +416,64 @@ function PilotPricingCards() {
   )
 }
 
+// ─── Cal.com Inline Embed ─────────────────────────────────────────────────────
+function CalInlineEmbed({ name, email, phone }: { name: string; email: string; phone: string }) {
+  const [loaded, setLoaded] = useState(false)
+  const ns = 'mypraxis-booking'
+
+  useEffect(() => {
+    const init = () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const Cal = (window as any).Cal as ((...args: unknown[]) => void) & { ns: Record<string, (...args: unknown[]) => void> }
+      if (!Cal) return
+      try {
+        Cal('init', ns, { origin: 'https://cal.com' })
+        Cal.ns[ns]('inline', {
+          elementOrSelector: '#cal-inline-embed',
+          calLink: 'kevin-hofbauer-marketing/mypraxis.at',
+          config: {
+            layout: 'month_view',
+            ...(name.trim()  && { name:  name.trim() }),
+            ...(email.trim() && { email: email.trim() }),
+            ...(phone.trim() && { notes: `Telefon: ${phone.trim()}` }),
+          },
+        })
+        Cal.ns[ns]('ui', {
+          styles: { branding: { brandColor: '#112080' } },
+          hideEventTypeDetails: false,
+          layout: 'month_view',
+        })
+      } catch { /* already initialised */ }
+      setLoaded(true)
+    }
+
+    if ((window as any).Cal) { // eslint-disable-line @typescript-eslint/no-explicit-any
+      init()
+    } else {
+      const script = document.createElement('script')
+      script.src = 'https://app.cal.com/embed/embed.js'
+      script.async = true
+      script.onload = init
+      document.head.appendChild(script)
+    }
+  }, []) // run once on mount
+
+  return (
+    <div className="relative -mx-2">
+      {!loaded && (
+        <div className="flex items-center justify-center py-16 text-gray-400 text-sm gap-2">
+          <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
+          </svg>
+          Kalender wird geladen…
+        </div>
+      )}
+      <div id="cal-inline-embed" style={{ minHeight: 600, width: '100%' }} />
+    </div>
+  )
+}
+
 // ─── Qualifying Funnel ────────────────────────────────────────────────────────
 type FunnelStep = 1 | 2 | 3 | 4 | 5
 
@@ -689,7 +747,6 @@ function QualifyingFunnel() {
               }
               sendFunnelNotification('cal')
               setSubmitted(true)
-              window.open('https://cal.com/kevin-hofbauer-marketing/mypraxis.at', '_blank')
             }}
             className="flex flex-col items-center gap-1.5 w-full bg-[#ff8a00] hover:bg-orange-600 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
           >
@@ -705,37 +762,27 @@ function QualifyingFunnel() {
         </div>
       )}
 
-      {/* Success Screen */}
+      {/* Success Screen – inline cal.com booking widget */}
       {step === 5 && submitted && (
-        <div className="text-center py-4">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
+        <div>
+          <div className="bg-green-50 border border-green-200 rounded-2xl px-4 py-3 mb-5 flex gap-3 items-center">
+            <div className="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <p className="font-bold text-green-800 text-sm">Bewerbung gespeichert!</p>
+              <p className="text-green-700 text-xs">
+                Wählen Sie jetzt Ihren Wunschtermin – Ihre Daten sind bereits eingetragen.
+              </p>
+            </div>
           </div>
-          <h3 className="text-xl font-bold text-[#112080] mb-2">Bewerbung erfolgreich übermittelt!</h3>
-          <p className="text-gray-500 text-sm mb-1">
-            Vielen Dank, <strong>{formData.name.trim()}</strong>. Wir haben Ihre Anfrage erhalten.
-          </p>
-          <p className="text-gray-500 text-sm mb-6">
-            Kevin meldet sich in Kürze telefonisch unter <strong>{formData.phone.trim()}</strong>.
-            {formData.email.trim() && (
-              <> Eine Bestätigung wurde an <strong>{formData.email.trim()}</strong> gesendet.</>
-            )}
-          </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 mb-4">
-            <p className="text-[#112080] text-sm font-semibold mb-1">📅 Termin-Buchung geöffnet</p>
-            <p className="text-gray-500 text-xs">Der Buchungskalender wurde in einem neuen Tab geöffnet. Falls er sich nicht geöffnet hat:</p>
-            <a
-              href="https://cal.com/kevin-hofbauer-marketing/mypraxis.at"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-2 text-[#112080] text-xs font-bold underline hover:text-blue-800"
-            >
-              Hier klicken zum Termin buchen →
-            </a>
-          </div>
-          <p className="text-gray-300 text-xs">Sie können dieses Fenster jetzt schließen oder die Seite weiter erkunden.</p>
+          <CalInlineEmbed
+            name={formData.name}
+            email={formData.email}
+            phone={formData.phone}
+          />
         </div>
       )}
     </div>
