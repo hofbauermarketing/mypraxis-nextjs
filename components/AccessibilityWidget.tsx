@@ -201,65 +201,22 @@ export default function AccessibilityWidget({
     }
   }, [])
 
-  // ── Text-to-Speech ────────────────────────────────────────────────
-  const SITE_DESCRIPTION =
-    'Willkommen bei mypraxis.at – Österreichs Spezialist für Arzt-Websites der nächsten Generation. ' +
-
-    'Was ist das Problem? Viele Ärztinnen und Ärzte in Österreich verlieren täglich wertvolle Zeit – ' +
-    'weil Patienten dieselben Fragen stellen, wieder und wieder. ' +
-    'Was kostet eine Konsultation? Welche Krankenkassen werden akzeptiert? Was sind die Öffnungszeiten? ' +
-    'Eine gute Website beantwortet all diese Fragen, bevor der Patient überhaupt anruft. ' +
-    'Das spart bis zu 18 Minuten pro Termin – bei 20 Terminen am Tag macht das mehrere Stunden aus. ' +
-
-    'Dazu kommt ein neues, dringendes Problem: KI-Sichtbarkeit. ' +
-    'Immer mehr Patienten fragen nicht mehr Google, sondern ChatGPT, Perplexity, Google Gemini oder Apple Siri: ' +
-    'Welcher Arzt in meiner Nähe ist empfehlenswert? ' +
-    'Wenn Ihre Website nicht für KI-Systeme lesbar und strukturiert ist, werden Sie dort schlicht nicht genannt. ' +
-    'Wer nicht sichtbar ist, existiert nicht – nicht einmal in der KI-Welt. ' +
-
-    'Was macht mypraxis.at? ' +
-    'Wir bauen professionelle, individuelle Websites für Ihre Ordination – ' +
-    'technisch gebaut mit Next.js, einer der modernsten Web-Technologien weltweit, ' +
-    'KI-lesbar strukturiert, barrierefrei nach WCAG 2.1, und mehrsprachig auf Knopfdruck. ' +
-    'Jede Website ist ein Einzelstück. Kein Baukasten, kein Template, keine Kompromisse. ' +
-    'Bilder werden mit Adobe Firefly erstellt – mit kommerzieller Lizenz, ganz ohne Urheberrechtsprobleme. ' +
-    'Hosting und Domain sind inklusive. Auf Wunsch erhalten Sie den vollständigen Quellcode – ' +
-    'die Website gehört Ihnen, nicht uns. ' +
-
-    'Was ist das Pilotprogramm? ' +
-    'Wir befinden uns in der Aufbauphase und suchen Ordinationen, die gemeinsam mit uns wachsen möchten. ' +
-    'Als Pilotpartner erhalten Sie Premium-Qualität zu einem bevorzugten Einstiegspreis. ' +
-    'Andere Anbieter verlangen ab 12.000 Euro für vergleichbare Websites – ' +
-    'wir investieren derzeit bewusst in Vertrauen und Referenzen statt in Gewinn. ' +
-    'Das ändert sich, die Qualität nicht. ' +
-
-    'Was erhalten Sie bei einer Bewerbung? ' +
-    'Nach erfolgreicher Bewerbung führen wir für Sie kostenlos eine vollständige Potenzialauswertung durch. ' +
-    'Diese umfasst Ihre aktuelle KI-Lesbarkeit, Verbesserungspotenzial, Kundenansprache und vieles mehr. ' +
-    'Kein Versprechen ohne Einlösung. ' +
-
-    'Wie geht es weiter? ' +
-    'Bewerben Sie sich jetzt kostenlos über das Formular auf dieser Seite. ' +
-    'Beantworten Sie vier kurze Fragen und buchen Sie direkt einen Termin mit Kevin Hofbauer, dem Gründer von mypraxis.at. ' +
-
-    'Kontakt und Erreichbarkeit: ' +
-    'E-Mail: office at mypraxis punkt at. ' +
-    'Telefon: plus 43 664 19 15 447. ' +
-    'Adresse: Kevin Hofbauer Einzelunternehmen, Hauptplatz 12, 3902 Vitis, Niederösterreich.'
+  // ── Text-to-Speech (ElevenLabs audio) ────────────────────────────
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const toggleSpeak = useCallback(() => {
-    if (!('speechSynthesis' in window)) return
+    if (!audioRef.current) {
+      audioRef.current = new Audio('/beschreibung.mp3')
+      audioRef.current.onended = () => setSpeaking(false)
+      audioRef.current.onerror = () => setSpeaking(false)
+    }
     if (speaking) {
-      window.speechSynthesis.cancel()
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
       setSpeaking(false)
       return
     }
-    const utter = new SpeechSynthesisUtterance(SITE_DESCRIPTION)
-    utter.lang = 'de-AT'
-    utter.rate = 0.92
-    utter.onend = () => setSpeaking(false)
-    utter.onerror = () => setSpeaking(false)
-    window.speechSynthesis.speak(utter)
+    audioRef.current.play()
     setSpeaking(true)
   }, [speaking])
 
