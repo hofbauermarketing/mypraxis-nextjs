@@ -1101,9 +1101,14 @@ export default function LandingPageClient() {
 
       {/* HEADER */}
       <header className="bg-white/95 backdrop-blur border-b border-gray-100 px-6 py-4 flex items-center justify-between sticky top-0 z-50 shadow-sm">
-        <div className="text-xl font-bold text-[#112080]">
-          <span className="text-[#ff8a00]">my</span>praxis.at
-        </div>
+        <Image
+          src="/logo.webp"
+          alt="mypraxis.at"
+          width={140}
+          height={40}
+          className="h-8 w-auto"
+          priority
+        />
         <a
           href="#funnel"
           className="bg-[#ff8a00] text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-orange-600 transition-colors"

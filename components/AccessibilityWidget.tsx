@@ -253,10 +253,19 @@ export default function AccessibilityWidget({
           aria-label="Barrierefreiheit Einstellungen öffnen"
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="relative flex items-center gap-2 px-3 py-2 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none"
+          className="relative flex items-center gap-2 px-3 py-1.5 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none"
           style={{ backgroundColor: accentColor }}
         >
-          <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 flex-shrink-0" aria-hidden="true">
+          {/* Mobile layout: icon + hint row */}
+          <span className="sm:hidden flex flex-col items-center gap-0.5">
+            <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5" aria-hidden="true">
+              <circle cx="12" cy="4" r="2.2" />
+              <path d="M18 8.5c-1.5-.3-3.8-.5-6-.5s-4.5.2-6 .5l.4 1.5 5.6-.3v3.5L9.5 19h2.3l.7-3.5.7 3.5h2.3l-2.5-5.3V10.2l5.6.3z" />
+            </svg>
+            <span className="text-white text-[8px] font-bold tracking-wide leading-none whitespace-nowrap opacity-90">♿ Aa 🌐</span>
+          </span>
+          {/* Desktop layout: icon + text */}
+          <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 flex-shrink-0 hidden sm:block" aria-hidden="true">
             <circle cx="12" cy="4" r="2.2" />
             <path d="M18 8.5c-1.5-.3-3.8-.5-6-.5s-4.5.2-6 .5l.4 1.5 5.6-.3v3.5L9.5 19h2.3l.7-3.5.7 3.5h2.3l-2.5-5.3V10.2l5.6.3z" />
           </svg>
