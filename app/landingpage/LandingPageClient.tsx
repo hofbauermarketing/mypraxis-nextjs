@@ -422,7 +422,9 @@ type FunnelStep = 1 | 2 | 3 | 4 | 5
 function QualifyingFunnel() {
   const [step, setStep] = useState<FunnelStep>(1)
   const [answers, setAnswers] = useState<Record<number, string>>({})
-  const [formData, setFormData] = useState({ name: '', phone: '', fachrichtung: '', ort: '' })
+  const [formData, setFormData] = useState({ name: '', phone: '', fachrichtung: '', ort: '', email: '' })
+  const [submitted, setSubmitted] = useState(false)
+  const [formError, setFormError] = useState('')
   const funnelRef = useRef<HTMLDivElement>(null)
 
   function scrollToFunnel() {
@@ -437,7 +439,7 @@ function QualifyingFunnel() {
     scrollToFunnel()
   }
 
-  async function sendFunnelNotification(method: 'jenny' | 'cal') {
+  async function sendFunnelNotification(method: 'cal') {
     try {
       await fetch('/api/funnel-notify', {
         method: 'POST',
@@ -447,6 +449,7 @@ function QualifyingFunnel() {
           phone: formData.phone,
           fachrichtung: formData.fachrichtung,
           ort: formData.ort,
+          email: formData.email,
           q1: answers[1] ?? '',
           q2: answers[2] ?? '',
           q3: answers[3] ?? '',
@@ -590,103 +593,149 @@ function QualifyingFunnel() {
       )}
 
       {/* Step 5 – Kontakt */}
-      {step === 5 && (
+      {step === 5 && !submitted && (
         <div>
-          <>
-            {/* Dringlichkeits-Nudge für späte Starter */}
-              {(answers[4] === 'bald' || answers[4] === 'spaeter') && (
-                <div className="bg-amber-50 border border-amber-300 rounded-2xl px-5 py-4 mb-4 flex gap-3">
-                  <span className="text-lg shrink-0 mt-0.5">⏳</span>
-                  <div>
-                    <p className="text-amber-800 font-bold text-sm mb-1">
-                      Startplätze sind begrenzt
-                    </p>
-                    <p className="text-amber-700 text-xs leading-relaxed">
-                      {answers[4] === 'spaeter'
-                        ? 'Aktuell vergeben wir Starttermine bevorzugt an Ordinationen, die in den nächsten Tagen loslegen möchten. Sie können sich trotzdem jetzt bewerben – wir melden uns sobald ein Platz verfügbar ist. Wer früher startet, profitiert früher.'
-                        : 'Wir empfehlen, nicht zu lange zu warten – verfügbare Starttermine gehen rasch. Am meisten profitieren Ordinationen, die innerhalb der nächsten 14 Tage in die Umsetzung gehen.'
-                      }
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              <div className="bg-[#112080]/5 border border-[#112080]/20 rounded-2xl p-5 mb-6 text-center">
-                <div className="text-2xl mb-2">✅</div>
-                <h3 className="font-bold text-[#112080] text-lg mb-1">
-                  Sie qualifizieren sich für das Pilotprogramm.
-                </h3>
-                <p className="text-gray-500 text-sm">
-                  Wie sollen wir Sie erreichen?
+          {/* Dringlichkeits-Nudge für späte Starter */}
+          {(answers[4] === 'bald' || answers[4] === 'spaeter') && (
+            <div className="bg-amber-50 border border-amber-300 rounded-2xl px-5 py-4 mb-4 flex gap-3">
+              <span className="text-lg shrink-0 mt-0.5">⏳</span>
+              <div>
+                <p className="text-amber-800 font-bold text-sm mb-1">Startplätze sind begrenzt</p>
+                <p className="text-amber-700 text-xs leading-relaxed">
+                  {answers[4] === 'spaeter'
+                    ? 'Aktuell vergeben wir Starttermine bevorzugt an Ordinationen, die in den nächsten Tagen loslegen möchten. Sie können sich trotzdem jetzt bewerben – wir melden uns sobald ein Platz verfügbar ist. Wer früher startet, profitiert früher.'
+                    : 'Wir empfehlen, nicht zu lange zu warten – verfügbare Starttermine gehen rasch. Am meisten profitieren Ordinationen, die innerhalb der nächsten 14 Tage in die Umsetzung gehen.'
+                  }
                 </p>
               </div>
+            </div>
+          )}
 
-              <div className="space-y-3 mb-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Name *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
-                      placeholder="Dr. Maria Muster"
-                      className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Telefon *</label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
-                      placeholder="+43 ..."
-                      className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Fachrichtung</label>
-                    <input
-                      type="text"
-                      value={formData.fachrichtung}
-                      onChange={e => setFormData(p => ({ ...p, fachrichtung: e.target.value }))}
-                      placeholder="z.B. Gynäkologie"
-                      className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Stadt</label>
-                    <input
-                      type="text"
-                      value={formData.ort}
-                      onChange={e => setFormData(p => ({ ...p, ort: e.target.value }))}
-                      placeholder="z.B. Wien"
-                      className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
-                    />
-                  </div>
-                </div>
+          <div className="bg-[#112080]/5 border border-[#112080]/20 rounded-2xl p-5 mb-6 text-center">
+            <div className="text-2xl mb-2">✅</div>
+            <h3 className="font-bold text-[#112080] text-lg mb-1">Sie qualifizieren sich für das Pilotprogramm.</h3>
+            <p className="text-gray-500 text-sm">Bitte hinterlassen Sie Ihre Kontaktdaten.</p>
+          </div>
+
+          <div className="space-y-3 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Name *</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={e => { setFormData(p => ({ ...p, name: e.target.value })); setFormError('') }}
+                  placeholder="Dr. Maria Muster"
+                  className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
+                />
               </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Telefon *</label>
+                <input
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={e => { setFormData(p => ({ ...p, phone: e.target.value })); setFormError('') }}
+                  placeholder="+43 ..."
+                  className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Fachrichtung</label>
+                <input
+                  type="text"
+                  value={formData.fachrichtung}
+                  onChange={e => setFormData(p => ({ ...p, fachrichtung: e.target.value }))}
+                  placeholder="z.B. Gynäkologie"
+                  className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Stadt</label>
+                <input
+                  type="text"
+                  value={formData.ort}
+                  onChange={e => setFormData(p => ({ ...p, ort: e.target.value }))}
+                  placeholder="z.B. Wien"
+                  className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-gray-600 mb-1">E-Mail <span className="text-gray-400 font-normal">(optional – für Ihre Bestätigung)</span></label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={e => setFormData(p => ({ ...p, email: e.target.value }))}
+                placeholder="ordination@beispiel.at"
+                className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[#112080] transition-colors"
+              />
+            </div>
+          </div>
 
-              <a
-                href="https://cal.com/kevin-hofbauer-marketing/mypraxis.at"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => sendFunnelNotification('cal')}
-                className="flex flex-col items-center gap-1.5 w-full bg-[#ff8a00] hover:bg-orange-600 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
-              >
-                <span className="text-2xl">📅</span>
-                <span className="text-sm font-bold">Jetzt Termin mit Kevin buchen</span>
-                <span className="text-xs font-normal opacity-80">Kostenloses Beratungsgespräch</span>
-              </a>
+          {formError && (
+            <p className="text-red-500 text-xs text-center mb-3">{formError}</p>
+          )}
 
-              <p className="text-gray-400 text-xs text-center mt-4">
-                Mit dem Fortfahren stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer{' '}
-                <a href="/datenschutz" className="underline hover:text-gray-600">Datenschutzerklärung</a> zu.
-              </p>
-          </>
+          <button
+            type="button"
+            onClick={async () => {
+              if (!formData.name.trim() || !formData.phone.trim()) {
+                setFormError('Bitte Name und Telefonnummer ausfüllen.')
+                return
+              }
+              sendFunnelNotification('cal')
+              setSubmitted(true)
+              window.open('https://cal.com/kevin-hofbauer-marketing/mypraxis.at', '_blank')
+            }}
+            className="flex flex-col items-center gap-1.5 w-full bg-[#ff8a00] hover:bg-orange-600 text-white font-bold py-5 px-4 rounded-2xl transition-all shadow-md hover:shadow-lg text-center"
+          >
+            <span className="text-2xl">📅</span>
+            <span className="text-sm font-bold">Bewerbung absenden & Termin buchen</span>
+            <span className="text-xs font-normal opacity-80">Kostenloses Beratungsgespräch mit Kevin</span>
+          </button>
+
+          <p className="text-gray-400 text-xs text-center mt-4">
+            Mit dem Fortfahren stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer{' '}
+            <a href="/datenschutz" className="underline hover:text-gray-600">Datenschutzerklärung</a> zu.
+          </p>
+        </div>
+      )}
+
+      {/* Success Screen */}
+      {step === 5 && submitted && (
+        <div className="text-center py-4">
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-[#112080] mb-2">Bewerbung erfolgreich übermittelt!</h3>
+          <p className="text-gray-500 text-sm mb-1">
+            Vielen Dank, <strong>{formData.name.trim()}</strong>. Wir haben Ihre Anfrage erhalten.
+          </p>
+          <p className="text-gray-500 text-sm mb-6">
+            Kevin meldet sich in Kürze telefonisch unter <strong>{formData.phone.trim()}</strong>.
+            {formData.email.trim() && (
+              <> Eine Bestätigung wurde an <strong>{formData.email.trim()}</strong> gesendet.</>
+            )}
+          </p>
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 mb-4">
+            <p className="text-[#112080] text-sm font-semibold mb-1">📅 Termin-Buchung geöffnet</p>
+            <p className="text-gray-500 text-xs">Der Buchungskalender wurde in einem neuen Tab geöffnet. Falls er sich nicht geöffnet hat:</p>
+            <a
+              href="https://cal.com/kevin-hofbauer-marketing/mypraxis.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-2 text-[#112080] text-xs font-bold underline hover:text-blue-800"
+            >
+              Hier klicken zum Termin buchen →
+            </a>
+          </div>
+          <p className="text-gray-300 text-xs">Sie können dieses Fenster jetzt schließen oder die Seite weiter erkunden.</p>
         </div>
       )}
     </div>
@@ -1575,8 +1624,7 @@ export default function LandingPageClient() {
               Jetzt kostenlos bewerben
             </h2>
             <p className="text-gray-500 text-center mb-10 text-sm max-w-sm mx-auto">
-              Drei kurze Fragen – dann wählen Sie, ob Jenny Sie sofort anruft oder
-              Sie einen Termin mit Kevin vereinbaren.
+              Vier kurze Fragen – dann buchen Sie direkt Ihren kostenlosen Termin mit Kevin.
             </p>
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
               <QualifyingFunnel />
