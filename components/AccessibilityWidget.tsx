@@ -253,7 +253,7 @@ export default function AccessibilityWidget({
           aria-label="Barrierefreiheit Einstellungen öffnen"
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="relative flex items-center gap-2 px-3 py-1.5 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none"
+          className="relative flex items-center gap-2 px-3 py-1.5 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none animate-a11y-mobile-pulse sm:animate-none"
           style={{ backgroundColor: accentColor }}
         >
           {/* Mobile layout: icon + hint row */}
@@ -278,6 +278,13 @@ export default function AccessibilityWidget({
             </span>
           )}
         </button>
+
+        {/* Mobile hint text */}
+        {!open && (
+          <p className="sm:hidden text-[8px] font-semibold tracking-wide text-center leading-none mt-0.5 whitespace-nowrap" style={{ color: accentColor }} aria-hidden="true">
+            widget hier testen
+          </p>
+        )}
 
         {/* WCAG Badge – only on sm+ */}
         <div className="hidden sm:flex items-center gap-1 pl-2 pr-2.5 py-1 rounded-r-xl shadow text-white text-[10px] font-bold tracking-wider" style={{ backgroundColor: accentColor + 'cc' }} aria-hidden="true">

@@ -158,6 +158,14 @@ body {
   transform-origin: left center;
 }
 
+@keyframes a11yMobilePulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35); }
+  50%       { transform: scale(1.08); box-shadow: 0 6px 22px rgba(37, 99, 235, 0.65); }
+}
+.animate-a11y-mobile-pulse {
+  animation: a11yMobilePulse 2.3s ease-in-out infinite;
+}
+
 /* ===== TYPEWRITER CURSOR ===== */
 @keyframes typewriterCursor {
   0%, 100% { opacity: 1; }
