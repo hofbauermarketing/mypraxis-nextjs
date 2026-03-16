@@ -761,7 +761,7 @@ function QualifyingFunnel() {
                 const gtag = (window as any).gtag
                 if (typeof gtag === 'function') {
                   gtag('event', 'conversion', {
-                    send_to: 'AW-18019658217/CONVERSION_LABEL',
+                    send_to: 'AW-18019658217/rfAdCKPnwokcEOnTuJBD',
                     value: 3950.0,
                     currency: 'EUR',
                   })
