@@ -930,6 +930,14 @@ const FAQ_ITEMS = [
     q: 'Gibt es Demoseiten?',
     a: 'Ja, die gibt es – diese dienen aber nur der Veranschaulichung, was schnell umsetzbar ist. Richtige Königsklasse-Seiten wirken noch viel besser. Diese bauen wir erst bei richtigen Kundenanfragen für Sie. Umsatz kommt vom Umsetzen. Auch wenn das frech klingt: Als Ärztin oder Arzt üben Sie ja auch nicht ständig auf einer Puppe, sondern behandeln lieber echte Patienten.',
   },
+  {
+    q: 'Wird die Website mit einem Baukasten oder KI-Builder gemacht?',
+    a: 'Nein – und das ist ein bewusster Qualitätsentscheid. Baukästen wie Wix, Squarespace oder KI-Builder sind ein bisschen so wie ein Saugdiesel im Vergleich zu einem Sportwagen: beide fahren, aber das Fahrgefühl – und was unter der Haube passiert – ist ein völlig anderes. Viele solcher Tools legen seitenweise unnötiges CSS über einfaches HTML, was dazu führt, dass Suchmaschinen und vor allem KI-Systeme wie ChatGPT oder Perplexity die Inhalte schlechter lesen und verstehen können. Das kostet Sichtbarkeit. Dazu kommt: kein Baukasten kann Ihre Persönlichkeit einfangen – nur Maßarbeit kann das.',
+  },
+  {
+    q: 'Wie baut mypraxis.at die Websites?',
+    a: 'Wir arbeiten mit Next.js – der gleichen Technologie, die große internationale Plattformen antreibt. Die Bilder werden mit Adobe Firefly AI generiert, das bedeutet: kommerzielle Lizenz, kein Urheberrechtsproblem, und ein einheitlicher visueller Stil, der zu Ihrer Praxis passt. Jede Website ist ein Einzelstück – kein Copy-Paste, keine Vorlage. Hosting und Domain sind inklusive. Auf Wunsch erhalten Sie den vollständigen Quellcode – die Website gehört Ihnen, nicht uns. Und anders als bei Baukästen: Wenn Sie jemals wechseln möchten, können Sie das – Sie sind nicht eingesperrt.',
+  },
 ]
 
 function FaqAccordion() {
