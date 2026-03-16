@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
-import ScannerEmbed from '@/components/ScannerEmbed'
 
 // ─── ChatGPT Mock Answers (module-level – SSR-safe) ───────────────────────────
 const MOCK_QUESTION = 'Welcher Gynäkologe in Wien ist empfehlenswert?'
@@ -1212,31 +1211,6 @@ export default function LandingPageClient() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SCANNER */}
-      <section className="relative bg-white px-6 py-16 overflow-hidden">
-        {/* Subtiles Hintergrundbild */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/lp-scanner-bg.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.20] mix-blend-luminosity" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#112080] text-center mb-3">
-            Wird Ihre aktuelle Website von KI gelesen?
-          </h2>
-          <p className="text-gray-500 text-center mb-10 max-w-xl mx-auto text-sm">
-            Geben Sie Ihre Website-URL ein und prüfen Sie kostenlos, wie KI-sichtbar Ihre
-            Ordination aktuell ist.
-          </p>
-          <ScannerEmbed />
-          <div className="text-center mt-8">
-            <a
-              href="#funnel"
-              className="inline-block bg-[#112080] hover:bg-[#1e3ab8] text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
-            >
-              Ergebnis besprechen → Jetzt bewerben
-            </a>
           </div>
         </div>
       </section>
