@@ -38,13 +38,14 @@ Spezialagentur für Arzt-Websites in Österreich. Einziger österreichischer Anb
 | **Live-URL** | https://www.mypraxis.at |
 | **GitHub** | https://github.com/hofbauermarketing/mypraxis-nextjs (branch: main) |
 | **Hosting** | Vercel (auto-deploy bei git push auf main) |
-| **Lokaler Pfad** | `/Users/kevinhofbauer/Downloads/mypraxis-nextjs` |
+| **Lokaler Pfad** | `/Users/kevinhofbauer/Desktop/mypraxis-nextjs` |
 | **Lokaler Port** | 3002 (`npm run dev -- -p 3002`) |
 | **Framework** | Next.js 15, App Router, TypeScript |
 | **Styling** | Tailwind CSS 3.4 |
-| **Animationen** | Framer Motion |
+| **Animationen** | Framer Motion (Hauptseite) + CSS keyframes (Landingpage) |
 | **E-Mail** | Nodemailer via SMTP |
 | **Übersetzung** | DeepL API (Free Tier) |
+| **KI-Anrufe** | Fonio.ai Outbound Call API |
 
 ---
 
@@ -81,6 +82,7 @@ Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo
 | Seite | Pfad | Beschreibung |
 |-------|------|-------------|
 | Startseite | `/` | Hero, Referenzkundenprogramm, Feature-Karten (ohne Preise), KI-Sichtbarkeit, FAQ, AskAI, BlogCarousel, Kontakt |
+| **Landing Page** | `/landingpage` | Eigenständige Sales-Page mit Qualifying-Funnel (siehe unten) |
 | Preise & Demos | `/preise` | 5 Demo-Stile, Reguläre Pakete (€3.900/€7.500), Referenzprogramm-Erklärung, KMU.DIGITAL |
 | Blog-Übersicht | `/blog` | Alle Blogartikel |
 | Blog-Artikel | `/blog/[slug]` | Einzelartikel mit Schema, Lesezeit, Breadcrumb |
@@ -99,6 +101,156 @@ Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo
 
 ---
 
+## Landing Page – `/landingpage` (ausführlich)
+
+**Datei:** `app/landingpage/LandingPageClient.tsx` (Client Component, `'use client'`)
+**Route:** `app/landingpage/page.tsx` → rendert `<LandingPageClient />`
+
+Diese Seite ist eine **eigenständige, vollständige Sales-Page** ohne Navigation/Footer der Hauptseite. Sie hat eigenen Header + Footer inline.
+
+### Aufbau der Seite (Sektionen von oben nach unten):
+
+1. **Header** – Sticky, Logo `mypraxis.at`, CTA-Button "Jetzt bewerben" → scrollt zu `#funnel`
+2. **Hero** – Vollbild mit `lp-hero.jpg`, Gradient-Overlay, Urgency-Badge mit Slot-Visualisierung (9 Punkte, 2 vergeben), H1, Subtext, CTA-Button
+3. **Pain Cards** – 3 Karten mit echten Logos (ÄK Wien, Statistik Austria, OEAK), IntersectionObserver Scroll-Reveal + `floatMicro` Animation, Hintergrundbild bei 22%/20% Opacity
+4. **Features Grid** – 2-Spalten, 6 Feature-Karten mit Bild + Icon + Text
+5. **KI-Showcase / ChatGPT Mock** – Tab-Switch "Mit KI-Optimierung" / "Typische Arzt-Website", animierter Chat
+6. **Animierte Stats** – 4 Zahlen (Statistiken), `AnimatedStat` Komponente mit IntersectionObserver
+7. **Guarantee / Versprechen** – Dunkle Sektion mit `GuaranteeBeam` (Canvas Border-Animation) + Trust Shield Badge (Doppelrahmen) + 5 Checkmarks
+8. **Qualifying Funnel** – 5-stufiger Bewerbungsprozess (siehe unten), 5-Spalten-Layout (xl:flex)
+9. **FAQ** – 5 Fragen, Accordion mit CSS grid-trick Expand, schwebende Animation, SVG-Hintergrundbild
+10. **Footer** – Impressum, Datenschutz
+
+### Qualifying Funnel – `QualifyingFunnel` Komponente
+
+**Schritte:**
+| Step | Frage | Wert-Keys |
+|------|-------|-----------|
+| 1 | Hat Ihre Ordination eine eigene Website? | `eigen` / `verzeichnis` / `keine` |
+| 2 | KI-Sichtbarkeit: ChatGPT-Frage nach Arzt | `nicht_genannt` / `weiss_nicht` / `sichtbar` |
+| 3 | Was kostet täglich am meisten Zeit? | `erklaerung` / `auslastung` / `sprache` / `anderes` |
+| 4 | Wann könnten Sie starten? (Timeline) | `sofort` / `bald` / `spaeter` |
+| 5 | Kontaktformular + 2 CTAs | — |
+
+**Step 4 Logik (Dringlichkeit):**
+- `sofort` (14 Tage) → kein Banner → direkt zum Formular
+- `bald` (2–4 Wochen) → Amber-Banner: "Wir empfehlen, nicht zu lange zu warten…"
+- `spaeter` (>1 Monat) → Amber-Banner: "Aktuell vergeben wir Starttermine bevorzugt…" (aber kein Hard-Reject)
+
+**Step 5 – Kontaktformular:**
+- Name, Telefon (Pflicht), Fachrichtung, Stadt (optional)
+- Auf Mobile: `grid-cols-1 sm:grid-cols-2` (nicht 2-spaltig auf 375px!)
+- 2 CTAs: "Jenny ruft mich an" (→ `/api/call`) + "Termin mit Kevin" (→ cal.com Link)
+
+**5-Spalten-Layout (Desktop-only, xl:flex):**
+```
+Col 1 (w-148px, hidden xl:flex): Leitsatz / Quote
+Col 2 (w-20, hidden xl:flex):    "Ihre Chance nutzen" Pfeil-Animation
+Col 3 (flex-1 max-w-lg):         FORM (immer sichtbar)
+Col 4 (w-20, hidden xl:flex):    "JETZT profitieren" Pfeil-Animation
+Col 5 (w-148px, hidden xl:flex): "Jede Seite enthält" Feature-Card
+```
+⚠️ Cols 1, 2, 4, 5 sind auf Mobile NICHT sichtbar. Das ist Absicht.
+
+### GuaranteeBeam – Canvas 2D Border-Animation
+
+**Datei:** `LandingPageClient.tsx`, Funktion `GuaranteeBeam()`
+
+**Implementierung:** Canvas 2D (NICHT SVG!) – wichtig, niemals zurück zu SVG wechseln:
+- SVG `stroke-dasharray`/`stroke-dashoffset` → hatte "mehrere Linien"-Bug (Browser interpoliert List-Properties)
+- Canvas `ctx.setLineDash([dashLen, gap])` + `ctx.lineDashOffset` ist deterministisch
+
+**Kernlogik:**
+```tsx
+const perim = 2 * (bw + bh) - r * (8 - 2 * Math.PI)  // exakte Umfang-Formel
+const dashLen = Math.min(420, perim - 10)
+const gap = perim - dashLen  // dashLen + gap = perim → exakt 1 Strich sichtbar
+ctx.setLineDash([dashLen, gap])
+ctx.lineDashOffset = -(t * perim)  // t = 0..1 über 10s
+ctx.setTransform(dpr, 0, 0, dpr, 0, 0)  // jedes Frame resetten (HiDPI + resize-safe)
+```
+
+**CSS Filter** auf `<canvas>` Element für Glow:
+```
+drop-shadow(0 0 3px rgba(255,200,80,0.9))
+drop-shadow(0 0 8px rgba(255,130,0,0.6))
+drop-shadow(0 0 18px rgba(255,100,0,0.3))
+```
+
+**ResizeObserver** aktualisiert `cw`/`ch` direkt (kein React-State → kein Re-Render).
+
+### Trust Shield Badge
+
+**Doppelrahmen via SVG** (nicht CSS border – wird von clip-path abgeschnitten):
+- Äußerer Ring: exakt auf Schildkontur, `rgba(255,255,255,0.72)`, 2px
+- Innerer Ring: ~6px eingerückt (`M43 10 L73 20...`), `rgba(255,255,255,0.32)`, 1.5px
+- SVG sitzt **neben** dem geclippten Div (nicht darin) → beide Ringe bleiben sichtbar
+
+```
+Clip-path shield: M43 4 L78 16 L78 52 Q78 76 43 92 Q8 76 8 52 L8 16 Z
+Inner ring path:  M43 10 L73 20 L73 52 Q73 72 43 87 Q13 72 13 52 L13 20 Z
+Container:        w-[86px] h-[96px]
+```
+
+### FAQ Accordion
+
+**5 Fragen** (nummeriert):
+1. Andere verlangen ab 12.000 € für Arzt-Websites – wie geht das bei mypraxis.at?
+2. Es gibt günstigere Anbieter – warum also mypraxis.at?
+3. Wird mir die Website gefallen?
+4. Ihr seid neu am Markt – gibt es mypraxis.at auch langfristig noch?
+5. Gibt es Demoseiten?
+
+**Smooth Expand:** CSS grid-trick (`gridTemplateRows: '0fr'` → `'1fr'` mit `transition: 0.28s`)
+
+**Float-Animation:** `floatMicro` mit `duration: 5–6.4s`, `delay: i * 0.45s` – jede Karte schwebt eigenständig.
+
+**SVG Hintergrundbild:** Selbstbewusste Figur (Power-Pose), Fragezeichen, Checkmark-Akzent, alle Elemente bei 3–6% Opacity.
+
+---
+
+## API Routes
+
+| Route | Datei | Funktion |
+|-------|-------|---------|
+| `POST /api/contact` | `app/api/contact/route.ts` | Kontaktformular → Nodemailer SMTP → office@mypraxis.at. Felder: name, email, phone, fachrichtung, message. HTML-Escape für Sicherheit. |
+| `POST /api/translate` | `app/api/translate/route.ts` | DeepL Free API. Batch-Übersetzung. Quellsprache DE. 10 Zielsprachen. |
+| `GET /api/scan` | `app/api/scan/route.ts` | WCAG/Accessibility Scanner |
+| `POST /api/call` | `app/api/call/route.ts` | Fonio.ai Outbound Call. Felder: phone, name, fachrichtung, ort. Startet KI-Telefonanruf ("Jenny") für Lead-Qualifizierung. |
+| `POST /api/funnel-notify` | `app/api/funnel-notify/route.ts` | Benachrichtigungs-E-Mail an office@mypraxis.at bei Funnel-Eintrag. Felder: name, phone, fachrichtung, ort, q1–q4, method (jenny/cal). |
+
+---
+
+## Environment Variables
+
+**Lokal** (`.env.local`):
+```
+DEEPL_API_KEY=***          # DeepL Free API für Widget-Übersetzung
+WAVE_API_KEY=***           # WCAG Wave Scanner
+```
+
+**Vercel Dashboard** (für E-Mail + Fonio – NICHT in .env.local!):
+```
+SMTP_HOST=smtp.strato.de   # oder smtp.gmail.com etc.
+SMTP_PORT=465              # 465 (SSL) oder 587 (STARTTLS)
+SMTP_SECURE=true           # "true" für Port 465
+SMTP_USER=office@mypraxis.at
+SMTP_PASS=***
+
+FONIO_API_KEY=***          # Fonio.ai API Key für Outbound Calls
+FONIO_FROM_NUMBER=***      # Absendernummer (E.164 Format, z.B. +43...)
+FONIO_AGENT_ID=***         # Fonio Agent ID ("Jenny")
+```
+
+**Blog-Bild-Generierung** (lokal, einmalig):
+```
+Together AI Key: tgp_v1_GHP2B0RP5UjY6pKROyhEMyOe6DYAATnyQLbMJxvw6tw
+Bestes Modell für photorealistische Szenen: google/imagen-4.0-preview
+Bildgröße: 1408×768 (JPEG, in public/blog/ als .png speichern)
+```
+
+---
+
 ## Komponenten-Übersicht
 
 | Komponente | Datei | Beschreibung |
@@ -114,42 +266,6 @@ Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo
 | Scanner Embed | `components/ScannerEmbed.tsx` | iframe Einbettung |
 | Accessibility Widget | `components/AccessibilityWidget.tsx` | Links floating. 16 Features: Schriftgröße (3 Stufen), Zeilenabstand, Buchstabenabstand, Legasthenie-Schrift, Lese-Lineal, Vorlesen (TTS), Übersetzung DeepL 10 Sprachen, Hoher Kontrast, Dunkler Modus, Graustufen, Invertierte Farben, Bilder ausblenden, Links unterstreichen, Animationen stoppen, Fokus sichtbar, Mauszeiger groß. |
 | WCAG Scanner | `components/WcagScanner.tsx` | Internes Tool |
-
----
-
-## API Routes
-
-| Route | Datei | Funktion |
-|-------|-------|---------|
-| `POST /api/contact` | `app/api/contact/route.ts` | Kontaktformular → Nodemailer SMTP → office@mypraxis.at. Felder: name, email, phone, fachrichtung, message. HTML-Escape für Sicherheit. |
-| `POST /api/translate` | `app/api/translate/route.ts` | DeepL Free API. Batch-Übersetzung. Quellsprache DE. 10 Zielsprachen. |
-| `GET /api/scan` | `app/api/scan/route.ts` | WCAG/Accessibility Scanner |
-
----
-
-## Environment Variables
-
-**Lokal** (`.env.local`):
-```
-DEEPL_API_KEY=***          # DeepL Free API für Widget-Übersetzung
-WAVE_API_KEY=***           # WCAG Wave Scanner
-```
-
-**Vercel Dashboard** (für Kontaktformular – NICHT in .env.local!):
-```
-SMTP_HOST=smtp.strato.de   # oder smtp.gmail.com etc.
-SMTP_PORT=465              # 465 (SSL) oder 587 (STARTTLS)
-SMTP_SECURE=true           # "true" für Port 465
-SMTP_USER=office@mypraxis.at
-SMTP_PASS=***
-```
-
-**Blog-Bild-Generierung** (lokal, einmalig):
-```
-Together AI Key: tgp_v1_GHP2B0RP5UjY6pKROyhEMyOe6DYAATnyQLbMJxvw6tw
-Bestes Modell für photorealistische Szenen: google/imagen-4.0-preview
-Bildgröße: 1408×768 (JPEG, in public/blog/ als .png speichern)
-```
 
 ---
 
@@ -256,10 +372,48 @@ Orange-Akzent (CTAs):          #ff8a00
 Dark-Background (Referenz):    #0a0f1e / #07090f
 ```
 
+### CSS Keyframes in globals.css
+```
+floatMicro    – translateY 0 → -5px → 0 (für Pain Cards, FAQ)
+floatSm       – etwas größer
+floatSlow     – langsam
+float         – standard
+fadeSlideUp   – opacity 0 + translateY → 1 + 0
+trustBadgeIn  – Einflug-Animation für Trust Badge
+trustBeamPulse – Puls für Trust Badge
+borderSpin    – rotate 0→360°
+```
+
 ### Kritische Design-Regeln
 - Niemals das Referenzkunden-Block-Design ändern ohne explizite Anweisung – es ist das Kern-Verkaufselement
 - Keine generischen Template-Designs – Kevin legt auf Exklusivität großen Wert
-- Keine unnötigen Framer Motion Animationen hinzufügen – nur bestehende Muster nutzen
+- Keine unnötigen Framer Motion Animationen auf der Landingpage – dort nur CSS keyframes + Canvas
+- **GuaranteeBeam IMMER Canvas 2D** – nie zurück zu SVG wechseln (hatte Multiple-Lines-Bug)
+
+---
+
+## Mobile Responsiveness – angewendete Fixes (März 2026)
+
+Alle Fixes wurden bereits in `LandingPageClient.tsx` eingebaut:
+
+| Bereich | Fix |
+|---------|-----|
+| Hero Badge | `text-xs sm:text-sm`, schmalere Padding |
+| Hero H1 | `text-2xl sm:text-3xl md:text-5xl` |
+| Hero Body-Text | `text-base md:text-xl` |
+| Hero CTA | `text-base sm:text-lg`, `px-8 sm:px-10`, `py-3 sm:py-4` |
+| Funnel Form Inputs | `grid-cols-1 sm:grid-cols-2` (beide Zeilen) |
+| FAQ Button | `px-4 sm:px-6`, `py-4 sm:py-5`, `gap-2 sm:gap-4` |
+| FAQ Fragetext | `text-[13px] sm:text-[15px]` |
+| FAQ Antworttext | `px-4 sm:px-6`, `text-[13px] sm:text-[14px]` |
+| Pain Cards Gap | `gap-5 md:gap-8` |
+| Guarantee Padding | `px-4 sm:px-8 md:px-12` |
+| Kevin Section Gap | `gap-6 md:gap-10` |
+| Stats Grid Divider | `divide-x` auf Mobile hinzugefügt |
+
+**Noch NICHT mobil optimiert (bewusst ausgelassen):**
+- Funnel 5-Spalten-Layout → Cols 1/2/4/5 sind `hidden xl:flex` → OK, Form ist das Wichtigste
+- FAQ SVG Hintergrundbild → `xMidYMid slice` → OK, sieht auf Mobile trotzdem gut aus
 
 ---
 
@@ -269,14 +423,20 @@ Dark-Background (Referenz):    #0a0f1e / #07090f
 |-------|-------|
 | `app/layout.tsx` | Root Layout + JSON-LD Schema + AccessibilityWidget + Navigation + CookieBanner |
 | `app/page.tsx` | Startseite (gesamter Page-Content) |
-| `app/globals.css` | Globale Styles + alle `a11y-*` CSS-Klassen für AccessibilityWidget |
+| `app/landingpage/page.tsx` | Landingpage Route (rendert LandingPageClient) |
+| `app/landingpage/LandingPageClient.tsx` | Gesamte Landingpage als Client Component |
+| `app/globals.css` | Globale Styles + alle `a11y-*` CSS-Klassen + Keyframe-Animationen |
 | `app/sitemap.ts` | Dynamische Sitemap (MetadataRoute API) |
 | `app/opengraph-image.tsx` | OG-Image Generator (1200×630) |
+| `app/api/call/route.ts` | Fonio.ai Outbound Call API |
+| `app/api/funnel-notify/route.ts` | Funnel E-Mail-Benachrichtigung |
+| `app/api/contact/route.ts` | Kontaktformular E-Mail |
 | `content/blog/` | Markdown-Dateien der Blogartikel |
 | `lib/blog.ts` | getSortedPostsData(), getPostData(), formatDate(). Lesezeit: 200 WPM |
 | `public/robots.txt` | 20+ KI-Crawler erlaubt |
 | `public/llms.txt` | KI-lesbares Profil |
 | `public/blog/` | Cover-Images der Blogartikel |
+| `public/logos/` | Logos für Pain Cards (aekwien-logo.jpg, oeak-logo.png, statistik-real.svg) |
 | `next.config.js` | non-www → www Redirect (permanent: true) + images.unoptimized: true |
 
 ---
@@ -289,6 +449,9 @@ Dark-Background (Referenz):    #0a0f1e / #07090f
 - **NIEMALS** statische `public/sitemap.xml` anlegen → kollidiert mit `app/sitemap.ts`.
 - **`images.unoptimized: true`** in next.config.js – Vercel Image Optimization deaktiviert, muss so bleiben.
 - **Vercel Dashboard:** mypraxis.at → 308 permanent → www.mypraxis.at. Nicht anfassen.
+- **GuaranteeBeam:** Immer Canvas 2D. SVG strokeDasharray verursacht "mehrere Linien"-Bug durch Browser-List-Interpolation.
+- **Funnel Step-Typ:** `type FunnelStep = 1 | 2 | 3 | 4 | 5` – bei neuen Steps anpassen.
+- **ctx.roundRect():** Chrome 99+, Firefox 112+ supported. Fallback-Path in GuaranteeBeam vorhanden.
 
 ---
 
@@ -307,14 +470,19 @@ Kein absolutes Versprechen – nur Wahrscheinlichkeitsaussagen:
 ✅ "ohne strukturierte Daten sinkt die Chance erheblich, korrekt erfasst zu werden"
 ```
 
+**FAQ-Metaphern (bereits verwendet – nicht wiederholen):**
+- Hausbau: Fertigbausatz vs. Architektenhaus
+- Auto: Kleinwagen vs. Fahrzeug das sich anfühlt wie Ihres
+- Assistenzarzt: Extrameile in der Aufbauphase
+
 ---
 
 ## Deployment
 
 ```bash
 # Lokale Entwicklung
-cd /Users/kevinhofbauer/Downloads/mypraxis-nextjs
-npm run dev   # Port 3002
+cd /Users/kevinhofbauer/Desktop/mypraxis-nextjs
+npm run dev -- -p 3002
 
 # Deploy (GitHub → Vercel auto-deploy)
 git add <dateien>
@@ -349,19 +517,20 @@ git push
 
 ## Offene Maßnahmen (manuell – nicht im Code)
 
-- [ ] SMTP-Variablen in Vercel Dashboard prüfen/setzen
+- [ ] SMTP-Variablen + Fonio-Variablen in Vercel Dashboard prüfen/setzen
 - [ ] Google Business Profile einrichten
 - [ ] Wikidata-Einträge: mypraxis.at + Kevin Hofbauer anlegen
 - [ ] Branchenverzeichnisse: herold.at, firmenabc.at, WKO
 - [ ] LinkedIn-Artikel schreiben
 - [ ] GA4 Setup + KI-Traffic-Tracking
+- [ ] Landingpage: Fonio-Agent "Jenny" konfigurieren und testen
 
 ---
 
 ## Verwandtes Projekt: hofbauer.marketing
 
 ```
-Pfad:    /Users/kevinhofbauer/Downloads/hofbauer-marketing-nextjs
+Pfad:    /Users/kevinhofbauer/Desktop/hofbauer-marketing-nextjs
 Port:    3000
 Stack:   Next.js 16.1.6, React 19, Tailwind CSS 4, Framer Motion
 E-Mail:  kontakt@hofbauer.marketing

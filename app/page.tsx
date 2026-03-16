@@ -620,6 +620,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== KI FRAGEN (direkt nach KI-Sichtbarkeit) ===== */}
+      <AskAiSection />
+
       {/* ===== DEMOS EYECATCHER ===== */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -806,9 +809,6 @@ export default function HomePage() {
 
         </div>
       </section>
-
-      {/* ===== KI FRAGEN ===== */}
-      <AskAiSection />
 
       {/* ===== BLOG VORSCHAU ===== */}
       <BlogCarousel posts={blogPosts} />
