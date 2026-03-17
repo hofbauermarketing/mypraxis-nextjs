@@ -1,20 +1,21 @@
 # robots.txt – mypraxis.at
-# KI-Crawler explizit willkommen
+# KI-Crawler explizit willkommen – Stand März 2026
 
+# ── Alle Bots: Standard ────────────────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /demo/
+Disallow: /api/
 
-# Google
+# ── Google ──────────────────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
 User-agent: Googlebot-Image
 Allow: /
 User-agent: Google-Extended
 Allow: /
-User-agent: Storebot-Google
-Allow: /
 
-# OpenAI / ChatGPT
+# ── OpenAI / ChatGPT ────────────────────────────────────────────
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
@@ -22,7 +23,7 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic / Claude
+# ── Anthropic / Claude ──────────────────────────────────────────
 User-agent: ClaudeBot
 Allow: /
 User-agent: Claude-Web
@@ -30,13 +31,13 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Perplexity
+# ── Perplexity ──────────────────────────────────────────────────
 User-agent: PerplexityBot
 Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# Microsoft / Bing / Copilot
+# ── Microsoft / Bing / Copilot ──────────────────────────────────
 User-agent: Bingbot
 Allow: /
 User-agent: BingPreview
@@ -44,19 +45,19 @@ Allow: /
 User-agent: msnbot
 Allow: /
 
-# xAI / Grok
+# ── xAI / Grok ──────────────────────────────────────────────────
 User-agent: Grok
 Allow: /
 User-agent: xAI
 Allow: /
 
-# Apple
+# ── Apple ────────────────────────────────────────────────────────
 User-agent: Applebot
 Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-# Meta AI
+# ── Meta AI ──────────────────────────────────────────────────────
 User-agent: Facebookbot
 Allow: /
 User-agent: FacebookExternalHit
@@ -64,11 +65,11 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Common Crawl (Training-Daten)
+# ── Common Crawl (Training-Daten) ────────────────────────────────
 User-agent: CCBot
 Allow: /
 
-# Weitere KI-Crawler
+# ── Weitere KI-Crawler ───────────────────────────────────────────
 User-agent: Bytespider
 Allow: /
 User-agent: cohere-ai
@@ -86,8 +87,7 @@ Allow: /
 User-agent: Kangaroo Bot
 Allow: /
 
-# Keine Demo-Seiten in Suchmaschinen-Ergebnissen
-User-agent: *
-Disallow: /demo/
-
+# ── Discovery ────────────────────────────────────────────────────
 Sitemap: https://www.mypraxis.at/sitemap.xml
+LLMs-txt: https://www.mypraxis.at/llms.txt
+LLMs-full-txt: https://www.mypraxis.at/llms-full.txt

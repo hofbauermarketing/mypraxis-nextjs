@@ -265,6 +265,16 @@ html.a11y-highlight-titles h6 {
   will-change: transform;
 }
 
+.animate-float-sm {
+  animation: floatSm 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-micro {
+  animation: floatMicro 2s ease-in-out infinite;
+  will-change: transform;
+}
+
 .animate-float-slow {
   animation: floatSlow 7s ease-in-out infinite;
   will-change: transform;

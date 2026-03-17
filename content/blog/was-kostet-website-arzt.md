@@ -1,7 +1,7 @@
 ---
 title: "Was kostet eine Website für Ärzte in Österreich?"
 date: "2026-02-23"
-description: "Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 % und worauf Ärzte bei der Auswahl achten sollten."
+description: "Arzt-Website Kosten im Überblick: Einmalige und laufende Kosten, Auswahlkriterien und worauf niedergelassene Ärzte in Österreich und Deutschland achten sollten."
 author: "Kevin Hofbauer"
 image: "/blog/was-kostet-website-arzt.png"
 imageAlt: "Arzt am Schreibtisch vor Laptop und Monitor mit Kostendiagrammen, modernes Ordinationszimmer mit Panoramafenster"

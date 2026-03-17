@@ -2,11 +2,20 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
 export const metadata = {
-  title: 'KI-Videothek für Ärzte – mypraxis.at',
-  description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich. Kostenlos ansehen.',
+  title: 'KI-Videothek für Ärzte in Österreich & Deutschland – mypraxis.at',
+  description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung & digitaler Positionierung für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland. ChatGPT, Perplexity & Google AI erklärt. Kostenlos.',
+  keywords: 'KI Videothek Ärzte Österreich Deutschland, Künstliche Intelligenz Medizin, KI Arztpraxis, KI Sichtbarkeit Video, Digitalisierung Ordination',
   alternates: {
     canonical: '/videothek',
     languages: { 'de-AT': '/videothek' },
+  },
+  openGraph: {
+    title: 'KI-Videothek für Ärzte – mypraxis.at',
+    description: 'Kuratierte Videos zu KI in der Medizin & digitaler Positionierung für niedergelassene Ärzte in Österreich und Deutschland. Kostenlos ansehen.',
+    url: 'https://www.mypraxis.at/videothek',
+    siteName: 'mypraxis.at',
+    locale: 'de_AT',
+    type: 'website',
   },
 }
 
@@ -49,7 +58,7 @@ const videos: Video[] = [
   // ─── Platzhalter – werden sukzessive befüllt ────────────────────────────────
   {
     youtubeId: 'PLACEHOLDER_1',
-    title: 'KI-Sichtbarkeit für Arztpraxen – Was Ärzte 2025 wissen müssen',
+    title: 'KI-Sichtbarkeit für Arztpraxen – Was Ärzte 2026 wissen müssen',
     description:
       'Wie ChatGPT, Google Gemini und andere KI-Systeme Patientenanfragen beantworten und warum die Sichtbarkeit Ihrer Praxis in diesen Systemen immer wichtiger wird.',
     category: 'KI & Sichtbarkeit',
@@ -227,7 +236,7 @@ export default function VideothekPage() {
         '@type': 'CollectionPage',
         '@id': 'https://www.mypraxis.at/videothek#page',
         name: 'KI-Videothek für Ärzte',
-        description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich.',
+        description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung und Online-Sichtbarkeit für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland.',
         url: 'https://www.mypraxis.at/videothek',
         inLanguage: 'de-AT',
         publisher: { '@id': 'https://www.mypraxis.at/#organization' },
@@ -268,17 +277,22 @@ export default function VideothekPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videothekSchema) }}
       />
       <Navigation />
-      <main className="min-h-screen bg-gray-50 pt-24 pb-20">
+      <main className="relative min-h-screen bg-gray-50 pb-20">
+        {/* Strukturhintergrund: feines Kreuzgitter, sehr dezent */}
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(30,58,184,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(30,58,184,0.035) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         {/* Header */}
-        <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-16">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="relative overflow-hidden text-white pt-28 pb-20 px-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%)' }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e] via-[#112080] to-[#0a0f1e]" />
+          <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.4)_100%)] pointer-events-none" />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-blue-200/70 text-xs mb-4">
               <Link href="/" className="hover:text-white transition-colors">mypraxis.at</Link>
               <span aria-hidden="true">/</span>
               <span className="text-blue-200">KI-Videothek</span>
             </nav>
             <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Kuratierte Inhalte</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">KI-Videothek</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">KI-Videothek für Ärzte in Österreich & Deutschland</h1>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
               Ausgewählte Videos zu KI in der Medizin, Digitalisierung und Online-Präsenz für niedergelassene Ärztinnen und Ärzte.
             </p>

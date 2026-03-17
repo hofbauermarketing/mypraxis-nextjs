@@ -42,7 +42,7 @@ export default function Navigation() {
         {/* Desktop Nav – centered */}
         <nav aria-label="Hauptnavigation" className="hidden md:flex items-center justify-center gap-3 lg:gap-5">
           {[
-            { label: 'Demo & Preise', href: '/preise' },
+            { label: 'Demo & Leistungen', href: '/preise' },
             { label: 'FAQ', href: '/faq' },
           ].map((item) => (
             <a
@@ -116,7 +116,7 @@ export default function Navigation() {
       {menuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg px-6 py-4 flex flex-col gap-4">
           {[
-            { label: 'Demo & Preise', href: '/preise' },
+            { label: 'Demo & Leistungen', href: '/preise' },
             { label: 'FAQ', href: '/faq' },
           ].map((item) => (
             <a

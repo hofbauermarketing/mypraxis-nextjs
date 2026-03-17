@@ -2,9 +2,18 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
 export const metadata = {
-    title: 'FAQ – Häufige Fragen | mypraxis.at',
-    description: 'Alle Fragen rund um Website, KI-Sichtbarkeit, KMU.DIGITAL-Förderung, Recht, Kosten und Technik für niedergelassene Ärzte in Österreich.',
+    title: 'FAQ: Arzt-Website, KI-Sichtbarkeit & digitale Positionierung in Österreich & Deutschland | mypraxis.at',
+    description: 'Häufige Fragen zu Kosten einer Arzt-Website, KI-Readiness, DSGVO, ÖÄK-Richtlinien und Technik – für niedergelassene Ärzte in Österreich und Deutschland. Ehrlich beantwortet.',
+    keywords: 'FAQ Arzt Website Österreich Deutschland, Praxis Website Kosten, KI-Readiness Arzt, DSGVO Arztpraxis, ÖÄK konform Website, Arzt Website Agentur',
     alternates: { canonical: '/faq', languages: { 'de-AT': '/faq' } },
+    openGraph: {
+        title: 'FAQ: Arzt-Website & KI-Sichtbarkeit für Ärzte – mypraxis.at',
+        description: 'Alle Fragen zu Kosten, KI-Readiness, DSGVO & ÖÄK für niedergelassene Ärzte in Österreich und Deutschland – ehrlich beantwortet.',
+        url: 'https://www.mypraxis.at/faq',
+        siteName: 'mypraxis.at',
+        locale: 'de_AT',
+        type: 'website',
+    },
 }
 
 const faqKategorien = [
@@ -15,7 +24,7 @@ const faqKategorien = [
         fragen: [
             {
                 q: 'Was kostet eine Website für Ärzte in Österreich?',
-                a: 'Unsere Praxis-Website liegt bei € 3.900 netto, die Digitale Positionierung mit Tiefenrecherche und KI-Readiness bei € 7.500 netto. Für Ärztezentren und PVEs erstellen wir individuelle Konzepte. Alle Preise verstehen sich exkl. MwSt. – und sind über KMU.DIGITAL um bis zu 30 % förderbar.',
+                a: 'Die Preise richten sich nach dem individuellen Leistungsumfang und werden auf Anfrage bekannt gegeben. Wir bieten Pakete für Einzelordinationen sowie maßgeschneiderte Lösungen für Ärztezentren und PVEs – kontaktieren Sie uns für ein individuelles Angebot.',
             },
             {
                 q: 'Was ist der Unterschied zwischen Praxis-Website und Digitale Positionierung?',
@@ -151,31 +160,47 @@ const faqKategorien = [
 export default function FaqPage() {
     const faqSchema = {
         '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqKategorien.flatMap((k) =>
-            k.fragen.map((f) => ({
-                '@type': 'Question',
-                name: f.q,
-                acceptedAnswer: { '@type': 'Answer', text: f.a },
-            }))
-        ),
+        '@graph': [
+            {
+                '@type': 'FAQPage',
+                '@id': 'https://www.mypraxis.at/faq#faq',
+                url: 'https://www.mypraxis.at/faq',
+                name: 'FAQ – Arzt-Website, KI-Sichtbarkeit & digitale Positionierung für Ärzte in Österreich & Deutschland',
+                mainEntity: faqKategorien.flatMap((k) =>
+                    k.fragen.map((f) => ({
+                        '@type': 'Question',
+                        name: f.q,
+                        acceptedAnswer: { '@type': 'Answer', text: f.a },
+                    }))
+                ),
+            },
+            {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                    { '@type': 'ListItem', position: 1, name: 'mypraxis.at', item: 'https://www.mypraxis.at' },
+                    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://www.mypraxis.at/faq' },
+                ],
+            },
+        ],
     }
 
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Navigation />
-            <main className="min-h-screen bg-gray-50 pt-24 pb-20">
+            <main className="relative min-h-screen bg-gray-50 pt-24 pb-20">
+                <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(30,58,184,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
 
                 {/* Hero */}
-                <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-14 px-6">
-                    <div className="max-w-5xl mx-auto">
+                <div className="relative overflow-hidden bg-gradient-to-br from-[#0a0f1e] via-[#1e3ab8] to-[#0a0f1e] text-white py-14 px-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%)' }}>
+                    <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                    <div className="max-w-5xl mx-auto relative z-10">
                         <nav className="flex items-center gap-2 text-blue-200/70 text-xs mb-6">
                             <Link href="/" className="hover:text-white transition-colors">mypraxis.at</Link>
                             <span>/</span>
                             <span className="text-blue-200">FAQ</span>
                         </nav>
-                        <h1 className="text-3xl md:text-4xl font-bold mb-3">Häufige Fragen</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-3">Häufige Fragen: Arzt-Website, KI-Sichtbarkeit & digitale Positionierung für Ärzte in Österreich & Deutschland</h1>
                         <p className="text-blue-100 text-lg max-w-2xl">Alles was Sie über Website, KI-Sichtbarkeit, Förderung, Recht und Technik wissen müssen – kompakt und ehrlich beantwortet.</p>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ const schemaMarkup = {
       "name": "mypraxis.at – Digitale Positionierung für Ärzte",
       "alternateName": "mypraxis.at by Kevin Hofbauer e.U.",
       "vatID": "ATU78915818",
-      "description": "Spezialisiert auf digitale Positionierung, KI-Sichtbarkeit und strukturierte Daten für niedergelassene Ärztinnen und Ärzte in Österreich. Tiefenrecherche, maßgeschneiderte Texte und KI-Readiness für Einzelordinationen und Ärztezentren. Bis zu 30 % KMU.DIGITAL Förderung.",
+      "description": "Spezialisiert auf digitale Positionierung, KI-Sichtbarkeit und strukturierte Daten für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland. Tiefenrecherche, maßgeschneiderte Texte und KI-Readiness für Einzelordinationen und Ärztezentren.",
       "url": "https://www.mypraxis.at",
       "logo": "https://www.mypraxis.at/logo.png",
       "image": "https://www.mypraxis.at/og-image.png",
@@ -33,6 +33,7 @@ const schemaMarkup = {
       "founder": { "@id": "https://www.mypraxis.at/#kevin-hofbauer" },
       "areaServed": [
         { "@type": "Country", "name": "Österreich", "sameAs": "https://www.wikidata.org/wiki/Q40" },
+        { "@type": "Country", "name": "Deutschland", "sameAs": "https://www.wikidata.org/wiki/Q183" },
         { "@type": "AdministrativeArea", "name": "Niederösterreich" },
         { "@type": "AdministrativeArea", "name": "Wien" },
         { "@type": "AdministrativeArea", "name": "Oberösterreich" },
@@ -68,7 +69,7 @@ const schemaMarkup = {
               "name": "Praxis-Website",
               "description": "Professionelle, rechtssichere Website für niedergelassene Ärztinnen und Ärzte in Österreich. Individuelles Design, Local SEO, Basis Schema Markup, DSGVO- und ÖÄK-konforme Umsetzung, 12 Monate technische Betreuung."
             },
-            "priceSpecification": { "@type": "PriceSpecification", "price": "3900", "priceCurrency": "EUR", "valueAddedTaxIncluded": false }
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "valueAddedTaxIncluded": false }
           },
           {
             "@type": "Offer",
@@ -77,7 +78,7 @@ const schemaMarkup = {
               "name": "Digitale Positionierung",
               "description": "Umfassende digitale Positionierung für Wahlärzte. Tiefenrecherche, Zielgruppenanalyse, maßgeschneiderte Texte, KI-Readiness mit Schema Markup und llms.txt, KI-Telefonassistent, 12 Monate Betreuung."
             },
-            "priceSpecification": { "@type": "PriceSpecification", "price": "7500", "priceCurrency": "EUR", "valueAddedTaxIncluded": false }
+            "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "valueAddedTaxIncluded": false }
           },
           {
             "@type": "Offer",
@@ -126,7 +127,7 @@ const schemaMarkup = {
         {
           "@type": "Question",
           "name": "Was kostet eine Website für Ärzte in Österreich?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Unsere Praxis-Website liegt bei € 3.900 netto, die Digitale Positionierung mit Tiefenrecherche und KI-Readiness bei € 7.500 netto. Für Ärztezentren und PVEs erstellen wir individuelle Konzepte. Über KMU.DIGITAL sind bis zu 30 % förderbar." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Die Preise richten sich nach dem individuellen Leistungsumfang und werden auf Anfrage bekannt gegeben. Wir bieten Pakete für Einzelordinationen sowie maßgeschneiderte Lösungen für Ärztezentren und PVEs." }
         },
         {
           "@type": "Question",
@@ -159,16 +160,17 @@ const schemaMarkup = {
 }
 
 export const metadata: Metadata = {
-  title: 'Arzt Website & KI-Sichtbarkeit Österreich | mypraxis.at',
-  description: 'Praxis-Websites ab € 3.900 & KI-Readiness für Ärzte in Österreich. DSGVO-konform, ÖÄK-konform, bis 30 % KMU.DIGITAL Förderung. Jetzt kostenlos analysieren lassen.',
-  keywords: 'Arzt Website Agentur Österreich, Praxis Website erstellen, KI-Sichtbarkeit Arztpraxis, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, KMU.DIGITAL Förderung Arzt, Digitale Positionierung Ärzte, Webdesign Ärzte Wien, Wahlarzt Website',
+  title: 'Arzt Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland | mypraxis.at',
+  description: 'Professionelle Praxis-Websites & KI-Readiness für niedergelassene Ärzte in Österreich und Deutschland. DSGVO-konform, ÖÄK-konform. Jetzt kostenlos analysieren lassen.',
+  keywords: 'Arzt Website Agentur Österreich Deutschland, Praxis Website erstellen, KI-Sichtbarkeit Arztpraxis, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, Digitale Positionierung Ärzte, Webdesign Ärzte Wien, Wahlarzt Website',
   authors: [{ name: 'Kevin Hofbauer', url: 'https://www.hofbauer.marketing' }],
   creator: 'mypraxis.at',
   publisher: 'Kevin Hofbauer e.U.',
   metadataBase: new URL('https://www.mypraxis.at'),
   openGraph: {
-    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit Österreich',
-    description: 'Praxis-Websites ab € 3.900, KI-Readiness für Ärzte, DSGVO- & ÖÄK-konform. Bis 30 % KMU.DIGITAL Förderung. Kostenlos scannen lassen.',
+    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland',
+    description: 'Professionelle Praxis-Websites & KI-Readiness für Ärzte in Österreich und Deutschland. DSGVO- & ÖÄK-konform. Kostenlos analysieren lassen.',
+    images: [{ url: 'https://www.mypraxis.at/lp-hero.jpg', width: 1920, height: 1080, alt: 'mypraxis.at – Digitale Positionierung für Ärzte in Österreich & Deutschland' }],
     url: 'https://www.mypraxis.at',
     siteName: 'mypraxis.at',
     locale: 'de_AT',
@@ -176,8 +178,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit',
-    description: 'Praxis-Websites & KI-Readiness für Ärzte in Österreich. Ab € 3.900, bis zu 30 % förderbar.',
+    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Ärzte',
+    description: 'Professionelle Praxis-Websites & KI-Readiness für Ärzte in Österreich und Deutschland. DSGVO- & ÖÄK-konform.',
   },
   robots: {
     index: true,
@@ -189,6 +191,7 @@ export const metadata: Metadata = {
 import Navigation from '@/components/Navigation'
 import CookieBanner from '@/components/CookieBanner'
 import AccessibilityWidget from '@/components/AccessibilityWidget'
+import Script from 'next/script'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -199,8 +202,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
+        {/* LLMs.txt Discovery Links */}
+        <link rel="alternate" type="text/plain" href="https://www.mypraxis.at/llms.txt" />
+        <link rel="alternate" type="text/plain" href="https://www.mypraxis.at/llms-full.txt" />
       </head>
       <body className="bg-white text-dark antialiased">
+        {/* Google Ads – Basis-Tag (sitewide) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18019658217"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18019658217');`}
+        </Script>
         {/* Skip-Link – WCAG 2.4.1 */}
         <a
           href="#main-content"

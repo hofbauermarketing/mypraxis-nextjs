@@ -58,7 +58,8 @@ export default function DemoIndexPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white px-6 pt-6 pb-14">
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white px-6 pt-6 pb-14" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%)' }}>
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         {/* Zurück-Link + Logo */}
         <div className="max-w-4xl mx-auto flex items-center justify-between mb-10">
           <Link href="/" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-semibold transition-colors">
@@ -85,9 +86,15 @@ export default function DemoIndexPage() {
       <div className="max-w-5xl mx-auto px-6 py-12">
 
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Privatärzte & Wahlarzt-Ordinationen</h2>
-        <div className="grid sm:grid-cols-3 gap-5 mb-12">
+        <div className="grid sm:grid-cols-3 gap-5 mb-12" style={{ paddingTop: '20px' }}>
           {demos.slice(0, 3).map((d) => (
-            <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+            <div key={d.href} className="relative mt-4">
+              {/* Push-Pin */}
+              <div className="absolute -top-[14px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
+                <div className="w-5 h-5 rounded-full border border-red-900/25" style={{ background: 'radial-gradient(circle at 35% 32%, #f05050 0%, #c02020 45%, #7a0f0f 100%)', boxShadow: '0 3px 8px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.35)' }} />
+                <div className="w-[2px] h-2.5 rounded-b-full" style={{ background: 'linear-gradient(to bottom, #bbb, #888)' }} />
+              </div>
+            <a href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 block" style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}>
               {/* Screenshot preview */}
               <div className="relative h-44 overflow-hidden bg-gray-100">
                 <img
@@ -104,13 +111,19 @@ export default function DemoIndexPage() {
                 <span className="text-xs font-semibold text-[#1e3ab8] group-hover:underline">Demo ansehen →</span>
               </div>
             </a>
+            </div>
           ))}
         </div>
 
         <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-5">Ärztezentren & Gruppenpraxen</h2>
-        <div className="grid sm:grid-cols-2 gap-5 mb-12">
+        <div className="grid sm:grid-cols-2 gap-5 mb-12" style={{ paddingTop: '20px' }}>
           {demos.slice(3).map((d) => (
-            <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+            <div key={d.href} className="relative mt-4">
+              <div className="absolute -top-[14px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
+                <div className="w-5 h-5 rounded-full border border-red-900/25" style={{ background: 'radial-gradient(circle at 35% 32%, #f05050 0%, #c02020 45%, #7a0f0f 100%)', boxShadow: '0 3px 8px rgba(0,0,0,0.5), inset 0 1px 2px rgba(255,255,255,0.35)' }} />
+                <div className="w-[2px] h-2.5 rounded-b-full" style={{ background: 'linear-gradient(to bottom, #bbb, #888)' }} />
+              </div>
+              <a href={d.href} target="_blank" rel="noopener noreferrer" className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 block" style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}>
               <div className="relative h-44 overflow-hidden bg-gray-100">
                 <img
                   src={d.screenshot}
@@ -125,7 +138,8 @@ export default function DemoIndexPage() {
                 <p className="text-xs text-gray-500 leading-relaxed mb-3">{d.desc}</p>
                 <span className="text-xs font-semibold text-[#1e3ab8] group-hover:underline">Demo ansehen →</span>
               </div>
-            </a>
+              </a>
+            </div>
           ))}
         </div>
 

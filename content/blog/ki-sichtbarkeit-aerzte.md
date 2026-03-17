@@ -1,7 +1,7 @@
 ---
 title: "Warum Ihre Ordination bei ChatGPT nicht empfohlen wird"
 date: "2026-02-23"
-description: "Über 90 % der österreichischen Ordinationen sind für KI-Systeme unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern."
+description: "Über 90 % der Ordinationen in Österreich und Deutschland sind für KI-Systeme wie ChatGPT unsichtbar. Was technisch dahintersteckt – und wie Sie es ändern."
 author: "Kevin Hofbauer"
 image: "/blog/ki-sichtbarkeit-aerzte.png"
 imageAlt: "Ärztin mit AR-Brille interagiert mit schwebenden KI-Suchergebnissen und digitalen Datenpanelen in einem modernen Krankenhaus"

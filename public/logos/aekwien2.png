@@ -1,0 +1,1521 @@
+<!doctype html>
+<html class="ltr" dir="ltr" lang="de-AT">
+ <head>
+  <title>Ärztekammer für Wien</title>
+  <meta content="initial-scale=1.0, width=device-width" name="viewport">
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <script type="importmap">{"imports": {"@liferay/oauth2-provider-web/client":"/o/oauth2-provider-web/__liferay__/client.js","@liferay/fragment-impl/api":"/o/fragment-impl/__liferay__/api.js","react-dom":"/o/frontend-js-react-web/__liferay__/exports/react-dom.js","react-dom-18":"/o/frontend-js-react-web/__liferay__/exports/react-dom-18.js","react-dom/client":"/o/frontend-js-react-web/__liferay__/exports/react-dom$client.js","react-dom-18/client":"/o/frontend-js-react-web/__liferay__/exports/react-dom-18$client.js","react":"/o/frontend-js-react-web/__liferay__/exports/react.js","react-16":"/o/frontend-js-react-web/__liferay__/exports/react-16.js","react-dom-16":"/o/frontend-js-react-web/__liferay__/exports/react-dom-16.js","react-18":"/o/frontend-js-react-web/__liferay__/exports/react-18.js","@liferay/frontend-js-api":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api.js","@liferay/frontend-js-api/data-set":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api$data-set.js","@liferay/dynamic-data-mapping-form-field-type/api":"/o/dynamic-data-mapping-form-field-type/__liferay__/api.js","@clayui/breadcrumb":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$breadcrumb.js","@clayui/form":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$form.js","@clayui/popover":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$popover.js","@clayui/charts":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$charts.js","@clayui/shared":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$shared.js","@clayui/localized-input":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$localized-input.js","@clayui/modal":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$modal.js","@clayui/empty-state":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$empty-state.js","@clayui/color-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$color-picker.js","@clayui/navigation-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$navigation-bar.js","@clayui/pagination":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination.js","@clayui/icon":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js","@clayui/table":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$table.js","@clayui/autocomplete":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$autocomplete.js","@clayui/slider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$slider.js","@clayui/management-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$management-toolbar.js","@clayui/multi-select":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-select.js","@clayui/nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$nav.js","@clayui/time-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$time-picker.js","@clayui/provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$provider.js","@clayui/upper-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$upper-toolbar.js","@clayui/loading-indicator":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js","@clayui/panel":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$panel.js","@clayui/drop-down":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$drop-down.js","@clayui/list":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$list.js","@clayui/date-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$date-picker.js","@clayui/label":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$label.js","@clayui/data-provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$data-provider.js","@clayui/core":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$core.js","@clayui/pagination-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination-bar.js","@clayui/layout":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$layout.js","@clayui/multi-step-nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-step-nav.js","@clayui/css":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$css.js","@clayui/toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$toolbar.js","@clayui/alert":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$alert.js","@clayui/badge":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$badge.js","@clayui/link":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$link.js","@clayui/card":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$card.js","@clayui/progress-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$progress-bar.js","@clayui/tooltip":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tooltip.js","@clayui/button":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$button.js","@clayui/tabs":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tabs.js","@clayui/sticker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$sticker.js","@liferay/language/": "/o/js/language/"}, "scopes": {}}</script>
+  <link rel="stylesheet" type="text/css" href="/o/cookie-banner/cb.css">
+  <script data-senna-track="permanent" src="/o/cookie-banner/jq.js"></script>
+  <link href="/documents/263869/0/favicon-wien.ico/e69e1be9-ff2d-41bd-ecdf-3ba58cfb3416" rel="apple-touch-icon">
+  <link href="/documents/263869/0/favicon-wien.ico/e69e1be9-ff2d-41bd-ecdf-3ba58cfb3416" rel="icon">
+  <link class="lfr-css-file" data-senna-track="temporary" href="https://www.aekwien.at/o/aerztekammer/css/clay.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1768580640000" id="liferayAUICSS" rel="stylesheet" type="text/css">
+  <link href="https://www.aekwien.at/o/asset-publisher-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1758666046000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="c0acd09">
+  <link href="https://www.aekwien.at/o/journal-content-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1757909054000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="29ed68bd">
+  <link href="https://www.aekwien.at/o/portal-search-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1765356556000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="1967a571">
+  <link href="https://www.aekwien.at/o/product-navigation-product-menu-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1757909168000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="b154322e">
+  <link href="https://www.aekwien.at/o/product-navigation-user-personal-bar-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1757909170000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="438d7040">
+  <link href="https://www.aekwien.at/o/site-navigation-menu-web/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1757909218000" rel="stylesheet" type="text/css" data-senna-track="temporary" id="8c420b56">
+  <script data-senna-track="temporary" type="text/javascript">
+(function() {
+	function buildESMStub(contextPath, symbol) {
+		return (
+			(...args) => {
+				import(
+					Liferay.ThemeDisplay.getPathContext() +
+						'/o/' +
+						contextPath +
+						'/__liferay__/index.js'
+				).then(
+					(exports) => exports[symbol](...args)
+				);
+			}
+		);
+	}
+
+	function defineReadOnlyGlobal(name, getValue) {
+		Object.defineProperty(
+			window,
+			name,
+			{
+				get: getValue,
+				set: (x) => {
+					if (x !== getValue()) {
+						console.error(`Global variable '${name}' is read-only`);
+					}
+				}
+			}
+		);
+	}
+
+	function isObject(item) {
+		return (item && typeof item === 'object' && !Array.isArray(item));
+	}
+
+	function merge(target, source) {
+		for (const key in source) {
+			if (isObject(source[key])) {
+				if (!target[key]) {
+					Object.assign(target, { [key]: {} });
+				}
+
+				merge(target[key], source[key]);
+			}
+else {
+				Object.assign(target, { [key]: source[key] });
+			}
+		}
+	}
+
+	let __liferay = {
+AUI: {
+getCombine: () => true,
+getComboPath: () => '/combo/?browserId=other&minifierType=&languageId=de_AT&t=1760473939865&',
+getDateFormat: () => '%d.%m.%Y',
+getEditorCKEditorPath: () => '/o/frontend-editor-ckeditor-web',
+getFilter: () => 'min',
+getFilterConfig: () => null,
+getJavaScriptRootPath: () => '/o/frontend-js-web',
+getPortletRootPath: () => '/html/portlet',
+getStaticResourceURLParams: () => '?browserId=other&minifierType=&languageId=de_AT&t=1760473939865',
+},
+Browser: {
+acceptsGzip: () => false,
+getMajorVersion: () => '0',
+getRevision: () => '',
+getVersion: () => '',
+isAir: () => false,
+isChrome: () => false,
+isEdge: () => false,
+isFirefox: () => false,
+isGecko: () => false,
+isIe: () => false,
+isIphone: () => false,
+isLinux: () => false,
+isMac: () => false,
+isMobile: () => false,
+isMozilla: () => false,
+isOpera: () => false,
+isRtf: () => false,
+isSafari: () => false,
+isSun: () => false,
+isWebKit: () => false,
+isWindows: () => false,
+},
+Data: {
+ICONS_INLINE_SVG: true,
+NAV_SELECTOR: '#navigation',
+NAV_SELECTOR_MOBILE: '#navigationCollapse',
+isCustomizationView: () => false,
+notices: [
+],
+},
+FeatureFlags: {
+'COMMERCE-13024': false,
+'COMMERCE-8087': true,
+'COMMERCE-8949': false,
+'LPD-10562': false,
+'LPD-10889': false,
+'LPD-10964': false,
+'LPD-11003': false,
+'LPD-11131': true,
+'LPD-11212': false,
+'LPD-11228': false,
+'LPD-11232': false,
+'LPD-11235': false,
+'LPD-11313': false,
+'LPD-11848': false,
+'LPD-13311': true,
+'LPD-13778': true,
+'LPD-17564': false,
+'LPD-19870': false,
+'LPD-19955': false,
+'LPD-20131': false,
+'LPD-20183': false,
+'LPD-20379': false,
+'LPD-20556': false,
+'LPD-20640': false,
+'LPD-21414': false,
+'LPD-21926': false,
+'LPD-24055': false,
+'LPD-29516': false,
+'LPD-30204': false,
+'LPD-30371': false,
+'LPD-31212': false,
+'LPD-31789': false,
+'LPD-32050': false,
+'LPD-32867': false,
+'LPD-34594': false,
+'LPD-35013': true,
+'LPD-35128': false,
+'LPD-35443': false,
+'LPD-36464': false,
+'LPD-38869': true,
+'LPD-39304': true,
+'LPD-39437': false,
+'LPD-39967': false,
+'LPD-40530': true,
+'LPD-40533': true,
+'LPD-40534': true,
+'LPD-40535': true,
+'LPD-42553': false,
+'LPD-42577': false,
+'LPD-44091': true,
+'LPD-44307': true,
+'LPD-44771': true,
+'LPD-45276': false,
+'LPD-45375': false,
+'LPD-47713': true,
+'LPD-47858': false,
+'LPD-48862': true,
+'LPD-50377': false,
+'LPD-58472': false,
+'LPD-60546': true,
+'LPD-6368': false,
+'LPD-6378': false,
+'LPD-7822': false,
+'LPS-122920': false,
+'LPS-129412': false,
+'LPS-134060': false,
+'LPS-135430': false,
+'LPS-153332': false,
+'LPS-153714': false,
+'LPS-153813': false,
+'LPS-155284': false,
+'LPS-159643': false,
+'LPS-164563': false,
+'LPS-165482': false,
+'LPS-167253': true,
+'LPS-169837': false,
+'LPS-170670': false,
+'LPS-174417': false,
+'LPS-174816': false,
+'LPS-176691': false,
+'LPS-177027': false,
+'LPS-178052': false,
+'LPS-178642': false,
+'LPS-179669': false,
+'LPS-180090': false,
+'LPS-185892': false,
+'LPS-186360': false,
+'LPS-186620': false,
+'LPS-193884': false,
+'LPS-196935': true,
+'LPS-197477': false,
+'LPS-197909': false,
+'LPS-198183': false,
+'LPS-199086': false,
+'LPS-200108': false,
+'LPS-202104': false,
+'LRAC-10757': false,
+'LRAC-15017': false,
+},
+Language: {
+	_cache:
+		window?.Liferay?.Language?._cache
+			? Liferay.Language._cache
+			: {},
+	available: {
+'de_AT': 'Deutsch\x20\x28Österreich\x29',
+'en_US': 'English\x20\x28United\x20States\x29',
+
+	},
+	direction: {
+'de_AT': 'ltr',
+'en_US': 'ltr',
+
+	},
+	get:
+		(key) => {
+			let value = Liferay.Language._cache[key];
+
+			if (value === undefined) {
+				value = key;
+			}
+
+			return value;
+		},
+},
+Portlet: {
+openModal: buildESMStub('frontend-js-components-web', 'openPortletModal'),
+openWindow: buildESMStub('frontend-js-components-web', 'openPortletWindow'),
+},
+PortletKeys: {
+DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+INSTANCE_SETTINGS: 'com_liferay_configuration_admin_web_portlet_InstanceSettingsPortlet',
+ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet',
+},
+PropsValues: {
+JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 52428800,
+},
+ThemeDisplay: {
+getLayoutId: () => '1',
+getLayoutRelativeControlPanelURL: () => '/group/wien/~/control_panel/manage',
+getLayoutRelativeURL: () => '/home',
+getLayoutURL: () => 'https://www.aekwien.at/home',
+getParentLayoutId: () => '0',
+isControlPanel: () => false,
+isPrivateLayout: () => false,
+isVirtualLayout: () => false,
+getBCP47LanguageId: () => 'de-AT',
+getCanonicalURL: () => 'https\x3a\x2f\x2fwww\x2eaekwien\x2eat',
+getCDNBaseURL: () => 'https://www.aekwien.at',
+getCDNDynamicResourcesHost: () => '',
+getCDNHost: () => '',
+getCompanyGroupId: () => '20152',
+getCompanyId: () => '20116',
+getDefaultLanguageId: () => 'de_AT',
+getDoAsUserIdEncoded: () => '',
+getLanguageId: () => 'de_AT',
+getParentGroupId: () => '263869',
+getPathContext: () => '',
+getPathImage: () => '/image',
+getPathJavaScript: () => '/o/frontend-js-web',
+getPathMain: () => '/c',
+getPathThemeImages: () => 'https://www.aekwien.at/o/aerztekammer/images',
+getPathThemeRoot: () => '/o/aerztekammer',
+getPlid: () => '263879',
+getPortalURL: () => 'https://www.aekwien.at',
+getRealUserId: () => '20120',
+getRemoteAddr: () => '89.144.222.158',
+getRemoteHost: () => '89.144.222.158',
+getScopeGroupId: () => '263869',
+getScopeGroupIdOrLiveGroupId: () => '263869',
+getSessionId: () => '',
+getSiteAdminURL: () => 'https://www.aekwien.at/group/wien/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view',
+getSiteGroupId: () => '263869',
+getTimeZone: () => 'Europe/Vienna',
+getURLControlPanel: () => '/group/control_panel?refererPlid=263879',
+getURLHome: () => 'https\x3a\x2f\x2fwww\x2eaekwien\x2eat\x2fweb\x2foak\x2fhome',
+getUserEmailAddress: () => '',
+getUserId: () => '20120',
+getUserName: () => '',
+isAddSessionIdToURL: () => false,
+isImpersonated: () => false,
+isSignedIn: () => false,
+isStagedPortlet: () => false,
+isStateExclusive: () => false,
+isStateMaximized: () => false,
+isStatePopUp: () => false,
+},
+Util: {
+Window: {
+	_map: {},
+	getById: (id) => Liferay.Util.Window._map[id],
+},
+openAlertModal: buildESMStub('frontend-js-components-web', 'openAlertModal'),
+openConfirmModal: buildESMStub('frontend-js-components-web', 'openConfirmModal'),
+openModal: buildESMStub('frontend-js-components-web', 'openModal'),
+openSelectionModal: buildESMStub('frontend-js-components-web', 'openSelectionModal'),
+openSimpleInputModal: buildESMStub('frontend-js-components-web', 'openSimpleInputModal'),
+openToast: buildESMStub('frontend-js-components-web', 'openToast'),
+},
+authToken: 'gNuZwUUQ',
+currentURL: '\x2ffavicon\x2epng',
+currentURLEncoded: '\x252Ffavicon\x2epng',
+
+	};
+
+	if (window.Liferay) {
+		merge(window.Liferay, __liferay);
+	}
+	else {
+		defineReadOnlyGlobal('Liferay', () => __liferay);
+		defineReadOnlyGlobal('themeDisplay', () => window.Liferay.ThemeDisplay);
+	}
+})();
+</script>
+  <script data-senna-track="permanent" src="/combo?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;t=1760473939865&amp;/o/frontend-js-aui-web/aui/aui/aui-min.js&amp;/o/frontend-js-aui-web/liferay/modules.js&amp;/o/frontend-js-aui-web/liferay/aui_sandbox.js&amp;/o/frontend-js-aui-web/aui/attribute-base/attribute-base-min.js&amp;/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex-min.js&amp;/o/frontend-js-aui-web/aui/attribute-core/attribute-core-min.js&amp;/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable-min.js&amp;/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras-min.js&amp;/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base-min.js&amp;/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex-min.js&amp;/o/frontend-js-aui-web/aui/oop/oop-min.js&amp;/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang-min.js&amp;/o/frontend-js-aui-web/liferay/dependency.js" type="text/javascript"></script>
+  <script data-senna-track="permanent" src="/o/frontend-js-web/Liferay.js?&amp;mac=M7FviXf8FL6zW64mx5SA73Dk+l4=&amp;browserId=other&amp;languageId=de_AT&amp;minifierType=js" type="text/javascript"></script>
+  <script data-senna-track="temporary" type="text/javascript">window.__CONFIG__= {basePath: '', combine: true, defaultURLParams: null, explainResolutions: false, exposeGlobal: false, logLevel: 'warn', moduleType: 'module', namespace:'Liferay', nonce: '', reportMismatchedAnonymousModules: 'warn', resolvePath: '/o/js_resolve_modules', url: '/combo/?browserId=other&minifierType=js&languageId=de_AT&t=1760473939865&', waitTimeout: 60000};</script>
+  <script data-senna-track="permanent" src="/o/frontend-js-loader-modules-extender/loader.js?&amp;mac=9WaMmhziBCkScHZwrrVcOR7VZF4=&amp;browserId=other&amp;languageId=de_AT&amp;minifierType=js" type="text/javascript"></script>
+  <script data-senna-track="temporary">Liferay.Icons = Liferay.Icons || {};Liferay.Icons.controlPanelSpritemap = 'https://www.aekwien.at/o/oak-admin-theme/images/clay/icons.svg'; Liferay.Icons.spritemap = 'https://www.aekwien.at/o/aerztekammer/images/clay/icons.svg';</script>
+  <script data-senna-track="permanent" type="text/javascript">window.Liferay.CSP = {nonce: ''};</script>
+  <script data-senna-track="permanent" src="/o/oauth2-provider-web/__liferay__/global.js" type="module"></script>
+  <script data-senna-track="temporary" type="text/javascript">window.Liferay = Liferay || {}; window.Liferay.OAuth2 = {getAuthorizeURL: function() {return 'https://www.aekwien.at/o/oauth2/authorize';}, getBuiltInRedirectURL: function() {return 'https://www.aekwien.at/o/oauth2/redirect';}, getIntrospectURL: function() { return 'https://www.aekwien.at/o/oauth2/introspect';}, getTokenURL: function() {return 'https://www.aekwien.at/o/oauth2/token';}, getUserAgentApplication: function(externalReferenceCode) {return Liferay.OAuth2._userAgentApplications[externalReferenceCode];}, _userAgentApplications: {}}</script>
+  <script data-senna-track="temporary" type="text/javascript">try {var MODULE_MAIN='exportimport-web@5.0.107/index';var MODULE_PATH='/o/exportimport-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			exportimportweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-export-import-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/image-uploader-web@5.0.58/index';var MODULE_PATH='/o/image-uploader-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			imageuploaderweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-logo-editor': {
+						path: 'logo_editor.js',
+						requires: ['aui-image-cropper', 'liferay-portlet-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='site-navigation-menu-web@6.0.79/index';var MODULE_PATH='/o/site-navigation-menu-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			navigationmenuweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-navigation-interaction': {
+						path: 'navigation_interaction.js',
+						plugins: {
+							'liferay-navigation-interaction-touch': {
+								condition: {
+									name: 'liferay-navigation-interaction-touch',
+									test(A) {
+										return A.UA.touchEnabled;
+									},
+									trigger: 'liferay-navigation-interaction',
+								},
+							},
+						},
+						requires: [
+							'aui-base',
+							'aui-component',
+							'event-mouseenter',
+							'node-focusmanager',
+							'plugin',
+						],
+					},
+					'liferay-navigation-interaction-touch': {
+						path: 'navigation_interaction_touch.js',
+						requires: [
+							'event-tap',
+							'event-touch',
+							'liferay-navigation-interaction',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/layout-js-components-web@1.0.42/index';var MODULE_PATH='/o/layout-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			layout: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-layout': {
+						path: 'layout.js',
+					},
+					'liferay-layout-column': {
+						path: 'layout_column.js',
+						requires: ['aui-sortable-layout', 'dd'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-state-web@1.0.34/index';var MODULE_PATH='/o/frontend-js-state-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			state: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-js-components-web@2.0.89/index';var MODULE_PATH='/o/frontend-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			components: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-react-web@5.0.62/index';var MODULE_PATH='/o/frontend-js-react-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			react: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='contacts-web@5.0.69/index';var MODULE_PATH='/o/contacts-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			contactscenter: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-contacts-center': {
+						path: 'main.js',
+						requires: [
+							'aui-io-plugin-deprecated',
+							'aui-toolbar',
+							'autocomplete-base',
+							'datasource-io',
+							'json-parse',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-alloyeditor-web@5.0.62/index';var MODULE_PATH='/o/frontend-editor-alloyeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			alloyeditor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-alloy-editor': {
+						path: 'alloyeditor.js',
+						requires: [
+							'aui-component',
+							'liferay-portlet-base',
+							'timers',
+						],
+					},
+					'liferay-alloy-editor-source': {
+						path: 'alloyeditor_source.js',
+						requires: [
+							'aui-debounce',
+							'liferay-fullscreen-source-editor',
+							'liferay-source-editor',
+							'plugin',
+						],
+					},
+					'liferay-fullscreen-source-editor': {
+						path: 'fullscreen_source_editor.js',
+						requires: ['liferay-source-editor'],
+					},
+					'liferay-source-editor': {
+						path: 'source_editor.js',
+						requires: ['aui-ace-editor'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-workflow-kaleo-designer-web@5.0.154/index';var MODULE_PATH='/o/portal-workflow-kaleo-designer-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			'kaleo-designer': {
+				base: MODULE_PATH + '/designer/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-kaleo-designer-autocomplete-util': {
+						path: 'autocomplete_util.js',
+						requires: ['autocomplete', 'autocomplete-highlighters'],
+					},
+					'liferay-kaleo-designer-definition-diagram-controller': {
+						path: 'definition_diagram_controller.js',
+						requires: [
+							'liferay-kaleo-designer-field-normalizer',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-dialogs': {
+						path: 'dialogs.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-kaleo-designer-editors': {
+						path: 'editors.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-base',
+							'aui-datatype',
+							'aui-node',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-field-normalizer': {
+						path: 'field_normalizer.js',
+						requires: ['liferay-kaleo-designer-remote-services'],
+					},
+					'liferay-kaleo-designer-nodes': {
+						path: 'nodes.js',
+						requires: [
+							'aui-datatable',
+							'aui-datatype',
+							'aui-diagram-builder',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-remote-services': {
+						path: 'remote_services.js',
+						requires: ['aui-io'],
+					},
+					'liferay-kaleo-designer-templates': {
+						path: 'templates.js',
+						requires: ['aui-tpl-snippets-deprecated'],
+					},
+					'liferay-kaleo-designer-utils': {
+						path: 'utils.js',
+						requires: [],
+					},
+					'liferay-kaleo-designer-xml-definition': {
+						path: 'xml_definition.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'dataschema-xml',
+							'datatype-xml',
+						],
+					},
+					'liferay-kaleo-designer-xml-definition-serializer': {
+						path: 'xml_definition_serializer.js',
+						requires: ['escape', 'liferay-kaleo-designer-xml-util'],
+					},
+					'liferay-kaleo-designer-xml-util': {
+						path: 'xml_util.js',
+						requires: ['aui-base'],
+					},
+					'liferay-portlet-kaleo-designer': {
+						path: 'main.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-tpl-snippets-deprecated',
+							'dataschema-xml',
+							'datasource',
+							'datatype-xml',
+							'event-valuechange',
+							'io-form',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-nodes',
+							'liferay-kaleo-designer-remote-services',
+							'liferay-kaleo-designer-utils',
+							'liferay-kaleo-designer-xml-util',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/designer/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='calendar-web@5.0.112/index';var MODULE_PATH='/o/calendar-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			calendar: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-calendar-a11y': {
+						path: 'calendar_a11y.js',
+						requires: ['calendar'],
+					},
+					'liferay-calendar-container': {
+						path: 'calendar_container.js',
+						requires: [
+							'aui-alert',
+							'aui-base',
+							'aui-component',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-date-picker-sanitizer': {
+						path: 'date_picker_sanitizer.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-interval-selector': {
+						path: 'interval_selector.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-interval-selector-scheduler-event-link': {
+						path: 'interval_selector_scheduler_event_link.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-list': {
+						path: 'calendar_list.js',
+						requires: [
+							'aui-template-deprecated',
+							'liferay-scheduler',
+						],
+					},
+					'liferay-calendar-message-util': {
+						path: 'message_util.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-calendar-recurrence-converter': {
+						path: 'recurrence_converter.js',
+						requires: [],
+					},
+					'liferay-calendar-recurrence-dialog': {
+						path: 'recurrence.js',
+						requires: [
+							'aui-base',
+							'liferay-calendar-recurrence-util',
+						],
+					},
+					'liferay-calendar-recurrence-util': {
+						path: 'recurrence_util.js',
+						requires: ['aui-base', 'liferay-util-window'],
+					},
+					'liferay-calendar-reminders': {
+						path: 'calendar_reminders.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-remote-services': {
+						path: 'remote_services.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'liferay-calendar-util',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-session-listener': {
+						path: 'session_listener.js',
+						requires: ['aui-base', 'liferay-scheduler'],
+					},
+					'liferay-calendar-simple-color-picker': {
+						path: 'simple_color_picker.js',
+						requires: ['aui-base', 'aui-template-deprecated'],
+					},
+					'liferay-calendar-simple-menu': {
+						path: 'simple_menu.js',
+						requires: [
+							'aui-base',
+							'aui-template-deprecated',
+							'event-outside',
+							'event-touch',
+							'widget-modality',
+							'widget-position',
+							'widget-position-align',
+							'widget-position-constrain',
+							'widget-stack',
+							'widget-stdmod',
+						],
+					},
+					'liferay-calendar-util': {
+						path: 'calendar_util.js',
+						requires: [
+							'aui-datatype',
+							'aui-io',
+							'aui-scheduler',
+							'aui-toolbar',
+							'autocomplete',
+							'autocomplete-highlighters',
+						],
+					},
+					'liferay-scheduler': {
+						path: 'scheduler.js',
+						requires: [
+							'async-queue',
+							'aui-datatype',
+							'aui-scheduler',
+							'dd-plugin',
+							'liferay-calendar-a11y',
+							'liferay-calendar-message-util',
+							'liferay-calendar-recurrence-converter',
+							'liferay-calendar-recurrence-util',
+							'liferay-calendar-util',
+							'liferay-scheduler-event-recorder',
+							'liferay-scheduler-models',
+							'promise',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-event-recorder': {
+						path: 'scheduler_event_recorder.js',
+						requires: [
+							'dd-plugin',
+							'liferay-calendar-util',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-models': {
+						path: 'scheduler_models.js',
+						requires: [
+							'aui-datatype',
+							'dd-plugin',
+							'liferay-calendar-util',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='staging-processes-web@5.0.71/index';var MODULE_PATH='/o/staging-processes-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			stagingprocessesweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-staging-processes-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-ckeditor-web@5.0.117/index';var MODULE_PATH='/o/frontend-editor-ckeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			editor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'inline-editor-ckeditor': {
+						path: 'main.js',
+						requires: [
+							'array-invoke',
+							'liferay-inline-editor-base',
+							'node-event-simulate',
+							'overlay',
+							'yui-later',
+						],
+					},
+					'liferay-inline-editor-base': {
+						path: 'inline_editor_base.js',
+						requires: ['aui-base', 'aui-overlay-base-deprecated'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-search-web@6.0.156/index';var MODULE_PATH='/o/portal-search-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			search: {
+				base: MODULE_PATH + '/js/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-search-custom-range-facet': {
+						path: 'custom_range_facet.js',
+						requires: ['aui-form-validator'],
+					},
+				},
+				root: MODULE_PATH + '/js/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='dynamic-data-mapping-web@5.0.123/index';var MODULE_PATH='/o/dynamic-data-mapping-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	const LiferayAUI = Liferay.AUI;
+
+	AUI().applyConfig({
+		groups: {
+			ddm: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: LiferayAUI.getFilterConfig(),
+				modules: {
+					'liferay-ddm-form': {
+						path: 'ddm_form.js',
+						requires: [
+							'aui-base',
+							'aui-datatable',
+							'aui-datatype',
+							'aui-image-viewer',
+							'aui-parse-content',
+							'aui-set',
+							'aui-sortable-list',
+							'json',
+							'liferay-form',
+							'liferay-map-base',
+							'liferay-translation-manager',
+							'liferay-util-window',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'main.js',
+						requires: [
+							'arraysort',
+							'aui-form-builder-deprecated',
+							'aui-form-validator',
+							'aui-map',
+							'aui-text-unicode',
+							'json',
+							'liferay-menu',
+							'liferay-translation-manager',
+							'liferay-util-window',
+							'text',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping-custom-fields': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'custom_fields.js',
+						requires: ['liferay-portlet-dynamic-data-mapping'],
+					},
+					'liferay-translation-manager': {
+						path: 'translation_manager.js',
+						requires: ['aui-base'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/document-library-web@6.0.208/index';var MODULE_PATH='/o/document-library-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			dl: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'document-library-upload-component': {
+						path: 'DocumentLibraryUpload.js',
+						requires: [
+							'aui-component',
+							'aui-data-set-deprecated',
+							'aui-overlay-manager-deprecated',
+							'aui-overlay-mask-deprecated',
+							'aui-parse-content',
+							'aui-progressbar',
+							'aui-template-deprecated',
+							'liferay-search-container',
+							'querystring-parse-simple',
+							'uploader',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}</script>
+  <script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+	
+		
+			
+			
+		
+	
+
+	
+	// ]]>
+</script> <!-- Matomo -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://aerztekammer.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/aerztekammer.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script> <!-- End Matomo Code -->
+  <link class="lfr-css-file" data-senna-track="temporary" href="https://www.aekwien.at/o/aerztekammer/css/main.css?browserId=other&amp;themeId=wien_WAR_aerztekammer&amp;languageId=de_AT&amp;t=1768580640000" id="liferayThemeCSS" rel="stylesheet" type="text/css">
+  <style data-senna-track="temporary" type="text/css">
+		.navbar.overlay-nav.desktop-menu > .dropdown-menu {
+background-color: #f0f0f0;
+margin-bottom: 15px;
+box-shadow: 1px 2px 4px #0000004f;
+}
+.navbar.overlay-nav .multi-level > li.dropdown-submenu:hover > .dropdown-menu {
+box-shadow: 1px 2px 4px #0000004f;
+}
+ul.menu-level-1 {
+max-width: 93.6% !important;
+max-width: calc(100% - 80px) !important;
+z-index:-1;
+}
+
+
+@media (max-width: 767px) {
+.dropdown2 {
+margin-bottom: 20px;
+}
+}
+
+.mitarbeiter-data  i.icon-envelope-alt, .mitarbeiter-data  i.icon-phone, .mitarbeiter-data  i.icon-print {
+margin-right: 0.4rem;
+}
+	</style>
+  <style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_IpSuxAJP5I1A_ > .portlet > .portlet-content {
+
+}
+#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_IpSuxAJP5I1A div.h2 {
+	color: #c80000;
+	border-bottom: 2px solid #c80000;
+}
+
+
+
+				
+
+			
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_UBZtJkdS4HXO_ > .portlet > .portlet-content {
+
+}
+#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_UBZtJkdS4HXO {
+  box-shadow: 1px 2px 4px #0000004f; /* Schatteneffekt */
+  margin: 0; /* Entfernt den Rand */
+}
+
+
+
+				
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_INSTANCE_GENERIC_FOOTER_1_ > .portlet > .portlet-content {
+color: #FFFFFF
+}
+
+
+
+
+				
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+  <style data-senna-track="temporary" type="text/css">
+</style>
+  <link data-senna-track="permanent" href="/o/frontend-js-aui-web/alloy_ui.css?&amp;mac=favIEq7hPo8AEd6k+N5OVADEEls=&amp;browserId=other&amp;languageId=de_AT&amp;themeId=wien_WAR_aerztekammer" rel="stylesheet">
+  <script type="text/javascript" data-senna-track="temporary">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+  <script type="text/javascript">
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title:event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+</script>
+  <script>
+
+</script>
+  <style>
+
+
+
+
+
+
+
+	 .desktop-menu .dropdown-submenu.show,
+	 .desktop-menu .dropdown-submenu.keyboard-active {
+		 background-color: #006eb3 !important;
+	 }
+
+	.dropdown-menu li.keyboard-active > a:focus {
+		background-color: #006eb3;
+		color: #272833;
+		text-decoration: none;
+		box-shadow: inset 0 0 0 0.125rem #006eb3, inset 0 0 0 0.25rem #fff;
+		outline: 0;
+	}
+
+	.desktop-menu .dropdown-submenu.show > a .caret,
+	.desktop-menu .dropdown-submenu.keyboard-active > a .caret,
+	.desktop-menu .dropdown-submenu.show > a button.caret,
+	.desktop-menu .dropdown-submenu.keyboard-active > a button.caret {
+		border-top-color: white !important;
+		color: white !important;
+	}
+
+
+.dropdown-item:focus, .dropdown-menu > li > a:focus, .dropdown-menu .link-list > li > a:focus, .dropdown-item.focus, .dropdown-menu > li > a.focus, .dropdown-menu .link-list > li > a.focus {
+	background-color: #f0f5ff;
+	color: #272833;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 0.125rem #006eb3, inset 0 0 0 0.25rem #fff;
+	outline: 0;
+}
+
+.mobile-menu .background-color-var-1 a:focus {
+	outline: 2px solid #006eb3 !important;
+	outline-offset: 2px !important;
+	position: relative !important;
+	z-index: 10 !important;
+	box-shadow: 0 0 0 3px white !important;
+}
+
+.desktop-menu .navigation-item button.caret:focus {
+	outline: 2px solid #006eb3 !important;
+	outline-offset: 2px !important;
+	box-shadow: 0 0 0 3px white !important;
+}
+
+.desktop-menu .navigation-item.keyboard-active button.caret:focus {
+	outline: 2px solid white !important;
+	outline-offset: 2px !important;
+	box-shadow: 0 0 0 3px #006eb3 !important;
+}
+
+body{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+h1,h2,h3,h4{
+	color: #c80000;
+}
+
+.bild-titel-color {
+	color: #c80000;
+}
+
+
+.font-color-var-1{
+	color: #c80000 !important;
+}
+.font-color-var-1-hover:hover{
+	color: #c80000 !important;
+}
+.background-color-var-1{
+	background-color: #c80000 !important;
+}
+.background-color-var-1-hover:hover{
+	background-color: #c80000 !important;
+}
+.border-color-var-1{
+	border-color: #c80000 !important;
+}
+.border-top-color-var-1{
+	border-top-color: #c80000 !important;
+}
+.border-right-color-var-1{
+	border-right-color: #c80000 !important;
+}
+.border-bottom-color-var-1{
+	border-bottom-color: #c80000 !important;
+}
+.border-left-color-var-1{
+	border-left-color: #c80000 !important;
+}
+
+.font-color-var-2{
+	color: #b20000 !important;
+}
+.border-top-color-var-2{
+	border-top-color: #b20000 !important;
+}
+.border-right-color-var-2{
+	border-right-color: #b20000 !important;
+}
+.border-bottom-color-var-2{
+	border-bottom-color: #b20000 !important;
+}
+.border-left-color-var-2{
+	border-left-color: #b20000 !important;
+}
+
+@media(max-width:767px){
+	.social-footer {
+		background-color: #c80000;
+	}
+}
+.aerztekammer-sitemap-navigation-wrapper ul	li:before{
+	border-left-color: #b20000;
+}
+
+.main-menu.keyboard-active
+		> a {
+			background-color: #c80000 !important;
+			color: white !important;
+		}
+
+.desktop-menu .dropdown-submenu.show > a,
+.desktop-menu .dropdown-submenu.keyboard-active > a {
+	color: white !important;
+}
+
+#wrapper .list-group-title [href] {
+		color: #b20000;
+}
+
+a {
+	color: #b20000;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #b20000;
+	text-decoration: underline;
+}
+
+.oak .portlet-asset-publisher .list-group .list-group-title [href] {
+	color: #b20000;
+}
+
+
+.structure-blaue-buttons-vertikal-wrapper a:focus .button-item {
+	box-shadow: inset 0 0 0 0.125rem #c80000, inset 0 0 0 0.25rem #fff;
+}
+
+.structure-blaue-buttons-horizontal-wrapper a:focus {
+	box-shadow: inset 0 0 0 0.125rem #c80000, inset 0 0 0 0.25rem #fff;
+}
+
+body.wien-theme #wrapper {
+    a {
+        color: #b20000;
+        text-decoration: none;
+    }
+
+    a:hover, a:focus {
+        color: #b20000;
+        text-decoration: none;
+    }
+
+    .h1, .h2, .h3, .h4, .h5 {
+        color: #c80000;
+    }
+
+    .footer-link-list a, .footer-link-list a:focus {
+        color: white;
+    }
+
+    .mobile-menu-title {
+        color: white !important;
+    }
+}
+body.wien-theme {
+    .consent-modal-content .consent-accept-btn {
+        background-color: #b20000;
+        color: white;
+    }
+    .consent-modal-content .consent-accept-btn:hover {
+        background-color: #a00000;
+    }
+    .consent-modal-content a {
+        color: #b20000;
+    }
+
+}
+
+.btn-default:focus, .btn-default.focus {
+    background-color: #f7f8f9;
+    border-color: #cdced9;
+}	</style>
+  <link href="/documents/263869/0/favicon-wien.ico/e69e1be9-ff2d-41bd-ecdf-3ba58cfb3416" rel="apple-touch-icon">
+  <link href="/documents/263869/0/favicon-wien.ico/e69e1be9-ff2d-41bd-ecdf-3ba58cfb3416" rel="shortcut icon">
+  <script>
+		var themeCookieMoreInfoUrl = "";
+	</script>
+ </head>
+ <body class="other controls-visible  yui3-skin-sam signed-out public-page site wien-theme oak theme-full">
+  <div class="container pb-3 pt-3">
+   <div class="alert alert-danger" role="alert">
+    <div class="alert-autofit-row autofit-row">
+     <div class="autofit-col">
+      <div class="autofit-section">
+       <span class="alert-indicator">
+        <svg class="lexicon-icon lexicon-icon-exclamation-full" role="presentation">
+         <use xlink:href="https://www.aekwien.at/o/aerztekammer/images/clay/icons.svg#exclamation-full" />
+        </svg></span>
+      </div>
+     </div>
+     <div class="autofit-col autofit-col-expand">
+      <div class="autofit-section">
+       <strong class="lead">Fehler:</strong>Nicht gefunden
+      </div>
+     </div>
+    </div>
+   </div> Die angeforderte Ressource konnte nicht gefunden werden. <br><br> <code class="lfr-url-error">https://www.aekwien.at/favicon.png</code>
+  </div>
+ </body>
+</html>

@@ -4,11 +4,20 @@ import Navigation from '@/components/Navigation'
 import BlogGrid from '@/components/BlogGrid'
 
 export const metadata = {
-  title: 'Blog: KI-Sichtbarkeit & Arzt-Website Tipps | mypraxis.at',
-  description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Website-Kosten für niedergelassene Ärzte in Österreich. Von ChatGPT bis Google AI Overviews – alles was Ärzte 2025 wissen müssen.',
+  title: 'Blog: Arzt-Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland | mypraxis.at',
+  description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Arzt-Website-Kosten für niedergelassene Ärzte in Österreich und Deutschland. Von ChatGPT bis Google AI Overviews – alles was Ärzte 2026 wissen müssen.',
+  keywords: 'Blog Arzt Website Österreich Deutschland, KI-Sichtbarkeit Arztpraxis, digitale Positionierung Ärzte, ChatGPT Perplexity Arzt, Praxis Website Kosten, DSGVO Arztwebsite',
   alternates: {
     canonical: '/blog',
     languages: { 'de-AT': '/blog' },
+  },
+  openGraph: {
+    title: 'Blog: Arzt-Website & KI-Sichtbarkeit für Ärzte – mypraxis.at',
+    description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Arzt-Website-Kosten für Ärzte in Österreich und Deutschland.',
+    url: 'https://www.mypraxis.at/blog',
+    siteName: 'mypraxis.at',
+    locale: 'de_AT',
+    type: 'website',
   },
 }
 
@@ -22,7 +31,7 @@ export default function BlogPage() {
         '@type': 'Blog',
         '@id': 'https://www.mypraxis.at/blog#blog',
         name: 'mypraxis.at Blog – KI & Digitalisierung für Ärzte',
-        description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Website-Kosten für niedergelassene Ärzte in Österreich.',
+        description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Website-Kosten für niedergelassene Ärzte in Österreich und Deutschland.',
         url: 'https://www.mypraxis.at/blog',
         inLanguage: 'de-AT',
         publisher: { '@id': 'https://www.mypraxis.at/#organization' },
@@ -53,19 +62,24 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
       <Navigation />
-      <main className="min-h-screen bg-gray-50 pt-24 pb-20">
+      <main className="relative min-h-screen bg-gray-50 pb-20">
+        {/* Strukturhintergrund: diagonale Punkte blau, sehr dezent */}
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(30,58,184,0.045) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
         {/* Header */}
-        <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] text-white py-16">
-          <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="relative overflow-hidden text-white pt-28 pb-20 px-6" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%)' }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e] via-[#112080] to-[#0a0f1e]" />
+          <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.4)_100%)] pointer-events-none" />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-blue-200/70 text-xs mb-4">
               <Link href="/" className="hover:text-white transition-colors">mypraxis.at</Link>
               <span aria-hidden="true">/</span>
               <span className="text-blue-200">Blog</span>
             </nav>
             <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-3">Wissen für Ihre Praxis</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog: Arzt-Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland</h1>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Praxisnahe Artikel über digitale Positionierung, KI-Sichtbarkeit und Förderungen für niedergelassene Ärztinnen und Ärzte in Österreich.
+              Praxisnahe Artikel über digitale Positionierung, KI-Sichtbarkeit und Förderungen für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland.
             </p>
           </div>
         </div>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="de" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="de" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="de" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="de" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+                                 More info: h5bp.com/i/378 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- <meta name="viewport" content="width=device-width" /> -->
+        <meta name="description" content="praktischArzt | Die Jobbörse für Ärzte" />
+        <meta name="keywords" content="Job, Jobs, company, employer, employee" />
+        <title>Page Not Found &#8211; praktischArztpraktischArzt</title>
+        <link rel="pingback" href="https://www.praktischarzt.de/xmlrpc.php" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,700,300,400italic&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/bootstrap.min.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/style.css" media="all" />
+		
+		<link rel="preload" href="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/font-awesome-pro/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+		<noscript><link as="font" href="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/font-awesome-pro/fontawesome.css" rel="stylesheet" type="text/css" /></noscript>
+		
+        <!--[if lte IE 8]> <link rel="stylesheet" type="text/css" href="css/lib/ie.css" charset="utf-8" /> <![endif]-->
+        <meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.1 (Yoast SEO v27.1.1) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<meta property="og:locale" content="de_DE" />
+	<meta property="og:title" content="Page Not Found &#8211; praktischArzt" />
+	<meta property="og:site_name" content="praktischArzt" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.praktischarzt.de/#website","url":"https://www.praktischarzt.de/","name":"praktischArzt","description":"praktischArzt | Die Jobbörse für Ärzte","publisher":{"@id":"https://www.praktischarzt.de/#organization"},"alternateName":"\"praktischarzt\", \"praktisch arzt\", \"praktisch Arzt\"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.praktischarzt.de/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"de"},{"@type":"Organization","@id":"https://www.praktischarzt.de/#organization","name":"praktischArzt","alternateName":"pA","url":"https://www.praktischarzt.de/","logo":{"@type":"ImageObject","inLanguage":"de","@id":"https://www.praktischarzt.de/#/schema/logo/image/","url":"https://www.praktischarzt.de/wp-content/uploads/2019/03/praktischArzt-logo-2019-blue.png","contentUrl":"https://www.praktischarzt.de/wp-content/uploads/2019/03/praktischArzt-logo-2019-blue.png","width":800,"height":215,"caption":"praktischArzt"},"image":{"@id":"https://www.praktischarzt.de/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/PraktischArzt","https://www.instagram.com/praktischarzt/"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='afu-css' href='https://www.praktischarzt.de/wp-content/plugins/ajax-file-upload/assets/css/style.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='afu-icons-css' href='https://www.praktischarzt.de/wp-content/plugins/ajax-file-upload/assets/fontello/css/afu.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='afu-icons-animation-css' href='https://www.praktischarzt.de/wp-content/plugins/ajax-file-upload/assets/fontello/css/animation.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='cleverreach_style-css' href='https://www.praktischarzt.de/wp-content/plugins/cleverreach/resources/css/frontend.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='duplica-css' href='https://www.praktischarzt.de/wp-content/plugins/duplica/assets/css/front.min.css?ver=0.16' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox2-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/fancybox2/jquery.fancybox.css?ver=1736493568' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/custom.css?ver=1736502777' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/bootstrap.min.css?ver=1736493568' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/style.css?ver=1772531270' type='text/css' media='all' />
+<link rel='stylesheet' id='login_popup-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/login_popup.css?ver=1753764550' type='text/css' media='all' />
+<link rel='stylesheet' id='common-f-css' href='https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/css/common.css?ver=1749451649' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-style-css' href='https://www.praktischarzt.de/wp-content/themes/jobengine/css/jquery-ui.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='recent-posts-widget-with-thumbnails-public-style-css' href='https://www.praktischarzt.de/wp-content/plugins/recent-posts-widget-with-thumbnails/public.css?ver=7.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.praktischarzt.de/wp-content/tablepress-combined.min.css?ver=71' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.praktischarzt.de/wp-includes/css/dashicons.min.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<link rel='stylesheet' id='jobseeker_style-css' href='https://www.praktischarzt.de/wp-content/themes/jobengine/css/custom-jseeker.css?ver=99fd99b463ca9769f83d3924be2d4712' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/jquery.min.js?ver=1736493568" id="jquery-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/plugins/ajax-file-upload/assets/js/main.js?ver=1590849031" id="afu-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/underscore-min.js?ver=99fd99b463ca9769f83d3924be2d4712" id="et-underscore-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/backbone-min.js?ver=99fd99b463ca9769f83d3924be2d4712" id="et-backbone-js"></script>
+<script type="text/javascript" id="job_engine-js-extra">
+/* <![CDATA[ */
+var et_globals = {"ajaxURL":"https://www.praktischarzt.de/wp-admin/admin-ajax.php","homeURL":"https://www.praktischarzt.de","imgURL":"https://www.praktischarzt.de/wp-content/themes/jobengine/img","jsURL":"https://www.praktischarzt.de/wp-content/themes/jobengine/js","dashboardURL":"https://www.praktischarzt.de/dashboard/","logoutURL":"https://www.praktischarzt.de/logout","routerRootCompanies":"https://www.praktischarzt.de/companies-10640/","msg_login_ok":"Sie sind sich als eingeloggt \u003C%= company %\u003E!","msg_logout":"Logout","err_field_required":"Dieses Feld darf nicht leer sein!","err_invalid_email":"Ung\u00fcltige E-Mail-Adresse!","err_invalid_username":"Invalid username!","err_pass_not_matched":"Die Passw\u00f6rter stimmen nicht \u00fcberein","plupload_config":{"max_file_size":"3mb","url":"https://www.praktischarzt.de/wp-admin/admin-ajax.php","flash_swf_url":"https://www.praktischarzt.de/wp-content/themes/jobengine/js/plupload/plupload.flash.swf","silverlight_xap_url":"https://www.praktischarzt.de/wp-content/themes/jobengine/js/plupload/plupload.silverlight.xap"},"is_enable_feature":"1","loading":"Wird geladen","txt_ok":"OK","txt_cancel":"Abbrechen","no_job_found":"Leider konnten keine Stellen zur aktuellen Suche gefunden werden. Versuchen Sie es mit anderen Suchkriterien erneut.","form_valid_msg":"Bitte f\u00fcllen Sie sich alle Pflichtfelder aus.","anywhere":"Irgendwo","view_map":"View map","page_template":"","is_single_job":null};
+//# sourceURL=job_engine-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/job_engine.js?ver=1736493568" id="job_engine-js"></script>
+<script type="text/javascript" id="front-js-extra">
+/* <![CDATA[ */
+var front_job_data = {"ajaxURL":"https://www.praktischarzt.de/wp-admin/admin-ajax.php","nonce":"277319e61e"};
+//# sourceURL=front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/front.js?ver=1738907002" id="front-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/resumes/js/jobseeker.js?ver=99fd99b463ca9769f83d3924be2d4712" id="et_jobseeker-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/plupload/moxie.min.js?ver=1.3.5.1" id="moxiejs-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/plupload/plupload.min.js?ver=2.1.9" id="plupload-js"></script>
+<link rel="https://api.w.org/" href="https://www.praktischarzt.de/wp-json/" />
+<script type="application/ld+json">{"@context":"http://schema.org/","@type":"Organization","url":"https://www.praktischarzt.de","logo":"https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/img/praktischArzt-logo-2021-Blue.png"}</script><style type='text/css'> 
+
+</style>		<style>
+		body, html {
+			height: auto !important;
+		}
+		span.footer_social_icons {
+			width: auto;
+			margin: 20px 0 !important;
+			height: auto;
+		}
+		</style>
+    </head>
+    <body class="error404 wp-theme-jobengine wp-child-theme-praktischArzt-theme two-column right-sidebar">
+
+	<div class="container-fluide">
+	<div class="row">
+	<div class="col-md-12 col-sm-12 col-12">
+        <div class="head404">
+            <div class="main-center a-center">Fehler #404</div>
+        </div>
+        <div class="header404">
+            <div class="main-center a-center">Seite nicht gefunden :(</div>
+        </div>
+        </div>
+        </div>
+        </div>
+		
+		
+			<div class="container">
+	<div class="row">
+	<div class="col-md-12 col-sm-12 col-12">
+        <div class="main-center a-center main404">
+            <p>
+                Entschuldigung, die Seite, die Sie sich ansehen wollten, existiert nicht.</p><p>Mögliche Ursachen sind entweder:</p><p>- eine falsch geschriebene Adresse<br />	- ein veralteter Link            </p>
+            <p>Sie können auch Folgendes versuchen:</p>
+            <p>Suchen <strong id="google-url">https://www.praktischarzt.de</strong>:</p>
+            <div class="input-text search404">
+                <form action="https://google.com/search" target="_blank" method="get" id="google-search">
+                    <input type="hidden" name="q" id="q" value="site:https://www.praktischarzt.de " />
+                </form>		
+                <span class="icon" data-icon="s"></span>
+            </div>
+        </div>
+        <div class="main-center a-center">
+            <a href="https://www.praktischarzt.de" class="backhome-btn">
+                zur Startseite zurückkehren            </a>
+        </div>
+		</div>
+		</div>
+		</div>
+		
+        <footer class="bg-footer bg_footer_red footer404">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-6 copy-footer">
+						<div class="f-left f-left-all">
+															<div class="copyright">Copyright 2026</div>
+																				</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-12 footer_social_link">
+						<div class="f-right f-left-all">
+							<!--<div class="follow"></div>-->
+														<span class="footer_social_icons">
+								<a target="_blank" href="https://www.youtube.com/channel/UCX5r2fU9ZrV_DcBy_KRUOrA"><i class="fa-brands fa-youtube"></i></a>
+								<a target="_blank" href="https://www.instagram.com/praktischarzt/"><i class="fa-brands fa-instagram"></i></a>
+								<a target="_blank" href="https://www.facebook.com/PraktischArzt/"><i class="fa-brands fa-facebook-f"></i></a>
+								<a target="_blank" href="https://www.linkedin.com/company/11783433/admin/feed/posts/"><i class="fa-brands fa-linkedin-in"></i></a>
+							</span>
+						</div>
+					</div>                  
+				</div>
+			</div>
+		</footer>
+		
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/praktischArzt-theme/*","/wp-content/themes/jobengine/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script type="text/javascript">
+				/* <![CDATA[ */
+				var ajax_file_upload = {
+					create_event: function(name, data) {
+						if( "object" !== typeof data ) { data = []; }
+						var e = document.createEvent('Event');
+						e.initEvent(name, true, true);
+						e.data = data;
+						document.dispatchEvent(e);
+					},
+					"ajax_path": "https://www.praktischarzt.de/wp-admin/admin-ajax.php"
+				}
+				/* ]]> */
+			</script>
+		
+		<div id="duplica-modal" style="display: none">
+			<img id="duplica-modal-loader" src="https://www.praktischarzt.de/wp-content/plugins/duplica/assets/img/loader.gif" />
+		</div><script type="text/javascript" id="cleverreach_script-js-extra">
+/* <![CDATA[ */
+var haet_cr_ajax = {"ajax_url":"https://www.praktischarzt.de/wp-admin/admin-ajax.php"};
+//# sourceURL=cleverreach_script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/plugins/cleverreach/resources/js/form.js?ver=99fd99b463ca9769f83d3924be2d4712" id="cleverreach_script-js"></script>
+<script type="text/javascript" id="duplica-js-extra">
+/* <![CDATA[ */
+var DUPLICA = {"ajaxurl":"https://www.praktischarzt.de/wp-admin/admin-ajax.php","_wpnonce":"3dbad60c94"};
+//# sourceURL=duplica-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/plugins/duplica/assets/js/front.min.js?ver=0.16" id="duplica-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/fancybox2/jquery.fancybox.js?ver=1736493568" id="fancybox2-js"></script>
+<script type="text/javascript" id="pa_main-js-extra">
+/* <![CDATA[ */
+var pa_globals = {"ajaxurl":"/wp-admin/admin-ajax.php","PA_LOGIN_ERROR_COMMON":"Es ist ein Fehler aufgetreten, bitte versuchen Sie es nocheinmal","PA_FORGOT_PASS_MAIL_SENT":"Eine E-Mail mit Anweisungen zum Zur\u00fccksetzen des Passworts wurde versendet."};
+//# sourceURL=pa_main-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/pa_main.js?ver=1736493568" id="pa_main-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/pa_login.js?ver=1753773740" id="pa_login-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/pa_newsletter.js?ver=1742297126" id="pa_newsletter-js"></script>
+<script type="text/javascript" id="index-js-extra">
+/* <![CDATA[ */
+var et_index = {"routerRootIndex":"https://www.praktischarzt.de"};
+//# sourceURL=index-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/praktischArzt-theme/js/index.js?ver=1736493568" id="index-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/plugins/tablepress/js/jquery.datatables.min.js?ver=2.1.5" id="tablepress-datatables-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3" id="jquery-ui-menu-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-a11y-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2026-03-07 03:18:04+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"de"},"Notifications":["Benachrichtigungen"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+//# sourceURL=wp-a11y-js-translations
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.3" id="jquery-ui-autocomplete-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/jquery-ui.js?ver=99fd99b463ca9769f83d3924be2d4712" id="jquery_ui-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/jquery.validate.min.js?ver=99fd99b463ca9769f83d3924be2d4712" id="jquery_validator-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3" id="jquery-ui-sortable-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/404.js?ver=99fd99b463ca9769f83d3924be2d4712" id="page-not-found-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/jquery.tinyscrollbar.min.js?ver=99fd99b463ca9769f83d3924be2d4712" id="tiny_scrollbar-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/jquery.jcarousellite.min.js?ver=99fd99b463ca9769f83d3924be2d4712" id="jcarousellite-js"></script>
+<script type="text/javascript" src="https://www.praktischarzt.de/wp-content/themes/jobengine/js/lib/jquery-multiple-select.js?ver=99fd99b463ca9769f83d3924be2d4712" id="multiple-select-js"></script>
+            <script type="text/javascript">
+                (function ($) {
+                $.extend($.validator.messages, {
+                required: "Dies ist ein Pflichtfeld.",
+                email: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+                url: "Bitte geben Sie eine gültige URL ein.",
+                number: "Bitte geben Sie eine gültige Nummer ein.",
+                digits: "Bitte geben Sie nur Ziffern ein.",
+                equalTo: "Bitte geben Sie denselben Wert erneut ein"
+                });
+                })(jQuery);
+            </script>
+                </body>
+</html>

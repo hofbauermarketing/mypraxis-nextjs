@@ -97,35 +97,37 @@ export default function ReferenzkundenSection() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <div ref={ref} className="relative mb-16 rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0f1e] via-[#0f1623] to-[#1a2845] border border-white/10 shadow-2xl">
+    <div ref={ref} className="relative mb-16 overflow-hidden bg-gradient-to-br from-[#0a0f1e] via-[#0f1623] to-[#1a2845] border border-white/10 shadow-2xl" style={{ clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)' }}>
+      {/* Meshgitter */}
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
       {/* Deco orbs */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#ff8a00]/8 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-blue-600/8 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-white/3 blur-2xl pointer-events-none" />
 
       {/* Top section */}
-      <div className="relative z-10 text-center px-8 sm:px-12 pt-10 sm:pt-14 pb-8">
+      <div className="relative z-10 text-center px-6 sm:px-10 pt-8 sm:pt-10 pb-6">
         <FadeUp delay={0} isInView={isInView}>
-          <span className="inline-block bg-[#ff8a00]/15 border border-[#ff8a00]/35 text-[#ff8a00] text-sm font-bold px-4 py-1.5 rounded-full mb-6 tracking-wider uppercase">
+          <span className="inline-block bg-[#ff8a00]/15 border border-[#ff8a00]/35 text-[#ff8a00] text-xs font-bold px-4 py-1.5 mb-4 tracking-wider uppercase">
             Referenzkunden-Programm 2026
           </span>
         </FadeUp>
 
         <FadeUp delay={0.15} isInView={isInView}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3 leading-tight">
             Ich suche{' '}
             <span className="text-[#ff8a00]">
               <Counter target={9} inView={isInView} /> Ordinationen.
             </span>
             <br />
-            <span className="text-white/70 text-2xl sm:text-3xl font-bold">
+            <span className="text-white/70 text-xl sm:text-2xl font-bold">
               Nicht mehr. Nicht weniger.
             </span>
           </h2>
         </FadeUp>
 
         <FadeUp delay={0.35} isInView={isInView}>
-          <p className="text-blue-200/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-blue-200/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
             Ich baue Ihre Praxis-Website neu – rechtssicher, individuell entwickelt und für Suchmaschinen sowie KI-Systeme sauber vorbereitet.
           </p>
         </FadeUp>
@@ -159,7 +161,7 @@ export default function ReferenzkundenSection() {
 
           <FadeIn delay={0.7} isInView={isInView}>
             <p
-              className="text-3xl sm:text-4xl md:text-5xl font-bold italic leading-tight mb-4 whitespace-nowrap overflow-visible"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold italic leading-tight mb-3 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
               <Typewriter text="Pilotkonditionen." isInView={isInView} delay={0.7} />
@@ -168,31 +170,14 @@ export default function ReferenzkundenSection() {
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/50 text-sm sm:text-base italic mb-7">
-              Reduzierte Pilotkonditionen gegen 24 Monate Zusammenarbeit und Freigabe als Referenzkunde. Danach gelten reguläre Pakete und Konditionen.
+              Reduzierte Pilotkonditionen gegen eine vereinbarte Zusammenarbeit und Freigabe als Referenzkunde. Die genauen Konditionen besprechen wir im Erstgespräch.
             </p>
           </FadeIn>
 
           <FadeIn delay={1.15} isInView={isInView}>
-            <div className="grid sm:grid-cols-2 gap-3 text-left max-w-sm mx-auto">
-              {[
-                {
-                  icon: '📋',
-                  label: 'Website-Paket',
-                  sub: 'Individuell entwickelt – kein Template',
-                },
-                {
-                  icon: '🛡️',
-                  label: 'Pflicht-Betreuung',
-                  sub: '24 Monate · Persönliche Begleitung',
-                },
-              ].map((item) => (
-                <div key={item.label} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                  <div className="text-lg mb-1">{item.icon}</div>
-                  <p className="text-white/40 text-[10px] uppercase tracking-wider font-semibold mb-0.5">{item.label}</p>
-                  <p className="text-white/55 text-[11px] mt-0.5">{item.sub}</p>
-                </div>
-              ))}
-            </div>
+            <p className="text-white/40 text-sm italic">
+              Nähere Informationen zu den Konditionen gerne im Erstgespräch.
+            </p>
           </FadeIn>
 
           <FadeIn delay={1.3} isInView={isInView}>
@@ -251,9 +236,9 @@ export default function ReferenzkundenSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.55, delay: card.delay, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className={`rounded-2xl overflow-hidden border ${card.border} shadow-xl hover:scale-[1.03] transition-all duration-300 group`}
+              className={`overflow-hidden border ${card.border} shadow-xl hover:scale-[1.02] transition-all duration-300 group`}
             >
-              <div className={`relative h-48 ${card.bg}`}>
+              <div className={`relative h-36 ${card.bg}`}>
                 <Image
                   src={card.src}
                   alt={card.alt}
@@ -262,7 +247,7 @@ export default function ReferenzkundenSection() {
                   sizes="(max-width: 640px) 100vw, 33vw"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${card.overlay} to-transparent`} />
-                <div className="absolute top-3 right-3 bg-[#ff8a00] text-white text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
+                <div className="absolute top-3 right-3 bg-[#ff8a00] text-white text-xs font-black px-3 py-1.5 shadow-lg">
                   3 Plätze
                 </div>
                 <div className="absolute bottom-3 left-4">
@@ -287,7 +272,7 @@ export default function ReferenzkundenSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
           <a
             href="#kontakt"
-            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-orange-500/25 text-base"
+            className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-3.5 transition-all hover:scale-105 shadow-lg shadow-orange-500/25 text-sm"
           >
             Jetzt bewerben
           </a>
