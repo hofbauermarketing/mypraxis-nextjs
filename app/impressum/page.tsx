@@ -3,7 +3,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Impressum | mypraxis.at',
   description: 'Impressum von mypraxis.at – Kevin Hofbauer e.U.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 }
 
 export default function ImpressumPage() {
