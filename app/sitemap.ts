@@ -25,9 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/faq`,              lastModified: LAST_CONTENT_UPDATE,  changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/videothek`,        lastModified: LAST_CONTENT_UPDATE,  changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/gratis-check`,     lastModified: LAST_MAJOR_UPDATE,   changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/wcag-check`,         lastModified: LAST_MAJOR_UPDATE,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/barrierefreiheit`, lastModified: SITE_LAUNCHED,        changeFrequency: 'yearly',  priority: 0.4 },
-    { url: `${BASE_URL}/impressum`,        lastModified: SITE_LAUNCHED,        changeFrequency: 'yearly',  priority: 0.3 },
-    { url: `${BASE_URL}/datenschutz`,      lastModified: SITE_LAUNCHED,        changeFrequency: 'yearly',  priority: 0.3 },
+    { url: `${BASE_URL}/impressum`,        lastModified: LAST_MAJOR_UPDATE,    changeFrequency: 'yearly',  priority: 0.3 },
+    { url: `${BASE_URL}/datenschutz`,      lastModified: LAST_MAJOR_UPDATE,    changeFrequency: 'yearly',  priority: 0.3 },
     ...blogEntries,
   ]
 }
