@@ -58,12 +58,15 @@ export default function HomePage() {
       {/* ===== HERO ===== */}
       <section className="relative text-white px-6 py-14 md:py-20 text-center overflow-hidden min-h-[500px] flex items-center" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)' }}>
         {/* Hero Background */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/lp-hero.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          fill
+          className="object-cover object-center"
+          priority
+          quality={75}
+          sizes="100vw"
         />
         {/* Overlay – Blau dominant, Bild scheint dezent durch */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e]/85 via-[#112080]/75 to-[#0a0f1e]/85" />
@@ -306,9 +309,8 @@ export default function HomePage() {
               },
             ].map((item) => (
               <div key={item.title} className="bg-white shadow-sm border border-gray-100 card-hover overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}>
-                <div className="h-28 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover object-center" />
+                <div className="relative h-28 overflow-hidden">
+                  <Image src={item.img} alt={item.title} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 25vw" quality={70} />
                 </div>
                 <div className="p-4">
                   <h3 className="text-sm font-semibold mb-1.5 text-primary leading-snug">{item.title}</h3>

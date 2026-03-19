@@ -4,6 +4,7 @@ export const metadata = {
   title: 'Barrierefreiheitserklärung | mypraxis.at',
   description: 'Barrierefreiheitserklärung von mypraxis.at gemäß Barrierefreiheitsgesetz (BaFG) und WCAG 2.1 Level AA.',
   robots: { index: true, follow: true },
+  alternates: { canonical: '/barrierefreiheit' },
 }
 
 export default function BarrierefreiheitPage() {

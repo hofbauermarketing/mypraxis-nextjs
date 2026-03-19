@@ -5,8 +5,8 @@ const BASE_URL = 'https://www.mypraxis.at'
 
 // Feste Datumswerte – bei inhaltlichen Änderungen aktualisieren
 const SITE_LAUNCHED    = new Date('2025-11-01')
-const LAST_MAJOR_UPDATE  = new Date('2026-03-17')
-const LAST_CONTENT_UPDATE = new Date('2026-03-17')
+const LAST_MAJOR_UPDATE  = new Date('2026-03-19')
+const LAST_CONTENT_UPDATE = new Date('2026-03-19')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getSortedPostsData()

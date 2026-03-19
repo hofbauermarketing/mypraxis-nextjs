@@ -4,6 +4,7 @@ export const metadata = {
   title: 'Impressum | mypraxis.at',
   description: 'Impressum von mypraxis.at – Kevin Hofbauer e.U.',
   robots: { index: true, follow: true },
+  alternates: { canonical: '/impressum' },
 }
 
 export default function ImpressumPage() {
