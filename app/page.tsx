@@ -77,20 +77,20 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-3xl mx-auto w-full pt-10 pb-8">
 
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-5" style={{ lineHeight: '1.2' }}>
             <span className="block text-xs sm:text-sm font-semibold text-[#ff8a00]/75 uppercase tracking-[0.22em] mb-3">
               Praxis-Website &amp; KI-Sichtbarkeit für Ärzte in Österreich &amp; Deutschland
             </span>
-            Was, wenn Ihre Wunschpatienten Sie finden –
+            Was, wenn Ihre künftigen Wunschpatienten Sie finden –
             <span className="text-[#ff8a00]"><br className="hidden sm:block" /> während Sie behandeln?</span>
           </h1>
 
-          <p className="text-base md:text-xl text-blue-100 mb-3 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-blue-100 mb-2 max-w-2xl mx-auto leading-relaxed">
             Ärzte, die von uns betreut werden, werden von genau jenen Patienten gefunden, die zu ihnen passen –
             nicht weil sie Glück hatten, sondern weil ihre Website für sie arbeitet.
           </p>
 
-          <p className="text-blue-300/80 text-sm mb-10 max-w-lg mx-auto">
+          <p className="text-blue-300/80 text-sm mb-6 max-w-lg mx-auto">
             Rechtssicher nach ÖÄK & DSGVO · Individuell entwickelt · Kein Template
           </p>
 
