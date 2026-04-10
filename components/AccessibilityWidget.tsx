@@ -59,18 +59,6 @@ const CLASS_MAP: Partial<Record<keyof Settings, string>> = {
   highlightTitles: 'a11y-highlight-titles',
 }
 
-const LANGUAGES = [
-  { code: 'DE', flag: '🇩🇪', label: 'Deutsch' },
-  { code: 'EN', flag: '🇬🇧', label: 'English' },
-  { code: 'RU', flag: '🇷🇺', label: 'Русский' },
-  { code: 'TR', flag: '🇹🇷', label: 'Türkçe' },
-  { code: 'AR', flag: '🇸🇦', label: 'العربية' },
-  { code: 'RO', flag: '🇷🇴', label: 'Română' },
-  { code: 'PL', flag: '🇵🇱', label: 'Polski' },
-  { code: 'HU', flag: '🇭🇺', label: 'Magyar' },
-  { code: 'UK', flag: '🇺🇦', label: 'Українська' },
-  { code: 'CS', flag: '🇨🇿', label: 'Čeština' },
-]
 
 function ReadingMask() {
   const [y, setY] = useState(0)
@@ -97,10 +85,7 @@ export default function AccessibilityWidget({
   const [open, setOpen] = useState(false)
   const [settings, setSettings] = useState<Settings>(defaults)
   const [mounted, setMounted] = useState(false)
-  const [activeLang, setActiveLang] = useState('DE')
-  const [translating, setTranslating] = useState(false)
   const [speaking, setSpeaking] = useState(false)
-  const originalTexts = useRef<Map<Node, string>>(new Map())
   const panelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -108,8 +93,6 @@ export default function AccessibilityWidget({
     try {
       const saved = localStorage.getItem('a11y-settings')
       if (saved) setSettings(JSON.parse(saved))
-      const savedLang = localStorage.getItem('a11y-lang')
-      if (savedLang) setActiveLang(savedLang)
     } catch {}
   }, [])
 
@@ -134,73 +117,6 @@ export default function AccessibilityWidget({
     return () => document.removeEventListener('mousedown', handler)
   }, [open])
 
-  // ── Translation ──────────────────────────────────────────────────
-  const translatePage = useCallback(async (targetLang: string) => {
-    if (targetLang === 'DE') {
-      // Restore originals
-      originalTexts.current.forEach((text, node) => { node.textContent = text })
-      originalTexts.current.clear()
-      setActiveLang('DE')
-      localStorage.setItem('a11y-lang', 'DE')
-      return
-    }
-
-    setTranslating(true)
-    try {
-      // Collect all visible text nodes
-      const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_TEXT,
-        {
-          acceptNode: (node) => {
-            const parent = node.parentElement
-            if (!parent) return NodeFilter.FILTER_REJECT
-            const tag = parent.tagName.toLowerCase()
-            if (['script', 'style', 'noscript'].includes(tag)) return NodeFilter.FILTER_REJECT
-            if (!node.textContent?.trim()) return NodeFilter.FILTER_REJECT
-            return NodeFilter.FILTER_ACCEPT
-          },
-        }
-      )
-
-      const nodes: Text[] = []
-      let n: Node | null
-      while ((n = walker.nextNode())) nodes.push(n as Text)
-
-      // Save originals (only first time)
-      nodes.forEach((node) => {
-        if (!originalTexts.current.has(node)) {
-          originalTexts.current.set(node, node.textContent ?? '')
-        }
-      })
-
-      const texts = nodes.map((n) => originalTexts.current.get(n) ?? n.textContent ?? '')
-
-      // Batch in chunks of 50
-      const CHUNK = 50
-      for (let i = 0; i < nodes.length; i += CHUNK) {
-        const chunk = texts.slice(i, i + CHUNK)
-        const res = await fetch('/api/translate', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ texts: chunk, targetLang }),
-        })
-        if (!res.ok) break
-        const { translations } = await res.json()
-        translations.forEach((t: string, j: number) => {
-          if (nodes[i + j]) nodes[i + j].textContent = t
-        })
-      }
-
-      setActiveLang(targetLang)
-      localStorage.setItem('a11y-lang', targetLang)
-    } catch (e) {
-      console.error('Translation error', e)
-    } finally {
-      setTranslating(false)
-    }
-  }, [])
-
   // ── Text-to-Speech (ElevenLabs audio) ────────────────────────────
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
@@ -223,13 +139,12 @@ export default function AccessibilityWidget({
   const toggle = (key: keyof Settings) => setSettings((p) => ({ ...p, [key]: !p[key] }))
   const reset = () => {
     setSettings(defaults)
-    if (activeLang !== 'DE') translatePage('DE')
     if (speaking) { window.speechSynthesis?.cancel(); setSpeaking(false) }
   }
 
   const activeCount = Object.entries(settings).filter(([k, v]) =>
     k === 'fontSize' ? v !== 0 : v === true
-  ).length + (activeLang !== 'DE' ? 1 : 0)
+  ).length
 
   if (!mounted) return null
 
@@ -270,8 +185,8 @@ export default function AccessibilityWidget({
             <circle cx="12" cy="4" r="2.2" />
             <path d="M18 8.5c-1.5-.3-3.8-.5-6-.5s-4.5.2-6 .5l.4 1.5 5.6-.3v3.5L9.5 19h2.3l.7-3.5.7 3.5h2.3l-2.5-5.3V10.2l5.6.3z" />
           </svg>
-          <span className="text-white text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap hidden sm:inline">
-            Barriere-<br />freiheit
+          <span className="text-white text-[11px] font-bold tracking-wide leading-tight hidden sm:inline" style={{ maxWidth: '68px', wordBreak: 'break-word', hyphens: 'auto' }}>
+            Barrierefreiheit
           </span>
           {activeCount > 0 && (
             <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] text-white text-[10px] font-black rounded-full flex items-center justify-center px-1 shadow" style={{ backgroundColor: '#22c55e' }}>
@@ -330,29 +245,6 @@ export default function AccessibilityWidget({
                     <div className="text-[11px] text-gray-400">{speaking ? 'Läuft…' : 'Was mypraxis.at ist & kann'}</div>
                   </div>
                 </button>
-              </Section>
-
-              {/* Sprache */}
-              <Section title={`Sprache${translating ? ' (übersetzt…)' : ''}`}>
-                <div className="grid grid-cols-2 gap-1.5">
-                  {LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => translatePage(lang.code)}
-                      disabled={translating}
-                      className="flex items-center gap-2 px-2.5 py-2 rounded-xl border-2 transition-all text-left text-[12px] font-medium disabled:opacity-50"
-                      style={{
-                        borderColor: activeLang === lang.code ? accentColor : '#f3f4f6',
-                        backgroundColor: activeLang === lang.code ? accentColor + '15' : '#fafafa',
-                        color: activeLang === lang.code ? accentColor : '#374151',
-                      }}
-                    >
-                      <span className="text-base leading-none">{lang.flag}</span>
-                      <span className="truncate">{lang.label}</span>
-                    </button>
-                  ))}
-                </div>
-                <p className="text-[10px] text-gray-300 mt-1.5 text-center">Übersetzt via DeepL</p>
               </Section>
 
               {/* Schriftgröße */}

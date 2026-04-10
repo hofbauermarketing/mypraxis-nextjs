@@ -4,8 +4,10 @@ import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
 import KiSichtbarkeitSection from '@/components/KiSichtbarkeitSection'
-import ReferenzkundenSection from '@/components/ReferenzkundenSection'
+import FoerderungSection from '@/components/FoerderungSection'
 import ZielgruppenSection from '@/components/ZielgruppenSection'
+import DemoShowcase from '@/components/DemoShowcase'
+import QrCode from '@/components/QrCode'
 
 export const metadata = {
   alternates: {
@@ -37,7 +39,7 @@ export default function HomePage() {
         totalTime: 'P4W',
         step: [
           { '@type': 'HowToStep', position: 1, name: 'Erstcheck', text: 'Kostenloses 15-minütiges Erstgespräch: Fachrichtung, Ziele und aktuelle Online-Präsenz werden besprochen. Unverbindlich.', url: 'https://www.mypraxis.at/#kontakt' },
-          { '@type': 'HowToStep', position: 2, name: 'Strategiegespräch', text: '30-minütige Tiefenanalyse der Ordination, des Wettbewerbs und der Zielgruppe. Ergebnis: konkretes Positionierungskonzept.', url: 'https://www.mypraxis.at/#kontakt' },
+          { '@type': 'HowToStep', position: 2, name: 'Strategiegespräch', text: '45 bis 60 Minuten Tiefenanalyse der Ordination, des Wettbewerbs und der Zielgruppe. Ergebnis: konkretes Positionierungskonzept.', url: 'https://www.mypraxis.at/#kontakt' },
           { '@type': 'HowToStep', position: 3, name: 'Umsetzung', text: '100 % individuelle Entwicklung: Texte, Design, Technik und vollständige KI-Readiness – kein Template, kein Baukasten.', url: 'https://www.mypraxis.at/#kontakt' },
           { '@type': 'HowToStep', position: 4, name: 'Launch & Betreuung', text: 'Website geht online. 12 Monate technische Betreuung: KI-Sichtbarkeitsmonitoring, Updates, Sicherheits-Patches inklusive.', url: 'https://www.mypraxis.at/#kontakt' },
         ],
@@ -75,29 +77,6 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-3xl mx-auto w-full pt-10 pb-8">
 
-          {/* Urgency Badge */}
-          <div className="inline-flex flex-col items-center gap-3 mb-8">
-            <div className="flex items-center gap-2.5 bg-[#ff8a00]/20 border border-[#ff8a00]/40 text-[#ffb347] text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 rounded-full">
-              <span className="relative flex h-2 w-2 shrink-0">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500" />
-              </span>
-              Referenzkunden-Programm 2026 – noch 7 Plätze verfügbar
-            </div>
-            <div className="flex items-center gap-1.5">
-              {[0,1,2,3,4,5,6,7,8].map((i) => (
-                <div
-                  key={i}
-                  className={i < 2
-                    ? 'w-3 h-3 rounded-full bg-white/20 border border-white/15'
-                    : 'w-3 h-3 rounded-full bg-[#ff8a00] animate-pulse'}
-                  style={i >= 2 ? { boxShadow: '0 0 7px rgba(255,138,0,0.7)' } : undefined}
-                />
-              ))}
-              <span className="text-[10px] text-white/35 ml-2 uppercase tracking-wider">2 vergeben · 7 frei</span>
-            </div>
-          </div>
-
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
             <span className="block text-xs sm:text-sm font-semibold text-[#ff8a00]/75 uppercase tracking-[0.22em] mb-3">
               Praxis-Website &amp; KI-Sichtbarkeit für Ärzte in Österreich &amp; Deutschland
@@ -115,13 +94,14 @@ export default function HomePage() {
             Rechtssicher nach ÖÄK & DSGVO · Individuell entwickelt · Kein Template
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          {/* Mobile: Buttons untereinander */}
+          <div className="flex flex-col sm:flex-row lg:hidden justify-center items-center gap-4 mb-8">
             <a
               href="#kontakt"
               className="inline-block bg-[#ff8a00] hover:bg-orange-600 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 transition-all shadow-xl hover:shadow-orange-500/40 border border-orange-300/40 hover:-translate-y-0.5"
               style={{ transform: 'skewX(-8deg)', clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}
             >
-              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Gratis KI-Check anfordern →</span>
+              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Gratis KI-Check & Webcheck anfordern ↓</span>
             </a>
             <a
               href="/preise"
@@ -130,6 +110,18 @@ export default function HomePage() {
             >
               <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Demo-Websites ansehen</span>
             </a>
+          </div>
+
+          {/* Desktop: CTA-Button + QR-Code nebeneinander mit Abstand */}
+          <div className="hidden lg:flex justify-center items-center gap-12 mb-8">
+            <a
+              href="#kontakt"
+              className="inline-block bg-[#ff8a00] hover:bg-orange-600 text-white font-bold text-lg px-10 py-4 transition-all shadow-xl hover:shadow-orange-500/40 border border-orange-300/40 hover:-translate-y-0.5"
+              style={{ transform: 'skewX(-8deg)', clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}
+            >
+              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Gratis KI-Check & Webcheck anfordern ↓</span>
+            </a>
+            <QrCode />
           </div>
 
           {/* Social Media Icons */}
@@ -344,8 +336,8 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-50/60 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto">
 
-          {/* Referenzkunden-Banner – animated */}
-          <ReferenzkundenSection />
+          {/* Förderungs-Banner – KMU.DIGITAL */}
+          <FoerderungSection />
 
           {/* Was Sie bekommen – Features ohne Preise */}
           <div className="text-center mb-8">
@@ -389,9 +381,6 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <a href="#kontakt" className="block text-center bg-primary hover:bg-[#162890] text-white font-semibold py-3 transition-all hover:scale-105 text-sm mt-5">
-                Jetzt anfragen
-              </a>
             </div>
 
             {/* Karte 2: Digitale Positionierung */}
@@ -424,14 +413,23 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <div className="bg-white/10 border border-white/20 p-3 mt-3 mb-3 text-xs text-blue-200 flex items-start gap-2">
+              <div className="bg-white/10 border border-white/20 p-3 mt-3 text-xs text-blue-200 flex items-start gap-2">
                 <span className="text-[#ffaa40] flex-shrink-0 mt-0.5">＋</span>
                 <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent zubuchbar</span>
               </div>
-              <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-3 transition-all hover:scale-105 text-sm">
-                Jetzt anfragen
-              </a>
             </div>
+          </div>
+
+          {/* Gemeinsamer CTA */}
+          <div className="text-center mt-5 mb-5">
+            <a
+              href="#kontakt"
+              className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-10 py-3.5 text-sm transition-all hover:scale-105 shadow-lg shadow-orange-500/20"
+              style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}
+            >
+              Kostenloses Erstgespräch vereinbaren →
+            </a>
+            <p className="text-gray-400 text-xs mt-2">Unverbindlich · 30 Minuten · Preis auf Anfrage</p>
           </div>
 
           {/* Ärztezentren Strip */}
@@ -451,14 +449,17 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-4 sm:w-44 lg:w-52 border-t sm:border-t-0 sm:border-l border-white/10 flex flex-col justify-center gap-3 text-center">
-                <a href="#kontakt" className="block text-center bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold py-2.5 transition-all text-sm">
-                  Jetzt bewerben
+                <a href="#kontakt" className="text-white/60 hover:text-white text-sm transition-colors">
+                  Anfragen →
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ===== DEMO SHOWCASE (Flip-Reveal Karten) ===== */}
+      <DemoShowcase />
 
       {/* ===== PROZESS ===== */}
       <section className="py-12 px-6 bg-white relative overflow-hidden">
@@ -481,7 +482,7 @@ export default function HomePage() {
             <div className="hidden md:block absolute top-[44px] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
             {[
               { nr: '01', title: 'Erstcheck', sub: '15 Min, kostenlos', text: 'Wir klären, ob wir zueinander passen – Fachrichtung, Ziele. Unverbindlich.', stat: '15', statLabel: 'Min.', bg: 'from-blue-900 to-[#0a0f1e]' },
-              { nr: '02', title: 'Strategiegespräch', sub: '30 Min', text: 'Analyse Ihrer Ordination, Wettbewerb und Zielgruppe. Daraus entsteht ein konkretes Konzept.', stat: '30', statLabel: 'Min.', bg: 'from-[#112080] to-[#0a0f1e]' },
+              { nr: '02', title: 'Strategiegespräch', sub: '45–60 Min', text: 'Analyse Ihrer Ordination, Wettbewerb und Zielgruppe. Daraus entsteht ein konkretes Konzept.', stat: '45+', statLabel: 'Min.', bg: 'from-[#112080] to-[#0a0f1e]' },
               { nr: '03', title: 'Umsetzung', sub: '100 % individuell', text: 'Texte, Design, Technik und KI-Readiness – individuell entwickelt. Kein Template.', stat: '100', statLabel: '%', bg: 'from-[#1e3ab8] to-[#0a0f1e]' },
               { nr: '04', title: 'Launch & Betreuung', sub: '12 Monate', text: 'Ihre Website geht online. Wir überwachen die KI-Sichtbarkeit und halten alles aktuell.', stat: '12', statLabel: 'Mo.', bg: 'from-[#ff8a00]/80 to-[#0a0f1e]' },
             ].map((step) => (
@@ -638,7 +639,7 @@ export default function HomePage() {
               </div>
 
               <div className="p-6 sm:p-8">
-                <h3 className="text-gray-900 font-bold text-xl mb-6">Gratis KI-Check anfordern</h3>
+                <h3 className="text-gray-900 font-bold text-xl mb-6">Gratis KI-Check & Webcheck anfordern</h3>
                 {/* Persönlicher Brief von Kevin */}
                 <div className="relative mb-6 overflow-hidden border border-[#1e3ab8]/20 bg-[#f5f7ff]" style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}>
                   <div className="p-5">

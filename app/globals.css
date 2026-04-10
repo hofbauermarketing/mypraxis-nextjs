@@ -422,3 +422,9 @@ details summary::-webkit-details-marker {
 .marquee-container:hover .animate-marquee-slow {
   animation-play-state: paused;
 }
+
+/* QR Code float animation */
+@keyframes qrFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

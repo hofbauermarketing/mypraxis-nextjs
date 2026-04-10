@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
-import ReferenzkundenSection from '@/components/ReferenzkundenSection'
+import FoerderungSection from '@/components/FoerderungSection'
 
 export const metadata = {
     title: 'Arzt-Website Demo & Preise für Österreich & Deutschland | mypraxis.at',
@@ -144,7 +144,7 @@ export default function PreisePage() {
                     <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#1e3ab8]/40 to-transparent pointer-events-none" />
                     <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ff8a00]/20 to-transparent pointer-events-none" />
                     <div className="max-w-6xl mx-auto relative z-10">
-                        <ReferenzkundenSection />
+                        <FoerderungSection />
                     </div>
                 </section>
 

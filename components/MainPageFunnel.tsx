@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const FACHRICHTUNGEN = [
   'Allgemeinmedizin',
@@ -25,10 +26,11 @@ const FACHRICHTUNGEN = [
 type Step = 1 | 2
 
 export default function MainPageFunnel() {
+  const router = useRouter()
   const [step, setStep] = useState<Step>(1)
   const [q1, setQ1] = useState('')
   const [form, setForm] = useState({ name: '', phone: '', email: '', fachrichtung: '' })
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
   const [formError, setFormError] = useState('')
 
   const set =
@@ -56,20 +58,7 @@ export default function MainPageFunnel() {
         }),
       })
       if (res.ok) {
-        // Google Ads Conversion – einmal pro Session
-        if (!sessionStorage.getItem('main_converted')) {
-          sessionStorage.setItem('main_converted', '1')
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const gtag = (window as any).gtag
-          if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-              send_to: 'AW-18019658217/rfAdCKPnwokcEOnTuJBD',
-              value: 3950.0,
-              currency: 'EUR',
-            })
-          }
-        }
-        setStatus('success')
+        router.push('/danke')
       } else {
         setStatus('error')
       }
@@ -81,29 +70,6 @@ export default function MainPageFunnel() {
   const inputClass =
     'w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#1e3ab8] focus:ring-2 focus:ring-[#1e3ab8]/15 transition-all'
   const labelClass = 'block text-gray-600 text-xs font-semibold uppercase tracking-wider mb-1.5'
-
-  if (status === 'success') {
-    return (
-      <div className="text-center py-8">
-        <div className="w-16 h-16 bg-green-100 border border-green-300 rounded-full flex items-center justify-center mx-auto mb-5">
-          <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="text-gray-900 font-bold text-xl mb-3">Ihr KI-Check ist reserviert!</h3>
-        <p className="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">
-          Wir melden uns <strong className="text-gray-900">innerhalb eines Werktags</strong> bei Ihnen.
-          Das vollständige Ergebnis besprechen wir im Ersttelefonat – und senden es Ihnen danach per Mail.
-        </p>
-        <button
-          onClick={() => { setStatus('idle'); setStep(1); setQ1(''); setForm({ name: '', phone: '', email: '', fachrichtung: '' }) }}
-          className="mt-6 text-[#1e3ab8] hover:text-[#112080] text-sm underline underline-offset-2 transition-colors"
-        >
-          Weitere Anfrage senden
-        </button>
-      </div>
-    )
-  }
 
   return (
     <div>

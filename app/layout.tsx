@@ -191,6 +191,7 @@ export const metadata: Metadata = {
 import Navigation from '@/components/Navigation'
 import CookieBanner from '@/components/CookieBanner'
 import AccessibilityWidget from '@/components/AccessibilityWidget'
+import ScrollToTop from '@/components/ScrollToTop'
 import Script from 'next/script'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -225,6 +226,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <CookieBanner />
         <AccessibilityWidget accentColor="#1d4ed8" declarationHref="/barrierefreiheit" />
+        <ScrollToTop />
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
