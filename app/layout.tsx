@@ -186,6 +186,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  other: {
+    'fb:app_id': '3980451328920273',
+  },
 }
 
 import Navigation from '@/components/Navigation'
