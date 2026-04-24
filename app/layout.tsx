@@ -186,9 +186,6 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
-  other: {
-    'fb:app_id': '3980451328920273',
-  },
 }
 
 import Navigation from '@/components/Navigation'
@@ -210,6 +207,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* LLMs.txt Discovery Links */}
         <link rel="alternate" type="text/plain" href="https://www.mypraxis.at/llms.txt" />
         <link rel="alternate" type="text/plain" href="https://www.mypraxis.at/llms-full.txt" />
+        {/* Facebook App-ID — muss als property=..., nicht name=... ausgespielt werden */}
+        <meta property="fb:app_id" content="3980451328920273" />
       </head>
       <body className="bg-white text-dark antialiased">
         {/* Google Ads – Basis-Tag (sitewide) */}
