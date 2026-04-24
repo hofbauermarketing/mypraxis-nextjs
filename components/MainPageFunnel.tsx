@@ -54,7 +54,7 @@ export default function MainPageFunnel() {
           email: form.email,
           phone: form.phone,
           fachrichtung: form.fachrichtung,
-          message: `Gratis KI-Check Anfrage. KI-Sichtbarkeit aktuell: ${q1 === 'sichtbar' ? 'Ja, bereits sichtbar' : 'Nein / Weiß ich nicht'}`,
+          message: `Erstgespräch-Anfrage. Online-Sichtbarkeit aktuell: ${q1 === 'sichtbar' ? 'Ja, steht weit oben' : 'Nein / weiß ich nicht'}`,
         }),
       })
       if (res.ok) {
@@ -92,15 +92,15 @@ export default function MainPageFunnel() {
       {step === 1 && (
         <div>
           <p className="text-gray-900 font-semibold text-base mb-1">
-            Wird Ihre Ordination heute von ChatGPT oder Perplexity gefunden?
+            Finden Patient:innen Ihre Ordination — oder gehen sie zu Kolleg:innen?
           </p>
           <p className="text-gray-500 text-xs mb-5">
-            Fragen Sie kurz: „Welche(r) [Ihr Fach] in [Ihrer Stadt]?" – Werden Sie genannt?
+            Googeln Sie selbst einmal: „[Ihr Fach] [Ihre Stadt]" — stehen Sie unter den ersten drei Ergebnissen?
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { value: 'sichtbar', label: 'Ja, ich bin sichtbar', icon: '✓' },
-              { value: 'nicht_sichtbar', label: 'Nein / Weiß ich nicht', icon: '?' },
+              { value: 'sichtbar', label: 'Ja, stehe weit oben', icon: '✓' },
+              { value: 'nicht_sichtbar', label: 'Nein / weiß ich nicht', icon: '?' },
             ].map((opt) => (
               <button
                 key={opt.value}
@@ -207,11 +207,11 @@ export default function MainPageFunnel() {
                 Wird gesendet...
               </span>
             ) : (
-              'Gratis KI-Check anfordern →'
+              'Erstgespräch mit Kevin anfragen →'
             )}
           </button>
           <p className="text-gray-400 text-xs text-center">
-            Kostenlos · Auswertung per Mail · DSGVO-konform
+            30 Min · kostenlos · persönlich · DSGVO-konform
           </p>
           <button
             type="button"

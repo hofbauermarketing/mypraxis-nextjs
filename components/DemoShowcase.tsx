@@ -67,7 +67,7 @@ export default function DemoShowcase() {
   }, [])
 
   return (
-    <section className="relative py-16 bg-[#0a0f1e] overflow-hidden">
+    <section id="demos" className="relative py-12 md:py-14 bg-[#0a0f1e] overflow-hidden scroll-mt-20">
       {/* Grid-Hintergrund */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
@@ -87,30 +87,16 @@ export default function DemoShowcase() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12 px-6">
-          <span className="inline-block bg-white/5 border border-white/10 text-[#ffaa40] text-xs font-bold uppercase tracking-[0.3em] px-4 py-1.5">
+        {/* Header — kompakt, im Stil der anderen Sektionen */}
+        <div className="text-center mb-8 px-6">
+          <span className="inline-block text-[10px] uppercase tracking-widest text-[#ffaa40] font-bold mb-2">
             Demo-Galerie
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mt-4 leading-tight">
-            Fünf Stile. <span className="text-[#ff8a00]">Eine Qualitätsstufe.</span>
-            <span className="block mt-1 text-white/90 text-xl sm:text-2xl italic font-semibold">
-              Sie wünschen, wir designen.
-            </span>
+          <h2 className="text-lg md:text-xl font-bold text-white leading-snug max-w-2xl mx-auto">
+            Fünf Stile als Orientierung — Ihre Website entsteht individuell.
           </h2>
-          <p className="text-white/70 mt-4 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Dem Design sind <span className="text-[#ffaa40] font-semibold">keine Grenzen gesetzt</span>.
-            Ob klassisch-seriös, warm-persönlich, technisch-präzise oder experimentell – wir
-            verstehen jede Ordination als Unikat und bemühen uns, jeden gestalterischen Wunsch
-            umzusetzen. Ihre Vorstellung ist der Ausgangspunkt, nicht die Grenze.
-          </p>
-          <p className="text-white/55 mt-4 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-            Die folgenden Beispiele sind
-            <span className="text-[#ffaa40] font-semibold"> bewusst keine finalen Entwürfe</span> –
-            sie dienen lediglich einer ersten, groben Orientierung, in welche Richtung es gehen könnte.
-          </p>
-          <p className="text-white/35 mt-2 text-xs max-w-xl mx-auto italic">
-            Ihre finale Website entsteht individuell nach Strategiegespräch und Wettbewerbsanalyse.
+          <p className="text-white/55 text-sm mt-2 max-w-xl mx-auto">
+            Klassisch, warm, modern, strukturiert oder premium — die Beispiele zeigen Richtungen, keine fertigen Entwürfe.
           </p>
         </div>
 
@@ -183,11 +169,14 @@ export default function DemoShowcase() {
         {/* Footer-CTA */}
         <div className="text-center mt-10 px-6">
           <a
-            href="/preise"
+            href="#kontakt"
             className="inline-block text-white/60 hover:text-white text-sm transition-colors border-b border-white/20 hover:border-white/60 pb-0.5"
           >
-            Alle Demos &amp; Pakete im Überblick →
+            Ihre individuelle Demo im Erstgespräch besprechen →
           </a>
+          <p className="text-white/40 text-xs mt-3">
+            Klick auf eine Demo öffnet die jeweilige Detail-Ansicht.
+          </p>
         </div>
       </div>
 

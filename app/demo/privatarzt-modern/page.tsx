@@ -23,7 +23,7 @@ export default function Demo2Page() {
       {/* Demo-Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-amber-400 text-amber-900 py-1.5 text-xs font-semibold">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-3 items-center">
-          <Link href="/demo" className="flex items-center gap-1 hover:underline font-bold">← Alle Demos</Link>
+          <Link href="/#demos" className="flex items-center gap-1 hover:underline font-bold">← Zurück zur Demo-Übersicht</Link>
           <span className="text-center">Demo · Stil 2: Modern Premium</span>
           <span />
         </div>

@@ -164,13 +164,13 @@ export default function ReferenzkundenSection() {
               className="text-2xl sm:text-3xl md:text-4xl font-bold italic leading-tight mb-3 whitespace-nowrap overflow-visible"
               style={{ fontFamily: 'Georgia, "Times New Roman", serif', letterSpacing: '-0.02em', transform: 'rotate(-1.5deg)' }}
             >
-              <Typewriter text="Pilotkonditionen." isInView={isInView} delay={0.7} />
+              <Typewriter text="Referenzpartner 2026." isInView={isInView} delay={0.7} />
             </p>
           </FadeIn>
 
           <FadeIn delay={1.0} isInView={isInView}>
             <p className="text-white/50 text-sm sm:text-base italic mb-7">
-              Reduzierte Pilotkonditionen gegen eine vereinbarte Zusammenarbeit und Freigabe als Referenzkunde. Die genauen Konditionen besprechen wir im Erstgespräch.
+              Vorteilskonditionen für ausgewählte Ordinationen – gegen vereinbarte Zusammenarbeit und Freigabe als Referenzkunde. Die genauen Konditionen besprechen wir im Erstgespräch.
             </p>
           </FadeIn>
 
@@ -274,9 +274,9 @@ export default function ReferenzkundenSection() {
             href="#kontakt"
             className="bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-8 py-3.5 transition-all hover:scale-105 shadow-lg shadow-orange-500/25 text-sm"
           >
-            Jetzt bewerben
+            Vorteilskonditionen sichern
           </a>
-          <span className="text-blue-400/80 text-sm">15 Min. Erstcheck · 30 Min. Strategiegespräch</span>
+          <span className="text-blue-400/80 text-sm">15 Min. Erstcheck · 45–60 Min. Strategiegespräch</span>
         </div>
         <p className="text-white/25 text-xs">
           Solange Plätze verfügbar · 9 Ordinationen gesamt · Aufnahme nach Gespräch und Eignung

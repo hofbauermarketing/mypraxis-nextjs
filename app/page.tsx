@@ -1,15 +1,16 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import MainPageFunnel from '@/components/MainPageFunnel'
 import { getSortedPostsData } from '@/lib/blog'
 import BlogCarousel from '@/components/BlogCarousel'
 import KiSystemeMarquee from '@/components/KiSystemeMarquee'
-import KiSichtbarkeitSection from '@/components/KiSichtbarkeitSection'
-import FoerderungSection from '@/components/FoerderungSection'
+import KiSichtbarkeitSectionV2 from '@/components/KiSichtbarkeitSectionV2'
 import ZielgruppenSection from '@/components/ZielgruppenSection'
 import DemoShowcase from '@/components/DemoShowcase'
 import QrCode from '@/components/QrCode'
 
-export const metadata = {
+export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     languages: { 'de-AT': '/' },
@@ -34,14 +35,14 @@ export default function HomePage() {
       {
         '@type': 'HowTo',
         '@id': 'https://www.mypraxis.at/#howto',
-        name: 'In vier Schritten zur KI-sichtbaren Arzt-Website',
+        name: 'In vier Schritten zur fachgebiet-spezifischen Arzt-Website',
         description: 'So läuft die Zusammenarbeit mit mypraxis.at ab – von der ersten Analyse bis zur 12-monatigen Betreuung nach dem Launch.',
         totalTime: 'P4W',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Erstcheck', text: 'Kostenloses 15-minütiges Erstgespräch: Fachrichtung, Ziele und aktuelle Online-Präsenz werden besprochen. Unverbindlich.', url: 'https://www.mypraxis.at/#kontakt' },
-          { '@type': 'HowToStep', position: 2, name: 'Strategiegespräch', text: '45 bis 60 Minuten Tiefenanalyse der Ordination, des Wettbewerbs und der Zielgruppe. Ergebnis: konkretes Positionierungskonzept.', url: 'https://www.mypraxis.at/#kontakt' },
-          { '@type': 'HowToStep', position: 3, name: 'Umsetzung', text: '100 % individuelle Entwicklung: Texte, Design, Technik und vollständige KI-Readiness – kein Template, kein Baukasten.', url: 'https://www.mypraxis.at/#kontakt' },
-          { '@type': 'HowToStep', position: 4, name: 'Launch & Betreuung', text: 'Website geht online. 12 Monate technische Betreuung: KI-Sichtbarkeitsmonitoring, Updates, Sicherheits-Patches inklusive.', url: 'https://www.mypraxis.at/#kontakt' },
+          { '@type': 'HowToStep', position: 1, name: 'Erstgespräch', text: 'Kostenloses 30-minütiges Erstgespräch mit Kevin: Arbeitsweise, Patient:innen-Konstellation, Positionierung — auf Basis eines Fachgebiet-Strategiepapiers (17-40 Seiten).', url: 'https://www.mypraxis.at/#kontakt' },
+          { '@type': 'HowToStep', position: 2, name: 'Kurz-Konzept', text: 'Individualisiertes Kurz-Konzept: Patient:innen-Personas, Wettbewerb im Einzugsgebiet, Content-Struktur, technische Empfehlung. Ergebnis liegt typischerweise innerhalb von 24 Stunden vor.', url: 'https://www.mypraxis.at/#kontakt' },
+          { '@type': 'HowToStep', position: 3, name: 'Produktion', text: 'Website-Produktion in 5 bis 7 Tagen. Technisch sauber, BFSG-konform, fachgebiet-spezifisch positioniert. Texte nach Patient-Persona. Demo oft schon nach 4-5 Tagen sichtbar.', url: 'https://www.mypraxis.at/#kontakt' },
+          { '@type': 'HowToStep', position: 4, name: 'Begleitung', text: '12 Monate technische Betreuung inklusive nach Launch — Updates, Sicherheit, kleine Inhalts-Änderungen. Auf Wunsch länger verlängerbar. Kein Abo-Zwang.', url: 'https://www.mypraxis.at/#kontakt' },
         ],
       },
       {
@@ -79,19 +80,19 @@ export default function HomePage() {
 
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-5" style={{ lineHeight: '1.2' }}>
             <span className="block text-xs sm:text-sm font-semibold text-[#ff8a00]/75 uppercase tracking-[0.22em] mb-3">
-              Praxis-Website &amp; KI-Sichtbarkeit für Ärzte in Österreich &amp; Deutschland
+              Praxis-Websites für Ärzt:innen in Österreich &amp; Deutschland
             </span>
-            Was, wenn Ihre künftigen Wunschpatienten Sie finden –
-            <span className="text-[#ff8a00]"><br className="hidden sm:block" /> während Sie behandeln?</span>
+            Sichtbar für die Patient:innen,
+            <span className="text-[#ff8a00]"><br className="hidden sm:block" /> die zu Ihnen passen.</span>
           </h1>
 
           <p className="text-base md:text-xl text-blue-100 mb-2 max-w-2xl mx-auto leading-relaxed">
-            Ärzte, die von uns betreut werden, werden von genau jenen Patienten gefunden, die zu ihnen passen –
-            nicht weil sie Glück hatten, sondern weil ihre Website für sie arbeitet.
+            Sie sind Ärzt:in — und online zugleich Dienstleister:in für Ihre Patient:innen. Wir helfen Ihnen,
+            gefunden zu werden — Fachgebiet für Fachgebiet, auf Basis eigener Strategiepapiere.
           </p>
 
           <p className="text-blue-300/80 text-sm mb-6 max-w-lg mx-auto">
-            Rechtssicher nach ÖÄK & DSGVO · Individuell entwickelt · Kein Template
+            Damit Ihre Zeit bei den Patient:innen bleibt.
           </p>
 
           {/* Mobile: Buttons untereinander */}
@@ -101,14 +102,14 @@ export default function HomePage() {
               className="inline-block bg-[#ff8a00] hover:bg-orange-600 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 transition-all shadow-xl hover:shadow-orange-500/40 border border-orange-300/40 hover:-translate-y-0.5"
               style={{ transform: 'skewX(-8deg)', clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}
             >
-              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Gratis KI-Check & Webcheck anfordern ↓</span>
+              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Erstgespräch mit Kevin anfragen ↓</span>
             </a>
             <a
-              href="/preise"
+              href="#demos"
               className="glass-card hover:bg-white/20 text-white font-semibold px-8 py-3 sm:py-4 text-base sm:text-lg transition-all border border-white/35 hover:border-white/60 hover:-translate-y-0.5"
               style={{ transform: 'skewX(-8deg)', clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}
             >
-              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Demo-Websites ansehen</span>
+              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Demo-Stile ansehen</span>
             </a>
           </div>
 
@@ -119,7 +120,7 @@ export default function HomePage() {
               className="inline-block bg-[#ff8a00] hover:bg-orange-600 text-white font-bold text-lg px-10 py-4 transition-all shadow-xl hover:shadow-orange-500/40 border border-orange-300/40 hover:-translate-y-0.5"
               style={{ transform: 'skewX(-8deg)', clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}
             >
-              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Gratis KI-Check & Webcheck anfordern ↓</span>
+              <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>Erstgespräch mit Kevin anfragen ↓</span>
             </a>
             <QrCode />
           </div>
@@ -195,7 +196,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             {/* Left: Problem text */}
             <div>
-              <div className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 mb-4">
+              <div className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-3">
                 Das Problem
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-1 text-primary leading-tight">
@@ -264,17 +265,16 @@ export default function HomePage() {
         <div className="absolute inset-0 pointer-events-none opacity-50" style={{ backgroundImage: 'radial-gradient(circle, rgba(30,58,184,0.07) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="flex items-center justify-between mb-8 gap-6">
-            <div>
-              <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                Was uns unterscheidet
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-primary leading-tight">
-                Nicht einfach eine Website.{' '}
-                <span className="shimmer-text">Eine digitale Positionierung.</span>
-              </h2>
-            </div>
-            <p className="hidden sm:block text-gray-400 text-sm text-right flex-shrink-0">Vier Gründe,<br />warum Ärzte uns wählen</p>
+          <div className="text-center mb-8">
+            <span className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-2">
+              Was uns unterscheidet
+            </span>
+            <h2 className="text-lg md:text-xl font-bold text-[#112080] leading-snug max-w-2xl mx-auto">
+              Nicht einfach eine Website. Eine digitale Positionierung.
+            </h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
+              Vier Gründe, warum Ärzt:innen uns wählen — alle vier basieren auf unserem Fachgebiet-Strategiepapier (17 bis 40 Seiten).
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -282,53 +282,160 @@ export default function HomePage() {
               {
                 img: '/features/tiefenrecherche.jpg',
                 title: 'Tiefenrecherche statt Template',
-                text: 'Jeder Text basiert auf echten Daten – Fachgebiet, Werdegang, Region, Mitbewerber.',
+                text: 'Aus dem Strategiepapier: Personas, Werdegang, Region, Mitbewerber — jeder Text basiert auf echten Daten.',
               },
               {
                 img: '/features/ki-sichtbarkeit.jpg',
                 title: 'KI-Sichtbarkeit statt nur Google',
-                text: 'Schema Markup, semantische Inhalte und llms.txt – damit KI-Assistenten Ihre Ordination nennen.',
+                text: 'Schema Markup, semantische Inhalte und llms.txt — damit ChatGPT, Perplexity & Co. Ihre Ordination nennen.',
               },
               {
                 img: '/features/rechtskonform.jpg',
                 title: 'Rechtskonform ohne Ihr Zutun',
-                text: 'ÖÄK, DSGVO, Impressum, Barrierefreiheit – wir kennen die Anforderungen und setzen sie um.',
+                text: 'ÖÄK, DSGVO, BFSG, Impressum, Barrierefreiheit — kennen wir, setzen wir um, kein Aufpreis.',
               },
               {
                 img: '/features/wunschpatienten.jpg',
-                title: 'Wunschpatienten statt Laufkundschaft',
-                text: 'Nicht mehr Patienten – die richtigen Patienten für Ihre Spezialisierung.',
+                title: 'Wunschpatient:innen statt Laufkundschaft',
+                text: 'Aus dem Strategiepapier abgeleitet: die richtigen Patient:innen für Ihre Spezialisierung — nicht alle, nur die passenden.',
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white shadow-sm border border-gray-100 card-hover overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}>
+              <div key={item.title} className="bg-white shadow-sm border border-gray-200 hover:shadow-md transition-all overflow-hidden flex flex-col" style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}>
                 <div className="relative h-28 overflow-hidden">
                   <Image src={item.img} alt={item.title} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, 25vw" quality={70} />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-sm font-semibold mb-1.5 text-primary leading-snug">{item.title}</h3>
+                <div className="p-4 flex-1">
+                  <h3 className="text-sm font-bold mb-1.5 text-[#112080] leading-snug">{item.title}</h3>
                   <p className="text-gray-500 text-xs leading-relaxed">{item.text}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Killer-Vergleich */}
-          <div className="mt-6 bg-white border border-gray-100 rounded-2xl p-6 sm:p-8 shadow-sm text-center">
-            <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Der Unterschied in einem Satz</p>
-            <p className="text-primary font-bold text-lg sm:text-xl leading-snug">
-              Andere Agenturen bauen Ihnen eine Website.
-            </p>
-            <p className="text-[#ff8a00] font-bold text-lg sm:text-xl leading-snug mt-1">
-              Wir erhöhen die Chance deutlich, dass ChatGPT Ihre Ordination kennt und nennt.
-            </p>
+          {/* Statt Killer-Vergleich: nur dezenter Link zu allen Fachgebieten */}
+          <div className="mt-6 flex justify-center">
+            <a
+              href="/fachgebiete"
+              className="inline-flex items-center gap-1.5 text-[#1e3ab8] hover:text-[#112080] text-xs font-semibold border-b border-[#1e3ab8]/40 hover:border-[#1e3ab8] pb-0.5 transition-colors"
+            >
+              Alle 12 Fachgebiete im Detail →
+            </a>
           </div>
         </div>
       </section>
 
-      <KiSichtbarkeitSection />
+      {/* ===== §4 VERGLEICHE — Praxis-Metapher, aufklappbar, nebeneinander, kantiger Stil ===== */}
+      <section className="py-12 md:py-14 px-6 bg-[#faf7f2]">
+        <div className="max-w-6xl mx-auto">
+          {/* Header dezent */}
+          <div className="text-center mb-8">
+            <p className="text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-2">
+              Zwei Vergleiche
+            </p>
+            <h2 className="text-lg md:text-xl font-bold text-[#112080] leading-snug max-w-2xl mx-auto">
+              Was Ärzt:innen aus dem Alltag kennen — und warum Websites genauso funktionieren.
+            </h2>
+            <p className="text-[12px] text-gray-500 mt-2 italic">Klicken zum Aufklappen</p>
+          </div>
 
-      {/* ===== REFERENZKUNDEN-PROGRAMM ===== */}
-      <section className="py-20 px-6 bg-white relative overflow-hidden" id="leistungen">
+          <div className="grid md:grid-cols-2 gap-5">
+
+            {/* Vergleich 1 — Ordination als Metapher */}
+            <div className="bg-white border-2 border-[#112080]/15 overflow-hidden shadow-[6px_6px_0_rgba(17,32,128,0.08)] flex flex-col">
+              <div className="grid grid-cols-2 gap-0">
+                <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/lp-vgl-praxis-leer.jpg" alt="Leerer Behandlungsraum ohne Ausstattung" className="w-full h-40 md:h-48 object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2">
+                    <span className="text-[9px] uppercase tracking-widest text-red-300 font-bold block leading-none">Was Sie kennen</span>
+                    <div className="text-xs md:text-sm font-bold text-white leading-tight mt-0.5">Praxis ohne Ausstattung</div>
+                  </div>
+                </div>
+                <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/lp-vgl-praxis-einladend.jpg" alt="Einladende, warm eingerichtete Arztpraxis" className="w-full h-40 md:h-48 object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2">
+                    <span className="text-[9px] uppercase tracking-widest text-[#ffaa40] font-bold block leading-none">Was Patient:innen brauchen</span>
+                    <div className="text-xs md:text-sm font-bold text-white leading-tight mt-0.5">Einladende Ordination</div>
+                  </div>
+                </div>
+              </div>
+              <div className="px-6 pt-5 pb-6 flex-1 flex flex-col">
+                <p className="text-[10px] uppercase tracking-widest text-[#ff8a00] font-bold mb-1.5">Vergleich 1</p>
+                <h3 className="text-base md:text-lg font-bold text-[#112080] leading-snug mb-2">Eine Website ist wie eine Ordination</h3>
+                <p className="text-[13px] text-gray-700 leading-relaxed mb-4">
+                  Vier Wände und Schild wirken vollständig. Aber sobald jemand reinkommt — kein Empfang, keine Geräte, keine warme Atmosphäre. Eine Website ohne Struktur ist genauso: sie existiert, aber sie behandelt niemanden. Was wirklich drin sein muss:
+                </p>
+                <ul className="space-y-1.5 text-[13px] text-gray-700 flex-1">
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Empfang + Hero</strong> — erster Eindruck. In 3 Sekunden: sind Patient:innen richtig hier?</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Behandlungsräume</strong> — Leistungen + Fachgebiet-Tiefe statt Einheits-Template.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Rezeption</strong> — Kontakt + Terminbuchung. Kommen Anfragen an oder versickern sie?</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Diagnostik</strong> — Personas + Strategie. Was googeln Ihre Patient:innen wirklich?</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Stromversorgung</strong> — SEO + KI-Sichtbarkeit. Findet Google Sie? Empfiehlt ChatGPT Sie oder jemand anderen?</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Hygiene + Zulassung</strong> — BFSG, DSGVO, ÖÄK-Werberichtlinie ab Tag 1 dicht.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Praxisleitung</strong> — 12 Monate Betreuung inklusive. Kein Abo-Zwang.</span></li>
+                </ul>
+                <p className="text-[12px] text-gray-500 leading-relaxed mt-4 pt-3 border-t border-gray-100 italic">
+                  Ohne Ausstattung behandelt eine Praxis niemanden. Ohne Struktur eine Website auch nicht.
+                </p>
+              </div>
+            </div>
+
+            {/* Vergleich 2 — Onlineauftritt + Sichtbarkeit */}
+            <div className="bg-white border-2 border-[#112080]/15 overflow-hidden shadow-[6px_6px_0_rgba(17,32,128,0.08)] flex flex-col">
+              <div className="grid grid-cols-2 gap-0">
+                <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/lp-vgl-website-alt.jpg" alt="Veraltete Website aus 2010 auf altem Desktop-Monitor" className="w-full h-40 md:h-48 object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2">
+                    <span className="text-[9px] uppercase tracking-widest text-red-300 font-bold block leading-none">Heute oft</span>
+                    <div className="text-xs md:text-sm font-bold text-white leading-tight mt-0.5">Website aus 2010 ohne Substanz</div>
+                  </div>
+                </div>
+                <div className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/lp-vgl-patienten-smartphone.jpg" alt="Lächelnde Patient:innen mit Smartphone und Laptop auf schöner Praxis-Website" className="w-full h-40 md:h-48 object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 to-transparent px-3 py-2">
+                    <span className="text-[9px] uppercase tracking-widest text-[#ffaa40] font-bold block leading-none">Ihr Onlineauftritt</span>
+                    <div className="text-xs md:text-sm font-bold text-white leading-tight mt-0.5">Sichtbar. Einladend. Auffindbar.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="px-6 pt-5 pb-6 flex-1 flex flex-col">
+                <p className="text-[10px] uppercase tracking-widest text-[#ff8a00] font-bold mb-1.5">Vergleich 2</p>
+                <h3 className="text-base md:text-lg font-bold text-[#112080] leading-snug mb-2">Ihr Onlineauftritt — was Patient:innen 2026 erwarten</h3>
+                <p className="text-[13px] text-gray-700 leading-relaxed mb-4">
+                  Viele Arzt-Websites sind technisch aus 2010, optisch aus 2015 — und unsichtbar für Google und ChatGPT. Patient:innen in 2026 suchen am Smartphone, fragen KI-Systeme und entscheiden binnen 3 Sekunden. Was heute dabei sein muss:
+                </p>
+                <ul className="space-y-1.5 text-[13px] text-gray-700 flex-1">
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Mobil-First</strong> — 70 % suchen am Smartphone. Ihre Seite muss dort überzeugen.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>In Google-Maps + Rich-Results sichtbar</strong> — Schema-Markup sorgt dafür, dass Google Sie als Arztpraxis erkennt.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>KI-Sichtbarkeit</strong> — llms.txt + strukturierte Daten, damit ChatGPT &amp; Perplexity Sie korrekt empfehlen.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Online-Terminbuchung 24/7</strong> — auf Wunsch integrierbar. Patient:innen buchen selbst.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Online-Rezept-Bestellung</strong> — wenn gewünscht. Entlastung bei Dauer-Medikamenten.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>FAQ mit 15 häufigsten Fragen</strong> — signifikant weniger Standardfragen, mehr Zeit fürs Wesentliche.</span></li>
+                  <li className="flex gap-3"><span className="text-[#ff8a00] font-bold flex-shrink-0">·</span><span><strong>Mehrsprachige Info-Seiten</strong> — Patient:innen verstehen, was Sie anbieten, bevor sie kommen.</span></li>
+                </ul>
+                <p className="text-[12px] text-gray-500 leading-relaxed mt-4 pt-3 border-t border-gray-100 italic">
+                  Mehr Sichtbarkeit für Sie — und bessere Erfahrung für Ihre Patient:innen. Das eine bedingt das andere.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Closing dezent */}
+          <p className="text-center text-gray-600 text-xs italic mt-6 max-w-xl mx-auto">
+            Online entscheidet sich, ob die richtigen Patient:innen Sie finden — und ob Sie entlastet starten oder im Telefon-Marathon.
+          </p>
+        </div>
+      </section>
+
+      {/* V2: Demo-Galerie zuerst — User sieht erst die Form, dann die 3 Wege */}
+      <DemoShowcase />
+
+      {/* ===== REFERENZKUNDEN-PROGRAMM (Zielgruppen-Karten) ===== */}
+      <section className="py-12 md:py-14 px-6 bg-white relative overflow-hidden" id="leistungen">
         {/* Strukturhintergrund: diagonale Punkte orange, sehr dezent */}
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(255,138,0,0.045) 1px, transparent 1px)', backgroundSize: '36px 36px' }} />
         {/* Ecken-Glow */}
@@ -336,130 +443,96 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-50/60 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto">
 
-          {/* Förderungs-Banner – KMU.DIGITAL */}
-          <FoerderungSection />
-
-          {/* Was Sie bekommen – Features ohne Preise */}
+          {/* Was Sie bekommen – 3 Zielgruppen-Pakete, gleichberechtigt, alle Budget-Anfrage */}
           <div className="text-center mb-8">
-            <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-4 py-1.5">
+            <span className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold">
               Was Sie bekommen
             </span>
-            <h2 className="text-xl sm:text-2xl font-bold mt-3 text-primary">
-              Handgemacht. Kein Template. Kein Baukasten.
+            <h2 className="text-lg md:text-xl font-bold mt-3 text-[#112080]">
+              Drei Wege. Eine Qualität. Maßgeschneidert nach Budget.
             </h2>
             <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">
-              Jede Ordination ist anders – deshalb wird jede Website individuell entwickelt.
+              Wir machen keine Pauschalpreise. Jedes Angebot wird im persönlichen Erstgespräch nach Ihrem Budget und Ihren Zielen erstellt.
             </p>
           </div>
 
-          {/* Feature Cards – kein Preis, nur Wert */}
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {/* Karte 1: Praxis-Website */}
-            <div className="bg-white shadow-md p-5 border border-gray-200 card-hover flex flex-col" style={{ clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}>
-              <h3 className="text-lg font-bold text-primary mb-1.5">Praxis-Website</h3>
-              <p className="text-gray-500 mb-3 text-xs leading-relaxed">
-                Für Ärztinnen und Ärzte, die eine professionelle, rechtssichere Website brauchen – individuell
-                entwickelt, ohne Kompromisse bei Qualität und Compliance.
-              </p>
-              <ul className="space-y-1.5 text-gray-700 flex-1 text-xs">
-                {[
-                  'Bis 5 Seiten (Home, Über mich, Leistungen, Kontakt, Impressum)',
-                  'Individuelles Design – kein Template, kein Baukasten',
-                  'Local SEO & Google Maps Einbindung',
-                  'DSGVO- & ÖÄK-konform',
-                  'Basis Schema Markup (strukturierte Daten)',
-                  'Mobile-Optimierung & SSL',
-                  'Online-Terminbuchung (Anbindung)',
-                  'Cookie-Banner & Impressum',
-                  'Einschulung – Inhalte selbst ändern',
-                  'Domain-Verbindung & Hosting-Setup',
-                  '12 Monate technische Betreuung inklusive',
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* 3 Zielgruppen-Karten — Budget-orientiert, keine festen Pakete */}
+          <div className="grid md:grid-cols-3 gap-5 mb-6">
+            {[
+              {
+                title: 'Kassenärzt:innen',
+                href: '/fuer-kassenaerzte',
+                sub: 'Entlastung für die volle Ordination — Patient:innen kommen vorbereitet, Sie konzentrieren sich auf Medizin.',
+                themen: 'Sprechzeiten · Rezept-Bestellung · Mehrsprachigkeit · Impfservice · BFSG-konform · Telefon-Entlastung',
+              },
+              {
+                title: 'Privat- und Wahlärzt:innen',
+                href: '/fuer-privatarzt',
+                sub: 'Positionierung, die Wunschpatient:innen anzieht — Fachgebiet-spezifisch, mit Tiefe statt Hochglanz.',
+                themen: 'Positionierung · Persona-Tiefe · Honorar-Transparenz · Erstgespräch-Block · KI-Sichtbarkeit · Mehrsprachig',
+              },
+              {
+                title: 'Ärztezentren & PVEs',
+                href: '/fuer-aerztezentren',
+                sub: 'Digitale Infrastruktur für mehrere Ärzt:innen unter einem Dach — Patient:innen-Reisen sichtbar gemacht.',
+                themen: 'Einzel-Profile · Fachrichtungs-Matrix · Patient:innen-Reisen · Überweiser-Bereich · Schema-Architektur · KMU.DIGITAL',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="bg-white shadow-md p-5 border border-[#1e3ab8]/20 hover:border-[#1e3ab8]/50 flex flex-col transition-all hover:shadow-xl"
+                style={{ clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}
+              >
+                <h3 className="text-lg font-bold text-primary mb-1.5">{card.title}</h3>
+                <p className="text-gray-500 mb-4 text-xs leading-relaxed">{card.sub}</p>
 
-            {/* Karte 2: Digitale Positionierung */}
-            <div className="bg-gradient-to-b from-[#1e3ab8] to-[#2a50cc] shadow-2xl p-5 relative card-hover flex flex-col neon-border-orange overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}>
-              {/* EMPFOHLEN shield – top-right, within clip-path bounds */}
-              <div className="absolute top-3 right-5 bg-[#ff8a00] text-white text-[9px] font-black px-3 py-1.5 shadow-lg tracking-[0.2em] whitespace-nowrap" style={{ clipPath: 'polygon(10px 0, 100% 0, 100% 100%, 0 100%)' }}>
-                ★ EMPFOHLEN
+                <div className="bg-[#f3f1ec] border-l-2 border-[#ff8a00]/60 pl-3 py-2 mb-4 flex-1">
+                  <div className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                    Mögliche Themen
+                  </div>
+                  <p className="text-[11px] text-gray-700 leading-relaxed">{card.themen}</p>
+                </div>
+
+                <p className="text-[11px] text-gray-500 italic mb-3 leading-snug">
+                  Was davon konkret in Frage kommt, hängt von Ihrem Budget und Ihren Zielen ab — das klären wir persönlich.
+                </p>
+
+                <a
+                  href="#kontakt"
+                  className="inline-block text-center bg-[#112080] hover:bg-[#1e3ab8] text-white font-semibold text-xs px-4 py-2.5 transition-all w-full mb-2"
+                  style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)' }}
+                >
+                  Budget besprechen →
+                </a>
+                <Link
+                  href={card.href}
+                  className="text-center text-[11px] text-gray-500 hover:text-[#112080] font-semibold transition-colors"
+                >
+                  Mehr Details ansehen
+                </Link>
               </div>
-              <h3 className="text-lg font-bold text-white mb-1.5 pr-16 sm:pr-28">Digitale Positionierung</h3>
-              <p className="text-blue-200 mb-3 text-xs leading-relaxed">
-                Für Wahlärztinnen und Wahlärzte, die gezielt Wunschpatienten erreichen wollen – in Google
-                UND in KI-Systemen wie ChatGPT und Perplexity.
-              </p>
-              <ul className="space-y-1.5 text-blue-100 flex-1 text-xs">
-                {[
-                  'Alles aus Praxis-Website, plus:',
-                  'Bis 10 Seiten (inkl. FAQ, Spezialisierungen, Ablauf)',
-                  'Tiefenrecherche: Fachgebiet, Wettbewerber, Region',
-                  'Zielgruppenanalyse (Wunschpatienten-Profil)',
-                  'Maßgeschneiderte Texte basierend auf Recherche',
-                  'KI-Readiness: Erweiterte strukturierte Daten',
-                  'llms.txt Implementierung',
-                  'KI-Sichtbarkeitsanalyse (Vorher / Nachher)',
-                  'FAQ-System (reduziert Routine-Anrufe)',
-                  '12 Monate technische Betreuung inklusive',
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <span className="text-[#ff8a00] mt-0.5 font-bold flex-shrink-0">✓</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="bg-white/10 border border-white/20 p-3 mt-3 text-xs text-blue-200 flex items-start gap-2">
-                <span className="text-[#ffaa40] flex-shrink-0 mt-0.5">＋</span>
-                <span><span className="text-[#ffaa40] font-semibold">Optional:</span> KI-Telefonassistent zubuchbar</span>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Gemeinsamer CTA */}
-          <div className="text-center mt-5 mb-5">
+          {/* Erklär-Block + dezenter CTA rechts daneben */}
+          <div className="bg-white border border-gray-200 px-6 py-5 max-w-3xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4" style={{ clipPath: 'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%)' }}>
+            <p className="text-sm text-gray-700 leading-relaxed md:flex-1">
+              <span className="font-semibold text-[#112080]">Warum kein Pakete-System:</span>{' '}
+              Eine Kassenordination in Wien-Floridsdorf braucht andere Inhalte als ein Ärztezentrum in Salzburg. Wir besprechen
+              im Erstgespräch Ihr Budget, Ihre Ziele und Ihren Praxis-Alltag — daraus erstellen wir Ihr individuelles Angebot.
+            </p>
             <a
               href="#kontakt"
-              className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-bold px-10 py-3.5 text-sm transition-all hover:scale-105 shadow-lg shadow-orange-500/20"
-              style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}
+              className="inline-flex items-center gap-1.5 text-[#1e3ab8] hover:text-[#112080] text-xs font-semibold border-b border-[#1e3ab8]/40 hover:border-[#1e3ab8] pb-0.5 whitespace-nowrap flex-shrink-0 transition-colors"
             >
-              Kostenloses Erstgespräch vereinbaren →
+              Erstgespräch vereinbaren →
             </a>
-            <p className="text-gray-400 text-xs mt-2">Unverbindlich · 30 Minuten · Preis auf Anfrage</p>
-          </div>
-
-          {/* Ärztezentren Strip */}
-          <div className="overflow-hidden border border-slate-200 bg-[#0f1623] relative" style={{ clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}>
-            <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-            <div className="flex flex-col sm:flex-row sm:items-stretch">
-              <div className="p-4 sm:w-48 lg:w-56 bg-gradient-to-br from-[#1a2845] to-[#0f1623] border-b sm:border-b-0 sm:border-r border-white/10 flex flex-col justify-center gap-1.5">
-                <span className="text-[10px] font-bold text-amber-400/80 uppercase tracking-[0.3em]">3 Plätze im Programm</span>
-                <h3 className="text-base font-bold text-white leading-snug">Ärztezentren &amp; PVEs</h3>
-                <p className="text-white/40 text-xs leading-relaxed">Digitale Infrastruktur für Ihr gesamtes Haus.</p>
-              </div>
-              <div className="flex-1 p-4 flex items-center">
-                <div className="flex flex-wrap gap-1.5">
-                  {['Zentrum-Strategie', 'Schema-Architektur', 'KI-Readiness', 'Arzt-Profilseiten', 'llms.txt', 'Mehrsprachigkeit (opt.)', 'Technische Betreuung'].map((f) => (
-                    <span key={f} className="text-xs text-white/60 bg-white/5 border border-white/10 px-2.5 py-1">{f}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="p-4 sm:w-44 lg:w-52 border-t sm:border-t-0 sm:border-l border-white/10 flex flex-col justify-center gap-3 text-center">
-                <a href="#kontakt" className="text-white/60 hover:text-white text-sm transition-colors">
-                  Anfragen →
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ===== DEMO SHOWCASE (Flip-Reveal Karten) ===== */}
-      <DemoShowcase />
+      {/* V2: KI-Sichtbarkeit als finaler Beweis direkt vor Kontakt — mit Customer-Test als Default */}
+      <KiSichtbarkeitSectionV2 />
 
       {/* ===== PROZESS ===== */}
       <section className="py-12 px-6 bg-white relative overflow-hidden">
@@ -468,11 +541,11 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>
-              <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 mb-2">
+              <span className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-2">
                 Ablauf
               </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-primary leading-tight">
-                In vier Schritten zu Ihrer digitalen Praxis-Präsenz.
+              <h2 className="text-lg md:text-xl font-bold text-[#112080] leading-tight">
+                Vier Schritte — schnell, intensiv, persönlich begleitet.
               </h2>
             </div>
           </div>
@@ -481,10 +554,10 @@ export default function HomePage() {
             {/* Connecting line (desktop) */}
             <div className="hidden md:block absolute top-[44px] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
             {[
-              { nr: '01', title: 'Erstcheck', sub: '15 Min, kostenlos', text: 'Wir klären, ob wir zueinander passen – Fachrichtung, Ziele. Unverbindlich.', stat: '15', statLabel: 'Min.', bg: 'from-blue-900 to-[#0a0f1e]' },
-              { nr: '02', title: 'Strategiegespräch', sub: '45–60 Min', text: 'Analyse Ihrer Ordination, Wettbewerb und Zielgruppe. Daraus entsteht ein konkretes Konzept.', stat: '45+', statLabel: 'Min.', bg: 'from-[#112080] to-[#0a0f1e]' },
-              { nr: '03', title: 'Umsetzung', sub: '100 % individuell', text: 'Texte, Design, Technik und KI-Readiness – individuell entwickelt. Kein Template.', stat: '100', statLabel: '%', bg: 'from-[#1e3ab8] to-[#0a0f1e]' },
-              { nr: '04', title: 'Launch & Betreuung', sub: '12 Monate', text: 'Ihre Website geht online. Wir überwachen die KI-Sichtbarkeit und halten alles aktuell.', stat: '12', statLabel: 'Mo.', bg: 'from-[#ff8a00]/80 to-[#0a0f1e]' },
+              { nr: '01', title: 'Erstgespräch', sub: '30 Min · kostenlos', text: 'Persönliches Gespräch mit Kevin. Wir verstehen Ihre Arbeitsweise, Ihre Patient:innen-Konstellation, Ihre Positionierung. Grundlage: Ihr Fachgebiet-Strategiepapier.', stat: '30', statLabel: 'Min.', bg: 'from-blue-900 to-[#0a0f1e]' },
+              { nr: '02', title: 'Kurz-Konzept', sub: 'innerhalb 24 Stunden', text: 'Ihr individualisiertes Kurz-Konzept — Patient:innen-Personas, Wettbewerbs-Ausschnitt aus Ihrem Einzugsgebiet, Content-Struktur, technische Empfehlung. Bevor eine Zeile Code entsteht.', stat: '24', statLabel: 'Std.', bg: 'from-[#112080] to-[#0a0f1e]' },
+              { nr: '03', title: 'Produktion', sub: '5–7 Tage', text: 'Website-Bau. Technisch sauber, BFSG-konform, positioniert auf Ihr Fachgebiet. Texte nach Patient-Persona, nicht nach Schema. Demo oft schon nach 4-5 Tagen sichtbar.', stat: '5–7', statLabel: 'Tage', bg: 'from-[#1e3ab8] to-[#0a0f1e]' },
+              { nr: '04', title: 'Begleitung', sub: '12 Monate inkl.', text: 'Nach dem Launch 12 Monate technische Betreuung ohne Aufpreis — Updates, Sicherheit, kleine Inhalte. Länger auf Wunsch jederzeit. Kein Abo-Zwang.', stat: '12+', statLabel: 'Mo.', bg: 'from-[#ff8a00]/80 to-[#0a0f1e]' },
             ].map((step) => (
               <div key={step.nr} className="relative flex flex-col">
                 {/* Stat card */}
@@ -512,7 +585,7 @@ export default function HomePage() {
 
       {/* ===== KONTAKT / CTA ===== */}
       <section
-        className="py-20 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden"
+        className="py-12 md:py-16 px-6 bg-gradient-to-br from-[#112080] via-[#1e3ab8] to-[#2a50cc] text-white relative overflow-hidden"
         id="kontakt"
       >
         <div className="absolute inset-0 hero-pattern" />
@@ -520,91 +593,52 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#ff8a00]/5 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white/3 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-            {/* Left: Info */}
+            {/* Left: Info — kompakt im Stil der anderen Sektionen */}
             <div>
-              <span className="inline-block bg-white/15 border border-white/25 text-white/90 text-sm font-semibold px-4 py-1.5 mb-6" style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)' }}>
-                100 % kostenlos · kein Konto nötig
+              <span className="inline-block text-[10px] uppercase tracking-widest text-[#ffaa40] font-bold mb-3">
+                30 Min · kostenlos · persönlich
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Wie sichtbar ist Ihre Ordination<br />für ChatGPT & Perplexity?
+              <h2 className="text-lg md:text-xl font-bold leading-snug mb-3">
+                Erreichen Sie schon heute die Patient:innen, die zu Ihnen passen?
               </h2>
-              <p className="text-base sm:text-lg text-blue-100 mb-6 leading-relaxed">
-                Wir analysieren kostenlos, ob Ihre Ordination in KI-Systemen gefunden wird.
-                Das Ergebnis besprechen wir im Ersttelefonat – und Sie erhalten die vollständige Auswertung danach per Mail.
+              <p className="text-sm text-blue-100/90 mb-5 leading-relaxed">
+                Wir sprechen über Ihre Ordination, Ihre Patient:innen und was Ihre Website in Ihrem Fachgebiet leisten müsste. Grundlage: unser Fachgebiet-Strategiepapier, individualisiert auf Ihre Geodaten und Ihr Einzugsgebiet. Kein Verkaufsgespräch — ein ehrliches Gespräch mit Kevin.
               </p>
 
-              {/* Hardfacts – kantige skewed badges mit Hover-Float */}
-              <div className="flex flex-wrap gap-2.5 mb-10">
-                {[
-                  { icon: '✓', label: 'Kostenlos & unverbindlich' },
-                  { icon: '✓', label: 'Auswertung per Mail' },
-                  { icon: '✓', label: 'Antwort in 1 Werktag' },
-                ].map((t) => (
-                  <div key={t.label} className="group cursor-default transition-transform duration-200 hover:-translate-y-0.5">
-                    <span
-                      className="inline-block bg-white/10 border border-white/25 text-white/90 text-xs font-semibold px-4 py-2 group-hover:bg-white/20 group-hover:border-white/40 group-hover:shadow-lg group-hover:shadow-black/20 transition-all duration-200"
-                      style={{ transform: 'skewX(-10deg)', display: 'inline-block' }}
-                    >
-                      <span style={{ display: 'inline-block', transform: 'skewX(10deg)' }}>
-                        <span className="text-[#ff8a00] mr-1.5">{t.icon}</span>{t.label}
-                      </span>
-                    </span>
-                  </div>
-                ))}
-              </div>
+              {/* Hardfacts — schlanke Liste statt fette Skew-Badges */}
+              <ul className="space-y-1.5 text-sm text-white/85 mb-6">
+                <li className="flex gap-2"><span className="text-[#ffaa40] font-bold">✓</span><span>Kostenlos &amp; unverbindlich</span></li>
+                <li className="flex gap-2"><span className="text-[#ffaa40] font-bold">✓</span><span>Fachgebiet-spezifisch — kein Standard-Pitch</span></li>
+                <li className="flex gap-2"><span className="text-[#ffaa40] font-bold">✓</span><span>Antwort innerhalb 1 Werktag</span></li>
+              </ul>
 
-              <div className="space-y-4">
-                {/* Phone Kevin */}
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-11 h-11 bg-[#ff8a00]/20 border border-[#ff8a00]/30 flex items-center justify-center flex-shrink-0"
-                    style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)' }}
-                  >
-                    <svg className="w-5 h-5 text-[#ff8a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Kontakt-Direktdaten kompakt */}
+              <div className="space-y-2.5 border-t border-white/15 pt-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#ff8a00]/20 border border-[#ff8a00]/30 flex items-center justify-center flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%)' }}>
+                    <svg className="w-3.5 h-3.5 text-[#ff8a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <div>
-                    <a href="tel:+436641915447" className="text-white font-semibold hover:text-[#ff8a00] transition-colors">+43 664 191 5447</a>
-                    <p className="text-blue-300 text-xs">Kevin Hofbauer</p>
+                  <div className="text-sm leading-tight">
+                    <a href="tel:+436641915447" className="text-white font-semibold hover:text-[#ffaa40] transition-colors">+43 664 191 5447</a>
+                    <p className="text-blue-300/70 text-[11px]">Kevin Hofbauer</p>
                   </div>
                 </div>
-                {/* Email */}
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-11 h-11 bg-[#ff8a00]/20 border border-[#ff8a00]/30 flex items-center justify-center flex-shrink-0"
-                    style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)' }}
-                  >
-                    <svg className="w-5 h-5 text-[#ff8a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-[#ff8a00]/20 border border-[#ff8a00]/30 flex items-center justify-center flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%)' }}>
+                    <svg className="w-3.5 h-3.5 text-[#ff8a00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div>
-                    <a href="mailto:office@mypraxis.at" className="text-white font-semibold hover:text-[#ff8a00] transition-colors">office@mypraxis.at</a>
-                    <p className="text-blue-300 text-xs">Mo–Fr, 09:00–18:00 Uhr</p>
+                  <div className="text-sm leading-tight">
+                    <a href="mailto:office@mypraxis.at" className="text-white font-semibold hover:text-[#ffaa40] transition-colors">office@mypraxis.at</a>
+                    <p className="text-blue-300/70 text-[11px]">Mo–Fr, 09:00–18:00 Uhr</p>
                   </div>
                 </div>
-              </div>
-
-              {/* Trust badges – kantig skewed */}
-              <div className="mt-10 flex flex-wrap gap-2.5">
-                {[
-                  { label: 'Kostenlos & unverbindlich' },
-                  { label: '30 Min. Erstgespräch' },
-                  { label: 'Antwort innerhalb 1 Werktag' },
-                ].map((b) => (
-                  <div key={b.label} className="group cursor-default transition-transform duration-200 hover:-translate-y-0.5">
-                    <span
-                      className="inline-block text-blue-200 text-xs bg-white/8 border border-white/15 px-3 py-1.5 group-hover:bg-white/15 group-hover:border-white/30 group-hover:shadow-md transition-all duration-200"
-                      style={{ transform: 'skewX(-8deg)', display: 'inline-block' }}
-                    >
-                      <span style={{ display: 'inline-block', transform: 'skewX(8deg)' }}>✓ {b.label}</span>
-                    </span>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -624,35 +658,30 @@ export default function HomePage() {
                 </div>
               </div>
 
-            <div className="border border-white/30 bg-white shadow-2xl overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)' }}>
-              {/* Card Header */}
-              <div className="bg-[#1e3ab8] px-6 py-4 flex items-center gap-3">
-                <div className="w-9 h-9 bg-white/20 flex items-center justify-center flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%)' }}>
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="border border-white/30 bg-white shadow-xl overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}>
+              {/* Card Header — kompakt */}
+              <div className="bg-[#1e3ab8] px-5 py-3 flex items-center gap-2.5">
+                <div className="w-7 h-7 bg-white/20 flex items-center justify-center flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%)' }}>
+                  <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div>
-                  <p className="text-white font-extrabold text-lg leading-none">Kontaktformular</p>
-                  <p className="text-white/65 text-xs mt-0.5">Kostenlos & unverbindlich · Antwort in 1 Werktag</p>
-                </div>
+                <p className="text-white font-bold text-sm leading-none">Erstgespräch anfragen</p>
               </div>
 
-              <div className="p-6 sm:p-8">
-                <h3 className="text-gray-900 font-bold text-xl mb-6">Gratis KI-Check & Webcheck anfordern</h3>
-                {/* Persönlicher Brief von Kevin */}
-                <div className="relative mb-6 overflow-hidden border border-[#1e3ab8]/20 bg-[#f5f7ff]" style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}>
-                  <div className="p-5">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#1e3ab8]/50 font-semibold mb-3">Persönliche Nachricht</p>
-                    <p className="text-gray-700 text-sm leading-relaxed italic mb-4" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
-                      „Ich nehme mir für jede Anfrage persönlich Zeit – nicht weil ich muss, sondern weil ich nur so verstehen kann, was Ihre Ordination wirklich braucht. Kein Verkaufsgespräch. Nur ein ehrliches Gespräch."
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <Image src="/kevin.webp" alt="Kevin Hofbauer" width={36} height={36} className="object-cover flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%)' }} />
-                      <div>
-                        <p className="text-gray-900 text-sm font-semibold leading-none" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>Kevin Hofbauer</p>
-                        <p className="text-gray-500 text-[10px] mt-0.5">Gründer · mypraxis.at</p>
-                      </div>
+              <div className="p-5">
+                <p className="text-gray-500 text-xs mb-4 leading-relaxed">
+                  30 Min · kostenlos · persönlich. Auch wenn die Antwort am Ende ist, dass wir nicht zusammenpassen.
+                </p>
+                {/* Persönlicher Brief von Kevin — kompakt */}
+                <div className="relative mb-4 overflow-hidden border border-[#1e3ab8]/15 bg-[#f5f7ff]" style={{ clipPath: 'polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%)' }}>
+                  <div className="p-4 flex items-start gap-3">
+                    <Image src="/kevin.webp" alt="Kevin Hofbauer" width={40} height={40} className="object-cover flex-shrink-0" style={{ clipPath: 'polygon(0 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%)' }} />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-gray-700 text-xs leading-relaxed italic" style={{ fontFamily: 'Georgia, serif' }}>
+                        „Ich nehme mir für jede Anfrage persönlich Zeit. Kein Verkaufsgespräch — nur ein ehrliches Gespräch."
+                      </p>
+                      <p className="text-gray-500 text-[10px] mt-1.5">— Kevin Hofbauer · Gründer mypraxis.at</p>
                     </div>
                   </div>
                 </div>
@@ -675,7 +704,7 @@ export default function HomePage() {
 
             {/* LEFT: FAQ – 2/3 */}
             <div className="lg:col-span-2">
-              <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 mb-3">
+              <span className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-3">
                 FAQ
               </span>
               <h2 className="text-xl sm:text-2xl font-bold mb-5 text-primary">
@@ -684,24 +713,28 @@ export default function HomePage() {
               <div className="space-y-2">
                 {[
                   {
-                    q: 'Was kostet eine Website für Ärzte in Österreich?',
-                    a: 'Die Konditionen besprechen wir im kostenlosen Erstgespräch – individuell, ohne Standardpreisliste. Jede Ordination ist anders, und das spiegelt sich auch in der Investition wider.',
+                    q: 'Was unterscheidet mypraxis.at von einer normalen Web-Agentur?',
+                    a: 'Wir arbeiten fachgebiet-spezifisch. Pro Fachgebiet haben wir ein eigenes Strategiepapier mit 17 bis 40 Seiten Recherche geschrieben — Psychiatrie, Dermatologie, Orthopädie und acht weitere. Daraus leiten wir Patient:innen-Personas, Tonalität, Website-Struktur ab. Bevor eine Zeile Code entsteht.',
                   },
                   {
-                    q: 'Was ist KI-Readiness und warum brauche ich das?',
-                    a: 'KI-Readiness beschreibt, wie gut Ihre Website für KI-Systeme wie ChatGPT und Perplexity aufbereitet ist. Saubere Struktur und strukturierte Daten erhöhen die Chance deutlich, dass Ihre Ordination dort korrekt genannt wird.',
+                    q: 'Warum nicht einfach ein Template wie Jimdo oder Wix?',
+                    a: 'Template-Websites sehen aus wie die von Ihren Kolleg:innen. Patient:innen erkennen nicht, wofür Sie stehen. Wir bauen keine Templates — wir arbeiten pro Fachgebiet an Tonalität, Personas und Conversion-Pfaden. Das merkt man nicht auf den ersten Blick, aber bei den Anrufen, die tatsächlich kommen.',
                   },
                   {
-                    q: 'Wie lange dauert es, bis meine Website bei Google sichtbar ist?',
-                    a: 'Zwischen 2 und 12 Wochen, abhängig von Fachrichtung, Region und Wettbewerb. KI-Systeme lesen strukturierte Daten oft innerhalb weniger Tage aus.',
+                    q: 'Wie lange dauert der Bau einer Arzt-Website?',
+                    a: 'Wir arbeiten schnell und intensiv. Erstgespräch 30 Minuten, Kurz-Konzept typisch innerhalb von 24 Stunden, Website-Produktion 5 bis 7 Tage. Eine erste Demo-Version ist oft schon nach 4-5 Tagen sichtbar. Ihr eigener Zeitaufwand: rund 2-3 Stunden verteilt auf Erstgespräch, Text-Input und Freigabe.',
+                  },
+                  {
+                    q: 'Wie läuft das Ganze konkret ab?',
+                    a: 'Vier Schritte: 1. Erstgespräch (30 Min, kostenlos) — wir verstehen Ihre Arbeitsweise und Ihre Patient:innen. 2. Kurz-Konzept (innerhalb 24 Stunden) — individualisiert auf Ihr Fachgebiet und Ihr Einzugsgebiet. 3. Produktion (5-7 Tage) — Website-Bau auf Basis des Konzepts. 4. Begleitung (12 Monate inklusive) — technische Betreuung ohne Aufpreis. Auf Wunsch länger verlängerbar, kein Abo-Zwang.',
+                  },
+                  {
+                    q: 'Patient:innen suchen nicht nach "Urologe Wien" — was heißt das?',
+                    a: 'Die wenigsten googeln "Urologe Wien" oder "Psychiater 1040". Sie googeln: "blut im urin was bedeutet das", "kann nicht schlafen seit wochen", "mutter vergisst immer mehr". Wir optimieren Ihre Website auf diese echten Suchen — fachgebiet-spezifisch, nicht generisch. Das steht auf jeder unserer Fachgebiet-Unterseiten im Detail.',
                   },
                   {
                     q: 'Was bedeutet Referenzkunde konkret?',
-                    a: 'Als Referenzkunde erhalten Sie vergünstigte Konditionen und enge Begleitung. Im Gegenzug geben Sie die Zusammenarbeit später als Referenz frei – z. B. durch ein Testimonial oder eine Fallstudie. Details besprechen wir im Erstgespräch.',
-                  },
-                  {
-                    q: 'Ist die Website DSGVO-konform und ÖÄK-konform?',
-                    a: 'Ja. Cookiebanner, Datenschutzerklärung, EU-Hosting, ÖÄK-konforme Texte ohne marktschreierische Werbung. Unsere Kunden hatten bisher keine Beanstandungen.',
+                    a: 'Als Referenzkunde erhalten Sie vergünstigte Konditionen und enge Begleitung. Im Gegenzug geben Sie die Zusammenarbeit später als Referenz frei — durch Testimonial oder Fallstudie, immer mit Ihrer schriftlichen Freigabe. Details besprechen wir im Erstgespräch.',
                   },
                 ].map((faq, i) => (
                   <details key={i} className="bg-white border border-gray-200 shadow-sm group overflow-hidden" style={{ clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%)' }}>
@@ -725,7 +758,7 @@ export default function HomePage() {
 
             {/* RIGHT: Über uns – 1/3, kompakt */}
             <div>
-              <span className="inline-block bg-blue-50 text-secondary text-xs font-semibold px-3 py-1 mb-3">
+              <span className="inline-block text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-3">
                 Über uns
               </span>
               <h3 className="text-lg font-bold mb-4 text-primary leading-snug">
@@ -777,69 +810,6 @@ export default function HomePage() {
 
       {/* ===== BLOG VORSCHAU ===== */}
       <BlogCarousel posts={blogPosts} />
-
-      {/* ===== FOOTER ===== */}
-      <footer className="py-12 px-6 bg-[#111827] text-gray-400">
-        <div className="max-w-5xl mx-auto">
-          <p className="mb-4 text-xs sm:text-sm leading-relaxed">
-            <Mp /> ist eine auf niedergelassene Ärztinnen und Ärzte spezialisierte Digitalagentur in Österreich und Deutschland.
-            Betrieben von Kevin Hofbauer e.U. mit Sitz in Niederösterreich. Wir erstellen rechtssichere
-            Praxis-Websites nach ÖÄK-Richtlinien, implementieren strukturierte Daten für medizinische Einrichtungen
-            und optimieren die Sichtbarkeit von Ordinationen in KI-Suchsystemen wie ChatGPT, Perplexity und Google AI
-            Overviews.
-          </p>
-          <p className="mb-4 text-xs text-gray-600 leading-relaxed">
-            Wir betreuen Ärztinnen und Ärzte aller Fachrichtungen: Allgemeinmedizin, Innere Medizin, Orthopädie,
-            Kardiologie, Dermatologie, Gynäkologie, HNO, Urologie, Neurologie, Chirurgie, Augenheilkunde,
-            Kinderheilkunde, Zahnmedizin, Alternativmedizin und alle weiteren Fachrichtungen.
-          </p>
-          <div className="text-xs text-gray-600 mb-6">
-            <span>Hauptplatz 12, TOP 24, 3902 Vitis</span>
-            <span className="mx-2">·</span>
-            <a href="tel:+436641915447" className="hover:text-gray-400 transition-colors">
-              +43 664 191 5447
-            </a>
-            <span className="mx-2">·</span>
-            <span>Mo–Fr, 09:00–18:00 Uhr</span>
-          </div>
-          <div className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm border-t border-gray-800 pt-6">
-            <a href="/impressum" className="hover:text-white transition-colors">
-              Impressum
-            </a>
-            <a href="/datenschutz" className="hover:text-white transition-colors">
-              Datenschutz
-            </a>
-            <a href="mailto:office@mypraxis.at" className="hover:text-white transition-colors">
-              office@mypraxis.at
-            </a>
-            <div className="flex items-center gap-3 sm:ml-auto">
-              <a
-                href="https://www.linkedin.com/in/kevin-hofbauer-b2660b274/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Kevin Hofbauer auf LinkedIn"
-                className="hover:text-white transition-colors"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100035353760113"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Kevin Hofbauer auf Facebook"
-                className="hover:text-white transition-colors"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
-              <span className="text-gray-600">© {new Date().getFullYear()} Kevin Hofbauer e.U.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
     </>
   )

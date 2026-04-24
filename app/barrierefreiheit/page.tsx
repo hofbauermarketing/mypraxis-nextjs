@@ -1,6 +1,7 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Barrierefreiheitserklärung | mypraxis.at',
   description: 'Barrierefreiheitserklärung von mypraxis.at gemäß Barrierefreiheitsgesetz (BaFG) und WCAG 2.1 Level AA.',
   robots: { index: true, follow: true },

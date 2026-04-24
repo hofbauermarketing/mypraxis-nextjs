@@ -1,6 +1,7 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Impressum | mypraxis.at',
   description: 'Impressum von mypraxis.at – Kevin Hofbauer e.U.',
   robots: { index: true, follow: true },

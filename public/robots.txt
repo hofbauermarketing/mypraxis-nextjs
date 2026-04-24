@@ -1,11 +1,13 @@
 # robots.txt – mypraxis.at
-# KI-Crawler explizit willkommen – Stand März 2026
+# KI-Crawler explizit willkommen – Stand April 2026
 
 # ── Alle Bots: Standard ────────────────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /demo/
 Disallow: /api/
+Disallow: /compare
+Disallow: /_compare/
 
 # ── Google ──────────────────────────────────────────────────────
 User-agent: Googlebot

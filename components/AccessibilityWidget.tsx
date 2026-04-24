@@ -158,8 +158,11 @@ export default function AccessibilityWidget({
         {/* Puls-Ring – only on sm+ (left-side shape) */}
         {!open && (
           <span
-            className="absolute -left-1 top-0 w-[calc(100%+4px)] h-[52px] rounded-r-2xl pointer-events-none animate-a11y-pulse hidden sm:block"
-            style={{ backgroundColor: accentColor }}
+            className="absolute -left-1 top-0 w-[calc(100%+4px)] h-[52px] pointer-events-none animate-a11y-pulse hidden sm:block"
+            style={{
+              backgroundColor: accentColor,
+              clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%)',
+            }}
           />
         )}
 
@@ -169,8 +172,12 @@ export default function AccessibilityWidget({
           aria-label="Barrierefreiheit Einstellungen öffnen"
           aria-expanded={open}
           aria-haspopup="dialog"
-          className="relative flex items-center gap-2 px-3 py-1.5 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl shadow-xl transition-all duration-200 focus:outline-none animate-a11y-mobile-pulse sm:animate-none"
-          style={{ backgroundColor: accentColor }}
+          className="relative flex items-center gap-2 px-3 py-1.5 sm:pl-2 sm:pr-3 sm:py-0 sm:h-[52px] shadow-xl transition-all duration-200 focus:outline-none animate-a11y-mobile-pulse sm:animate-none"
+          style={{
+            backgroundColor: accentColor,
+            clipPath:
+              'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%)',
+          }}
         >
           {/* Mobile layout: icon + hint row */}
           <span className="sm:hidden flex flex-col items-center gap-0.5">
@@ -203,7 +210,14 @@ export default function AccessibilityWidget({
         )}
 
         {/* WCAG Badge – only on sm+ */}
-        <div className="hidden sm:flex items-center gap-1 pl-2 pr-2.5 py-1 rounded-r-xl shadow text-white text-[10px] font-bold tracking-wider" style={{ backgroundColor: accentColor + 'cc' }} aria-hidden="true">
+        <div
+          className="hidden sm:flex items-center gap-1 pl-2 pr-2.5 py-1 shadow text-white text-[10px] font-bold tracking-wider"
+          style={{
+            backgroundColor: accentColor + 'cc',
+            clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%)',
+          }}
+          aria-hidden="true"
+        >
           <span>♿</span><span>WCAG 2.1</span>
         </div>
 
@@ -213,8 +227,12 @@ export default function AccessibilityWidget({
             role="dialog"
             aria-modal="false"
             aria-label="Barrierefreiheitseinstellungen"
-            className="absolute top-full mt-1 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:top-1/2 sm:-translate-y-1/2 sm:left-[46px] w-[288px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
-            style={{ maxHeight: '90vh' }}
+            className="absolute top-full mt-1 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:top-1/2 sm:-translate-y-1/2 sm:left-[46px] w-[288px] bg-white shadow-2xl border border-gray-100 overflow-hidden"
+            style={{
+              maxHeight: '90vh',
+              clipPath:
+                'polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)',
+            }}
           >
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3" style={{ backgroundColor: accentColor }}>
@@ -231,7 +249,7 @@ export default function AccessibilityWidget({
               <Section title="Vorlesen">
                 <button
                   onClick={toggleSpeak}
-                  className="w-full flex items-center gap-3 px-3 py-3 rounded-xl border-2 transition-all text-left"
+                  className="w-full flex items-center gap-3 px-3 py-3 border-2 transition-all text-left"
                   style={{
                     borderColor: speaking ? accentColor : '#f3f4f6',
                     backgroundColor: speaking ? accentColor + '12' : '#fafafa',
@@ -259,7 +277,7 @@ export default function AccessibilityWidget({
                       key={val}
                       onClick={() => setSettings((p) => ({ ...p, fontSize: val }))}
                       aria-pressed={settings.fontSize === val}
-                      className="flex-1 py-2.5 rounded-xl border-2 font-bold transition-all"
+                      className="flex-1 py-2.5 border-2 font-bold transition-all"
                       style={{
                         fontSize: `${fs}px`,
                         borderColor: settings.fontSize === val ? accentColor : '#e5e7eb',
@@ -332,7 +350,7 @@ function Toggle({ label, sub, active, onChange, accentColor }: {
     <button
       onClick={onChange}
       aria-pressed={active}
-      className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl border-2 transition-all text-left"
+      className="w-full flex items-center justify-between px-3 py-2.5 border-2 transition-all text-left"
       style={{ borderColor: active ? accentColor : '#f3f4f6', backgroundColor: active ? accentColor + '12' : '#fafafa' }}
     >
       <div className="flex-1 min-w-0 mr-3">

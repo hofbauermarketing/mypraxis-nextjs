@@ -1,0 +1,114 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { fachgebieteList, fachgebieteTotalPages, fachgebieteExtraSlugs } from '@/content/fachgebiete'
+
+export const metadata: Metadata = {
+  title: 'Fachgebiete · Websites für 12 medizinische Spezialisierungen | mypraxis.at',
+  description:
+    'mypraxis.at baut Websites für 12 medizinische Fachgebiete einzeln — jedes mit eigener Patient:innen-Gruppe, eigener Tonalität, eigenem Strategiepapier. Ihr Fachgebiet nicht dabei? Wir arbeiten es individuell aus.',
+  alternates: { canonical: '/fachgebiete' },
+}
+
+export default function FachgebieteUebersichtPage() {
+  return (
+    <main className="min-h-screen bg-white font-sans">
+      {/* Hero */}
+      <section className="relative text-white px-6 py-20 md:py-28 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero-bg.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Multi-Layer Overlay für hohen Kontrast */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e]/95 via-[#0a1230]/92 to-[#0a0f1e]/95" />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="inline-block text-[11px] tracking-widest uppercase text-[#ff8a00] font-bold mb-6 drop-shadow-lg">
+            Unsere Fachgebiete
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            12 medizinische Fachgebiete. 12 eigene Welten.
+          </h1>
+          <p className="text-base md:text-xl text-white mb-4 max-w-3xl leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)]">
+            Wir arbeiten in jedem Fachgebiet einzeln. Das heißt: eigene Patient:innen-Personas, eigene Tonalität, eigene Bildsprache. Die Zahnmedizin behandeln wir als Sonderfach mit eigenem Papier.
+          </p>
+          <p className="text-white/80 text-sm max-w-2xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.7)]">
+            Insgesamt {fachgebieteTotalPages} Seiten interne Strategiepapiere — die Grundlage jedes Projekts.
+          </p>
+        </div>
+      </section>
+
+      {/* Grid */}
+      <section className="px-6 py-12 bg-[#faf7f2]">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {fachgebieteList.map((fg) => {
+              const isExtra = fachgebieteExtraSlugs.includes(fg.slug)
+              return (
+                <Link
+                  key={fg.slug}
+                  href={`/fachgebiete/${fg.slug}`}
+                  className={`group bg-white border rounded-xl p-6 transition-all ${
+                    isExtra
+                      ? 'border-[#ff8a00]/40 hover:border-[#ff8a00]/70 hover:shadow-md'
+                      : 'border-gray-200 hover:border-[#112080]/40 hover:shadow-md'
+                  }`}
+                >
+                  <div className="flex items-baseline justify-between mb-3 gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="font-bold text-[#112080] text-lg group-hover:text-[#1e3ab8] transition-colors truncate">
+                        {fg.name}
+                      </span>
+                      {isExtra && (
+                        <span className="text-[9px] font-semibold uppercase tracking-wider text-[#ff8a00] bg-[#ff8a00]/10 border border-[#ff8a00]/30 px-1.5 py-0.5 rounded flex-shrink-0">
+                          Sonderfach
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-[10px] text-gray-400 font-mono flex-shrink-0">
+                      {fg.paperPages} S.
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {fg.hero.teaser}
+                  </p>
+                  <div className="text-sm text-[#ff8a00] font-semibold">
+                    Ansehen →
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+
+          {/* Hinweis „Ihr Fachgebiet nicht dabei?" */}
+          <div className="mt-8 border border-dashed border-gray-300 bg-white/60 rounded-xl px-6 py-5 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-700 leading-relaxed text-center">
+              <span className="font-semibold text-[#112080]">Ihr Fachgebiet nicht aufgeführt?</span>{' '}
+              Die oben gezeigten Fachgebiete dienen als Beispiele unserer Arbeitsweise. Für jedes andere medizinische Fachgebiet erarbeiten wir das Strategiepapier eigenständig — individuell auf Ihre Ordination und Ihr Einzugsgebiet abgestimmt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-12 bg-[#112080] text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-lg md:text-xl font-bold mb-4">
+            Bereit, Ihr eigenes Fach-Strategiepapier zu besprechen?
+          </h2>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+            30 Minuten, kostenlos, unverbindlich. Wir klären gemeinsam, ob und wie wir helfen können.
+          </p>
+          <Link
+            href="/#kontakt"
+            className="inline-block bg-[#ff8a00] hover:bg-orange-600 text-white font-bold text-base md:text-lg px-8 py-3.5 rounded-full transition-colors shadow-lg"
+          >
+            Erstgespräch anfragen →
+          </Link>
+        </div>
+      </section>
+    </main>
+  )
+}

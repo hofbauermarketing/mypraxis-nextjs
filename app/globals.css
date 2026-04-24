@@ -409,12 +409,12 @@ details summary::-webkit-details-marker {
 }
 
 .animate-marquee {
-  animation: marquee 55s linear infinite;
+  animation: marquee 90s linear infinite;
   will-change: transform;
 }
 
 .animate-marquee-slow {
-  animation: marquee 65s linear infinite;
+  animation: marquee 220s linear infinite;
   will-change: transform;
 }
 

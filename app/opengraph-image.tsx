@@ -65,10 +65,10 @@ export default function OGImage() {
             lineHeight: 1.1,
             marginBottom: 28,
             letterSpacing: '-1.5px',
-            maxWidth: 800,
+            maxWidth: 900,
           }}
         >
-          Digitale Positionierung für Ärzte in Österreich.
+          Praxis-Websites mit Fachgebiet-Tiefe.
         </div>
 
         {/* Subtext */}
@@ -78,16 +78,16 @@ export default function OGImage() {
             fontSize: 28,
             fontWeight: 400,
             lineHeight: 1.4,
-            maxWidth: 700,
+            maxWidth: 820,
             marginBottom: 48,
           }}
         >
-          KI-Sichtbarkeit · Schema Markup · Rechtssichere Websites
+          Genau auf Ihr Budget zugeschnitten · BFSG- und ÖÄK-konform
         </div>
 
         {/* Pills */}
         <div style={{ display: 'flex', gap: 16 }}>
-          {['ChatGPT', 'Perplexity', 'Google AI', 'Claude'].map((name) => (
+          {['Kassenarzt', 'Wahlarzt', 'Ärztezentrum', 'PVE'].map((name) => (
             <div
               key={name}
               style={{

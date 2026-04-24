@@ -137,7 +137,7 @@ const schemaMarkup = {
         {
           "@type": "Question",
           "name": "Wie funktioniert die KMU.DIGITAL Förderung für Ärzte?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind als KMU förderbar. Die Umsetzungsförderung beträgt 30 % der Investitionskosten (max. € 6.000). Voraussetzung ist eine Strategieberatung durch einen zertifizierten Digital Consultant (CDC) – Kosten ca. € 500, davon € 250 gefördert." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind als KMU über KMU.DIGITAL förderbar. Voraussetzung ist eine Strategieberatung durch einen zertifizierten Digital Consultant. Die genauen Förderdetails klären wir im kostenlosen Erstgespräch gemeinsam mit unserem Förderpartner." }
         },
         {
           "@type": "Question",
@@ -160,17 +160,17 @@ const schemaMarkup = {
 }
 
 export const metadata: Metadata = {
-  title: 'Arzt Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland | mypraxis.at',
-  description: 'Professionelle Praxis-Websites & KI-Readiness für niedergelassene Ärzte in Österreich und Deutschland. DSGVO-konform, ÖÄK-konform. Jetzt kostenlos analysieren lassen.',
-  keywords: 'Arzt Website Agentur Österreich Deutschland, Praxis Website erstellen, KI-Sichtbarkeit Arztpraxis, Schema Markup Ärzte, DSGVO Arztpraxis, ÖÄK konform, Digitale Positionierung Ärzte, Webdesign Ärzte Wien, Wahlarzt Website',
+  title: 'Praxis-Websites mit Fachgebiet-Tiefe · Österreich | mypraxis.at',
+  description: 'Praxis-Websites für niedergelassene Ärzt:innen in Österreich — mit Fachgebiet-Tiefe, genau auf Ihr Budget zugeschnitten. BFSG- und ÖÄK-konform. Kostenloses Erstgespräch.',
+  keywords: 'Arzt Website Österreich, Praxis Website erstellen, Wahlarzt Website, Kassenarzt Website, Ärztezentrum Website, Fachgebiet spezifisch, BFSG konform, ÖÄK konform, Digitale Positionierung Ärzte, Webdesign Ärzte Wien',
   authors: [{ name: 'Kevin Hofbauer', url: 'https://www.hofbauer.marketing' }],
   creator: 'mypraxis.at',
   publisher: 'Kevin Hofbauer e.U.',
   metadataBase: new URL('https://www.mypraxis.at'),
   openGraph: {
-    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland',
-    description: 'Professionelle Praxis-Websites & KI-Readiness für Ärzte in Österreich und Deutschland. DSGVO- & ÖÄK-konform. Kostenlos analysieren lassen.',
-    images: [{ url: 'https://www.mypraxis.at/lp-hero.jpg', width: 1920, height: 1080, alt: 'mypraxis.at – Digitale Positionierung für Ärzte in Österreich & Deutschland' }],
+    title: 'mypraxis.at – Praxis-Websites mit Fachgebiet-Tiefe für Ärzt:innen in Österreich',
+    description: 'Mit Fachgebiet-Tiefe, genau auf Ihr Budget zugeschnitten. BFSG- und ÖÄK-konform. Kostenloses Erstgespräch.',
+    images: [{ url: 'https://www.mypraxis.at/lp-hero.jpg', width: 1920, height: 1080, alt: 'mypraxis.at – Praxis-Websites mit Fachgebiet-Tiefe für Ärzt:innen in Österreich' }],
     url: 'https://www.mypraxis.at',
     siteName: 'mypraxis.at',
     locale: 'de_AT',
@@ -178,8 +178,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mypraxis.at – Arzt Website & KI-Sichtbarkeit für Ärzte',
-    description: 'Professionelle Praxis-Websites & KI-Readiness für Ärzte in Österreich und Deutschland. DSGVO- & ÖÄK-konform.',
+    title: 'mypraxis.at – Praxis-Websites mit Fachgebiet-Tiefe',
+    description: 'Für niedergelassene Ärzt:innen in Österreich. Fachgebiet-Tiefe, aufs Budget zugeschnitten, BFSG-konform.',
   },
   robots: {
     index: true,
@@ -192,6 +192,7 @@ import Navigation from '@/components/Navigation'
 import CookieBanner from '@/components/CookieBanner'
 import AccessibilityWidget from '@/components/AccessibilityWidget'
 import ScrollToTop from '@/components/ScrollToTop'
+import SiteFooter from '@/components/SiteFooter'
 import Script from 'next/script'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -230,6 +231,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
+        <SiteFooter />
       </body>
     </html>
   )

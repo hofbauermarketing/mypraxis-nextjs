@@ -96,12 +96,12 @@ export async function POST(request: NextRequest) {
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;">
       <div style="background:linear-gradient(135deg,#112080,#1e3ab8);padding:28px 32px;text-align:center;">
         <h1 style="margin:0;color:white;font-size:22px;font-weight:700;">mypraxis.at</h1>
-        <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Ihre Bewerbung wurde erfolgreich übermittelt</p>
+        <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:13px;">Ihre Nachricht ist bei uns eingegangen</p>
       </div>
       <div style="padding:28px 32px;">
         <p style="font-size:16px;color:#111827;font-weight:600;margin:0 0 8px;">Liebe/r ${esc(name.trim())},</p>
         <p style="font-size:14px;color:#374151;line-height:1.7;margin:0 0 20px;">
-          vielen Dank für Ihre Bewerbung beim mypraxis.at Pilotprogramm. Wir haben Ihre Anfrage erhalten und melden uns zeitnah telefonisch unter <strong>${esc(phone.trim())}</strong>.
+          danke für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen — telefonisch unter <strong>${esc(phone.trim())}</strong>.
         </p>
 
         <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px 20px;margin-bottom:20px;">

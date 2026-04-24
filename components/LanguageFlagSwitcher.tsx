@@ -227,20 +227,25 @@ export default function LanguageFlagSwitcher({ scrolled = false, compact = false
           <ul className="max-h-80 overflow-y-auto py-1">
             {LANGS.map((lang) => {
               const active = lang.code === activeLang
+              const available = lang.code === 'DE'
               return (
                 <li key={lang.code}>
                   <button
                     type="button"
-                    onClick={() => translatePage(lang.code)}
-                    disabled={translating || active}
+                    onClick={() => available ? translatePage(lang.code) : undefined}
+                    disabled={!available || translating || active}
+                    aria-disabled={!available}
+                    title={!available ? 'Bald verfügbar — lokale Übersetzung in Arbeit' : undefined}
                     className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors text-left ${
                       active
                         ? 'bg-[#ff8a00]/10 text-[#ff8a00] font-semibold cursor-default'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-[#1e3ab8]'
+                        : available
+                          ? 'text-gray-700 hover:bg-gray-50 hover:text-[#1e3ab8]'
+                          : 'text-gray-300 cursor-not-allowed bg-gray-50/50'
                     } ${translating && !active ? 'opacity-40 cursor-wait' : ''}`}
                     role="menuitem"
                   >
-                    <span className="text-lg leading-none" aria-hidden="true">
+                    <span className={`text-lg leading-none ${!available ? 'grayscale opacity-50' : ''}`} aria-hidden="true">
                       {lang.flag}
                     </span>
                     <span className="flex-1">{lang.label}</span>
@@ -249,13 +254,16 @@ export default function LanguageFlagSwitcher({ scrolled = false, compact = false
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     )}
+                    {!available && (
+                      <span className="text-[9px] text-gray-400 uppercase tracking-wider font-semibold">bald</span>
+                    )}
                   </button>
                 </li>
               )
             })}
           </ul>
-          <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 text-[10px] text-gray-400 italic">
-            Nicht vollständig übersetzte Inhalte werden auf Deutsch angezeigt.
+          <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 text-[10px] text-gray-500 italic leading-snug">
+            Weitere Sprachen werden derzeit lokal übersetzt — finalisieren wir in den nächsten Tagen.
           </div>
         </div>
       )}

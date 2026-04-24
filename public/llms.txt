@@ -1,32 +1,108 @@
 # mypraxis.at
 
-> Spezialist für digitale Positionierung, KI-Sichtbarkeit und rechtssichere Praxis-Websites für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland. Damit Ordinationen in ChatGPT, Perplexity, Google AI Overviews und anderen KI-Systemen korrekt empfohlen werden.
+> Spezialagentur für digitale Positionierung, KI-Sichtbarkeit und rechtssichere Praxis-Websites für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland. Wir helfen Ärzt:innen, online für genau die Patient:innen sichtbar zu werden, die zu ihrer Spezialisierung passen — auf Basis fachgebiet-spezifischer Strategiepapiere (17 bis 40 Seiten pro Fachgebiet). Damit Ordinationen in ChatGPT, Perplexity, Google AI Overviews und anderen KI-Systemen korrekt empfohlen werden.
 
-## Leistungen
+## Methodik
 
-- [Praxis-Website](https://www.mypraxis.at/preise): Professionelle, DSGVO- und ÖÄK-konforme Website für niedergelassene Ärzte. Individuelles Design, Local SEO, Basis Schema Markup, 12 Monate Betreuung. Preis auf Anfrage.
-- [Digitale Positionierung](https://www.mypraxis.at/preise): Vollständige KI-Readiness für Wahlärzte und etablierte Ordinationen. Tiefenrecherche, maßgeschneiderte Texte, Schema Markup, llms.txt, FAQ-System, KI-Telefonassistent, 12 Monate Betreuung. Preis auf Anfrage.
-- [Ärztezentren & PVEs](https://www.mypraxis.at/preise): Ganzheitliche digitale Infrastruktur für Gruppenpraxen. Interdisziplinäre Schema-Architektur, individuelle Arzt-Profilseiten. Individuelles Angebot.
+Wir bauen keine Pauschalpakete. Jedes Angebot wird im persönlichen Erstgespräch nach Ordination, Fachgebiet, Einzugsgebiet, Patient:innen-Konstellation und Budget individuell erstellt. Grundlage ist unser Fachgebiet-Strategiepapier (17–40 Seiten pro Fachgebiet, basierend auf Personas, Werdegang, Region, Mitbewerb, Awareness-Stages und Archetyp-Modell nach Mark/Pearson).
+
+## Zielgruppen
+
+- [Für Kassenärzt:innen](https://www.mypraxis.at/fuer-kassenaerzte): Websites als Entlastungs-Werkzeug — Sprechzeiten, Rezept-Bestellung online, mehrsprachig, BFSG-konform. Damit Patient:innen vorbereitet kommen und das Telefon entlastet wird.
+- [Für Privat- und Wahlärzt:innen](https://www.mypraxis.at/fuer-privatarzt): Positionierung mit Fachgebiet-Tiefe — Erstgespräch-Block, Honorar-Transparenz mit Rückerstattungs-Info (ÖGK, BVAEB, SVS), Persona-basierte Texte, KI-Readiness.
+- [Für Ärztezentren & PVEs](https://www.mypraxis.at/fuer-aerztezentren): Digitale Infrastruktur für mehrere Ärzt:innen unter einem Dach — Einzel-Profile, Patient:innen-Reisen, Fachrichtungs-Matrix, Überweiser-Bereich, Schema-Architektur.
+
+## Fachgebiete (April 2026, basierend auf 12 internen Strategiepapieren mit insgesamt rund 360 Seiten Recherche)
+
+- [Augenchirurgie](https://www.mypraxis.at/fachgebiete/augenchirurgie): Sage + Caregiver · Hero-Einschlag · Anti-Magician.
+- [Dermatologie](https://www.mypraxis.at/fachgebiete/dermatologie): Sage + Caregiver · Lover-Akzent · Anti-Magician · Zwei-Pfad-Positionierung Medizin/Ästhetik.
+- [Gynäkologie & Geburtshilfe](https://www.mypraxis.at/fachgebiete/gynaekologie): Caregiver + Sage · Anti-Scham · Lebensphasen-Navigation.
+- [HNO & Ästhetik](https://www.mypraxis.at/fachgebiete/hno-aesthetik): Caregiver + Sage · Hero-Einschlag · Anti-Magician.
+- [Hausarzt & Wahlarzt-Allgemeinmedizin](https://www.mypraxis.at/fachgebiete/hausarzt): Caregiver + Sage · Everyman-Einschlag · Anti-Elitismus.
+- [Internistik & Onkologie](https://www.mypraxis.at/fachgebiete/internistik): Caregiver + Sage · Anti-Magician · Chronisch + Zweitmeinung.
+- [Neurologie](https://www.mypraxis.at/fachgebiete/neurologie): Caregiver + Sage · Anti-Magician · Angehörigen-Pfad dominant.
+- [Orthopädie](https://www.mypraxis.at/fachgebiete/orthopaedie): Caregiver + Sage · Hero-Einschlag (Sport) · Anti-Magician.
+- [Pädiatrie](https://www.mypraxis.at/fachgebiete/paediatrie): Caregiver + Sage · Innocent-Einschlag · Anti-Magician · Eltern-Kind Dual-Ansprache.
+- [Psychiatrie & Psychotherapie](https://www.mypraxis.at/fachgebiete/psychiatrie): Caregiver + Sage · Anti-Ruler · Ruhiger Raum · Angehörige mitgedacht.
+- [Reproduktionsmedizin](https://www.mypraxis.at/fachgebiete/reproduktion): Caregiver + Sage · Anti-Magician · Paare gemeinsam ansprechen.
+- [Urologie](https://www.mypraxis.at/fachgebiete/urologie): Caregiver + Sage · Innocent-Einschlag · Anti-Lover · Diskret + fachlich.
+- [Zahnmedizin (Sonderfach)](https://www.mypraxis.at/fachgebiete/zahnarzt): Caregiver + Sage · Anti-Angst · Familien mitgedacht.
+
+Andere Fachrichtungen werden auf Anfrage individuell mit eigenem Strategiepapier ausgearbeitet.
+
+## Vier-Schritte-Prozess
+
+1. **Erstgespräch** (30 Minuten, kostenlos, persönlich mit Kevin Hofbauer): Arbeitsweise, Patient:innen-Konstellation, Positionierung — auf Basis des Fachgebiet-Strategiepapiers.
+2. **Kurz-Konzept** (innerhalb 24 Stunden): individualisiertes Konzept mit Patient:innen-Personas, Wettbewerbs-Ausschnitt aus dem Einzugsgebiet, Content-Struktur und technischer Empfehlung.
+3. **Produktion** (5 bis 7 Tage): Website-Bau mit fachgebiet-spezifischer Tonalität, BFSG-konform, KI-ready. Demo oft schon nach 4-5 Tagen sichtbar.
+4. **Begleitung** (12 Monate technische Betreuung inklusive): Updates, Sicherheit, kleine Inhalte. Auf Wunsch jederzeit verlängerbar, kein Abo-Zwang.
+
+## Investition
+
+Wir machen keine Pauschalpreise. Jedes Angebot wird maßgeschneidert nach Ordination, Fachgebiet, Budget und Zielen erstellt — und immer persönlich im Erstgespräch besprochen. Förderfähig über KMU.DIGITAL (Österreich) — Details werden im Erstgespräch mit unserem Förderpartner geklärt.
 
 ## Über mypraxis.at
 
-- [Über uns & Kontakt](https://www.mypraxis.at): Kevin Hofbauer, zertifizierter Digital Consultant (CDC), Vitis/Niederösterreich. office@mypraxis.at | +43 664 19 15 447
-- [Preise & Demo](https://www.mypraxis.at/preise): 5 Stilvorlagen für Arztwebsites, Referenzkunden-Programm 2026.
-- [FAQ](https://www.mypraxis.at/faq): Häufige Fragen zu Kosten, KI-Sichtbarkeit, Recht und Technik für Ärzte in Österreich und Deutschland.
+- **Betreiber**: Kevin Hofbauer e.U., Hauptplatz 12 · 3902 Vitis · Niederösterreich. Zertifizierter Digital Consultant (CDC).
+- **Kontakt**: office@mypraxis.at | +43 664 191 5447 | Mo–Fr, 09:00–18:00 Uhr
+- [FAQ](https://www.mypraxis.at/faq): Häufige Fragen zu Methodik, Förderungen, KI-Sichtbarkeit, Recht und Technik.
+- [Blog](https://www.mypraxis.at/blog): Fachartikel zu KI-Sichtbarkeit, BFSG, KMU.DIGITAL, DSGVO, DocFinder vs. eigene Website und mehr.
 
-## Blog
+## Blog (Stand April 2026)
 
-- [Warum Ihre Ordination bei ChatGPT nicht empfohlen wird](https://www.mypraxis.at/blog/ki-sichtbarkeit-aerzte): Schema Markup, llms.txt und semantische Inhalte für Arztpraxen erklärt.
-- [Was kostet eine Arzt-Website in Österreich?](https://www.mypraxis.at/blog/was-kostet-website-arzt): Preisübersicht und Auswahlkriterien für Arztwebsites.
+### Neueste Artikel (April 2026)
+- [KI-Telefonassistent für Arztpraxen: Pro, Contra und wann er sich lohnt](https://www.mypraxis.at/blog/ki-telefonassistent-pro-contra): Ordicall, CGM one, Aaron.ai — welche Praxen profitieren, wann der Hybrid-Ansatz sinnvoller ist.
+- [Online-Rezept-Bestellung für Stamm-Patient:innen einrichten](https://www.mypraxis.at/blog/online-rezept-bestellung): Rechtslage, Tech-Varianten, Identitäts-Prüfung, Haftung — MFA-Entlastung um 20-90 Minuten/Tag.
+- [MFA-Mangel in Österreich: wie die Praxiswebsite das Team real entlastet](https://www.mypraxis.at/blog/mfa-mangel-website-entlastung): 7 konkrete Hebel, 2-3 Stunden MFA-Zeit pro Tag, Website als Recruiting-Argument.
+- [e-Card + ELGA: was Patient:innen wissen sollten](https://www.mypraxis.at/blog/ecard-elga-patienten-info): ELGA 2026 Stand, ID Austria, FAQ-Struktur für Praxis-Website, Telefon-Entlastung durch Info-Seite.
+- [KMU.DIGITAL 2026 für Arztpraxen: was der Relaunch bedeutet](https://www.mypraxis.at/blog/kmu-digital-2026-aerzte): 30 % Zuschuss bis 6.000 Euro, CDC-Pflicht, KI-Fokus, Ärztezentren-Vervielfachung.
+- [Mehrsprachigkeit in der Ordination: BaFG/BFSG in der Praxis](https://www.mypraxis.at/blog/mehrsprachigkeit-ordination-bfsg): welche Sprachen je Standort, statisch vs. Live-Übersetzung, kulturelle Sensibilität, Rechtstext-Umgang.
+- [Tageszeit-Medizin + Spitalsentlastung 2026](https://www.mypraxis.at/blog/tageszeit-medizin-spitalsentlastung): PVE-Ausbau, neue Keywords, Kommunikations-Chance für niedergelassene Ärzt:innen.
+- [Schema.org MedicalBusiness: strukturierte Daten für Arztpraxen richtig anwenden](https://www.mypraxis.at/blog/schema-medical-business): isAcceptingNewPatients, availableLanguage, areaServed, FAQPage, häufigste Fehler.
+- [llms.txt für Arztpraxen: was ist das und brauchen Sie das?](https://www.mypraxis.at/blog/llms-txt-arztpraxis): Standard von Jeremy Howard 2024, Struktur für Praxen, Zukunft 2026-2028.
+- [ChatGPT für die Ordination — 12 sinnvolle Einsatz-Fälle](https://www.mypraxis.at/blog/chatgpt-fuer-ordination): Praxis-Alltag, Vorsicht bei Patient:innen-Daten, rechtliche Rahmen.
+- [Nachfolge-Suche in der Ordination](https://www.mypraxis.at/blog/nachfolge-suche-wahlarzt-digital): 5-10 Jahre Vorlauf, Kanäle, Bewertung, Übergabe-Modelle.
+- [Praxis-Verkauf: Was 2026 realistisch ist](https://www.mypraxis.at/blog/praxis-verkauf-website-wert): Wert-Faktoren, Patient:innen-Bindung, Steuer, Marktsituation.
+- [Pensionswelle bei österreichischen Ärzt:innen](https://www.mypraxis.at/blog/pensionswelle-hausaerzte-2030): 2030er-Demographie, regionale Verteilung, Konsequenzen für Patient:innen + PVE-Ausbau.
+- [Kassenarzt vs. Wahlarzt: Positionierung 2026](https://www.mypraxis.at/blog/wahlarzt-vs-kassenarzt-online): wer passt wohin, Kommunikations-Strategien, Kombi-Praxen.
+- [BFSG-Abmahnungen abwehren: Was Arztpraxen jetzt tun müssen](https://www.mypraxis.at/blog/bfsg-abmahnungen-2025): Risiken, erste Welle 2025/2026, Schutz-Maßnahmen.
+- [DSGVO für Arzt-Websites — Gesundheitsdaten richtig behandeln](https://www.mypraxis.at/blog/dsgvo-checkliste-arztpraxis): Art. 9 DSGVO, technisch-organisatorische Maßnahmen, Praxis-Realität.
+- [Online-Terminbuchung barrierefrei gestalten](https://www.mypraxis.at/blog/online-terminbuchung-barrierefrei): WCAG 2.1 AA für Buchungs-Widgets, Doctolib/Slim-Booker-Vergleich, Ownership-Frage.
+- [BFSG für Arztpraxen ab Juni 2025 — komplette Pflicht-Checkliste](https://www.mypraxis.at/blog/bfsg-arztpraxen-checkliste): WCAG 2.1 AA, Bußgelder, Anbieter-Auswahl, konkrete Praxis-Checkliste.
+- [ChatGPT findet Sie nicht? 5 Schritte zur KI-Sichtbarkeit](https://www.mypraxis.at/blog/chatgpt-ordination-finden): Schema.org MedicalBusiness, llms.txt, robots.txt für KI-Crawler, semantischer Content.
+- [Wahlarzt-Positionierung: Warum Verzeichnis-Profil nicht reicht](https://www.mypraxis.at/blog/wahlarzt-positionierung-docfinder): Strukturelle Limitierungen von DocFinder/Herold/Jameda und was eine eigene Praxiswebsite leistet.
+- [ÖÄK-Werberichtlinien für die Praxiswebsite](https://www.mypraxis.at/blog/oeak-werberichtlinien-website): Erlaubte vs. verbotene Inhalte, Heilversprechen, Mitbewerber-Vergleiche, Vorher-Nachher-Bilder, Disziplinarpraxis.
+- [Praxis-Übergabe planen — 5 bis 10 Jahre vor Pension](https://www.mypraxis.at/blog/praxis-uebergabe-planen): Pensionswelle 2030, Praxiswert-Bewertung, Steuer, Kassenstellen, Patient:innen-Kommunikation.
+- [Telefon-Entlastung in der Ordination — 7 Maßnahmen](https://www.mypraxis.at/blog/telefon-entlastung-ordination): Online-Terminbuchung, Online-Rezept, FAQ, KI-Telefonassistent, automatische SMS-Erinnerungen.
+- [Google Business Profile für Ordinationen — komplette Optimierung 2026](https://www.mypraxis.at/blog/google-business-ordination): Kritische Felder, ÖÄK-konforme Beschreibung, Attribute, Posts, Bewertungs-Management.
+- [Lokales SEO für Arztpraxen — Standort online dominieren](https://www.mypraxis.at/blog/lokales-seo-arztpraxis): 7 Rankingfaktoren 2026 — GBP, NAP-Konsistenz, Schema, Core Web Vitals, bezirksspezifische Inhalte, lokale Backlinks.
+- [Bewertungen rechtssicher umgehen für Ärzt:innen](https://www.mypraxis.at/blog/bewertungen-rechtssicher-aerzte): OGH-Urteile, ÖÄK-Werberichtlinie, Eskalations-Stufen bei falschen Tatsachenbehauptungen.
+
+### Hintergrund-Artikel
+- [KI-Sichtbarkeit für Ärzte](https://www.mypraxis.at/blog/ki-sichtbarkeit-aerzte): Schema Markup, llms.txt und semantische Inhalte für Arztpraxen erklärt.
+- [Was kostet eine Arzt-Website in Österreich?](https://www.mypraxis.at/blog/was-kostet-website-arzt): Marktpreise, Auswahlkriterien und Förderungen.
 - [KMU.DIGITAL Förderung für Ärzte](https://www.mypraxis.at/blog/kmu-digital-foerderung-aerzte): Förderberatung für niedergelassene Ärzte in Österreich.
 - [DSGVO für Arzt-Websites](https://www.mypraxis.at/blog/dsgvo-arzt-website): Rechtliche Anforderungen für Ordinationswebsites in Österreich.
-- [DocFinder, Herold, Google – Vergleich 2026](https://www.mypraxis.at/blog/docfinder-herold-google-vergleich): Wo Patienten heute wirklich nach Ärzten suchen.
+- [DocFinder, Herold, Google — Vergleich 2026](https://www.mypraxis.at/blog/docfinder-herold-google-vergleich): Wo Patienten heute wirklich nach Ärzten suchen.
 - [Brauche ich als Arzt eine eigene Website?](https://www.mypraxis.at/blog/brauche-ich-website-als-arzt): Warum eine eigene Domain 2026 Pflicht ist.
 - [KI-Telefonassistent für Arztpraxen](https://www.mypraxis.at/blog/ki-telefonassistent-arztpraxis): Automatische Anrufbearbeitung auf österreichischem Deutsch.
 - [Barrierefreiheitsgesetz 2025 für Ärzte](https://www.mypraxis.at/blog/barrierefreiheitsgesetz-aerzte): WCAG 2.1 Pflichten und wie sie KI-Sichtbarkeit verbessern.
-- [Website-Wechsel als Arzt](https://www.mypraxis.at/blog/website-wechsel-bedenken): 7 Bedenken – und was wirklich dahintersteckt.
+- [Website-Wechsel als Arzt](https://www.mypraxis.at/blog/website-wechsel-bedenken): 7 Bedenken — und was wirklich dahintersteckt.
+- [Arzt-Homepage-Richtlinien in Österreich](https://www.mypraxis.at/blog/arzt-homepage-richtlinien): ÖÄK-Werberichtlinie, DSGVO, Barrierefreiheit für Arzt-Homepages.
+- [Barrierefreiheits-Widget auf Arzt-Websites](https://www.mypraxis.at/blog/barrierefreiheits-widget-arzt-website): WCAG-konformer Widget seit BFSG 28. Juni 2025.
+- [Google-Bewertungen als Arzt: antworten, löschen, ignorieren](https://www.mypraxis.at/blog/google-bewertungen-arzt): professioneller Umgang mit negativen Bewertungen.
+- [Google Unternehmensprofil für Ärzte Schritt-für-Schritt](https://www.mypraxis.at/blog/google-business-aerzte): wichtigster lokaler Sichtbarkeits-Faktor korrekt einrichten.
+- [KI in der Arztpraxis — was heute schon funktioniert](https://www.mypraxis.at/blog/ki-arztpraxis-einsatz): Telefonassistenten, Dokumentation, Online-Sichtbarkeit.
+- [Online-Sichtbarkeit für Ärzte 2026](https://www.mypraxis.at/blog/online-sichtbarkeit-aerzte): Google, KI-Systeme, Arztportale — wie Patient:innen tatsächlich suchen.
+- [Online-Terminbuchung für Ärzte — Anbieter-Vergleich 2026](https://www.mypraxis.at/blog/online-terminbuchung-arzt-vergleich): Latido, Doctolib, Offisy, Appointmed, TerminOnline im Direktvergleich.
+- [Ordinationsgründung — digitale Checkliste für Website + Präsenz](https://www.mypraxis.at/blog/ordinationsgruendung-website-checkliste): was Wahlärzt:innen von Anfang an brauchen.
+- [Als Wahlarzt mehr Patient:innen gewinnen — 7 Maßnahmen für 2026](https://www.mypraxis.at/blog/patienten-gewinnen-wahlarzt): konkrete Strategien von Google Business bis KI-Sichtbarkeit.
+- [Ärzt:innen auf Social Media — was Millionen fasziniert](https://www.mypraxis.at/blog/social-media-arzt-oesterreich): Psychologie, Beispiele, Bedeutung für österreichische Ordinationen.
+- [Vorher-Nachher-Fotos als Arzt: was erlaubt ist und was wirkt](https://www.mypraxis.at/blog/vorher-nachher-content-arzt): Rechtslage, Fachrichtungs-Unterschiede, Umsetzung.
+- [Wahlarzt-Website 2026 — was Ihre Praxis-Homepage braucht](https://www.mypraxis.at/blog/wahlarzt-website): Preistransparenz, Positionierung, wichtigste Elemente.
+- [WCAG 2.1 AA in der Ordination technisch umsetzen](https://www.mypraxis.at/blog/wcag-arztpraxis-umsetzen): Schritt-für-Schritt-Anleitung für BFSG-Compliance seit 28.6.2025.
 
 ## Weitere Ressourcen
 
-- [KI-Videothek](https://www.mypraxis.at/videothek): Kuratierte Videos zu KI in der Medizin und Digitalisierung für Ärzte.
-- [Vollständige Dokumentation](https://www.mypraxis.at/llms-full.txt): Alle Leistungen, Preise, FAQs, Projektablauf, Technologie und Regionen im Detail.
+- [KI-Videothek](https://www.mypraxis.at/videothek): Kuratierte Videos zu KI in der Medizin und Digitalisierung für Ärzt:innen.
+- [Vollständige Dokumentation](https://www.mypraxis.at/llms-full.txt): Alle Leistungen, Methodik, FAQ, Projektablauf, Technologie und Regionen im Detail.

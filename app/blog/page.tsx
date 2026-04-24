@@ -1,9 +1,10 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getSortedPostsData } from '@/lib/blog'
 import Navigation from '@/components/Navigation'
 import BlogGrid from '@/components/BlogGrid'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Blog: Arzt-Website & KI-Sichtbarkeit für Ärzte in Österreich & Deutschland | mypraxis.at',
   description: 'Praxisnahe Artikel zu KI-Readiness, digitaler Positionierung und Arzt-Website-Kosten für niedergelassene Ärzte in Österreich und Deutschland. Von ChatGPT bis Google AI Overviews – alles was Ärzte 2026 wissen müssen.',
   keywords: 'Blog Arzt Website Österreich Deutschland, KI-Sichtbarkeit Arztpraxis, digitale Positionierung Ärzte, ChatGPT Perplexity Arzt, Praxis Website Kosten, DSGVO Arztwebsite',
@@ -88,15 +89,22 @@ export default function BlogPage() {
         <div className="max-w-6xl mx-auto px-6 mt-12">
           <BlogGrid posts={posts} />
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">
-            <h2 className="text-2xl font-bold mb-3">Kostenlose Erstberatung</h2>
-            <p className="text-blue-100 mb-6">30 Minuten, unverbindlich. Wir analysieren Ihre aktuelle Online-Präsenz und zeigen, was möglich ist.</p>
+          {/* CTA — im Stil der Startseite (kantig, Eyebrow, Navy/Orange) */}
+          <div className="mt-16 bg-white border-2 border-[#112080]/15 shadow-[6px_6px_0_rgba(17,32,128,0.08)] px-6 md:px-10 py-10 text-center">
+            <p className="text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-3">
+              Nächster Schritt
+            </p>
+            <h2 className="text-lg md:text-xl font-bold text-[#112080] leading-snug mb-3">
+              Kostenloses Erstgespräch
+            </h2>
+            <p className="text-[14px] text-gray-700 leading-relaxed max-w-xl mx-auto mb-6">
+              30 Minuten, unverbindlich. Wir schauen uns Ihre aktuelle Online-Präsenz an und besprechen, was für Ihre Ordination sinnvoll ist.
+            </p>
             <Link
               href="/#kontakt"
-              className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+              className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-3 transition-colors"
             >
-              Beratung vereinbaren
+              Erstgespräch anfragen
             </Link>
           </div>
         </div>

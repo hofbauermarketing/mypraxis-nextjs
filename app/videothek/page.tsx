@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'KI-Videothek für Ärzte in Österreich & Deutschland – mypraxis.at',
   description: 'Kuratierte Videos zu KI in der Medizin, Digitalisierung & digitaler Positionierung für niedergelassene Ärztinnen und Ärzte in Österreich und Deutschland. ChatGPT, Perplexity & Google AI erklärt. Kostenlos.',
   keywords: 'KI Videothek Ärzte Österreich Deutschland, Künstliche Intelligenz Medizin, KI Arztpraxis, KI Sichtbarkeit Video, Digitalisierung Ordination',

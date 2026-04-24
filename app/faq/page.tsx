@@ -1,7 +1,8 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'FAQ: Arzt-Website, KI-Sichtbarkeit & digitale Positionierung in Österreich & Deutschland | mypraxis.at',
     description: 'Häufige Fragen zu Kosten einer Arzt-Website, KI-Readiness, DSGVO, ÖÄK-Richtlinien und Technik – für niedergelassene Ärzte in Österreich und Deutschland. Ehrlich beantwortet.',
     keywords: 'FAQ Arzt Website Österreich Deutschland, Praxis Website Kosten, KI-Readiness Arzt, DSGVO Arztpraxis, ÖÄK konform Website, Arzt Website Agentur',
@@ -47,7 +48,7 @@ const faqKategorien = [
         fragen: [
             {
                 q: 'Wie beantrage ich die KMU.DIGITAL-Förderung?',
-                a: 'Der Prozess läuft in zwei Schritten: (1) Strategieberatung durch einen zertifizierten Digital Consultant (CDC) – Kosten ca. € 500, davon € 250 gefördert. (2) Danach Antrag auf Umsetzungsförderung (30 % der Investitionskosten, max. € 6.000). Wir begleiten Sie durch den gesamten Prozess – von der Anfrage beim AWS bis zum finalen Abschluss.',
+                a: 'Der Prozess läuft in zwei Schritten: (1) Strategieberatung durch einen zertifizierten Digital Consultant. (2) Danach Antrag auf Umsetzungsförderung über KMU.DIGITAL. Konkrete Förderhöhe und Eigenanteil hängen vom Projektumfang ab — die Details klären wir im kostenlosen Erstgespräch gemeinsam mit unserem Förderpartner.',
             },
             {
                 q: 'Welche Ordinationen sind förderfähig?',
@@ -244,13 +245,20 @@ export default function FaqPage() {
                     ))}
                 </div>
 
-                {/* CTA */}
+                {/* CTA — im Stil der Startseite (kantig, Eyebrow, Navy/Orange) */}
                 <div className="max-w-5xl mx-auto px-6 mt-16">
-                    <div className="bg-gradient-to-br from-[#1e3ab8] to-[#2a50cc] rounded-2xl p-8 text-white text-center">
-                        <h2 className="text-2xl font-bold mb-3">Noch eine Frage?</h2>
-                        <p className="text-blue-100 mb-6 max-w-xl mx-auto">30 Minuten, unverbindlich. Wir analysieren Ihre Online-Präsenz und zeigen, was konkret möglich ist.</p>
-                        <Link href="/#kontakt" className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-3 rounded-xl transition-colors shadow-md">
-                            Kostenlose Erstberatung vereinbaren
+                    <div className="bg-white border-2 border-[#112080]/15 shadow-[6px_6px_0_rgba(17,32,128,0.08)] px-6 md:px-10 py-10 text-center">
+                        <p className="text-[11px] uppercase tracking-widest text-[#ff8a00] font-bold mb-3">
+                            Nächster Schritt
+                        </p>
+                        <h2 className="text-lg md:text-xl font-bold text-[#112080] leading-snug mb-3">
+                            Noch eine Frage offen?
+                        </h2>
+                        <p className="text-[14px] text-gray-700 leading-relaxed max-w-xl mx-auto mb-6">
+                            30 Minuten, unverbindlich. Wir schauen uns Ihre aktuelle Online-Präsenz an und besprechen, was für Ihre Ordination sinnvoll ist.
+                        </p>
+                        <Link href="/#kontakt" className="inline-block bg-[#ff8a00] hover:bg-[#e67a00] text-white font-semibold px-8 py-3 transition-colors">
+                            Erstgespräch anfragen
                         </Link>
                     </div>
                 </div>

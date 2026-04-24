@@ -1,0 +1,71 @@
+{
+  "stand": "2026-04-24",
+  "quelle": "Perplexity sonar-pro 5-Loop-Recherche zu Suchverhalten österreichischer Ärzt:innen 2025/2026",
+  "ziel": "Blog-Artikel die ÄRZT:INNEN googeln (nicht Patient:innen — wir wollen Ärzt:innen anziehen)",
+  "naechster_block": "Top-3 zur Generation freigegeben am 24.04.2026 (BFSG, ChatGPT, Wahlarzt vs DocFinder)",
+  "cluster": {
+    "A_Recht": {
+      "label": "Pflicht / Recht",
+      "farbe": "rot — höchste Dringlichkeit (BFSG akut)",
+      "themen": [
+        { "slug": "bfsg-arztpraxen-checkliste", "title": "BFSG für Arztpraxen ab Juni 2025 — komplette Pflicht-Checkliste", "status": "in-arbeit" },
+        { "slug": "wcag-arztpraxis-umsetzen", "title": "WCAG 2.1 AA in der Ordination umsetzen — Schritt-für-Schritt" },
+        { "slug": "online-terminbuchung-barrierefrei", "title": "Online-Terminbuchung barrierefrei — Anbieter-Vergleich" },
+        { "slug": "oeak-werberichtlinien-website", "title": "ÖÄK-Werberichtlinien für die eigene Website — was erlaubt, was verboten" },
+        { "slug": "dsgvo-checkliste-arztpraxis", "title": "DSGVO-Checkliste für Praxiswebsites in Österreich" },
+        { "slug": "bfsg-abmahnungen-2025", "title": "BFSG-Abmahnungen 2025 — was Praxen über erste Strafverfahren wissen müssen" }
+      ]
+    },
+    "B_Marketing": {
+      "label": "Marketing / Sichtbarkeit",
+      "farbe": "orange",
+      "themen": [
+        { "slug": "google-business-ordination", "title": "Google My Business für Ordinationen — Optimierung Schritt-für-Schritt" },
+        { "slug": "wahlarzt-positionierung-docfinder", "title": "Wahlarzt-Positionierung online: Warum DocFinder allein nicht reicht", "status": "in-arbeit" },
+        { "slug": "lokales-seo-arztpraxis", "title": "Lokales SEO für Praxen — Standort online dominieren" },
+        { "slug": "bewertungen-rechtssicher-aerzte", "title": "Bewertungen rechtssicher: DocFinder, Jameda, Google ÖÄK-konform umgehen" },
+        { "slug": "wahlarzt-vs-kassenarzt-online", "title": "Wahlarzt vs. Kassenarzt online positionieren — unterschiedliche Sprachen" }
+      ]
+    },
+    "C_Uebergabe": {
+      "label": "Übergabe / Pension (2030 droht große Welle)",
+      "farbe": "amber",
+      "themen": [
+        { "slug": "praxis-uebergabe-planen", "title": "Praxis-Übergabe planen — 5 Jahre vor Pension was tun" },
+        { "slug": "pensionswelle-hausaerzte-2030", "title": "Pensionswelle der Hausärzt:innen — wer übernimmt 2030?" },
+        { "slug": "praxis-verkauf-website-wert", "title": "Praxis-Verkauf + Website-Wert — was eine Praxis online wertvoll macht" },
+        { "slug": "nachfolge-suche-wahlarzt-digital", "title": "Nachfolge-Suche im Wahlarzt-Bereich — digitale Strategie" }
+      ]
+    },
+    "D_KI": {
+      "label": "KI / Digitalisierung",
+      "farbe": "violett",
+      "themen": [
+        { "slug": "chatgpt-fuer-ordination", "title": "ChatGPT für die Ordination — 5 sinnvolle Anwendungen" },
+        { "slug": "chatgpt-ordination-finden", "title": "ChatGPT findet Sie nicht? 5 Schritte zur KI-Sichtbarkeit", "status": "in-arbeit" },
+        { "slug": "llms-txt-arztpraxis", "title": "llms.txt für Arztpraxen — was ist das, brauchen Sie das?" },
+        { "slug": "schema-medical-business", "title": "Schema.org MedicalBusiness richtig anwenden" },
+        { "slug": "ki-telefonassistent-pro-contra", "title": "KI-Telefonassistent in der Ordination — Pro/Contra" }
+      ]
+    },
+    "E_Buerokratie": {
+      "label": "Bürokratie / Entlastung",
+      "farbe": "blau",
+      "themen": [
+        { "slug": "telefon-entlastung-ordination", "title": "Telefon-Entlastung in der Ordination — was wirklich hilft" },
+        { "slug": "online-rezept-bestellung", "title": "Online-Rezept-Bestellung für Stammpatient:innen einrichten" },
+        { "slug": "mfa-mangel-website-entlastung", "title": "MFA-Mangel — wie die Website das Team entlastet" },
+        { "slug": "ecard-elga-patienten-info", "title": "e-Card / ELGA — was Patient:innen vorher wissen sollten" }
+      ]
+    },
+    "F_Aktualitaet": {
+      "label": "Bonus / Aktualität",
+      "farbe": "smaragd",
+      "themen": [
+        { "slug": "kmu-digital-2026-aerzte", "title": "KMU.DIGITAL 2026 — Förder-Kombinationen für Ärzt:innen" },
+        { "slug": "mehrsprachigkeit-ordination-bfsg", "title": "Mehrsprachigkeit in der Ordination — BFSG verlangt einfache Sprache" },
+        { "slug": "tageszeit-medizin-spitalsentlastung", "title": "Tageszeit-Wandel der Medizin — Spitalsentlastung durch Praxen" }
+      ]
+    }
+  }
+}
