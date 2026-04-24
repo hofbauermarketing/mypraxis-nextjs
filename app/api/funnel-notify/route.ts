@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { rateLimit, getClientIp } from '@/lib/rate-limit'
 
 function esc(str: string): string {
   return str
@@ -35,6 +36,13 @@ const Q_LABELS: Record<string, Record<string, string>> = {
 }
 
 export async function POST(request: NextRequest) {
+  // Rate-Limit: max 5 Funnel-Submits pro IP pro 10 Minuten
+  const ip = getClientIp(request)
+  const limited = rateLimit(ip, 'funnel', 5, 600)
+  if (limited) {
+    return NextResponse.json({ error: limited }, { status: 429 })
+  }
+
   const body = await request.json() as Record<string, string>
   const { name, phone, fachrichtung, ort, email, q1, q2, q3, q4 } = body
 

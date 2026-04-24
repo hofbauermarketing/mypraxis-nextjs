@@ -1,7 +1,15 @@
 import { NextResponse } from 'next/server'
+import { rateLimit, getClientIp } from '@/lib/rate-limit'
 
 export async function POST(req: Request) {
   try {
+    // Rate-Limit: max 3 Calls pro IP pro Stunde (schützt vor Fonio-Spam-Kosten)
+    const ip = getClientIp(req)
+    const limited = rateLimit(ip, 'call', 3, 3600)
+    if (limited) {
+      return NextResponse.json({ error: limited }, { status: 429 })
+    }
+
     const { phone, name, fachrichtung, ort } = await req.json()
 
     if (!phone || !name) {

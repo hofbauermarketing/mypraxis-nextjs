@@ -26,7 +26,20 @@ const nextConfig = {
     ]
   },
   async headers() {
+    const securityHeaders = [
+      { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=(), payment=(), usb=()' },
+      { key: 'X-XSS-Protection', value: '1; mode=block' },
+    ]
     return [
+      // Security-Header auf allen Routes (inkl. API)
+      {
+        source: '/:path*',
+        headers: securityHeaders,
+      },
       // Link-Header für KI-Discovery auf allen HTML-Seiten
       {
         source: '/((?!_next|api|.*\\..*).*)',

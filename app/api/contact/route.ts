@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { rateLimit, getClientIp } from '@/lib/rate-limit'
 
 // Required Vercel environment variables:
 //   SMTP_HOST   – e.g. smtp.strato.de or smtp.gmail.com
@@ -18,6 +19,13 @@ function escapeHtml(str: string): string {
 }
 
 export async function POST(request: NextRequest) {
+  // Rate-Limit: max 5 Kontaktformular-Submits pro IP pro 10 Minuten (Spam-Schutz)
+  const ip = getClientIp(request)
+  const limited = rateLimit(ip, 'contact', 5, 600)
+  if (limited) {
+    return NextResponse.json({ error: limited }, { status: 429 })
+  }
+
   const body = await request.json()
   const { name, email, phone, fachrichtung, message } = body as Record<string, string>
 
