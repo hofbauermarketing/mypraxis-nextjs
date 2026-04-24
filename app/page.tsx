@@ -207,14 +207,19 @@ export default function HomePage() {
               </p>
 
               <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-                <strong className="text-primary">97 % der Patienten recherchieren online</strong> – bevor sie anrufen. Wunschpatienten suchen genau dort nach Ihnen. Wer Sie noch nicht kennt, findet Sie nicht: nicht auf Google, nicht bei ChatGPT, nicht bei Perplexity.{' '}
-                <strong className="text-primary">Während Ihre Mitbewerber bereits sichtbar sind.</strong>
+                Patient:innen suchen heute mit Google, ChatGPT und Perplexity — <em>bevor</em> sie das erste Mal zum Hörer greifen. Wer Sie noch nicht kennt, entscheidet in <strong className="text-primary">drei Sekunden online</strong>. Und nicht immer für die beste Ordination, sondern für die sichtbare.
+              </p>
+              <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                Sie wollen, dass Patient:innen <strong className="text-primary">gut informiert</strong> zu Ihnen kommen — und verstehen, was Ihre Arbeit einzigartig macht. Dass sie sich <strong className="text-primary">in einer Geschichte wiederfinden</strong>, nicht in einer Leistungsliste. Dass sie beim Lesen denken: <em>„Genau hier bin ich richtig."</em>
+              </p>
+              <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                Stattdessen konkurrieren Sie online mit Template-Websites: Standardtexte ohne Fachgebiet-Tiefe, austauschbare Stockfotos, keine Persönlichkeit. Sie gewinnen oft — weil sie gefunden werden. Nicht weil sie überzeugen.
               </p>
               <p className="text-sm text-gray-700 mb-5 leading-relaxed">
-                Dazu kommt das regulatorische Minenfeld: ÖÄK-Richtlinien, DSGVO, Impressumspflicht, Barrierefreiheitsgesetz. Eine Website, die gut aussieht <em>und</em> rechtskonform ist, braucht Spezialwissen.
+                Und dann die Pflichten: <strong>ÖÄK-Werberichtlinie, DSGVO, Barrierefreiheitsgesetz</strong> seit Juni 2025. Wichtig für Patient:innen-Schutz. Zusätzlicher Aufwand neben dem Praxis-Alltag.
               </p>
               <p className="text-sm font-semibold text-primary leading-relaxed">
-                Wir bringen beides zusammen – damit Ihre Ordination nicht nur existiert, sondern gefunden wird.
+                Sie haben Medizin studiert — nicht Online-Marketing. Wir bringen das zusammen: Fachgebiet-Tiefe, damit Ihre Expertise online sichtbar wird. Rechtssicher, damit Sie ruhig schlafen. Genau auf Ihr Budget zugeschnitten.
               </p>
             </div>
 
