@@ -1,156 +1,118 @@
 ---
-title: "KMU.DIGITAL 2026 für Arztpraxen: was der Relaunch bedeutet"
+title: "KMU.DIGITAL 2026 für Arztpraxen: Überblick und Einordnung"
 date: "2026-04-24"
-description: "KMU.DIGITAL — das Digitalisierungs-Förderprogramm des Bundes — wurde 2025/2026 relauncht. Was Arztpraxen 2026 beantragen können, welche Fristen gelten, und warum Praxen das nicht verpassen sollten."
+description: "KMU.DIGITAL — das Digitalisierungs-Förderprogramm des Bundes — wurde 2025/2026 überarbeitet. Was Arztpraxen 2026 grundsätzlich beantragen können, wie der Antragsweg aussieht — und warum konkrete Fördersummen nur ein qualifizierter Förderpartner verbindlich nennen kann."
 author: "Kevin Hofbauer"
 image: "/blog/kmu-digital-2026-aerzte.png"
 imageAlt: "Laptop mit Förderantragsformular auf Praxis-Schreibtisch — Symbol für KMU.DIGITAL 2026 für Arztpraxen"
 ---
 
-**KMU.DIGITAL** ist das Digitalisierungs-Förderprogramm des Bundeskanzleramts für österreichische Klein- und Mittelbetriebe — und Arztpraxen fallen darunter. Das Programm wurde 2025/2026 deutlich überarbeitet. Was sich für Praxen geändert hat, welche Investitionen 2026 förderfähig sind und wie der Antragsweg aussieht — dieser Artikel gibt den aktuellen Überblick.
+**KMU.DIGITAL** ist das Digitalisierungs-Förderprogramm des Bundes für österreichische Klein- und Mittelbetriebe — und niedergelassene Ärztinnen und Ärzte fallen darunter. Das Programm wurde 2025/2026 überarbeitet. Was sich grundsätzlich geändert hat, welche Investitionen für Praxen relevant sind und wie der Antragsweg aussieht — dieser Artikel gibt den Überblick. Konkrete Förderquoten und maximale Beträge nennen wir bewusst nicht, weil diese sich regelmäßig ändern und für jede Praxis individuell vom Förderpartner geprüft werden müssen.
 
 ## Was ist KMU.DIGITAL kurz?
 
 KMU.DIGITAL fördert Digitalisierungs-Investitionen österreichischer Kleinst-, Klein- und Mittelbetriebe mit einem **Zuschuss** (nicht Kredit, nicht Steuervorteil). Ziel: digitale Transformation beschleunigen — besonders bei kleineren Unternehmen, die sich externe Beratung sonst nicht leisten würden.
 
-Arztpraxen qualifizieren sich, wenn sie:
-- Freie Berufe in Österreich mit UID
-- Weniger als 250 Mitarbeiter:innen
-- Unter 50 Mio. Euro Jahresumsatz (praktisch immer erfüllt bei Arztpraxen)
-- Kein staatliches Mehrheits-Eigentum
+Das Programm besteht aus **zwei aufeinander aufbauenden Säulen**:
 
-Ärztezentren / PVEs qualifizieren ebenfalls, sofern jede einzelne Ordination die Kriterien erfüllt.
+1. **Strategieberatung** durch einen zertifizierten Digital Consultant (CDC)
+2. **Umsetzungsförderung** für die im Strategieplan vereinbarten Maßnahmen
 
-## Die Förderung 2026
+Beide Säulen sind getrennt zu beantragen. Beide werden bezuschusst — die konkreten Quoten und Maximalbeträge ändern sich von Jahr zu Jahr.
 
-**Zuschuss-Höhe:**
-- **30 % der förderfähigen Netto-Kosten**
-- **Maximum 6.000 Euro pro Unternehmen** (gilt über den gesamten Förderzeitraum)
-- Ärztezentren: **pro Einzelpraxis** ein eigener Antrag möglich → mehrere Ärzt:innen → mehrere Förderungen
+## Was hat sich 2026 geändert?
 
-**Förderfähige Investitionen 2026:**
-- **Praxiswebsite** (Konzept, Entwicklung, Design, Hosting-Setup)
-- **Digitale Kommunikation** (E-Mail-Marketing, Newsletter-Systeme, Chat-Tools)
-- **E-Rechnung-Systeme** (sevDesk, BMD, etc.)
-- **Digitale Buchhaltung**
-- **KI-Anwendungen** (ChatGPT, KI-Telefonassistenten, Transkriptions-Tools)
-- **Digitale Sicherheit** (2-Faktor-Authentifizierung, Backup-Systeme, SSL-Zertifikate)
-- **Daten-Management** (CRM, Patient:innen-Kommunikations-Tools außerhalb Praxis-Software)
-- **E-Commerce / Online-Terminbuchung** (Doctolib, Slim-Booker, eigene Systeme)
-- **Schulungen + Weiterbildungen** zu digitalen Themen (Webinare, Online-Kurse)
+Der Relaunch des Programms 2025/2026 hat einige Schwerpunkte verschoben:
 
-**Nicht förderfähig:**
-- Hardware-Anschaffung (Computer, Server, Router) — mit Ausnahme spezifischer Ausnahme-Kategorien
-- Laufende Betriebskosten (Hosting-Monatsgebühren nach Förder-Ende)
-- Personal-Kosten für interne Umsetzung
+- **KI-Förderung explizit verankert.** Investitionen in KI-Tools, KI-Telefonassistenten und KI-Sichtbarkeit (Schema-Markup, llms.txt) sind seit 2026 eindeutig förderfähig.
+- **CDC-Pflicht bleibt.** Ohne vorgeschaltete Strategieberatung durch einen zertifizierten Berater keine Umsetzungsförderung. Das ist Programm-Bestandteil.
+- **Bundesweite Einheitlichkeit.** Was früher Bundesland-Variationen hatte, ist jetzt einheitlich.
+- **Antrags-Plattform digitalisiert.** Anträge laufen über das digitale Förder-Portal — die Bearbeitungszeit hat sich verkürzt.
+- **Budget-Topf-Logik.** Das Bundes-Budget ist jährlich begrenzt. Erfahrungswerte: Programme sind oft schon Mitte-Ende des Jahres ausgeschöpft.
 
-## Der Ablauf
+## Welche Praxis-Investitionen sind förderfähig?
 
-**Schritt 1: Strategie-Beratung durch CDC**
+Typische Maßnahmen für Ärztepraxen, die unter das 2026er Programm fallen können:
 
-Zentrale Änderung 2025/2026: vor jedem Antrag ist eine **strukturierte Strategie-Beratung** durch eine:n **Certified Digital Consultant (CDC)** verpflichtend. Die Beratung analysiert Praxis-Status-Quo + erstellt Digitalisierungs-Strategie.
+- **Praxis-Website:** Erstellung, Relaunch, KI-Optimierung
+- **Online-Terminbuchung** mit Anbindung an Praxissoftware
+- **KI-Telefonassistent** für automatisierte Anrufbearbeitung
+- **Patienten-Portal** mit DSGVO-konformer Kommunikation
+- **Digitalisierung von Verwaltungsprozessen**
+- **Schulungen für das Praxis-Team**
+- **Mehrsprachige Erweiterung** (für Praxen mit internationaler Klientel)
 
-- Dauer: typisch 6-10 Beratungs-Stunden über 3-6 Wochen
-- Kosten: ca. 500-800 Euro (je nach CDC)
-- **Förderfähig**: 50 % der Beratungs-Kosten = ca. 250-400 Euro Zuschuss
+**Nicht förderfähig sind typischerweise:** Hardware (Computer, Telefonanlagen, Drucker), reine Hosting-Gebühren, laufende Wartung, Lizenzkosten ohne Strategie-Bezug.
 
-**Schritt 2: Umsetzungs-Phase**
+## Wer ist berechtigt?
 
-Auf Basis der Strategie: Investitionen in digitale Lösungen (Website, Tools, Schulungen). Diese sind dann zu 30 % förderfähig bis max. 6.000 Euro Zuschuss.
+Niedergelassene Ärztinnen und Ärzte mit eigener Ordination gelten als Klein- bzw. Kleinstunternehmen und sind damit grundsätzlich antragsberechtigt:
 
-**Schritt 3: Abrechnung**
+- Kassenärzt:innen
+- Wahlärzt:innen
+- Gruppenpraxen (jeder Arzt einzeln)
+- Ärztezentren
+- Primärversorgungseinheiten (PVE)
 
-Nach Umsetzung: Rechnungen, Zahlungsnachweise und Verwendungs-Nachweise werden eingereicht. Zuschuss wird ausbezahlt.
+**Nicht berechtigt:** Krankenhäuser, Klinikabteilungen, rein angestellte Ärzte ohne eigene Ordination.
 
-**Gesamtdauer**: typisch 6-9 Monate von Antrag bis Auszahlung.
+## Ärztezentren und PVE — Mehrfach-Antragstellung
 
-## Wichtige 2026-Änderungen zu vorherigen Förderungen
+Ein wichtiger Aspekt für Gruppenpraxen: **Jeder niedergelassene Arzt mit eigener UID gilt als eigenständiges KMU** — und kann grundsätzlich einen eigenen Förderantrag stellen. In Ärztezentren multipliziert sich damit das mögliche Förder-Potenzial. Die genaue Koordination und Zulässigkeit prüft der Förderpartner pro Fall.
 
-**Erhöhte Förderung für KI-Themen**: 2026 ist ein Fokus-Jahr für KI-Förderung. Bei KI-Projekten (Website mit KI-Chatbot, KI-Telefonassistenten, automatisierte Übersetzungen, KI-Transkription) wird priorisiert bearbeitet.
+## Antragsablauf
 
-**Strengere Nachhaltigkeits-Kriterien**: Die Digitalisierungs-Investitionen müssen über Ende der Förderung hinaus betrieben werden. „Einmal-Website" ohne Pflege-Konzept → Ablehnung möglich.
+Realistisch ist der Prozess als 3–5 monatiger Ablauf zu planen:
 
-**Kombinierbar mit weiteren Förderungen**: KMU.DIGITAL ist mit anderen Landes-Förderungen (Wien-Digital, NÖ-Digital, etc.) **kumulierbar**, sofern die Summe nicht 100 % der Investitions-Kosten übersteigt.
+1. **Erstgespräch** mit uns — Bestandsaufnahme, Wunsch-Umfang, Budget
+2. **Vermittlung an externen CDC-Förderpartner** — er prüft Förderfähigkeit
+3. **CDC-Strategieberatung** (1. Säule) — Beratungstermine, Maßnahmenplan
+4. **Antrag Säule 1** über Förder-Portal
+5. **Bewilligung Säule 1** — anschließend Antrag Säule 2 (Umsetzung)
+6. **Bewilligung Säule 2** — Vorbescheid, dann Projektstart
+7. **Umsetzung der Praxis-Website / Digitalprojekt**
+8. **Endabrechnung + Auszahlung** durch Förderstelle
 
-**Nicht mehr verpflichtend FFG-Plattform**: Anmeldung 2026 vereinfacht — direkt über kmudigital.at.
+## Warum konkrete Zahlen nur der Förderpartner nennen kann
 
-## Realistisches Zahlenbeispiel für eine Arztpraxis
+Anbieter, die pauschal Versprechen machen wie *"30 % Förderung garantiert"* oder *"6.000 € geschenkt"*, übertreten eine Linie. Es gibt drei Gründe warum nur ein qualifizierter Förderberater verbindlich Zahlen nennen kann:
 
-**Investition**: 
-- Neue Website: 8.000 Euro netto
-- Online-Terminbuchungs-Tool (Setup + 1. Jahr): 1.500 Euro netto
-- Strategie-Beratung: 700 Euro netto
-- Schulung für MFA (Website-Pflege + digitale Tools): 800 Euro netto
-- **Gesamt: 11.000 Euro netto**
+1. **Programm-Stand ändert sich.** Quoten + Maximalbeträge werden jährlich angepasst. Was im April 2026 stimmt, kann im Oktober anders sein.
+2. **Praxis-Situation ist individuell.** Förderhöhe hängt vom Projektumfang, vom CDC-Bewertungsbericht und vom Budget-Stand des Topfs ab.
+3. **Bundes-Budget begrenzt.** Auch wenn Sie grundsätzlich berechtigt sind: Ist der Topf leer, wird abgelehnt.
 
-**KMU.DIGITAL-Förderung**:
-- Strategie-Beratung: 50 % = 350 Euro
-- Umsetzungs-Kosten: 30 % von 10.300 Euro = 3.090 Euro
-- **Summe: 3.440 Euro Zuschuss**
+**Bei mypraxis.at machen wir es deshalb so:** Wir nennen keine Zahlen, sondern vermitteln Sie an unseren externen, zertifizierten Förderpartner — der prüft Ihre konkrete Situation kostenlos im Rahmen des Erstgesprächs.
 
-**Netto-Kosten nach Förderung**: ca. 7.560 Euro statt 11.000 Euro. Ersparnis: 31 %.
+## Häufige Fehler beim Förderantrag
 
-## Fristen + Budgetlage 2026
+- **Vor Bewilligung mit Umsetzung beginnen.** Das wird oft unterschätzt — Rechnungen vor dem Bewilligungsbescheid führen zu Ablehnung.
+- **CDC-Säule überspringen.** Ohne Säule 1 keine Säule 2. Manche Anbieter wissen das nicht oder ignorieren es.
+- **Nicht-förderfähige Posten mitkalkulieren.** Hardware, Hosting, laufende Wartung — gilt typischerweise nicht.
+- **Spätes Beantragen.** Wenn das Bundes-Budget Mitte des Jahres knapp wird, wird strenger geprüft.
 
-KMU.DIGITAL wird jährlich mit Bundes-Budget ausgestattet. 2026 ist das Programm mit ca. 40-50 Mio. Euro dotiert. Erfahrungswerte aus Vorjahren: Budget ist **typisch bis August-Oktober erschöpft**.
+## Wann sollten Sie aktiv werden?
 
-**Empfehlung**: Anträge sollten bis **Mai/Juni 2026** gestellt werden — um sicher im Budget zu sein.
+**Jetzt — nicht warten.** Bundes-Budgets werden traditionell Jahresanfang voll vergeben. Wer im Q1/Q2 anfängt, hat die besten Chancen auf die volle Quote. Wer im Q3/Q4 startet, riskiert dass der Topf schon leer ist.
 
-Landes-Förderungen (z. B. Wien-Digital) haben eigene Budgets und laufen oft länger. Wer KMU.DIGITAL verpasst, kann auf Landes-Ebene nachziehen.
+## Fazit
 
-## Tipps aus der Praxis
-
-**1. CDC früh einbinden.** Die Beratung ist nicht nur Formalität — ein guter CDC strukturiert das Projekt so, dass die Umsetzung zügig läuft. Lieber 2-3 CDCs anfragen und vergleichen.
-
-**2. Rechnungen getrennt halten.** Förderfähige und nicht-förderfähige Kosten müssen auf getrennten Rechnungen stehen. Bei Dienstleister:innen vorab klären.
-
-**3. Projektzeitraum realistisch planen.** Typische Zeit zwischen Antrag und Projekt-Start: 4-8 Wochen Bearbeitungs-Zeit. Umsetzung dann 3-6 Monate.
-
-**4. Pflege-Konzept vorab aufschreiben.** Für die Nachhaltigkeits-Prüfung: wie wird die Website/das Tool nach Förder-Ende weiter betrieben?
-
-**5. Verbundene Projekte kombinieren.** Praxiswebsite + Online-Buchung + Schulung = ein einzelner Antrag. Nicht jedes Mini-Projekt einzeln beantragen.
-
-## Unterschied KMU.DIGITAL vs. KI-Innovationsprogramm
-
-Beide Programme existieren parallel:
-
-**KMU.DIGITAL**: breitere Digitalisierung, auch „einfachere" Projekte wie Website.
-
-**KI-Innovationsprogramm (BMAW, FFG)**: spezifisch für KI-Investitionen über 20.000 Euro, höhere Förderquoten, mehr Bürokratie.
-
-Für die meisten Arztpraxen 2026 ist **KMU.DIGITAL der richtige Einstieg**. KI-Innovationsprogramm ist relevant bei größeren Ärztezentren mit eigener KI-Infrastruktur.
-
-## Die Rolle der:des CDC
-
-Certified Digital Consultants sind vom BMAW zertifizierte Berater:innen. Sie müssen:
-
-- Abgeschlossene Ausbildung + CDC-Zertifizierung haben
-- Regelmäßig Fortbildungen absolvieren
-- KMU.DIGITAL-spezifische Methodik anwenden
-- In der CDC-Liste gelistet sein (auf kmudigital.at abrufbar)
-
-Der:die CDC übernimmt:
-- Beratung + Strategie-Erstellung
-- Antragsunterstützung
-- Koordination mit Umsetzungs-Partner:innen
-- Abrechnungs-Hilfe
-
-Für Arztpraxen: möglichst CDC mit **Gesundheits-/Medizin-Branchen-Erfahrung** wählen — die verstehen die spezifischen Themen (ÖÄK-Werberichtlinie, Patient:innen-Datenschutz, ELGA-Kontext).
-
-## Fazit: 2026 ist ein gutes Förderjahr für Digitalisierung
-
-KMU.DIGITAL ist für 2026 gut dotiert und speziell für KI-Investitionen priorisiert. Arztpraxen, die in Website, Online-Buchung, KI-Tools oder Schulungen investieren wollen, sollten das Programm aktiv nutzen.
-
-Der Aufwand ist überschaubar (typ. 10-15 Stunden Eigenzeit über 6-9 Monate), die Ersparnis beträchtlich (30 % bis max. 6.000 Euro pro Unternehmen). In Ärztezentren mit mehreren Ärzt:innen vervielfacht sich das.
-
-Die wichtigste Voraussetzung: ein:e qualifizierte:r CDC und ein klar strukturiertes Digital-Projekt.
+KMU.DIGITAL kann ein wertvoller Hebel für Ihre Praxis-Digitalisierung sein. Ob, wieviel, und in welcher Form — das prüft individuell unser externer Förderpartner. **Im kostenlosen Erstgespräch besprechen wir Ihre Situation und vermitteln Sie weiter, wenn Förderung sinnvoll ist.**
 
 ---
 
-**Verwandte Themen:**
-- [KMU.DIGITAL Förderung für Arztpraxen](/blog/kmu-digital-foerderung-aerzte) — Grundlagen
-- [Was kostet eine Arzt-Website?](/blog/was-kostet-website-arzt)
-- [KI-Sichtbarkeit für Arztpraxen](/blog/ki-sichtbarkeit-aerzte)
-- [Website-Wechsel ohne Bedenken](/blog/website-wechsel-bedenken)
+## Häufige Fragen
 
-**KMU.DIGITAL-Antrag für Ihre Praxis?** Wir bringen Sie mit geprüften CDC-Berater:innen zusammen. [Erstgespräch anfragen →](/#kontakt)
+**Wieviel Förderung ist konkret 2026 möglich?**
+Konkrete Quoten und Maximalbeträge ändern sich jährlich. Unser Förderpartner gibt Ihnen den aktuellen Stand basierend auf Ihrer Praxis-Situation.
+
+**Ist Hardware (Computer, Drucker) förderfähig?**
+Typischerweise nein. Förderfähig sind Software, Beratung, Schulung, digitale Infrastruktur — nicht physische Geräte.
+
+**Können Wahlärzt:innen das Programm nutzen?**
+Ja, niedergelassene Wahlärzt:innen sind als Einzelunternehmer KMU.
+
+**Was ist mit Ordinationen, die schon eine Website haben?**
+Auch ein Relaunch oder eine KI-Optimierung bestehender Websites kann förderfähig sein. Der Förderpartner prüft das.
+
+**Was passiert wenn der Antrag abgelehnt wird?**
+Eine Ablehnung kann erfolgen wegen Budget-Erschöpfung, Formfehlern oder nicht-förderfähigen Inhalten. Mit qualifizierter Begleitung sind Ablehnungen selten — aber möglich.
