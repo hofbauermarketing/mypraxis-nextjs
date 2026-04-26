@@ -42,8 +42,7 @@ Ein Rechenbeispiel für eine Wahlarzt-Ordination:
 - Ein neuer Patient bringt durchschnittlich 150–300 € pro Erstbesuch (je nach Fachrichtung).
 - Eine gut positionierte Website generiert konservativ geschätzt 5–15 neue Patientenanfragen pro Monat.
 - Das entspricht 750–4.500 € zusätzlichem Umsatz pro Monat.
-- Eine professionelle Website kostet einmalig 3.900–7.500 € (vor Förderung).
-- Die Investition amortisiert sich typischerweise innerhalb von 1–3 Monaten.
+- Die Investition in eine Praxis-Website wird individuell auf Ihren Bedarf und Ihr Budget zugeschnitten — und amortisiert sich bei guter Positionierung typischerweise innerhalb weniger Monate.
 
 Zum Vergleich: Keine Website zu haben kostet nichts – außer den Patienten, die Sie nie kennenlernen werden.
 
@@ -99,7 +98,7 @@ In allen anderen Fällen – ob Wahlarzt, Kassenarzt mit Nachfolgeplanung, oder 
 Ein Google Business Profil ist wichtig und kostenlos – aber es ersetzt keine Website. Sie können dort keine ausführlichen Leistungsbeschreibungen hinterlegen, kein Schema Markup implementieren und keine llms.txt-Datei bereitstellen. Für KI-Sichtbarkeit ist ein GBP eine Ergänzung, nicht ein Ersatz.
 
 **Was kostet eine Arzt-Website in Österreich?**
-Professionelle Arzt-Websites kosten typischerweise zwischen 1.500 und 8.000 €. Bei mypraxis.at beginnen die Pakete bei 3.900 € (Praxis-Website mit KI-Readiness) bzw. 7.500 € (Digitale Positionierung). Über KMU.DIGITAL sind bis zu 30 % förderbar, was den Eigenanteil auf 2.730 € bzw. 5.250 € reduziert.
+Das hängt von Praxis, Anspruch und Unterbau ab. Wer Ihnen ohne Erstgespräch einen Pauschalpreis nennt, baut entweder zu wenig oder verlangt zu viel. Bei mypraxis.at klären wir Ihren Bedarf und Ihr Budget im kostenlosen Erstgespräch. Förderungen wie KMU.DIGITAL prüft unser externer Förderpartner individuell.
 
 **Wie schnell hat sich eine Arzt-Website amortisiert?**
 Für Wahlärzte typischerweise in 1–3 Monaten, abhängig von Fachrichtung und Standort. Jeder neue Patient, der über die Website kommt, trägt direkt zum Umsatz bei.

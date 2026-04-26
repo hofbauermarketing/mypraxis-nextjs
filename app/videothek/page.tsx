@@ -95,9 +95,9 @@ const videos: Video[] = [
   },
   {
     youtubeId: 'PLACEHOLDER_5',
-    title: 'KMU Digital Förderung für Ärzte – So beantragen Sie den Zuschuss',
+    title: 'KMU Digital Förderung für Ärzte – Wie der Prozess funktioniert',
     description:
-      'Das KMU Digital Förderprogramm unterstützt niedergelassene Ärzte bei der Digitalisierung mit bis zu 10.000 €. Schritt-für-Schritt-Anleitung zur Antragstellung.',
+      'Das KMU Digital Förderprogramm unterstützt niedergelassene Ärzte bei der Digitalisierung. Wir erklären den Ablauf — die konkrete Förderhöhe und den Antrag prüft unser externer, zertifizierter Förderpartner individuell für Ihre Praxis.',
     category: 'Förderung',
     duration: '~20 Min.',
     placeholder: true,

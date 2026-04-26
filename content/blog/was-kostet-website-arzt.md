@@ -1,111 +1,101 @@
 ---
 title: "Was kostet eine Website für Ärzte in Österreich?"
 date: "2026-02-23"
-description: "Arzt-Website Kosten im Überblick: Einmalige und laufende Kosten, Auswahlkriterien und worauf niedergelassene Ärzte in Österreich und Deutschland achten sollten."
+description: "Warum die ehrliche Antwort lautet: das hängt von Praxis, Anspruch und Unterbau ab. Was eine seriöse Praxis-Website ausmacht — und woran Sie unseriöse Anbieter erkennen."
 author: "Kevin Hofbauer"
 image: "/blog/was-kostet-website-arzt.png"
 imageAlt: "Arzt am Schreibtisch vor Laptop und Monitor mit Kostendiagrammen, modernes Ordinationszimmer mit Panoramafenster"
 ---
 
-Eine professionelle Website für niedergelassene Ärztinnen und Ärzte in Österreich kostet zwischen 1.500 € und 8.000 € netto. Der Preis hängt davon ab, ob es sich um eine einfache Visitenkarten-Website oder eine vollständige digitale Positionierung mit KI-Sichtbarkeit handelt. Über das Förderprogramm KMU.DIGITAL sind bis zu 30 % der Kosten rückerstattbar – das reduziert den Eigenanteil auf 1.050 € bis 5.600 €.
+Die ehrliche Antwort: **das hängt von Ihrer Praxis ab.** Wer Ihnen ohne ein einziges Gespräch einen fixen Preis nennt, arbeitet entweder mit Standard-Templates ohne Tiefgang — oder kalkuliert großzügig über Ihren tatsächlichen Bedarf hinaus. Beides ist nicht in Ihrem Interesse.
 
-## Preisübersicht: Was Arzt-Websites in Österreich kosten
+## Warum es keine seriöse Online-Preisliste gibt
 
-Die Kosten für eine Arzt-Website setzen sich aus einmaligen Erstellungskosten und laufenden Betriebskosten zusammen.
+Eine Praxis-Website ist kein Produkt vom Stapel. Sie ist die digitale Visitenkarte einer Ordination, die rechtlich (DSGVO, ÖÄK-Werberecht, Barrierefreiheitsgesetz) sauber sein muss, technisch von Suchmaschinen und KI-Systemen gefunden werden soll, und inhaltlich Patient:innen erreichen muss, die heute anders suchen als vor fünf Jahren.
 
-**Einmalige Kosten (netto):**
+Was Ihre Praxis konkret braucht, hängt ab von:
 
-| Leistungsumfang | Preisbereich | Was ist enthalten? |
-|---|---|---|
-| Einfache Visitenkarten-Website | 1.500 – 2.500 € | 3–5 Seiten, Responsive Design, Impressum, Kontaktformular |
-| Professionelle Praxis-Website | 3.000 – 5.000 € | 5–8 Seiten, Local SEO, Schema Markup, DSGVO-konform, Online-Terminbuchung |
-| Digitale Positionierung mit KI-Readiness | 5.000 – 8.000 € | 8–12 Seiten, Tiefenrecherche, strukturierte Daten, llms.txt, KI-Sichtbarkeit, Telefonassistent |
+- **Fachrichtung und Patient:innen-Konstellation.** Eine Wahlarzt-Praxis für Aesthetische Dermatologie braucht andere Inhalte als eine Kassenpraxis für Allgemeinmedizin im Waldviertel.
+- **Online-Status quo.** Bestehende Domain, Bewertungen, Google Business Profil, Branchenverzeichnisse — was ist da, was fehlt?
+- **Mehrsprachigkeit.** Eine Praxis im 10. Wiener Bezirk braucht oft Türkisch, Polnisch, Arabisch — eine Praxis in Imst nicht.
+- **KI-Sichtbarkeit.** Für Praxen, die in ChatGPT, Perplexity und Google AI Overviews vorkommen wollen, braucht es zusätzliche strukturierte Daten, llms.txt und semantische Inhalte.
+- **Funktionsumfang.** Online-Terminbuchung mit Praxissoftware-Anbindung? KI-Telefonassistent? Patientenportal-Übersicht? Alles davon? Oder bewusst keines?
 
-**Laufende Kosten (monatlich):**
+Ohne diese Klärung ist jede Preisangabe entweder zu hoch oder zu niedrig — beides ist unseriös.
 
-| Posten | Kosten |
+## Woran Sie seriöse Anbieter erkennen
+
+**Seriös ist nur, wenn Anbieter und Arzt sich direkt unterhalten und Budget gemeinsam durchgehen.** Alles andere führt zu zwei Problemen:
+
+1. **Zu teuer.** Anbieter, die mit fixen 12.000-€-Paketen werben, verkaufen Ihnen Module, die Sie nicht brauchen.
+2. **Zu billig.** Anbieter, die mit 500-€-Templates locken, liefern Ihnen eine Website ohne SEO-Unterbau, ohne KI-Auffindbarkeit, ohne ÖÄK-/DSGVO-Sauberkeit, ohne echte digitale Infrastruktur.
+
+Beides kostet Sie am Ende mehr — entweder beim Geld oder bei den Patient:innen, die nicht zu Ihnen finden.
+
+## Was eine seriöse Website für Ärzte enthält
+
+Egal in welchem Budget-Rahmen Sie arbeiten: Diese Punkte müssen drin sein, sonst kaufen Sie eine leere Hülle.
+
+- **Rechtliche Grundlagen.** DSGVO-konformes Cookie-Consent, korrektes Impressum, Datenschutzerklärung nach österreichischem Recht.
+- **ÖÄK-Werberecht.** Keine vergleichende Werbung, keine marktschreierischen Formulierungen, sachliche Kommunikation. Standesrechtlich sauber.
+- **BFSG-Konformität.** Seit Juni 2025 für viele Praxis-Websites Pflicht. WCAG 2.2 Level AA als Mindeststandard.
+- **Mobile-First.** Über 70 % der Patient:innen suchen heute am Smartphone.
+- **SSL-Verschlüsselung + Performance.** Schnelle Ladezeiten, technisch sauber.
+- **Lokale Auffindbarkeit.** Schema-Markup für `MedicalBusiness`, korrekt verbundenes Google Business Profil, lokale SEO.
+- **KI-Sichtbarkeit.** Strukturierte Daten, `llms.txt`, semantische Inhalte. Damit ChatGPT und Co. Ihre Praxis korrekt erfassen.
+- **Inhaltliche Tiefe.** Kein Boilerplate-Text — Patient:innen googeln nach Alltagssprache, nicht nach Mediziner-Latein.
+
+## Laufende Kosten — was im Hintergrund anfällt
+
+Unabhängig vom Erstellungs-Budget gibt es laufende Posten, die jede Praxis-Website mitbringt. Die typischen Branchenwerte:
+
+| Posten | Branchenüblicher Bereich |
 |---|---|
 | Hosting & Domain | 10 – 30 €/Monat |
 | SSL-Zertifikat | meist im Hosting inkludiert |
 | Wartung & Updates | 30 – 100 €/Monat |
 | Inhaltspflege (optional) | 50 – 200 €/Monat |
 
-## KMU.DIGITAL Förderung: Bis zu 30 % zurückbekommen
+Diese Werte gelten branchenweit für seriöse Anbieter. Was bei mypraxis.at konkret enthalten ist und was nicht, klären wir im Erstgespräch — abhängig davon, wie viel Sie selbst pflegen wollen und was an uns ausgelagert werden soll.
 
-Niedergelassene Ärztinnen und Ärzte sind in Österreich Einzelunternehmer und damit förderberechtigt über KMU.DIGITAL. Das Programm erstattet 30 % der Investitionskosten für digitale Projekte, maximal 6.000 € pro Unternehmen.
+## Förderungen — was Sie wissen müssen
 
-**Rechenbeispiel Praxis-Website (3.900 € netto):**
-- Paketpreis: 3.900 €
-- KMU.DIGITAL Förderung (30 %): − 1.170 €
-- **Eigenanteil: 2.730 €**
+Niedergelassene Ärzt:innen mit eigener Ordination gelten in Österreich grundsätzlich als KMU und können Förderprogramme wie **KMU.DIGITAL** in Anspruch nehmen. Die Programme ändern sich regelmäßig — Quoten, maximale Fördersummen, Voraussetzungen werden jährlich angepasst.
 
-**Rechenbeispiel Digitale Positionierung (7.500 € netto):**
-- Paketpreis: 7.500 €
-- KMU.DIGITAL Förderung (30 %): − 2.250 €
-- **Eigenanteil: 5.250 €**
-
-Voraussetzung für die Förderung ist eine Strategieberatung durch einen zertifizierten Digital Consultant (CDC). Diese kostet ca. 500 €, davon sind 250 € ebenfalls gefördert.
-
-## Was den Preis beeinflusst
-
-**Günstiger wird es, wenn:**
-- Fertige Texte und Fotos vorhanden sind
-- Wenige Seiten benötigt werden (3–5)
-- Standardfunktionen ausreichen (Kontaktformular, Google Maps)
-- Template-basiertes Design akzeptabel ist
-
-**Teurer wird es, wenn:**
-- Individuelle Texte auf Basis einer Fachrecherche erstellt werden
-- Online-Terminbuchung mit Praxissoftware-Anbindung gewünscht ist
-- KI-Sichtbarkeit (Schema Markup, llms.txt, strukturierte Daten) implementiert wird
-- Mehrsprachigkeit benötigt wird (z.B. Deutsch + Englisch + Türkisch)
-- Ein KI-Telefonassistent eingebunden wird
-
-## Warum „billig" teuer werden kann
-
-Eine Website für 500 € von einem Bekannten oder über einen Baukasten wie Wix oder Jimdo mag verlockend wirken. In der Praxis fehlt diesen Seiten aber fast immer:
-
-- **DSGVO-Konformität:** Fehlende oder fehlerhafte Datenschutzerklärung, kein korrektes Cookie-Consent. Abmahnrisiko.
-- **ÖÄK-Werberichtlinien:** Unzulässige Formulierungen wie „bester Arzt" oder „garantierte Heilung" können standesrechtliche Konsequenzen haben.
-- **Technische Qualität:** Langsame Ladezeiten, kein SSL, keine Mobile-Optimierung. Google straft das ab.
-- **KI-Unsichtbarkeit:** Ohne Schema Markup und strukturierte Daten existiert die Ordination für ChatGPT, Perplexity und Google AI nicht.
-
-Über 90 % aller Ordinationswebsites in Österreich haben kein Schema Markup. Das bedeutet: Sie sind für KI-Systeme unsichtbar – egal wie gut der Inhalt ist.
+**Welche aktuellen Programme für Ihre Praxis konkret in Frage kommen, prüft unser externer, zertifizierter Förderpartner individuell.** Das ist kein Marketing-Trick, sondern die einzige rechtlich saubere Vorgehensweise. Wer Ihnen pauschal "30 % Förderung gesichert" verspricht, ohne Ihre Situation zu kennen, übertritt eine Linie.
 
 ## Ist eine Arzt-Website steuerlich absetzbar?
 
-Ja. Die Kosten für eine Praxis-Website sind als Betriebsausgabe absetzbar. Einmalige Erstellungskosten über 800 € netto müssen über die Nutzungsdauer (3–5 Jahre) abgeschrieben werden. Laufende Kosten (Hosting, Wartung) sind sofort absetzbar. Wir empfehlen, dies mit dem Steuerberater abzuklären.
+Ja. Die Kosten für eine Praxis-Website sind als Betriebsausgabe absetzbar. Einmalige Erstellungskosten über 800 € netto müssen über die Nutzungsdauer (3–5 Jahre) abgeschrieben werden. Laufende Kosten (Hosting, Wartung) sind sofort absetzbar. Die Details bitte mit Ihrer Steuerberatung abklären.
 
-## Worauf Ärzte bei der Auswahl achten sollten
+## Worauf Sie bei der Anbieter-Wahl achten sollten
 
-Bei der Wahl eines Anbieters für Arzt-Websites sind folgende Punkte entscheidend:
-
-1. **Branchenkenntnis:** Versteht der Anbieter die ÖÄK-Werberichtlinien und DSGVO-Anforderungen im medizinischen Bereich?
-2. **Referenzen:** Gibt es bestehende Arzt-Websites als Arbeitsproben?
-3. **Transparente Preise:** Festpreis oder Stundenbasis? Sind laufende Kosten klar definiert?
-4. **Technische Qualität:** Server-seitiges Rendering (SSR), Schema Markup, schnelle Ladezeiten?
-5. **KI-Readiness:** Werden strukturierte Daten, llms.txt und semantische Inhalte implementiert?
-6. **Förderberatung:** Unterstützt der Anbieter beim KMU.DIGITAL Antrag?
+1. **Branchenkenntnis.** Versteht der Anbieter ÖÄK-Werberichtlinien und DSGVO-Anforderungen im medizinischen Bereich?
+2. **Echte Referenzen.** Gibt es bestehende Arzt-Websites — keine Demo-Mockups, sondern live-laufende Praxen?
+3. **Persönliches Gespräch vor Angebot.** Wer ein Festpreis-Angebot ohne Gespräch macht, hat Ihren Bedarf nicht verstanden.
+4. **Technische Tiefe.** Server-seitiges Rendering (SSR), Schema Markup, KI-Readiness, Performance — fragen Sie konkret nach.
+5. **Förderkompetenz.** Begleitet der Anbieter Sie beim Förderprozess oder nur als Schlagwort?
+6. **12 Monate Betreuung inklusive.** Eine Website ist kein abgeschlossenes Projekt — sie braucht Pflege, gerade in der ersten Zeit.
 
 ## Fazit
 
-Eine professionelle Arzt-Website kostet zwischen 1.500 € und 8.000 € – nach KMU.DIGITAL Förderung zwischen 1.050 € und 5.600 €. Entscheidend ist nicht der niedrigste Preis, sondern ob die Website Patienten tatsächlich erreicht: in Suchmaschinen und zunehmend in KI-Systemen wie ChatGPT und Google AI. Eine Website ohne KI-Readiness wird in den kommenden Jahren zunehmend unsichtbar.
+Wer ehrlich beraten will, fragt zuerst — und macht erst dann ein Angebot. Bei mypraxis.at gibt es deshalb keine Online-Preisliste. Im **kostenlosen Erstgespräch** schauen wir uns Ihre konkrete Situation an, klären gemeinsam was Ihre Praxis wirklich braucht, und in welchem Rahmen sich die Investition bewegt. Förderungen prüft unser externer Partner individuell für Sie.
 
 ---
 
 ## Häufige Fragen
 
-**Was kostet eine einfache Website für Ärzte?**
-Eine einfache Visitenkarten-Website mit 3–5 Seiten kostet zwischen 1.500 € und 2.500 € netto. Darin enthalten sind Responsive Design, Impressum und ein Kontaktformular.
+**Warum nennen Sie keine konkreten Preise auf der Website?**
+Weil eine Praxis-Website immer individuell ist. Wer pauschal Preise nennt, baut entweder zu wenig oder verlangt zu viel. Beides ist nicht in Ihrem Interesse. Im Erstgespräch klären wir gemeinsam, was Sie brauchen.
 
 **Ist die KMU.DIGITAL Förderung für Ärzte nutzbar?**
-Ja. Niedergelassene Ärzte sind als Einzelunternehmer förderberechtigt. KMU.DIGITAL erstattet 30 % der Investitionskosten, maximal 6.000 € pro Unternehmen.
+Grundsätzlich ja — niedergelassene Ärzt:innen sind als Einzelunternehmer KMU. Welche aktuellen Förderquoten und maximale Beträge gelten und ob Ihre konkrete Praxis-Situation passt, prüft unser externer Förderpartner.
 
 **Wie lange dauert die Erstellung einer Arzt-Website?**
-Eine Standard-Website dauert 2–3 Wochen, eine vollständige digitale Positionierung 4–6 Wochen. Ärztezentren und PVEs: 8–12 Wochen.
+Eine Standard-Website dauert 2–3 Wochen, eine vollständige digitale Positionierung 4–6 Wochen. Ärztezentren und PVEs: 8–12 Wochen. Dazu kommt vorab die Förderabwicklung (typischerweise 2–4 Wochen).
 
 **Brauche ich als Arzt wirklich Schema Markup?**
-Ja. Ohne Schema Markup (strukturierte Daten) ist Ihre Website für KI-Systeme wie ChatGPT, Perplexity und Google AI unsichtbar. Über 90 % der Ordinationen in Österreich haben kein Schema Markup implementiert.
+Ja. Ohne Schema Markup (strukturierte Daten) ist Ihre Website für KI-Systeme wie ChatGPT, Perplexity und Google AI deutlich schlechter erfassbar. Über 90 % der Ordinationen in Österreich haben kein Schema Markup implementiert — wer es hat, hat einen klaren Vorteil.
 
 **Muss meine Arzt-Website barrierefrei sein?**
-Seit 28. Juni 2025 gilt das Barrierefreiheitsgesetz (BaFG) für bestimmte digitale Dienstleistungen. Wenn Sie Online-Terminbuchung anbieten, müssen Sie WCAG 2.2 Level AA einhalten.
+Seit 28. Juni 2025 gilt das Barrierefreiheitsgesetz (BaFG) für viele digitale Dienstleistungen. Wenn Sie Online-Terminbuchung anbieten, müssen Sie WCAG 2.2 Level AA einhalten. Bei mypraxis.at ist das im Standard inkludiert.

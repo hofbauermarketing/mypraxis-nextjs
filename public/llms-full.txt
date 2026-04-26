@@ -107,7 +107,7 @@ Buchung: Telefonisch unter +43 664 19 15 447 oder per E-Mail an office@mypraxis.
 
 ### Schritt 2: KMU.DIGITAL Strategieberatung (optional, aber empfohlen)
 
-Wer die KMU.DIGITAL-Förderung nutzen möchte, startet mit einer zertifizierten Strategieberatung durch Kevin Hofbauer (CDC). Dauer: ca. 2 Stunden. Die Beratungskosten sind förderungsfähig (50 % Förderung, max. € 1.500). Ergebnis: Schriftliche Beratungsunterlage, die für den Förderantrag benötigt wird. Ohne Strategieberatung ist keine Umsetzungsförderung möglich.
+Wer die KMU.DIGITAL-Förderung nutzen möchte, startet mit einer zertifizierten Strategieberatung durch einen Digital Consultant (CDC). Wir arbeiten mit einem externen, zertifizierten Förderpartner zusammen — er prüft Ihre individuelle Situation und übernimmt die Beratung. Ergebnis: Schriftliche Beratungsunterlage, die für den Förderantrag benötigt wird. Ohne Strategieberatung ist keine Umsetzungsförderung möglich. Konkrete Förderquoten und maximale Beträge ändern sich regelmäßig — der Förderpartner gibt den aktuellen Stand.
 
 ### Schritt 3: Angebot & Förderantrag
 
@@ -225,15 +225,15 @@ KMU.DIGITAL ist ein österreichisches Förderprogramm des Bundesministeriums fü
 ### Förderkomponenten
 
 **Strategieberatung (Stufe 1):**
-- Kosten: variieren je nach Berater (Preis auf Anfrage)
-- Förderung: 50 % der Beratungskosten, max. € 1.500
 - Durchführung durch zertifizierten Digital Consultant (CDC)
 - Ergebnis: Schriftliche Beratungsunterlage (Pflicht für Stufe 2)
+- Beratung wird durch das Programm bezuschusst — konkrete Quoten ändern sich regelmäßig
+- Wir vermitteln an unseren externen, zertifizierten Förderpartner
 
 **Umsetzungsförderung (Stufe 2):**
-- Förderung: 30 % der Investitionskosten
-- Maximale Förderung: € 6.000 pro Unternehmen
-- Investitionskosten: individuell je nach Leistungsumfang (Preis auf Anfrage)
+- Auf Basis der Strategieberatung wird die Umsetzung (z.B. Website, KI-Tools) bezuschusst
+- Konkrete Förderquoten und maximale Beträge ändern sich jährlich
+- Welche Investitionen für Ihre Praxis konkret förderfähig sind und in welcher Höhe, prüft der externe Förderpartner individuell
 
 ### Wer ist förderbar?
 
@@ -402,11 +402,11 @@ URL: https://www.mypraxis.at/blog/ki-sichtbarkeit-aerzte
 
 ### Was kostet eine Website für Ärzte in Österreich?
 URL: https://www.mypraxis.at/blog/was-kostet-website-arzt
-Preisübersicht: Einmalige und laufende Kosten, KMU.DIGITAL Förderung bis 30 %, worauf Ärzte bei der Auswahl einer Webagentur achten sollten.
+Warum die ehrliche Antwort lautet: das hängt von Praxis, Anspruch und Unterbau ab. Was eine seriöse Praxis-Website ausmacht — und woran Sie unseriöse Anbieter erkennen.
 
-### KMU.DIGITAL Förderung für Ärzte: So bekommen Sie bis zu 30 % zurück
+### KMU.DIGITAL Förderung für Ärzte: was Sie wissen müssen
 URL: https://www.mypraxis.at/blog/kmu-digital-foerderung-aerzte
-Das KMU.DIGITAL-Programm fördert Website-Kosten für Arztpraxen mit bis zu 30 %. Wer förderberechtigt ist, wie der Antrag funktioniert, welche Fehler Sie vermeiden sollten.
+Das KMU.DIGITAL-Programm kann Digitalisierungsprojekte für Arztpraxen unterstützen. Wer grundsätzlich förderberechtigt ist, wie der Prozess abläuft, und warum konkrete Förderquoten immer individuell vom Förderpartner geprüft werden müssen.
 
 ### DSGVO für Arzt-Websites: Was muss drauf, was darf nicht drauf?
 URL: https://www.mypraxis.at/blog/dsgvo-arzt-website

@@ -48,7 +48,7 @@ const faqKategorien = [
         fragen: [
             {
                 q: 'Wie beantrage ich die KMU.DIGITAL-Förderung?',
-                a: 'Der Prozess läuft in zwei Schritten: (1) Strategieberatung durch einen zertifizierten Digital Consultant. (2) Danach Antrag auf Umsetzungsförderung über KMU.DIGITAL. Konkrete Förderhöhe und Eigenanteil hängen vom Projektumfang ab — die Details klären wir im kostenlosen Erstgespräch gemeinsam mit unserem Förderpartner.',
+                a: 'Der Prozess läuft in zwei Schritten: (1) Strategieberatung durch einen zertifizierten Digital Consultant (CDC). (2) Danach Antrag auf Umsetzungsförderung über KMU.DIGITAL. Konkrete Förderhöhe und Eigenanteil hängen vom Projektumfang und vom aktuellen Programm-Stand ab — die Details klären wir im kostenlosen Erstgespräch gemeinsam mit unserem externen Förderpartner.',
             },
             {
                 q: 'Welche Ordinationen sind förderfähig?',
@@ -56,7 +56,7 @@ const faqKategorien = [
             },
             {
                 q: 'Können Ärztezentren die Förderung mehrfach nutzen?',
-                a: 'Ja – jeder niedergelassene Arzt ist ein eigenständiges Unternehmen und kann die Förderung individuell beantragen. Bei einem Ärztezentrum mit 16 Ärzten können bis zu 16 separate Förderanträge gestellt werden. Wir koordinieren das auf Wunsch zentral.',
+                a: 'Grundsätzlich ist jeder niedergelassene Arzt ein eigenständiges Unternehmen und kann Förderungen individuell beantragen. Wie das im konkreten Ärztezentrum aussieht und welche Programme passen, prüft unser externer Förderpartner pro Fall. Auf Wunsch koordinieren wir die Anträge zentral.',
             },
         ],
     },

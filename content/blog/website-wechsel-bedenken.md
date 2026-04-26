@@ -56,7 +56,7 @@ So lässt sich das vermeiden:
 - **Referenzen:** Bestehende Arzt-Websites als Arbeitsproben. Kein Arzt sollte der erste Kunde einer Agentur in der Medizinbranche sein.
 - **12 Monate Betreuung:** Seriöse Anbieter inkludieren technische Betreuung nach dem Launch.
 
-Bei mypraxis.at arbeiten wir mit transparenten Festpreisen: 3.900 € (Praxis-Website) oder 7.500 € (Digitale Positionierung). Keine versteckten Kosten.
+Bei mypraxis.at klären wir Ihren Bedarf und Ihr Budget im kostenlosen Erstgespräch — und machen Ihnen erst dann ein konkretes, schriftliches Angebot. Keine Standard-Pakete, keine versteckten Kosten.
 
 ## 5. „DSGVO und ÖÄK-Richtlinien machen alles kompliziert."
 
@@ -101,7 +101,7 @@ Drei Entwicklungen machen eine professionelle Online-Präsenz 2026 dringlicher a
 
 1. **KI wird zum Gatekeeper.** Wenn ein Patient ChatGPT oder Google AI fragt „Welcher Dermatologe in Salzburg?", werden nur Ordinationen genannt, deren Websites technisch dafür aufbereitet sind. Das betrifft aktuell weniger als 10 % aller Ordinationen.
 
-2. **Die KMU.DIGITAL Förderung macht den Einstieg günstig.** 30 % Rückerstattung bei max. 6.000 €. In Ärztezentren kann jeder Arzt seinen eigenen Antrag stellen – bei 10 Ärzten sind das bis zu 60.000 € Förderung.
+2. **Förderprogramme wie KMU.DIGITAL können den Einstieg unterstützen.** Niedergelassene Ärzt:innen sind als KMU grundsätzlich antragsberechtigt. In Ärztezentren kann jeder Arzt einen eigenen Antrag stellen — die konkreten Möglichkeiten prüft unser externer Förderpartner individuell.
 
 3. **Das Barrierefreiheitsgesetz schafft neue Pflichten.** Seit Juni 2025 müssen Websites mit Online-Terminbuchung barrierefrei sein. Viele bestehende Websites erfüllen diese Anforderung nicht.
 

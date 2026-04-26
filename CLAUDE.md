@@ -27,7 +27,7 @@ Spezialagentur für Arzt-Websites in Österreich. Einziger österreichischer Anb
 
 1. **KI-Sichtbarkeit als USP** – Schema Markup v3, llms.txt, semantische Inhalte, SSR-first (Konkurrenten webdoctor.at, einfachordi.at bauen SPA-Templates die für KI unsichtbar sind)
 2. **Barrierefreiheits-Widget** – 16 Features, WCAG 2.1 AA, DeepL-Übersetzung in 10 Sprachen, im Standard inklusive
-3. **KMU.DIGITAL Förderung** – 30 % Zuschuss, bis € 6.000 pro Arzt
+3. **Förderbegleitung** – KMU.DIGITAL und andere Programme via externem zertifizierten Förderpartner (konkrete Quoten/Beträge ändern sich, werden individuell pro Praxis geprüft)
 
 ---
 
@@ -62,18 +62,15 @@ Kevin sucht **9 Ordinationen gesamt** (3 Kassenärzte + 3 Privatärzte/Wahlärzt
 
 ⚠️ **VERALTET – NICHT MEHR VERWENDEN:** "Sie bestimmen den Wert" / "Nach Fertigstellung überweisen Sie, was es Ihnen wert ist" – das war das alte Konzept. Jetzt: "Pilotkonditionen."
 
-### Nach dem Programm – reguläre Preise:
-| Paket | Preis netto | Mit KMU.DIGITAL (–30%) |
-|-------|------------|------------------------|
-| Praxis-Website | € 3.900 | € 2.730 |
-| Digitale Positionierung | € 7.500 | € 5.250 |
-| Ärztezentren & PVEs | Auf Anfrage | Pro Arzt bis € 6.000 Förderung |
+### Nach dem Programm – reguläre Kunden:
 
-Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo).
+**WICHTIG (Kevin 2026-04-26):** KEINE öffentlichen Preise mehr — weder Pakete noch Förderquoten. Alle Investitionen werden im Erstgespräch nach Praxis-Bedarf und Budget individuell zugeschnitten. Förderungen werden mit externem zertifizierten Förderpartner geprüft.
+
+Reguläre Kunden bekommen: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo).
 
 ### CTA-Unterscheidung (wichtig!):
 - **"Jetzt bewerben"** → NUR Referenzkundenprogramm
-- **"Jetzt anfragen"** → reguläre Pakete (auf /preise und Hauptseite-Featurekarten)
+- **"Jetzt anfragen"** → Erstgespräch für individuelle Lösung
 
 ---
 
@@ -83,7 +80,7 @@ Reguläre Kunden: **12 Monate technische Betreuung inklusive** (kein Pflicht-Abo
 |-------|------|-------------|
 | Startseite | `/` | Hero, Referenzkundenprogramm, Feature-Karten (ohne Preise), KI-Sichtbarkeit, FAQ, AskAI, BlogCarousel, Kontakt |
 | **Landing Page** | `/landingpage` | Eigenständige Sales-Page mit Qualifying-Funnel (siehe unten) |
-| Preise & Demos | `/preise` | 5 Demo-Stile, Reguläre Pakete (€3.900/€7.500), Referenzprogramm-Erklärung, KMU.DIGITAL |
+| Demos & Anfrage | `/preise` | 5 Demo-Stile, Referenzprogramm-Erklärung. KEINE konkreten Pakete/Preise — alles "auf Anfrage" |
 | Blog-Übersicht | `/blog` | Alle Blogartikel |
 | Blog-Artikel | `/blog/[slug]` | Einzelartikel mit Schema, Lesezeit, Breadcrumb |
 | KI-Videothek | `/videothek` | Videos mit VideoObject Schema |
@@ -494,10 +491,13 @@ git push
 
 ## KMU.DIGITAL Förderung
 
-- **Förderquote:** 30 % der Netto-Kosten, max. € 6.000 pro Unternehmen
-- **Voraussetzung:** Strategieberatung durch zertifizierten Digital Consultant (CDC), ca. € 500 (davon € 250 gefördert)
-- Kevin hat einen **externen Förderberater** der Beratung + Antragstellung übernimmt
-- **Ärztezentren:** Jeder Arzt = eigenes KMU = eigener Förderantrag möglich
+**WICHTIG (Kevin 2026-04-26):** KEINE konkreten Förderquoten oder Maximalbeträge mehr auf der Website nennen — Programme ändern sich, Praxis-Situationen sind individuell. Nur strukturelle Aussagen + Verweis auf externen Förderpartner.
+
+- **Programm-Struktur:** zwei Säulen (Strategieberatung CDC + Umsetzung)
+- **Voraussetzung:** Strategieberatung durch zertifizierten Digital Consultant (CDC) ist programmpflicht
+- Kevin hat einen **externen, zertifizierten Förderberater** der Beratung + Antragstellung übernimmt — er prüft individuell welche Quoten + Beträge aktuell gelten
+- **Ärztezentren:** Jeder Arzt = eigenes KMU = eigener Förderantrag grundsätzlich möglich (Detail-Prüfung pro Fall)
+- **Niemals selbst Quoten versprechen** — das macht der Förderpartner verbindlich im Erstgespräch
 
 ---
 

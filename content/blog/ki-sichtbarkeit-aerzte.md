@@ -128,7 +128,7 @@ Ja. Schema Markup verbessert die Darstellung in Google-Suchergebnissen (Rich Sni
 Strukturierte Daten werden von Google typischerweise innerhalb von 1–4 Wochen erfasst. Die Aufnahme in KI-Trainingsdaten (ChatGPT, Claude) dauert länger und hängt vom Crawl-Zyklus der jeweiligen Anbieter ab. Je früher Sie anfangen, desto schneller sind Sie sichtbar.
 
 **Was kostet KI-Readiness für eine Arzt-Website?**
-KI-Readiness ist bei mypraxis.at in beiden Paketen enthalten: ab 3.900 € (Praxis-Website) bzw. 7.500 € (Digitale Positionierung). Über KMU.DIGITAL sind bis zu 30 % förderbar.
+KI-Readiness ist bei mypraxis.at fester Bestandteil unserer Arbeit — der konkrete Umfang wird im Erstgespräch individuell mit Ihnen abgestimmt, abhängig von Praxis, Anspruch und Budget. Förderungen prüft unser externer Förderpartner.
 
 **Kann ich KI-Readiness auf meiner bestehenden Website nachrüsten?**
 Technisch ja – allerdings hängt es von der Plattform ab. WordPress-Websites lassen sich erweitern. Bei Website-Baukästen (Wix, Jimdo) oder SPAs ist ein Neubau oft sinnvoller und günstiger als die Nachrüstung.

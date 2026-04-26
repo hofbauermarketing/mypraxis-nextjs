@@ -137,12 +137,12 @@ const schemaMarkup = {
         {
           "@type": "Question",
           "name": "Wie funktioniert die KMU.DIGITAL Förderung für Ärzte?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind als KMU über KMU.DIGITAL förderbar. Voraussetzung ist eine Strategieberatung durch einen zertifizierten Digital Consultant. Die genauen Förderdetails klären wir im kostenlosen Erstgespräch gemeinsam mit unserem Förderpartner." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Niedergelassene Ärztinnen und Ärzte mit eigener Ordination sind als KMU grundsätzlich über KMU.DIGITAL förderbar. Voraussetzung ist eine Strategieberatung durch einen zertifizierten Digital Consultant (CDC). Konkrete Förderquoten und maximale Beträge ändern sich regelmäßig — wir arbeiten mit einem externen, zertifizierten Förderpartner zusammen, der Ihre individuelle Situation im kostenlosen Erstgespräch prüft." }
         },
         {
           "@type": "Question",
           "name": "Können Ärztezentren die Förderung mehrfach nutzen?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ja – jeder niedergelassene Arzt in einem Ärztezentrum ist ein eigenständiges Unternehmen und kann die KMU.DIGITAL Förderung individuell beantragen. Bei 16 Ärzten können bis zu 16 separate Förderanträge gestellt werden." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Grundsätzlich ja — jeder niedergelassene Arzt in einem Ärztezentrum ist ein eigenständiges Unternehmen und kann Förderprogramme wie KMU.DIGITAL individuell beantragen. Wie das im konkreten Fall optimal koordiniert wird, prüft unser externer Förderpartner pro Praxis." }
         },
         {
           "@type": "Question",
