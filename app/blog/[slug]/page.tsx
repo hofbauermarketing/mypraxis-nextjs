@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema, null, 2) }}
       />
       <Navigation />
       <main className="min-h-screen bg-gray-50 pt-24 pb-20">

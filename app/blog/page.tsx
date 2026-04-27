@@ -60,7 +60,7 @@ export default function BlogPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema, null, 2) }}
       />
       <Navigation />
       <main className="relative min-h-screen bg-gray-50 pb-20">

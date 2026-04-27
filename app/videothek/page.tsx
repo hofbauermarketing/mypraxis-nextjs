@@ -275,7 +275,7 @@ export default function VideothekPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videothekSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videothekSchema, null, 2) }}
       />
       <Navigation />
       <main className="relative min-h-screen bg-gray-50 pb-20">

@@ -187,7 +187,7 @@ export default function FaqPage() {
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema, null, 2) }} />
             <Navigation />
             <main className="relative min-h-screen bg-gray-50 pt-24 pb-20">
                 <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(30,58,184,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />

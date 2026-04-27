@@ -56,7 +56,7 @@ export default function HomePage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema, null, 2) }} />
       <main>
       {/* ===== HERO ===== */}
       <section className="relative text-white px-6 py-14 md:py-20 text-center overflow-hidden min-h-[500px] flex items-center" style={{ clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)' }}>

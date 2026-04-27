@@ -202,7 +202,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Schema Markup - SOFORT sichtbar für jeden Crawler */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup, null, 2) }}
         />
         {/* LLMs.txt Discovery Links */}
         <link rel="alternate" type="text/plain" href="https://www.mypraxis.at/llms.txt" />
